@@ -1,0 +1,11 @@
+.idea
+.nyc_output
+node_modules
+package-lock.json
+yarn.lock
+
+.github
+.dependabot
+test
+tap-snapshots
+docker-compose.yml

@@ -1,0 +1,41 @@
+{
+  "name": "schema-typegen",
+  "version": "1.0.1",
+  "description": "Generate TypeScript type definitions from database schema",
+  "main": "schema-typegen.js",
+  "bin": {
+    "schema-typegen": "schema-typegen.js"
+  },
+  "scripts": {
+    "test": "standard && tap test/*.js --100 --before=test/helpers/setup-postgres.js",
+    "lint:fix": "standard --fix"
+  },
+  "author": "Aldis Ameriks <aldis.ameriks@gmail.com>",
+  "keywords": [
+    "typescript",
+    "types",
+    "database",
+    "postgres",
+    "schema",
+    "codegen"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aldis-ameriks/schema-typegen.git"
+  },
+  "homepage": "https://github.com/aldis-ameriks/schema-typegen#readme",
+  "bugs": {
+    "url": "https://github.com/aldis-ameriks/schema-typegen/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cross-argv": "^1.0.0",
+    "minimist": "^1.2.5",
+    "postgres": "^2.0.0-beta.0"
+  },
+  "devDependencies": {
+    "eol": "^0.9.1",
+    "standard": "^14.3.4",
+    "tap": "^14.10.7"
+  }
+}
