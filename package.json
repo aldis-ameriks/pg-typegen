@@ -1,6 +1,6 @@
 {
   "name": "schema-typegen",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generate TypeScript type definitions from database schema",
   "main": "schema-typegen.js",
   "bin": {
