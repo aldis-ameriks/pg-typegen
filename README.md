@@ -88,6 +88,19 @@ interface UserEntity {
 }
 ```
 
+### Loading database config
+
+#### from .env file
+```
+export $(grep -v '^#' .env | xargs) && schema-typegen -o ./entities.ts postgres://$DB_USERNAME:$DB_PASSWORD@$DB_HOST:$DB_PORT/$DB_NAME
+```
+
+#### from json file
+```
+schema-typegen -o ./entities.ts postgres://$(jq -r '.DB.USERNAME' config.json):$(jq -r '.DB.PASSWORD' config.json)@$(jq -r '.DB.HOST' config.json)$(jq -r '.DB.PORT' config.json)/$(jq -r '.DB.NAME' config.json)
+```
+
+
 ## Run tests
 
 ```sh
