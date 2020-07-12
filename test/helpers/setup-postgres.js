@@ -2,8 +2,10 @@
 
 const postgres = require('postgres')
 
+const defaultPort = '5435'
+
 function getTestPostgresConnectionString () {
-  return process.env.DATABASE_CONNECTION || 'postgres://postgres:postgres@localhost:5435/test_db'
+  return process.env.DATABASE_CONNECTION || `postgres://postgres:postgres@localhost:${defaultPort}/test_db`
 }
 
 async function setupTestPostgres () {
@@ -12,7 +14,7 @@ async function setupTestPostgres () {
 
   let sql
   if (!connection) {
-    connection = 'postgres://postgres:postgres@localhost:5435'
+    connection = `postgres://postgres:postgres@localhost:${defaultPort}`
     const database = 'test_db'
     sql = postgres(connection, ssl ? { ssl: { rejectUnauthorized: false } } : false)
 
