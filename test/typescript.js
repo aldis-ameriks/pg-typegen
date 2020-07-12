@@ -104,3 +104,9 @@ test('using interfaces', t => {
   result = typescript({ ...opts, type: false, noSemi: true }, { tables, typeMapping, enums })
   t.matchSnapshot(result)
 })
+
+test('with custom suffix', t => {
+  t.plan(1)
+  const result = typescript({ ...opts, suffix: 'Record' }, { tables, typeMapping, enums })
+  t.matchSnapshot(result)
+})
