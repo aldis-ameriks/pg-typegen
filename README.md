@@ -1,16 +1,19 @@
 <h1 align="center">Welcome to schema-typegen 👋</h1>
 <p>
-  <a href="https://www.npmjs.com/package/schema-typegen" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/schema-typegen.svg">
-  </a>
-  <a href="https://github.com/aldis-ameriks/schema-typegen/graphs/commit-activity" target="_blank">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
-  </a>
-  <a href="https://github.com/aldis-ameriks/schema-typegen/blob/master/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/aldis-ameriks/schema-typegen" />
-  </a>
+    <a href="https://www.npmjs.com/package/schema-typegen" target="_blank">
+        <img alt="Version" src="https://img.shields.io/npm/v/schema-typegen.svg">
+    </a>
+    <a href="https://github.com/aldis-ameriks/schema-typegen/graphs/commit-activity" target="_blank">
+        <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+    </a>
+    <a href="https://github.com/aldis-ameriks/schema-typegen/blob/master/LICENSE" target="_blank">
+        <img alt="License: MIT" src="https://img.shields.io/github/license/aldis-ameriks/schema-typegen" />
+    </a>
+    <a href='https://coveralls.io/github/aldis-ameriks/schema-typegen?branch=master'>
+        <img src='https://coveralls.io/repos/github/aldis-ameriks/schema-typegen/badge.svg?branch=master' alt='Coverage Status' />
+    </a>
     <a href="https://github.com/aldis-ameriks/schema-typegen/workflows/CI/badge.svg" target="_blank">
-      <img alt="CI" src="https://github.com/aldis-ameriks/schema-typegen/workflows/CI/badge.svg" />
+        <img alt="CI" src="https://github.com/aldis-ameriks/schema-typegen/workflows/CI/badge.svg" />
     </a>
 </p>
 
