@@ -65,7 +65,7 @@ CREATE TABLE users (
     id int4 NOT NULL,
     name varchar(255),
     state user_state,
-    is_enabled bool DEFAULT FALSE
+    is_enabled bool NOT NULL DEFAULT FALSE
 );
 ```
 
