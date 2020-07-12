@@ -169,7 +169,7 @@ async function setupTestPostgres () {
          phone_Osvaldo       timestamptz[]     NOT NULL,
          
          -- check camel case too
-         "camelCase"         int4,
+         "camelCase"         bool              DEFAULT FALSE,
     
         -- custom types
          fruit_a             fruits,

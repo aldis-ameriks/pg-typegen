@@ -16,7 +16,7 @@ const defaultOpts = {
   type: false,
   schema: 'public',
   output: undefined,
-  exclude: []
+  exclude: ''
 }
 
 function parseArguments (argvs) {
@@ -34,6 +34,7 @@ function parseArguments (argvs) {
   })
 
   argv.connection = argv._[0]
+  argv.exclude = argv.exclude.split(',')
 
   if (argv.version) {
     console.log('schema-typegen', 'v' + require('./package').version)

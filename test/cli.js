@@ -110,3 +110,23 @@ test('generates types to file', t => {
     fs.unlinkSync(outputPath)
   })
 })
+
+test('generates types with exclusion', t => {
+  t.plan(1)
+
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), connection, ssl ? '--ssl' : '', '-e', 'types,snake_test'], {
+    cwd: __dirname,
+    env: process.env,
+    stdio: ['ignore', 'pipe', 'pipe'],
+    detached: false
+  })
+
+  const result = { data: '' }
+  child.stdout.on('data', data => {
+    result.data += data.toString()
+  })
+
+  child.on('close', () => {
+    t.matchSnapshot(eol.lf(result.data))
+  })
+})

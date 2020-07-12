@@ -35,7 +35,7 @@ export interface TypeEntity {
   avatar_mark?: Array<object>;
   avatar_myah: Array<string>;
   avatar_rozella: Array<string>;
-  camelCase?: number;
+  camelCase?: boolean;
   category_amari: number;
   category_april: Array<string>;
   category_buddy?: Array<string>;
@@ -172,7 +172,7 @@ export interface TypeEntity {
   avatar_mark?: Array<object>;
   avatar_myah: Array<string>;
   avatar_rozella: Array<string>;
-  camelCase?: number;
+  camelCase?: boolean;
   category_amari: number;
   category_april: Array<string>;
   category_buddy?: Array<string>;
@@ -278,6 +278,29 @@ export interface TypeEntity {
 
 `
 
+exports['test/cli.js TAP generates types with exclusion > must match snapshot 1'] = `
+export enum DeliciousKebab {
+  'big-mix' = 'big-mix',
+  mix = 'mix',
+}
+
+export enum Fruits {
+  apple = 'apple',
+  banana = 'banana',
+  orange = 'orange',
+}
+
+export enum SnakesOn {
+  a_plane = 'a_plane',
+}
+
+export interface KebabTestEntity {
+  id: number;
+};
+
+
+`
+
 exports['test/cli.js TAP help > must match snapshot 1'] = `
 Usage: schema-typegen [opts] connection_string
 
@@ -293,7 +316,7 @@ Available options:
   -o/--output OUTPUT_PATH
         Output path, e.g. './entities.ts'. Default: outputs to stdout.
   -e/--exclude EXCLUDE
-        Excluded tables and enums. Default: no exclusions.
+        Excluded tables and enums as comma separated string e.g. knex_migrations,knex_migrations_lock  Default: ''.
   --types
         Use type definitions instead of interfaces in generated output. Default: false.
   --noSemi
@@ -323,7 +346,7 @@ Available options:
   -o/--output OUTPUT_PATH
         Output path, e.g. './entities.ts'. Default: outputs to stdout.
   -e/--exclude EXCLUDE
-        Excluded tables and enums. Default: no exclusions.
+        Excluded tables and enums as comma separated string e.g. knex_migrations,knex_migrations_lock  Default: ''.
   --types
         Use type definitions instead of interfaces in generated output. Default: false.
   --noSemi

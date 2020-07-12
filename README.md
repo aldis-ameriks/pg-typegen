@@ -40,8 +40,8 @@ Available options:
   -o/--output OUTPUT_PATH
         Output path, e.g. './entities.ts'. Default: outputs to stdout.
   -e/--exclude EXCLUDE
-        Excluded tables and enums. Default: no exclusions.
-  --type
+        Excluded tables and enums as comma separated string e.g. knex_migrations,knex_migrations_lock  Default: ''.
+  --types
         Use type definitions instead of interfaces in generated output. Default: false.
   --noSemi
         Omit semicolons in generated types. Default: false.

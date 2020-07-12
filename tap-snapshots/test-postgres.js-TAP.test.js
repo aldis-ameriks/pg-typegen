@@ -81,7 +81,7 @@ Object {
         Object {
           "isNullable": true,
           "name": "camelCase",
-          "type": "int4",
+          "type": "bool",
         },
         Object {
           "isNullable": false,
