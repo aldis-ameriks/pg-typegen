@@ -23,3 +23,4 @@ jobs:
           CI: true
           DATABASE_SSL_ENABLED: true
           DATABASE_CONNECTION: ${{ secrets.DATABASE_CONNECTION }}
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
