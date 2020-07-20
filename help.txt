@@ -9,6 +9,8 @@ Available options:
         Suffix to append to generated table type, e.g. item -> ItemEntity. Default: 'Entity'.
   -s/--schema SCHEMA
         Schema. Default: 'public'.
+  -h/--header HEADER
+        Header content. Default: ''.
   -o/--output OUTPUT_PATH
         Output path, e.g. './entities.ts'. Default: outputs to stdout.
   -e/--exclude EXCLUDE

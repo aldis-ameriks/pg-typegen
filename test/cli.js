@@ -130,3 +130,23 @@ test('generates types with exclusion', t => {
     t.matchSnapshot(eol.lf(result.data))
   })
 })
+
+test('generates types with header', t => {
+  t.plan(1)
+
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), connection, ssl ? '--ssl' : '', '-h', '/* eslint-disable */'], {
+    cwd: __dirname,
+    env: process.env,
+    stdio: ['ignore', 'pipe', 'pipe'],
+    detached: false
+  })
+
+  const result = { data: '' }
+  child.stdout.on('data', data => {
+    result.data += data.toString()
+  })
+
+  child.on('close', () => {
+    t.matchSnapshot(eol.lf(result.data))
+  })
+})

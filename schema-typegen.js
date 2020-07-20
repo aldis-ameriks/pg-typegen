@@ -16,7 +16,8 @@ const defaultOpts = {
   type: false,
   schema: 'public',
   output: undefined,
-  exclude: ''
+  exclude: '',
+  header: ''
 }
 
 function parseArguments (argvs) {
@@ -28,7 +29,8 @@ function parseArguments (argvs) {
       output: 'o',
       exclude: 'e',
       help: 'h',
-      version: 'v'
+      version: 'v',
+      header: 'h'
     },
     default: defaultOpts
   })

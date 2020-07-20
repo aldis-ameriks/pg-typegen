@@ -110,3 +110,9 @@ test('with custom suffix', t => {
   const result = typescript({ ...opts, suffix: 'Record' }, { tables, typeMapping, enums })
   t.matchSnapshot(result)
 })
+
+test('with header', t => {
+  t.plan(1)
+  const result = typescript({ ...opts, header: '/* eslint-disable */' }, { tables, typeMapping, enums })
+  t.matchSnapshot(result)
+})
