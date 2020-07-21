@@ -173,7 +173,7 @@ test('generates types with header', t => {
 
 test('sends error to stderr', t => {
   t.plan(1)
-  const invalidConnection = 'xxx'
+  const invalidConnection = 'postgres://postgres:postgres@0.0.0.0:1/test_db'
   const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), '-o', './entities.ts', invalidConnection, ssl ? '--ssl' : ''], {
     cwd: __dirname,
     env: process.env,
@@ -187,6 +187,6 @@ test('sends error to stderr', t => {
   })
 
   child.on('close', () => {
-    t.ok(result.data.startsWith('PostgresError'), `${result.data} is not the expected error`)
+    t.ok(result.data.includes('Error'), `${result.data} is not the expected error`)
   })
 })
