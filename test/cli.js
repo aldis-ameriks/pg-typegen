@@ -170,3 +170,23 @@ test('generates types with header', t => {
     t.matchSnapshot(eol.lf(result.data))
   })
 })
+
+test('sends error to stderr', t => {
+  t.plan(1)
+  const invalidConnection = 'xxx'
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), '-o', './entities.ts', invalidConnection, ssl ? '--ssl' : ''], {
+    cwd: __dirname,
+    env: process.env,
+    stdio: ['ignore', 'pipe', 'pipe'],
+    detached: false
+  })
+
+  const result = { data: '' }
+  child.stderr.on('data', data => {
+    result.data += data.toString()
+  })
+
+  child.on('close', () => {
+    t.ok(result.data.startsWith('PostgresError'))
+  })
+})
