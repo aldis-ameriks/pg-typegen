@@ -14,6 +14,7 @@ const defaultOpts = {
   suffix: 'Entity',
   noSemi: false,
   type: false,
+  optionals: false,
   schema: 'public',
   output: undefined,
   exclude: '',
@@ -22,7 +23,7 @@ const defaultOpts = {
 
 function parseArguments (argvs) {
   const argv = minimist(argvs, {
-    boolean: ['type', 'noSemi', 'version', 'ssl'],
+    boolean: ['type', 'noSemi', 'version', 'optionals', 'ssl'],
     alias: {
       suffix: 'f',
       schema: 's',

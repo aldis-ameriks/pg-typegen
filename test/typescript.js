@@ -116,3 +116,9 @@ test('with header', t => {
   const result = typescript({ ...opts, header: '/* eslint-disable */' }, { tables, typeMapping, enums })
   t.matchSnapshot(result)
 })
+
+test('with optionals', t => {
+  t.plan(1)
+  const result = typescript({ ...opts, optionals: true }, { tables, typeMapping, enums })
+  t.matchSnapshot(result)
+})

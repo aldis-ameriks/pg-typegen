@@ -52,6 +52,8 @@ Available options:
         Omit semicolons in generated types. Default: false.
   --ssl
         Use ssl. Default: false.
+  --optionals
+        Use optionals "?" instead of null. Default: false.
   -v/--version
         Print the version number.
   -h/--help
