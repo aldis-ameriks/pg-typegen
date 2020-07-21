@@ -187,6 +187,6 @@ test('sends error to stderr', t => {
   })
 
   child.on('close', () => {
-    t.ok(result.data.startsWith('PostgresError'))
+    t.ok(result.data.startsWith('PostgresError'), `${result.data} is not the expected error`)
   })
 })
