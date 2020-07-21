@@ -111,6 +111,26 @@ test('generates types to file', t => {
   })
 })
 
+test('reports success to stdout', t => {
+  t.plan(1)
+
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), '-o', './entities.ts', connection, ssl ? '--ssl' : ''], {
+    cwd: __dirname,
+    env: process.env,
+    stdio: ['ignore', 'pipe', 'pipe'],
+    detached: false
+  })
+
+  const result = { data: '' }
+  child.stdout.on('data', data => {
+    result.data += data.toString()
+  })
+
+  child.on('close', () => {
+    t.equal(result.data, 'Generated types from 4 tables and 3 enums\n')
+  })
+})
+
 test('generates types with exclusion', t => {
   t.plan(1)
 
