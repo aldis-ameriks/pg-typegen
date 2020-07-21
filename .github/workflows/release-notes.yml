@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 100
       - name: Fetch all tags
-        run: git fetch --depth=1 --tags origin +refs/tags/*:refs/tags/*
+        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
       - name: Generate Changelog
         id: changelog
         run: |
