@@ -13,9 +13,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          fetch-depth: 100
+          fetch-depth: 0
       - name: Fetch all tags
-        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+        run: git fetch --depth=100 origin +refs/tags/*:refs/tags/*
       - name: Generate Changelog
         id: changelog
         run: |
