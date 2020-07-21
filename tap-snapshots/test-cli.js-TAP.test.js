@@ -21,6 +21,10 @@ export enum SnakesOn {
   a_plane = 'a_plane',
 }
 
+export interface HistoryEntity {
+  id: number;
+};
+
 export interface KebabTestEntity {
   id: number;
 };
@@ -158,6 +162,10 @@ export enum SnakesOn {
   a_plane = 'a_plane',
 }
 
+export interface HistoryEntity {
+  id: number;
+};
+
 export interface KebabTestEntity {
   id: number;
 };
@@ -294,6 +302,10 @@ export enum SnakesOn {
   a_plane = 'a_plane',
 }
 
+export interface HistoryEntity {
+  id: number;
+};
+
 export interface KebabTestEntity {
   id: number;
 };
@@ -318,6 +330,10 @@ export enum Fruits {
 export enum SnakesOn {
   a_plane = 'a_plane',
 }
+
+export interface HistoryEntity {
+  id: number;
+};
 
 export interface KebabTestEntity {
   id: number;

@@ -68,6 +68,12 @@ async function setupTestPostgres () {
     `
 
     await sql`
+        CREATE TABLE IF NOT EXISTS histories (
+            id int4 NOT NULL
+        );
+    `
+
+    await sql`
       CREATE TABLE IF NOT EXISTS types (
          email_Lucio         bpchar,
          category_Viola      bpchar            NOT NULL,

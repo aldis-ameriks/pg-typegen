@@ -39,6 +39,16 @@ Object {
           "type": "int4",
         },
       ],
+      "name": "histories",
+    },
+    Object {
+      "columns": Array [
+        Object {
+          "isNullable": false,
+          "name": "id",
+          "type": "int4",
+        },
+      ],
       "name": "kebab-test",
     },
     Object {
