@@ -65,7 +65,7 @@ if (require.main === module) {
     const types = await typescript(opts, schema)
     if (opts.output) {
       fs.writeFileSync(opts.output, types)
-      console.log(`Generated types from ${schema.tables.length} tables and ${schema.enums.length} enums`)
+      console.log(`✔ Generated types from ${schema.tables.length} tables and ${schema.enums.length} enums`)
     } else {
       console.log(types)
     }
