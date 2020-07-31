@@ -86,8 +86,8 @@ enum UserState {
 
 interface UserEntity {
   id: number;
-  name?: string;
-  state?: UserState;
+  name: string | null;
+  state: UserState | null;
   is_enabled: boolean;
 }
 ```
@@ -101,7 +101,7 @@ export $(grep -v '^#' .env | xargs) && schema-typegen -o ./entities.ts postgres:
 
 #### from json file
 ```
-schema-typegen -o ./entities.ts postgres://$(jq -r '.DB.USERNAME' config.json):$(jq -r '.DB.PASSWORD' config.json)@$(jq -r '.DB.HOST' config.json)$(jq -r '.DB.PORT' config.json)/$(jq -r '.DB.NAME' config.json)
+schema-typegen -o ./entities.ts postgres://$(jq -r '.DB.USERNAME' config.json):$(jq -r '.DB.PASSWORD' config.json)@$(jq -r '.DB.HOST' config.json):$(jq -r '.DB.PORT' config.json)/$(jq -r '.DB.NAME' config.json)
 ```
 
 
