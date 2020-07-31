@@ -122,3 +122,9 @@ test('with optionals', t => {
   const result = typescript({ ...opts, optionals: true }, { tables, typeMapping, enums })
   t.matchSnapshot(result)
 })
+
+test('without enums', t => {
+  t.plan(1)
+  const result = typescript({ ...opts, optionals: true }, { tables, typeMapping, enums: [] })
+  t.matchSnapshot(result)
+})

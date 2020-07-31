@@ -573,3 +573,50 @@ export interface EmptyEntity {};
 export interface AppleEntity {};
 
 `
+
+exports['test/typescript.js TAP without enums > must match snapshot 1'] = `
+export interface KnownEntity {
+  known1: number;
+  known2?: number;
+  known3?: number;
+  known4: number;
+  known5?: string;
+  known6: string;
+};
+
+export interface UnknownEntity {
+  unknown1?: any;
+  unknown2: any;
+  unknown3?: Array<any>;
+  unknown4: Array<any>;
+};
+
+export interface SnakeCaseEntity {
+  snake_case1?: number;
+  snake_case2: number;
+};
+
+export interface KebabCaseEntity {
+  'kebab-case1'?: number;
+  'kebab-case2': number;
+};
+
+export interface WhiteSpaceEntity {
+  'white space 1'?: number;
+  'white space 2': number;
+};
+
+export interface CustomEntity {
+  custom1: any;
+  custom2: any;
+  custom3: any;
+  custom4: Array<any>;
+  custom5: Array<any>;
+  custom6: Array<any>;
+};
+
+export interface EmptyEntity {};
+
+export interface AppleEntity {};
+
+`
