@@ -84,6 +84,8 @@ export interface EmptyEntity {};
 
 export interface AppleEntity {};
 
+export interface AddressEntity {};
+
 `
 
 exports['test/typescript.js TAP using interfaces > must match snapshot 2'] = `
@@ -164,6 +166,8 @@ export interface CustomEntity {
 export interface EmptyEntity {}
 
 export interface AppleEntity {}
+
+export interface AddressEntity {}
 
 `
 
@@ -246,6 +250,8 @@ export type EmptyEntity = {};
 
 export type AppleEntity = {};
 
+export type AddressEntity = {};
+
 `
 
 exports['test/typescript.js TAP using types > must match snapshot 2'] = `
@@ -327,6 +333,8 @@ export type EmptyEntity = {}
 
 export type AppleEntity = {}
 
+export type AddressEntity = {}
+
 `
 
 exports['test/typescript.js TAP with custom suffix > must match snapshot 1'] = `
@@ -407,6 +415,8 @@ export interface CustomRecord {
 export interface EmptyRecord {};
 
 export interface AppleRecord {};
+
+export interface AddressRecord {};
 
 `
 
@@ -491,6 +501,8 @@ export interface EmptyEntity {};
 
 export interface AppleEntity {};
 
+export interface AddressEntity {};
+
 `
 
 exports['test/typescript.js TAP with optionals > must match snapshot 1'] = `
@@ -572,6 +584,8 @@ export interface EmptyEntity {};
 
 export interface AppleEntity {};
 
+export interface AddressEntity {};
+
 `
 
 exports['test/typescript.js TAP without enums > must match snapshot 1'] = `
@@ -618,5 +632,7 @@ export interface CustomEntity {
 export interface EmptyEntity {};
 
 export interface AppleEntity {};
+
+export interface AddressEntity {};
 
 `
