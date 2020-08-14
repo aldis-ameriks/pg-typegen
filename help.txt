@@ -23,6 +23,8 @@ Available options:
         Use ssl. Default: false.
   --optionals
         Use optionals "?" instead of null. Default: false.
+  --pascal-enums
+        Transform enum keys to pascal case. Default: false.
   -v/--version
         Print the version number.
   -h/--help

@@ -15,6 +15,7 @@ const defaultOpts = {
   noSemi: false,
   type: false,
   optionals: false,
+  pascalEnums: false,
   schema: 'public',
   output: undefined,
   exclude: '',
@@ -23,7 +24,7 @@ const defaultOpts = {
 
 function parseArguments (argvs) {
   const argv = minimist(argvs, {
-    boolean: ['type', 'noSemi', 'version', 'optionals', 'ssl'],
+    boolean: ['type', 'noSemi', 'version', 'optionals', 'ssl', 'pascal-enums'],
     alias: {
       suffix: 'f',
       schema: 's',
@@ -31,7 +32,8 @@ function parseArguments (argvs) {
       exclude: 'e',
       help: 'h',
       version: 'v',
-      header: 'h'
+      header: 'h',
+      pascalEnums: 'pascal-enums'
     },
     default: defaultOpts
   })

@@ -63,7 +63,7 @@ const tables = [
 ]
 
 const enums = [
-  { name: 'custom_enum', values: ['value_one', 'value_two'] },
+  { name: 'custom_enum', values: ['value_one', 'value_two', 'foo bar', 'foo-bar2', 'foo   bar3', 'foo----bar4', 'foo____bar5', 'foo  ---- ____ ---   bar6'] },
   { name: 'exclude_this_too', values: ['value_one'] },
   { name: 'empty', values: [] },
   { name: 'kebab-case1', values: [] },
@@ -127,5 +127,11 @@ test('with optionals', t => {
 test('without enums', t => {
   t.plan(1)
   const result = typescript({ ...opts, optionals: true }, { tables, typeMapping, enums: [] })
+  t.matchSnapshot(result)
+})
+
+test('with pascal case enums', t => {
+  t.plan(1)
+  const result = typescript({ ...opts, pascalEnums: true }, { tables, typeMapping, enums })
   t.matchSnapshot(result)
 })
