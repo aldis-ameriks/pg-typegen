@@ -13,6 +13,7 @@ const postgres = require('./lib/postgres')
 const defaultOpts = {
   suffix: 'Entity',
   noSemi: false,
+  semicolons: true,
   type: false,
   optionals: false,
   pascalEnums: false,
@@ -24,7 +25,7 @@ const defaultOpts = {
 
 function parseArguments (argvs) {
   const argv = minimist(argvs, {
-    boolean: ['type', 'noSemi', 'version', 'optionals', 'ssl', 'pascal-enums'],
+    boolean: ['type', 'noSemi', 'semicolons', 'version', 'optionals', 'ssl', 'pascal-enums'],
     alias: {
       suffix: 'f',
       schema: 's',
@@ -37,6 +38,10 @@ function parseArguments (argvs) {
     },
     default: defaultOpts
   })
+
+  if (argv.noSemi) {
+    argv.semicolons = false
+  }
 
   argv.connection = argv._[0]
   argv.exclude = argv.exclude.split(',')

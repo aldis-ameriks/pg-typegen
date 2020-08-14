@@ -17,7 +17,7 @@ Available options:
         Excluded tables and enums as comma separated string e.g. knex_migrations,knex_migrations_lock  Default: ''.
   --types
         Use type definitions instead of interfaces in generated output. Default: false.
-  --noSemi
+  --no-semicolons
         Omit semicolons in generated types. Default: false.
   --ssl
         Use ssl. Default: false.

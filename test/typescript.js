@@ -85,24 +85,25 @@ const opts = {
   suffix: 'Entity',
   schema: 'public',
   output: './entities.ts',
-  exclude: ['excluded', 'exclude_this_too']
+  exclude: ['excluded', 'exclude_this_too'],
+  semicolons: true
 }
 
 test('using types', t => {
   t.plan(2)
-  let result = typescript({ ...opts, type: true, noSemi: false }, { tables, typeMapping, enums })
+  let result = typescript({ ...opts, type: true, semicolons: true }, { tables, typeMapping, enums })
   t.matchSnapshot(result)
 
-  result = typescript({ ...opts, type: true, noSemi: true }, { tables, typeMapping, enums })
+  result = typescript({ ...opts, type: true, semicolons: false }, { tables, typeMapping, enums })
   t.matchSnapshot(result)
 })
 
 test('using interfaces', t => {
   t.plan(2)
-  let result = typescript({ ...opts, type: false, noSemi: false }, { tables, typeMapping, enums })
+  let result = typescript({ ...opts, type: false, semicolons: true }, { tables, typeMapping, enums })
   t.matchSnapshot(result)
 
-  result = typescript({ ...opts, type: false, noSemi: true }, { tables, typeMapping, enums })
+  result = typescript({ ...opts, type: false, semicolons: false }, { tables, typeMapping, enums })
   t.matchSnapshot(result)
 })
 

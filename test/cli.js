@@ -191,6 +191,46 @@ test('generates types with pascal case enums', t => {
   })
 })
 
+test('generates types with noSemi option', t => {
+  t.plan(1)
+
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), connection, ssl ? '--ssl' : '', '--noSemi'], {
+    cwd: __dirname,
+    env: process.env,
+    stdio: ['ignore', 'pipe', 'pipe'],
+    detached: false
+  })
+
+  const result = { data: '' }
+  child.stdout.on('data', data => {
+    result.data += data.toString()
+  })
+
+  child.on('close', () => {
+    t.matchSnapshot(eol.lf(result.data))
+  })
+})
+
+test('generates types with no-semicolons option', t => {
+  t.plan(1)
+
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), connection, ssl ? '--ssl' : '', '--no-semicolons'], {
+    cwd: __dirname,
+    env: process.env,
+    stdio: ['ignore', 'pipe', 'pipe'],
+    detached: false
+  })
+
+  const result = { data: '' }
+  child.stdout.on('data', data => {
+    result.data += data.toString()
+  })
+
+  child.on('close', () => {
+    t.matchSnapshot(eol.lf(result.data))
+  })
+})
+
 test('sends error to stderr', t => {
   t.plan(1)
   const invalidConnection = 'postgres://postgres:postgres@0.0.0.0:1/test_db'
