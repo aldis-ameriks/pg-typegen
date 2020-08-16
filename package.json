@@ -7,7 +7,8 @@
     "schema-typegen": "schema-typegen.js"
   },
   "scripts": {
-    "test": "standard && tap test/*.js --100 --before=test/helpers/setup-postgres.js",
+    "test": "tap test/*.js --100 --before=test/helpers/setup-postgres.js",
+    "lint": "standard",
     "lint:fix": "standard --fix"
   },
   "author": "Aldis Ameriks <aldis.ameriks@gmail.com>",

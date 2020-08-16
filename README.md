@@ -56,6 +56,8 @@ Available options:
         Use optionals "?" instead of null. Default: false.
   --pascal-enums
         Transform enum keys to pascal case. Default: false.
+  --bigint
+        Use bigint for int8 types instead of strings. Default: false.
   -v/--version
         Print the version number.
   -h/--help
