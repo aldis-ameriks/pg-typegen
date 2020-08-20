@@ -3,6 +3,7 @@
   "version": "2.4.0",
   "description": "Generate TypeScript type definitions from database schema",
   "main": "schema-typegen.js",
+  "types": "schema-typegen.d.ts",
   "bin": {
     "schema-typegen": "schema-typegen.js"
   },

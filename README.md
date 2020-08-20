@@ -96,6 +96,17 @@ interface UserEntity {
 }
 ```
 
+### Running from code
+
+```ts
+import { join } from 'path'
+import generate from 'schema-typegen'
+;(async () => {
+  const output = join(__dirname, 'entities.ts')
+  await generate({ connection: 'postgres://username:password@localhost:5432/database', output })
+})()
+```
+
 ### Loading database config
 
 #### from .env file

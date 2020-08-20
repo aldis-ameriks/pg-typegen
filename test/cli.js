@@ -6,7 +6,6 @@ const path = require('path')
 const eol = require('eol')
 const { test } = require('tap')
 const { getTestPostgresConnectionString } = require('./helpers/setup-postgres')
-require('../schema-typegen')
 
 const connection = getTestPostgresConnectionString()
 const ssl = process.env.DATABASE_SSL_ENABLED === 'true'

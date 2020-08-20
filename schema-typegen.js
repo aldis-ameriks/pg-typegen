@@ -60,6 +60,18 @@ function parseArguments (argvs) {
   return argv
 }
 
+async function generateSchema (opts) {
+  opts = { ...defaultOpts, exclude: [], ...opts }
+  const schema = await postgres(opts)
+  const types = await typescript(opts, schema)
+  if (opts.output) {
+    fs.writeFileSync(opts.output, types)
+    return `✔ Generated types from ${schema.tables.length} tables and ${schema.enums.length} enums`
+  } else {
+    return types
+  }
+}
+
 if (require.main === module) {
   (async () => {
     const argv = xargv(process.argv.slice(2))
@@ -69,18 +81,9 @@ if (require.main === module) {
       return
     }
 
-    const schema = await postgres(opts)
-    const types = await typescript(opts, schema)
-    if (opts.output) {
-      fs.writeFileSync(opts.output, types)
-      console.log(`✔ Generated types from ${schema.tables.length} tables and ${schema.enums.length} enums`)
-    } else {
-      console.log(types)
-    }
+    const result = await generateSchema(opts)
+    console.log(result)
   })()
 }
 
-module.exports = {
-  typescript,
-  postgres
-}
+module.exports = generateSchema
