@@ -1,6 +1,6 @@
 'use strict'
 
-const { test } = require('tap')
+const { test, only } = require('tap')
 const typescript = require('../lib/typescript')
 
 const tables = [
@@ -59,7 +59,8 @@ const tables = [
   { name: 'empty', columns: [] },
   { name: 'excluded', columns: [] },
   { name: 'apples', columns: [] },
-  { name: 'addresses', columns: [] }
+  { name: 'addresses', columns: [] },
+  { name: 'entities', columns: [{ name: 'duplicate', type: 'int2' }, { name: 'duplicate', type: 'int2' }] }
 ]
 
 const enums = [
@@ -89,7 +90,7 @@ const opts = {
   semicolons: true
 }
 
-test('using types', t => {
+only('using types', t => {
   t.plan(2)
   let result = typescript({ ...opts, type: true, semicolons: true }, { tables, typeMapping, enums })
   t.matchSnapshot(result)
