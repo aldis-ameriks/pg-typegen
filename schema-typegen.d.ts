@@ -12,7 +12,11 @@ declare module 'schema-typegen' {
     output?: string;
     exclude?: string[];
     header?: string;
+    ssl?: boolean;
+    types?: boolean;
   }
 
-  export default (options: Options) => Promise<string>;
+  function generate(option: Options): Promise<string>;
+
+  export default generate;
 }
