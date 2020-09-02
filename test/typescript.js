@@ -60,7 +60,8 @@ const tables = [
   { name: 'excluded', columns: [] },
   { name: 'apples', columns: [] },
   { name: 'addresses', columns: [] },
-  { name: 'entities', columns: [{ name: 'duplicate', type: 'int2' }, { name: 'duplicate', type: 'int2' }] }
+  { name: 'entities', columns: [{ name: 'duplicate', type: 'int2' }, { name: 'duplicate', type: 'int2' }] },
+  { name: 'UpperCase', columns: [{ name: 'duplicate', type: 'int2' }, { name: 'duplicate', type: 'int2' }] }
 ]
 
 const enums = [

@@ -92,6 +92,11 @@ export interface UnknownEntity {
   unknown4: Array<any>;
 };
 
+export interface UpperCaseEntity {
+  duplicate: number;
+  duplicate: number;
+};
+
 export interface WhiteSpaceEntity {
   'white space 1': number | null;
   'white space 2': number;
@@ -184,6 +189,11 @@ export interface UnknownEntity {
   unknown2: any
   unknown3: Array<any> | null
   unknown4: Array<any>
+}
+
+export interface UpperCaseEntity {
+  duplicate: number
+  duplicate: number
 }
 
 export interface WhiteSpaceEntity {
@@ -280,6 +290,11 @@ export type UnknownEntity = {
   unknown4: Array<any>;
 };
 
+export type UpperCaseEntity = {
+  duplicate: number;
+  duplicate: number;
+};
+
 export type WhiteSpaceEntity = {
   'white space 1': number | null;
   'white space 2': number;
@@ -374,6 +389,11 @@ export type UnknownEntity = {
   unknown4: Array<any>
 }
 
+export type UpperCaseEntity = {
+  duplicate: number
+  duplicate: number
+}
+
 export type WhiteSpaceEntity = {
   'white space 1': number | null
   'white space 2': number
@@ -466,6 +486,11 @@ export interface UnknownRecord {
   unknown2: any;
   unknown3: Array<any> | null;
   unknown4: Array<any>;
+};
+
+export interface UpperCaseRecord {
+  duplicate: number;
+  duplicate: number;
 };
 
 export interface WhiteSpaceRecord {
@@ -564,6 +589,11 @@ export interface UnknownEntity {
   unknown4: Array<any>;
 };
 
+export interface UpperCaseEntity {
+  duplicate: number;
+  duplicate: number;
+};
+
 export interface WhiteSpaceEntity {
   'white space 1': number | null;
   'white space 2': number;
@@ -656,6 +686,11 @@ export interface UnknownEntity {
   unknown2: any;
   unknown3?: Array<any>;
   unknown4: Array<any>;
+};
+
+export interface UpperCaseEntity {
+  duplicate: number;
+  duplicate: number;
 };
 
 export interface WhiteSpaceEntity {
@@ -752,6 +787,11 @@ export interface UnknownEntity {
   unknown4: Array<any>;
 };
 
+export interface UpperCaseEntity {
+  duplicate: number;
+  duplicate: number;
+};
+
 export interface WhiteSpaceEntity {
   'white space 1': number | null;
   'white space 2': number;
@@ -804,6 +844,11 @@ export interface UnknownEntity {
   unknown2: any;
   unknown3?: Array<any>;
   unknown4: Array<any>;
+};
+
+export interface UpperCaseEntity {
+  duplicate: number;
+  duplicate: number;
 };
 
 export interface WhiteSpaceEntity {
