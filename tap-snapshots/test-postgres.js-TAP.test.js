@@ -603,6 +603,7 @@ Object {
     },
   ],
   "typeMapping": Object {
+    "Array<bigint>": Array [],
     "Array<boolean>": Array [
       "_bool",
     ],
@@ -632,11 +633,11 @@ Object {
       "_uuid",
       "_bytea",
       "_inet",
-      "_int8",
       "_time",
       "_timetz",
       "_interval",
       "_name",
+      "_int8",
     ],
     "bigint": Array [],
     "boolean": Array [
@@ -1276,6 +1277,9 @@ Object {
     },
   ],
   "typeMapping": Object {
+    "Array<bigint>": Array [
+      "_int8",
+    ],
     "Array<boolean>": Array [
       "_bool",
     ],
@@ -1308,11 +1312,13 @@ Object {
       "_uuid",
       "_bytea",
       "_inet",
-      "_int8",
       "_time",
       "_timetz",
       "_interval",
       "_name",
+      "_int8",
+      "_int8",
+      "_int8",
     ],
     "bigint": Array [
       "int8",
@@ -1959,6 +1965,9 @@ Object {
     },
   ],
   "typeMapping": Object {
+    "Array<bigint>": Array [
+      "_int8",
+    ],
     "Array<boolean>": Array [
       "_bool",
     ],
@@ -1991,11 +2000,14 @@ Object {
       "_uuid",
       "_bytea",
       "_inet",
-      "_int8",
       "_time",
       "_timetz",
       "_interval",
       "_name",
+      "_int8",
+      "_int8",
+      "_int8",
+      "_int8",
       "_date",
     ],
     "bigint": Array [
@@ -2645,6 +2657,9 @@ Object {
     },
   ],
   "typeMapping": Object {
+    "Array<bigint>": Array [
+      "_int8",
+    ],
     "Array<boolean>": Array [
       "_bool",
     ],
@@ -2676,11 +2691,12 @@ Object {
       "_uuid",
       "_bytea",
       "_inet",
-      "_int8",
       "_time",
       "_timetz",
       "_interval",
       "_name",
+      "_int8",
+      "_int8",
     ],
     "bigint": Array [
       "int8",
@@ -3325,6 +3341,7 @@ Object {
     },
   ],
   "typeMapping": Object {
+    "Array<bigint>": Array [],
     "Array<boolean>": Array [
       "_bool",
     ],
@@ -3355,11 +3372,12 @@ Object {
       "_uuid",
       "_bytea",
       "_inet",
-      "_int8",
       "_time",
       "_timetz",
       "_interval",
       "_name",
+      "_int8",
+      "_int8",
     ],
     "bigint": Array [],
     "boolean": Array [

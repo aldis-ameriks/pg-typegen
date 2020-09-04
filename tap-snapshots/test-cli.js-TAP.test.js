@@ -322,7 +322,7 @@ export interface TypeEntity {
   avatar_rozella: Array<string>;
   camelCase: boolean | null;
   category_amari: number;
-  category_april: Array<string>;
+  category_april: Array<bigint>;
   category_buddy: Array<string> | null;
   category_clementine: number | null;
   category_marcelle: Date | null;
@@ -352,7 +352,7 @@ export interface TypeEntity {
   group_jedediah: Array<Date>;
   group_shanny: Date;
   group_toby: string;
-  group_ulices: Array<string> | null;
+  group_ulices: Array<bigint> | null;
   id_gay: string;
   id_hailee: object;
   id_helen: Array<number> | null;
