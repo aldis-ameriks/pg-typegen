@@ -1050,6 +1050,8 @@ Available options:
         Transform enum keys to pascal case. Default: false.
   --bigint
         Use bigint for int8 types instead of strings. Default: false.
+  --date-as-string
+        Use string for date types instead of javascript Date object. Default: false.
   -v/--version
         Print the version number.
   -h/--help
@@ -1088,6 +1090,8 @@ Available options:
         Transform enum keys to pascal case. Default: false.
   --bigint
         Use bigint for int8 types instead of strings. Default: false.
+  --date-as-string
+        Use string for date types instead of javascript Date object. Default: false.
   -v/--version
         Print the version number.
   -h/--help

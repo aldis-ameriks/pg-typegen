@@ -37,6 +37,28 @@ test('returns typeMapping with int8 to bigint mapping', async t => {
   t.matchSnapshot(result)
 })
 
+test('returns typeMapping with date to javascript Date mapping', async t => {
+  t.plan(1)
+
+  const connection = getTestPostgresConnectionString()
+  const ssl = process.env.DATABASE_SSL_ENABLED === 'true'
+
+  const opts = { schema: 'public', connection, ssl, dateAsString: false }
+  const result = await getSchemaDefinition(opts)
+  t.matchSnapshot(result)
+})
+
+test('returns typeMapping with date to string mapping', async t => {
+  t.plan(1)
+
+  const connection = getTestPostgresConnectionString()
+  const ssl = process.env.DATABASE_SSL_ENABLED === 'true'
+
+  const opts = { schema: 'public', connection, ssl, dateAsString: true }
+  const result = await getSchemaDefinition(opts)
+  t.matchSnapshot(result)
+})
+
 test('uses correct postgres opts', t => {
   t.plan(3)
 

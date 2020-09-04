@@ -8,6 +8,7 @@ declare module 'schema-typegen' {
     optionals?: boolean;
     pascalEnums?: boolean;
     bigint?: boolean;
+    dateAsString?: boolean;
     schema?: string;
     output?: string;
     exclude?: string[];
