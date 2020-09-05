@@ -15,7 +15,7 @@ test('generates types as return value', async (t) => {
   t.matchSnapshot(result)
 })
 
-test('generates types as return value', async (t) => {
+test('generates types to file', async (t) => {
   t.plan(2)
 
   const outputPath = path.join(__dirname, './test-entities.ts')
@@ -24,4 +24,18 @@ test('generates types as return value', async (t) => {
   t.matchSnapshot(content)
   t.matchSnapshot(result)
   fs.unlinkSync(outputPath)
+})
+
+test('returns help when missing connection', async (t) => {
+  t.plan(1)
+
+  const result = await generate()
+  t.matchSnapshot(result)
+})
+
+test('returns help when missing connection', async (t) => {
+  t.plan(1)
+
+  const result = await generate({})
+  t.matchSnapshot(result)
 })

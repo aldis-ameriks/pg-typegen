@@ -1021,86 +1021,68 @@ export interface TypeEntity {
 `
 
 exports['test/cli.js TAP help > must match snapshot 1'] = `
-Usage: schema-typegen [opts] connection_string
+Usage: schema-typegen [options] <connection>
+
+Options:
+  -V, --version              output the version number
+  -f, --suffix <suffix>      suffix to append to generated table type, e.g.
+                             item -> ItemEntity (default: "Entity")
+  -s, --schema <schema>      schema (default: "public")
+  -h, --header <header>      header content (default: "")
+  -o, --output <output>      file output path (default: "stdout")
+  -e, --exclude <exclude>    excluded tables and enums as comma separated
+                             string e.g. knex_migrations,knex_migrations_lock
+                             (default: [])
+  --types                    use type definitions instead of interfaces in
+                             generated output (default: false)
+  --noSemi, --no-semicolons  omit semicolons in generated types
+  --ssl                      use ssl (default: false)
+  --optionals                use optionals "?" instead of null (default: false)
+  --pascal-enums             transform enum keys to pascal case (default:
+                             false)
+  --bigint                   use bigint for int8 types instead of strings
+                             (default: false)
+  --date-as-string           use string for date types instead of javascript
+                             Date object (default: false)
+  --help                     display help for command
 
 Example:
-schema-typegen -o ./entities.ts postgres://username:password@localhost:5432/database
-
-Available options:
-
-  -f/--suffix SUFFIX
-        Suffix to append to generated table type, e.g. item -> ItemEntity. Default: 'Entity'.
-  -s/--schema SCHEMA
-        Schema. Default: 'public'.
-  -h/--header HEADER
-        Header content. Default: ''.
-  -o/--output OUTPUT_PATH
-        Output path, e.g. './entities.ts'. Default: outputs to stdout.
-  -e/--exclude EXCLUDE
-        Excluded tables and enums as comma separated string e.g. knex_migrations,knex_migrations_lock  Default: ''.
-  --types
-        Use type definitions instead of interfaces in generated output. Default: false.
-  --no-semicolons
-        Omit semicolons in generated types. Default: false.
-  --ssl
-        Use ssl. Default: false.
-  --optionals
-        Use optionals "?" instead of null. Default: false.
-  --pascal-enums
-        Transform enum keys to pascal case. Default: false.
-  --bigint
-        Use bigint for int8 types instead of strings. Default: false.
-  --date-as-string
-        Use string for date types instead of javascript Date object. Default: false.
-  -v/--version
-        Print the version number.
-  -h/--help
-        Print this menu.
-
+  $ schema-typegen -o ./entities.ts postgres://username:password@localhost:5432/database
 
 `
 
 exports['test/cli.js TAP missing connection string > must match snapshot 1'] = `
-Usage: schema-typegen [opts] connection_string
+Usage: schema-typegen [options] <connection>
+
+Options:
+  -V, --version              output the version number
+  -f, --suffix <suffix>      suffix to append to generated table type, e.g.
+                             item -> ItemEntity (default: "Entity")
+  -s, --schema <schema>      schema (default: "public")
+  -h, --header <header>      header content (default: "")
+  -o, --output <output>      file output path (default: "stdout")
+  -e, --exclude <exclude>    excluded tables and enums as comma separated
+                             string e.g. knex_migrations,knex_migrations_lock
+                             (default: [])
+  --types                    use type definitions instead of interfaces in
+                             generated output (default: false)
+  --noSemi, --no-semicolons  omit semicolons in generated types
+  --ssl                      use ssl (default: false)
+  --optionals                use optionals "?" instead of null (default: false)
+  --pascal-enums             transform enum keys to pascal case (default:
+                             false)
+  --bigint                   use bigint for int8 types instead of strings
+                             (default: false)
+  --date-as-string           use string for date types instead of javascript
+                             Date object (default: false)
+  --help                     display help for command
 
 Example:
-schema-typegen -o ./entities.ts postgres://username:password@localhost:5432/database
-
-Available options:
-
-  -f/--suffix SUFFIX
-        Suffix to append to generated table type, e.g. item -> ItemEntity. Default: 'Entity'.
-  -s/--schema SCHEMA
-        Schema. Default: 'public'.
-  -h/--header HEADER
-        Header content. Default: ''.
-  -o/--output OUTPUT_PATH
-        Output path, e.g. './entities.ts'. Default: outputs to stdout.
-  -e/--exclude EXCLUDE
-        Excluded tables and enums as comma separated string e.g. knex_migrations,knex_migrations_lock  Default: ''.
-  --types
-        Use type definitions instead of interfaces in generated output. Default: false.
-  --no-semicolons
-        Omit semicolons in generated types. Default: false.
-  --ssl
-        Use ssl. Default: false.
-  --optionals
-        Use optionals "?" instead of null. Default: false.
-  --pascal-enums
-        Transform enum keys to pascal case. Default: false.
-  --bigint
-        Use bigint for int8 types instead of strings. Default: false.
-  --date-as-string
-        Use string for date types instead of javascript Date object. Default: false.
-  -v/--version
-        Print the version number.
-  -h/--help
-        Print this menu.
-
+  $ schema-typegen -o ./entities.ts postgres://username:password@localhost:5432/database
 
 `
 
 exports['test/cli.js TAP version > must match snapshot 1'] = `
-schema-typegen v{v}
+2.6.1
 
 `

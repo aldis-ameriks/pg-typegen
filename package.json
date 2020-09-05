@@ -31,8 +31,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "cross-argv": "^1.0.0",
-    "minimist": "^1.2.5",
+    "commander": "^6.1.0",
     "postgres": "^2.0.0-beta.0"
   },
   "devDependencies": {

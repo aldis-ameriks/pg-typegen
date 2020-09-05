@@ -2,17 +2,16 @@ declare module 'schema-typegen' {
   interface Options {
     connection: string;
     suffix?: string;
-    noSemi?: boolean;
-    semicolons?: boolean;
-    type?: boolean;
-    optionals?: boolean;
-    pascalEnums?: boolean;
-    bigint?: boolean;
-    dateAsString?: boolean;
     schema?: string;
     output?: string;
     exclude?: string[];
     header?: string;
+    type?: boolean;
+    semicolons?: boolean;
+    optionals?: boolean;
+    pascalEnums?: boolean;
+    bigint?: boolean;
+    dateAsString?: boolean;
     ssl?: boolean;
     types?: boolean;
   }

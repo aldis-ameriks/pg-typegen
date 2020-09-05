@@ -13,7 +13,7 @@ const ssl = process.env.DATABASE_SSL_ENABLED === 'true'
 test('help', t => {
   t.plan(1)
 
-  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), '-h'], {
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), '--help'], {
     cwd: __dirname,
     env: process.env,
     stdio: ['ignore', 'pipe', 'pipe'],
@@ -21,7 +21,7 @@ test('help', t => {
   })
 
   const result = { data: '' }
-  child.stderr.on('data', data => {
+  child.stdout.on('data', data => {
     result.data += data.toString()
   })
 
@@ -35,7 +35,7 @@ test('version', t => {
 
   t.cleanSnapshot = s => s.replace(/v[0-9.]+/g, 'v{v}')
 
-  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), '-v'], {
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), '--version'], {
     cwd: __dirname,
     env: process.env,
     stdio: ['ignore', 'pipe', 'pipe'],
@@ -63,7 +63,7 @@ test('missing connection string', t => {
   })
 
   const result = { data: '' }
-  child.stderr.on('data', data => {
+  child.stdout.on('data', data => {
     result.data += data.toString()
   })
 

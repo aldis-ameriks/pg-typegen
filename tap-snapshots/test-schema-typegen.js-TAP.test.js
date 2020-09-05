@@ -145,7 +145,7 @@ export interface TypeEntity {
 
 `
 
-exports['test/schema-typegen.js TAP generates types as return value > must match snapshot 2'] = `
+exports['test/schema-typegen.js TAP generates types to file > must match snapshot 1'] = `
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',
   mix = 'mix',
@@ -285,6 +285,62 @@ export interface TypeEntity {
 
 `
 
-exports['test/schema-typegen.js TAP generates types as return value > must match snapshot 3'] = `
+exports['test/schema-typegen.js TAP generates types to file > must match snapshot 2'] = `
 ✔ Generated types from 4 tables and 3 enums
+`
+
+exports['test/schema-typegen.js TAP returns help when missing connection > must match snapshot 1'] = `
+Usage: schema-typegen [options] <connection>
+
+Options:
+  -V, --version              output the version number
+  -f, --suffix <suffix>      suffix to append to generated table type, e.g.
+                             item -> ItemEntity (default: "Entity")
+  -s, --schema <schema>      schema (default: "public")
+  -h, --header <header>      header content (default: "")
+  -o, --output <output>      file output path (default: "stdout")
+  -e, --exclude <exclude>    excluded tables and enums as comma separated
+                             string e.g. knex_migrations,knex_migrations_lock
+                             (default: [])
+  --types                    use type definitions instead of interfaces in
+                             generated output (default: false)
+  --noSemi, --no-semicolons  omit semicolons in generated types
+  --ssl                      use ssl (default: false)
+  --optionals                use optionals "?" instead of null (default: false)
+  --pascal-enums             transform enum keys to pascal case (default:
+                             false)
+  --bigint                   use bigint for int8 types instead of strings
+                             (default: false)
+  --date-as-string           use string for date types instead of javascript
+                             Date object (default: false)
+  --help                     display help for command
+
+`
+
+exports['test/schema-typegen.js TAP returns help when missing connection > must match snapshot 2'] = `
+Usage: schema-typegen [options] <connection>
+
+Options:
+  -V, --version              output the version number
+  -f, --suffix <suffix>      suffix to append to generated table type, e.g.
+                             item -> ItemEntity (default: "Entity")
+  -s, --schema <schema>      schema (default: "public")
+  -h, --header <header>      header content (default: "")
+  -o, --output <output>      file output path (default: "stdout")
+  -e, --exclude <exclude>    excluded tables and enums as comma separated
+                             string e.g. knex_migrations,knex_migrations_lock
+                             (default: [])
+  --types                    use type definitions instead of interfaces in
+                             generated output (default: false)
+  --noSemi, --no-semicolons  omit semicolons in generated types
+  --ssl                      use ssl (default: false)
+  --optionals                use optionals "?" instead of null (default: false)
+  --pascal-enums             transform enum keys to pascal case (default:
+                             false)
+  --bigint                   use bigint for int8 types instead of strings
+                             (default: false)
+  --date-as-string           use string for date types instead of javascript
+                             Date object (default: false)
+  --help                     display help for command
+
 `
