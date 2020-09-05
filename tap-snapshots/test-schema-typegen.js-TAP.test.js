@@ -302,7 +302,7 @@ Options:
   -e, --exclude <exclude>    excluded tables and enums as comma separated
                              string e.g. knex_migrations,knex_migrations_lock
                              (default: [])
-  --types                    use type definitions instead of interfaces in
+  --type                     use type definitions instead of interfaces in
                              generated output (default: false)
   --noSemi, --no-semicolons  omit semicolons in generated types
   --ssl                      use ssl (default: false)
@@ -330,7 +330,7 @@ Options:
   -e, --exclude <exclude>    excluded tables and enums as comma separated
                              string e.g. knex_migrations,knex_migrations_lock
                              (default: [])
-  --types                    use type definitions instead of interfaces in
+  --type                     use type definitions instead of interfaces in
                              generated output (default: false)
   --noSemi, --no-semicolons  omit semicolons in generated types
   --ssl                      use ssl (default: false)
