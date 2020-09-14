@@ -13,7 +13,7 @@ const ssl = process.env.DATABASE_SSL_ENABLED === 'true'
 test('help', t => {
   t.plan(1)
 
-  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), '--help'], {
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'index.js'), '--help'], {
     cwd: __dirname,
     env: process.env,
     stdio: ['ignore', 'pipe', 'pipe'],
@@ -35,7 +35,7 @@ test('version', t => {
 
   t.cleanSnapshot = s => s.replace(/v[0-9.]+/g, 'v{v}')
 
-  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), '--version'], {
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'index.js'), '--version'], {
     cwd: __dirname,
     env: process.env,
     stdio: ['ignore', 'pipe', 'pipe'],
@@ -55,7 +55,7 @@ test('version', t => {
 test('missing connection string', t => {
   t.plan(1)
 
-  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js')], {
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'index.js')], {
     cwd: __dirname,
     env: process.env,
     stdio: ['ignore', 'pipe', 'pipe'],
@@ -75,7 +75,7 @@ test('missing connection string', t => {
 test('generates types stdout', t => {
   t.plan(1)
 
-  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), connection, ssl ? '--ssl' : ''], {
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'index.js'), connection, ssl ? '--ssl' : ''], {
     cwd: __dirname,
     env: process.env,
     stdio: ['ignore', 'pipe', 'pipe'],
@@ -95,7 +95,7 @@ test('generates types stdout', t => {
 test('generates types to file', t => {
   t.plan(1)
 
-  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), '-o', './entities.ts', connection, ssl ? '--ssl' : ''], {
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'index.js'), '-o', './entities.ts', connection, ssl ? '--ssl' : ''], {
     cwd: __dirname,
     env: process.env,
     stdio: ['ignore', 'pipe', 'pipe'],
@@ -113,7 +113,7 @@ test('generates types to file', t => {
 test('reports success to stdout', t => {
   t.plan(1)
 
-  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), '-o', './entities.ts', connection, ssl ? '--ssl' : ''], {
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'index.js'), '-o', './entities.ts', connection, ssl ? '--ssl' : ''], {
     cwd: __dirname,
     env: process.env,
     stdio: ['ignore', 'pipe', 'pipe'],
@@ -133,7 +133,7 @@ test('reports success to stdout', t => {
 test('generates types with exclusion', t => {
   t.plan(1)
 
-  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), connection, ssl ? '--ssl' : '', '-e', 'types,snake_test'], {
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'index.js'), connection, ssl ? '--ssl' : '', '-e', 'types,snake_test'], {
     cwd: __dirname,
     env: process.env,
     stdio: ['ignore', 'pipe', 'pipe'],
@@ -153,7 +153,7 @@ test('generates types with exclusion', t => {
 test('generates types with header', t => {
   t.plan(1)
 
-  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), connection, ssl ? '--ssl' : '', '-h', '/* eslint-disable */'], {
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'index.js'), connection, ssl ? '--ssl' : '', '-h', '/* eslint-disable */'], {
     cwd: __dirname,
     env: process.env,
     stdio: ['ignore', 'pipe', 'pipe'],
@@ -173,7 +173,7 @@ test('generates types with header', t => {
 test('generates types with pascal case enums', t => {
   t.plan(1)
 
-  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), connection, ssl ? '--ssl' : '', '--pascal-enums'], {
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'index.js'), connection, ssl ? '--ssl' : '', '--pascal-enums'], {
     cwd: __dirname,
     env: process.env,
     stdio: ['ignore', 'pipe', 'pipe'],
@@ -193,7 +193,7 @@ test('generates types with pascal case enums', t => {
 test('generates types with noSemi option', t => {
   t.plan(1)
 
-  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), connection, ssl ? '--ssl' : '', '--noSemi'], {
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'index.js'), connection, ssl ? '--ssl' : '', '--noSemi'], {
     cwd: __dirname,
     env: process.env,
     stdio: ['ignore', 'pipe', 'pipe'],
@@ -213,7 +213,7 @@ test('generates types with noSemi option', t => {
 test('generates types with no-semicolons option', t => {
   t.plan(1)
 
-  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), connection, ssl ? '--ssl' : '', '--no-semicolons'], {
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'index.js'), connection, ssl ? '--ssl' : '', '--no-semicolons'], {
     cwd: __dirname,
     env: process.env,
     stdio: ['ignore', 'pipe', 'pipe'],
@@ -233,7 +233,7 @@ test('generates types with no-semicolons option', t => {
 test('generates types with bigint option', t => {
   t.plan(1)
 
-  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), connection, ssl ? '--ssl' : '', '--bigint'], {
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'index.js'), connection, ssl ? '--ssl' : '', '--bigint'], {
     cwd: __dirname,
     env: process.env,
     stdio: ['ignore', 'pipe', 'pipe'],
@@ -253,7 +253,7 @@ test('generates types with bigint option', t => {
 test('generates types with types option', t => {
   t.plan(1)
 
-  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), connection, ssl ? '--ssl' : '', '--type'], {
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'index.js'), connection, ssl ? '--ssl' : '', '--type'], {
     cwd: __dirname,
     env: process.env,
     stdio: ['ignore', 'pipe', 'pipe'],
@@ -273,7 +273,7 @@ test('generates types with types option', t => {
 test('sends error to stderr', t => {
   t.plan(1)
   const invalidConnection = 'postgres://postgres:postgres@0.0.0.0:1/test_db'
-  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'schema-typegen.js'), '-o', './entities.ts', invalidConnection, ssl ? '--ssl' : ''], {
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'index.js'), '-o', './entities.ts', invalidConnection, ssl ? '--ssl' : ''], {
     cwd: __dirname,
     env: process.env,
     stdio: ['ignore', 'pipe', 'pipe'],

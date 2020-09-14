@@ -2,13 +2,13 @@
   "name": "schema-typegen",
   "version": "2.6.3",
   "description": "Generate TypeScript type definitions from database schema",
-  "main": "schema-typegen.js",
-  "types": "schema-typegen.d.ts",
+  "main": "index.js",
   "bin": {
-    "schema-typegen": "schema-typegen.js"
+    "schema-typegen": "index.js"
   },
   "scripts": {
     "test": "tap test/*.js --100 --before=test/helpers/setup-postgres.js",
+    "test:types": "tsd",
     "lint": "standard",
     "lint:fix": "standard --fix"
   },
@@ -37,6 +37,10 @@
   "devDependencies": {
     "eol": "^0.9.1",
     "standard": "^14.3.4",
-    "tap": "^14.10.7"
+    "tap": "^14.10.7",
+    "tsd": "^0.13.1"
+  },
+  "tsd": {
+    "directory": "test/types"
   }
 }

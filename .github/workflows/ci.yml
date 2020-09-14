@@ -19,6 +19,7 @@ jobs:
       - run: npm --version
       - run: npm install
       - run: npm run lint
+      - run: npm run test:types
       - run: npm test
         env:
           CI: true

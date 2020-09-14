@@ -2,7 +2,7 @@ const { test } = require('tap')
 const fs = require('fs')
 const path = require('path')
 
-const generate = require('../schema-typegen')
+const generate = require('../')
 const { getTestPostgresConnectionString } = require('./helpers/setup-postgres')
 
 const connection = getTestPostgresConnectionString()
