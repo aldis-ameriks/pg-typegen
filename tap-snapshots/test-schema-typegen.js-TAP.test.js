@@ -36,7 +36,7 @@ export interface SnakeTestEntity {
 export interface TypeEntity {
   avatar_darren: Array<number> | null;
   avatar_ernestina: string;
-  avatar_mark: Array<object> | null;
+  avatar_mark: Array<Record<string, any> | Array<Record<string, any>>> | null;
   avatar_myah: Array<string>;
   avatar_rozella: Array<string>;
   camelCase: boolean | null;
@@ -46,7 +46,7 @@ export interface TypeEntity {
   category_clementine: number | null;
   category_marcelle: Date | null;
   category_roberta: boolean | null;
-  category_trent: object | null;
+  category_trent: Record<string, any> | Array<Record<string, any>> | null;
   category_viola: string;
   comment_cali: string;
   comment_delilah: Array<string> | null;
@@ -54,7 +54,7 @@ export interface TypeEntity {
   comment_ella: string;
   comment_myles: string;
   comment_rocio: string | null;
-  createdat_hulda: object;
+  createdat_hulda: Record<string, any> | Array<Record<string, any>>;
   createdat_pansy: Array<number> | null;
   email_andres: Date;
   email_cleveland: string | null;
@@ -73,7 +73,7 @@ export interface TypeEntity {
   group_toby: string;
   group_ulices: Array<string> | null;
   id_gay: string;
-  id_hailee: object;
+  id_hailee: Record<string, any> | Array<Record<string, any>>;
   id_helen: Array<number> | null;
   id_ike: Array<number>;
   id_joan: Array<string> | null;
@@ -99,7 +99,7 @@ export interface TypeEntity {
   password_elenora: number | null;
   password_felton: Array<Date> | null;
   password_korey: number;
-  password_murphy: Array<object> | null;
+  password_murphy: Array<Record<string, any> | Array<Record<string, any>>> | null;
   password_vladimir: number | null;
   phone_angelo: string;
   phone_colten: number;
@@ -109,7 +109,7 @@ export interface TypeEntity {
   phone_keyshawn: string | null;
   phone_maryam: string | null;
   phone_osvaldo: Array<Date>;
-  phone_rupert: object | null;
+  phone_rupert: Record<string, any> | Array<Record<string, any>> | null;
   snakes_on_a: SnakesOn | null;
   snakes_on_b: SnakesOn;
   status_amalia: number;
@@ -121,7 +121,7 @@ export interface TypeEntity {
   title_aidan: Date | null;
   title_alexzander: string;
   title_haylee: Array<string> | null;
-  title_ilene: Array<object>;
+  title_ilene: Array<Record<string, any> | Array<Record<string, any>>>;
   title_vicenta: string | null;
   title_vivienne: Array<number>;
   token_adella: Array<Date>;
@@ -135,7 +135,7 @@ export interface TypeEntity {
   updatedat_abe: Array<number> | null;
   updatedat_brett: Array<string> | null;
   updatedat_cedrick: Array<boolean>;
-  updatedat_derick: Array<object>;
+  updatedat_derick: Array<Record<string, any> | Array<Record<string, any>>>;
   updatedat_eli: Array<number>;
   updatedat_ewell: Array<string>;
   updatedat_laura: Array<string> | null;
@@ -176,7 +176,7 @@ export interface SnakeTestEntity {
 export interface TypeEntity {
   avatar_darren: Array<number> | null;
   avatar_ernestina: string;
-  avatar_mark: Array<object> | null;
+  avatar_mark: Array<Record<string, any> | Array<Record<string, any>>> | null;
   avatar_myah: Array<string>;
   avatar_rozella: Array<string>;
   camelCase: boolean | null;
@@ -186,7 +186,7 @@ export interface TypeEntity {
   category_clementine: number | null;
   category_marcelle: Date | null;
   category_roberta: boolean | null;
-  category_trent: object | null;
+  category_trent: Record<string, any> | Array<Record<string, any>> | null;
   category_viola: string;
   comment_cali: string;
   comment_delilah: Array<string> | null;
@@ -194,7 +194,7 @@ export interface TypeEntity {
   comment_ella: string;
   comment_myles: string;
   comment_rocio: string | null;
-  createdat_hulda: object;
+  createdat_hulda: Record<string, any> | Array<Record<string, any>>;
   createdat_pansy: Array<number> | null;
   email_andres: Date;
   email_cleveland: string | null;
@@ -213,7 +213,7 @@ export interface TypeEntity {
   group_toby: string;
   group_ulices: Array<string> | null;
   id_gay: string;
-  id_hailee: object;
+  id_hailee: Record<string, any> | Array<Record<string, any>>;
   id_helen: Array<number> | null;
   id_ike: Array<number>;
   id_joan: Array<string> | null;
@@ -239,7 +239,7 @@ export interface TypeEntity {
   password_elenora: number | null;
   password_felton: Array<Date> | null;
   password_korey: number;
-  password_murphy: Array<object> | null;
+  password_murphy: Array<Record<string, any> | Array<Record<string, any>>> | null;
   password_vladimir: number | null;
   phone_angelo: string;
   phone_colten: number;
@@ -249,7 +249,7 @@ export interface TypeEntity {
   phone_keyshawn: string | null;
   phone_maryam: string | null;
   phone_osvaldo: Array<Date>;
-  phone_rupert: object | null;
+  phone_rupert: Record<string, any> | Array<Record<string, any>> | null;
   snakes_on_a: SnakesOn | null;
   snakes_on_b: SnakesOn;
   status_amalia: number;
@@ -261,7 +261,7 @@ export interface TypeEntity {
   title_aidan: Date | null;
   title_alexzander: string;
   title_haylee: Array<string> | null;
-  title_ilene: Array<object>;
+  title_ilene: Array<Record<string, any> | Array<Record<string, any>>>;
   title_vicenta: string | null;
   title_vivienne: Array<number>;
   token_adella: Array<Date>;
@@ -275,7 +275,7 @@ export interface TypeEntity {
   updatedat_abe: Array<number> | null;
   updatedat_brett: Array<string> | null;
   updatedat_cedrick: Array<boolean>;
-  updatedat_derick: Array<object>;
+  updatedat_derick: Array<Record<string, any> | Array<Record<string, any>>>;
   updatedat_eli: Array<number>;
   updatedat_ewell: Array<string>;
   updatedat_laura: Array<string> | null;

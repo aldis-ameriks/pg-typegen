@@ -621,7 +621,7 @@ Object {
       "_money",
       "_oid",
     ],
-    "Array<object>": Array [
+    "Array<Record<string, any> | Array<Record<string, any>>>": Array [
       "_json",
       "_jsonb",
     ],
@@ -657,7 +657,7 @@ Object {
       "money",
       "oid",
     ],
-    "object": Array [
+    "Record<string, any> | Array<Record<string, any>>": Array [
       "json",
       "jsonb",
     ],
@@ -1300,7 +1300,7 @@ Object {
       "_money",
       "_oid",
     ],
-    "Array<object>": Array [
+    "Array<Record<string, any> | Array<Record<string, any>>>": Array [
       "_json",
       "_jsonb",
     ],
@@ -1343,7 +1343,7 @@ Object {
       "money",
       "oid",
     ],
-    "object": Array [
+    "Record<string, any> | Array<Record<string, any>>": Array [
       "json",
       "jsonb",
     ],
@@ -1988,7 +1988,7 @@ Object {
       "_money",
       "_oid",
     ],
-    "Array<object>": Array [
+    "Array<Record<string, any> | Array<Record<string, any>>>": Array [
       "_json",
       "_jsonb",
     ],
@@ -2033,7 +2033,7 @@ Object {
       "money",
       "oid",
     ],
-    "object": Array [
+    "Record<string, any> | Array<Record<string, any>>": Array [
       "json",
       "jsonb",
     ],
@@ -2679,7 +2679,7 @@ Object {
       "_money",
       "_oid",
     ],
-    "Array<object>": Array [
+    "Array<Record<string, any> | Array<Record<string, any>>>": Array [
       "_json",
       "_jsonb",
     ],
@@ -2720,7 +2720,7 @@ Object {
       "money",
       "oid",
     ],
-    "object": Array [
+    "Record<string, any> | Array<Record<string, any>>": Array [
       "json",
       "jsonb",
     ],
@@ -3360,7 +3360,7 @@ Object {
       "_money",
       "_oid",
     ],
-    "Array<object>": Array [
+    "Array<Record<string, any> | Array<Record<string, any>>>": Array [
       "_json",
       "_jsonb",
     ],
@@ -3398,7 +3398,7 @@ Object {
       "money",
       "oid",
     ],
-    "object": Array [
+    "Record<string, any> | Array<Record<string, any>>": Array [
       "json",
       "jsonb",
     ],
