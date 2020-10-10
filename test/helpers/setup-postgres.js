@@ -188,6 +188,18 @@ async function setupTestPostgres () {
          snakes_on_b         snakes_on         NOT NULL
     );
   `
+
+    await sql`
+        CREATE MATERIALIZED VIEW materialized_items AS (
+            SELECT 1 AS test,  '2' AS test_text, ARRAY [1,2] AS test_array, now()::timestamptz AS test_timestamp
+        )
+    `
+
+    await sql`
+        CREATE MATERIALIZED VIEW materialized_other_items AS (
+            SELECT 1 AS test,  '2' AS test_text
+        )
+    `
   } catch (e) {
     console.error(e)
     throw e

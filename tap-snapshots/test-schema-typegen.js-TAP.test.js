@@ -29,6 +29,18 @@ export interface KebabTestEntity {
   id: number;
 };
 
+export interface MaterializedItemEntity {
+  test: number | null;
+  test_array: Array<number> | null;
+  test_text: string | null;
+  test_timestamp: Date | null;
+};
+
+export interface MaterializedOtherItemEntity {
+  test: number | null;
+  test_text: string | null;
+};
+
 export interface SnakeTestEntity {
   id: number;
 };
@@ -169,6 +181,18 @@ export interface KebabTestEntity {
   id: number;
 };
 
+export interface MaterializedItemEntity {
+  test: number | null;
+  test_array: Array<number> | null;
+  test_text: string | null;
+  test_timestamp: Date | null;
+};
+
+export interface MaterializedOtherItemEntity {
+  test: number | null;
+  test_text: string | null;
+};
+
 export interface SnakeTestEntity {
   id: number;
 };
@@ -286,7 +310,7 @@ export interface TypeEntity {
 `
 
 exports['test/schema-typegen.js TAP generates types to file > must match snapshot 2'] = `
-✔ Generated types from 4 tables and 3 enums
+✔ Generated types from 6 tables and 3 enums
 `
 
 exports['test/schema-typegen.js TAP returns help when missing connection > must match snapshot 1'] = `

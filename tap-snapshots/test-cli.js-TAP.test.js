@@ -29,6 +29,18 @@ export interface KebabTestEntity {
   id: number;
 };
 
+export interface MaterializedItemEntity {
+  test: number | null;
+  test_array: Array<number> | null;
+  test_text: string | null;
+  test_timestamp: Date | null;
+};
+
+export interface MaterializedOtherItemEntity {
+  test: number | null;
+  test_text: string | null;
+};
+
 export interface SnakeTestEntity {
   id: number;
 };
@@ -170,6 +182,18 @@ export interface KebabTestEntity {
   id: number;
 };
 
+export interface MaterializedItemEntity {
+  test: number | null;
+  test_array: Array<number> | null;
+  test_text: string | null;
+  test_timestamp: Date | null;
+};
+
+export interface MaterializedOtherItemEntity {
+  test: number | null;
+  test_text: string | null;
+};
+
 export interface SnakeTestEntity {
   id: number;
 };
@@ -308,6 +332,18 @@ export interface HistoryEntity {
 
 export interface KebabTestEntity {
   id: number;
+};
+
+export interface MaterializedItemEntity {
+  test: number | null;
+  test_array: Array<number> | null;
+  test_text: string | null;
+  test_timestamp: Date | null;
+};
+
+export interface MaterializedOtherItemEntity {
+  test: number | null;
+  test_text: string | null;
 };
 
 export interface SnakeTestEntity {
@@ -451,6 +487,18 @@ export interface KebabTestEntity {
   id: number;
 };
 
+export interface MaterializedItemEntity {
+  test: number | null;
+  test_array: Array<number> | null;
+  test_text: string | null;
+  test_timestamp: Date | null;
+};
+
+export interface MaterializedOtherItemEntity {
+  test: number | null;
+  test_text: string | null;
+};
+
 
 `
 
@@ -478,6 +526,18 @@ export interface HistoryEntity {
 
 export interface KebabTestEntity {
   id: number;
+};
+
+export interface MaterializedItemEntity {
+  test: number | null;
+  test_array: Array<number> | null;
+  test_text: string | null;
+  test_timestamp: Date | null;
+};
+
+export interface MaterializedOtherItemEntity {
+  test: number | null;
+  test_text: string | null;
 };
 
 export interface SnakeTestEntity {
@@ -621,6 +681,18 @@ export interface KebabTestEntity {
   id: number
 }
 
+export interface MaterializedItemEntity {
+  test: number | null
+  test_array: Array<number> | null
+  test_text: string | null
+  test_timestamp: Date | null
+}
+
+export interface MaterializedOtherItemEntity {
+  test: number | null
+  test_text: string | null
+}
+
 export interface SnakeTestEntity {
   id: number
 }
@@ -760,6 +832,18 @@ export interface HistoryEntity {
 
 export interface KebabTestEntity {
   id: number
+}
+
+export interface MaterializedItemEntity {
+  test: number | null
+  test_array: Array<number> | null
+  test_text: string | null
+  test_timestamp: Date | null
+}
+
+export interface MaterializedOtherItemEntity {
+  test: number | null
+  test_text: string | null
 }
 
 export interface SnakeTestEntity {
@@ -903,6 +987,18 @@ export interface KebabTestEntity {
   id: number;
 };
 
+export interface MaterializedItemEntity {
+  test: number | null;
+  test_array: Array<number> | null;
+  test_text: string | null;
+  test_timestamp: Date | null;
+};
+
+export interface MaterializedOtherItemEntity {
+  test: number | null;
+  test_text: string | null;
+};
+
 export interface SnakeTestEntity {
   id: number;
 };
@@ -1042,6 +1138,18 @@ export type HistoryEntity = {
 
 export type KebabTestEntity = {
   id: number;
+};
+
+export type MaterializedItemEntity = {
+  test: number | null;
+  test_array: Array<number> | null;
+  test_text: string | null;
+  test_timestamp: Date | null;
+};
+
+export type MaterializedOtherItemEntity = {
+  test: number | null;
+  test_text: string | null;
 };
 
 export type SnakeTestEntity = {

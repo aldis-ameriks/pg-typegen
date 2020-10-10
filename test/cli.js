@@ -126,7 +126,7 @@ test('reports success to stdout', t => {
   })
 
   child.on('close', () => {
-    t.equal(result.data, '✔ Generated types from 4 tables and 3 enums\n')
+    t.equal(result.data, '✔ Generated types from 6 tables and 3 enums\n')
   })
 })
 

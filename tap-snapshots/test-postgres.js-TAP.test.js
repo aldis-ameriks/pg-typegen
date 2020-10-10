@@ -601,6 +601,46 @@ Object {
       ],
       "name": "types",
     },
+    Object {
+      "columns": Array [
+        Object {
+          "isNullable": true,
+          "name": "test",
+          "type": "int4",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_array",
+          "type": "_int4",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_text",
+          "type": "text",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_timestamp",
+          "type": "timestamptz",
+        },
+      ],
+      "name": "materialized_items",
+    },
+    Object {
+      "columns": Array [
+        Object {
+          "isNullable": true,
+          "name": "test",
+          "type": "int4",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_text",
+          "type": "text",
+        },
+      ],
+      "name": "materialized_other_items",
+    },
   ],
   "typeMapping": Object {
     "Array<bigint>": Array [],
@@ -1274,6 +1314,46 @@ Object {
         },
       ],
       "name": "types",
+    },
+    Object {
+      "columns": Array [
+        Object {
+          "isNullable": true,
+          "name": "test",
+          "type": "int4",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_array",
+          "type": "_int4",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_text",
+          "type": "text",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_timestamp",
+          "type": "timestamptz",
+        },
+      ],
+      "name": "materialized_items",
+    },
+    Object {
+      "columns": Array [
+        Object {
+          "isNullable": true,
+          "name": "test",
+          "type": "int4",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_text",
+          "type": "text",
+        },
+      ],
+      "name": "materialized_other_items",
     },
   ],
   "typeMapping": Object {
@@ -1962,6 +2042,46 @@ Object {
         },
       ],
       "name": "types",
+    },
+    Object {
+      "columns": Array [
+        Object {
+          "isNullable": true,
+          "name": "test",
+          "type": "int4",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_array",
+          "type": "_int4",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_text",
+          "type": "text",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_timestamp",
+          "type": "timestamptz",
+        },
+      ],
+      "name": "materialized_items",
+    },
+    Object {
+      "columns": Array [
+        Object {
+          "isNullable": true,
+          "name": "test",
+          "type": "int4",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_text",
+          "type": "text",
+        },
+      ],
+      "name": "materialized_other_items",
     },
   ],
   "typeMapping": Object {
@@ -2655,6 +2775,46 @@ Object {
       ],
       "name": "types",
     },
+    Object {
+      "columns": Array [
+        Object {
+          "isNullable": true,
+          "name": "test",
+          "type": "int4",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_array",
+          "type": "_int4",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_text",
+          "type": "text",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_timestamp",
+          "type": "timestamptz",
+        },
+      ],
+      "name": "materialized_items",
+    },
+    Object {
+      "columns": Array [
+        Object {
+          "isNullable": true,
+          "name": "test",
+          "type": "int4",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_text",
+          "type": "text",
+        },
+      ],
+      "name": "materialized_other_items",
+    },
   ],
   "typeMapping": Object {
     "Array<bigint>": Array [
@@ -3338,6 +3498,46 @@ Object {
         },
       ],
       "name": "types",
+    },
+    Object {
+      "columns": Array [
+        Object {
+          "isNullable": true,
+          "name": "test",
+          "type": "int4",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_array",
+          "type": "_int4",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_text",
+          "type": "text",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_timestamp",
+          "type": "timestamptz",
+        },
+      ],
+      "name": "materialized_items",
+    },
+    Object {
+      "columns": Array [
+        Object {
+          "isNullable": true,
+          "name": "test",
+          "type": "int4",
+        },
+        Object {
+          "isNullable": true,
+          "name": "test_text",
+          "type": "text",
+        },
+      ],
+      "name": "materialized_other_items",
     },
   ],
   "typeMapping": Object {
