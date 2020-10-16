@@ -52,7 +52,7 @@ export interface TypeEntity {
   avatar_myah: Array<string>;
   avatar_rozella: Array<string>;
   camelCase: boolean | null;
-  category_amari: number;
+  category_amari: string;
   category_april: Array<string>;
   category_buddy: Array<string> | null;
   category_clementine: number | null;
@@ -89,7 +89,7 @@ export interface TypeEntity {
   id_helen: Array<number> | null;
   id_ike: Array<number>;
   id_joan: Array<string> | null;
-  id_karelle: number | null;
+  id_karelle: string | null;
   id_lavern: Date;
   id_margarita: string | null;
   id_maximilian: Array<string>;
@@ -102,7 +102,7 @@ export interface TypeEntity {
   name_enoch: number;
   name_jermain: Array<string> | null;
   name_marielle: string | null;
-  name_myrtle: Array<number> | null;
+  name_myrtle: Array<string> | null;
   name_santos: Array<string>;
   name_skye: string | null;
   name_stephanie: boolean;
@@ -148,7 +148,7 @@ export interface TypeEntity {
   updatedat_brett: Array<string> | null;
   updatedat_cedrick: Array<boolean>;
   updatedat_derick: Array<Record<string, any> | Array<Record<string, any>>>;
-  updatedat_eli: Array<number>;
+  updatedat_eli: Array<string>;
   updatedat_ewell: Array<string>;
   updatedat_laura: Array<string> | null;
   updatedat_melody: Array<number>;
@@ -205,7 +205,7 @@ export interface TypeEntity {
   avatar_myah: Array<string>;
   avatar_rozella: Array<string>;
   camelCase: boolean | null;
-  category_amari: number;
+  category_amari: string;
   category_april: Array<string>;
   category_buddy: Array<string> | null;
   category_clementine: number | null;
@@ -242,7 +242,7 @@ export interface TypeEntity {
   id_helen: Array<number> | null;
   id_ike: Array<number>;
   id_joan: Array<string> | null;
-  id_karelle: number | null;
+  id_karelle: string | null;
   id_lavern: Date;
   id_margarita: string | null;
   id_maximilian: Array<string>;
@@ -255,7 +255,7 @@ export interface TypeEntity {
   name_enoch: number;
   name_jermain: Array<string> | null;
   name_marielle: string | null;
-  name_myrtle: Array<number> | null;
+  name_myrtle: Array<string> | null;
   name_santos: Array<string>;
   name_skye: string | null;
   name_stephanie: boolean;
@@ -301,7 +301,7 @@ export interface TypeEntity {
   updatedat_brett: Array<string> | null;
   updatedat_cedrick: Array<boolean>;
   updatedat_derick: Array<Record<string, any> | Array<Record<string, any>>>;
-  updatedat_eli: Array<number>;
+  updatedat_eli: Array<string>;
   updatedat_ewell: Array<string>;
   updatedat_laura: Array<string> | null;
   updatedat_melody: Array<number>;
@@ -357,7 +357,7 @@ export interface TypeEntity {
   avatar_myah: Array<string>;
   avatar_rozella: Array<string>;
   camelCase: boolean | null;
-  category_amari: number;
+  category_amari: string;
   category_april: Array<bigint>;
   category_buddy: Array<string> | null;
   category_clementine: number | null;
@@ -394,7 +394,7 @@ export interface TypeEntity {
   id_helen: Array<number> | null;
   id_ike: Array<number>;
   id_joan: Array<string> | null;
-  id_karelle: number | null;
+  id_karelle: string | null;
   id_lavern: Date;
   id_margarita: bigint | null;
   id_maximilian: Array<string>;
@@ -407,7 +407,7 @@ export interface TypeEntity {
   name_enoch: number;
   name_jermain: Array<string> | null;
   name_marielle: string | null;
-  name_myrtle: Array<number> | null;
+  name_myrtle: Array<string> | null;
   name_santos: Array<string>;
   name_skye: string | null;
   name_stephanie: boolean;
@@ -453,7 +453,7 @@ export interface TypeEntity {
   updatedat_brett: Array<string> | null;
   updatedat_cedrick: Array<boolean>;
   updatedat_derick: Array<Record<string, any> | Array<Record<string, any>>>;
-  updatedat_eli: Array<number>;
+  updatedat_eli: Array<string>;
   updatedat_ewell: Array<string>;
   updatedat_laura: Array<string> | null;
   updatedat_melody: Array<number>;
@@ -551,7 +551,7 @@ export interface TypeEntity {
   avatar_myah: Array<string>;
   avatar_rozella: Array<string>;
   camelCase: boolean | null;
-  category_amari: number;
+  category_amari: string;
   category_april: Array<string>;
   category_buddy: Array<string> | null;
   category_clementine: number | null;
@@ -588,7 +588,7 @@ export interface TypeEntity {
   id_helen: Array<number> | null;
   id_ike: Array<number>;
   id_joan: Array<string> | null;
-  id_karelle: number | null;
+  id_karelle: string | null;
   id_lavern: Date;
   id_margarita: string | null;
   id_maximilian: Array<string>;
@@ -601,7 +601,7 @@ export interface TypeEntity {
   name_enoch: number;
   name_jermain: Array<string> | null;
   name_marielle: string | null;
-  name_myrtle: Array<number> | null;
+  name_myrtle: Array<string> | null;
   name_santos: Array<string>;
   name_skye: string | null;
   name_stephanie: boolean;
@@ -647,7 +647,7 @@ export interface TypeEntity {
   updatedat_brett: Array<string> | null;
   updatedat_cedrick: Array<boolean>;
   updatedat_derick: Array<Record<string, any> | Array<Record<string, any>>>;
-  updatedat_eli: Array<number>;
+  updatedat_eli: Array<string>;
   updatedat_ewell: Array<string>;
   updatedat_laura: Array<string> | null;
   updatedat_melody: Array<number>;
@@ -704,7 +704,7 @@ export interface TypeEntity {
   avatar_myah: Array<string>
   avatar_rozella: Array<string>
   camelCase: boolean | null
-  category_amari: number
+  category_amari: string
   category_april: Array<string>
   category_buddy: Array<string> | null
   category_clementine: number | null
@@ -741,7 +741,7 @@ export interface TypeEntity {
   id_helen: Array<number> | null
   id_ike: Array<number>
   id_joan: Array<string> | null
-  id_karelle: number | null
+  id_karelle: string | null
   id_lavern: Date
   id_margarita: string | null
   id_maximilian: Array<string>
@@ -754,7 +754,7 @@ export interface TypeEntity {
   name_enoch: number
   name_jermain: Array<string> | null
   name_marielle: string | null
-  name_myrtle: Array<number> | null
+  name_myrtle: Array<string> | null
   name_santos: Array<string>
   name_skye: string | null
   name_stephanie: boolean
@@ -800,7 +800,7 @@ export interface TypeEntity {
   updatedat_brett: Array<string> | null
   updatedat_cedrick: Array<boolean>
   updatedat_derick: Array<Record<string, any> | Array<Record<string, any>>>
-  updatedat_eli: Array<number>
+  updatedat_eli: Array<string>
   updatedat_ewell: Array<string>
   updatedat_laura: Array<string> | null
   updatedat_melody: Array<number>
@@ -857,7 +857,7 @@ export interface TypeEntity {
   avatar_myah: Array<string>
   avatar_rozella: Array<string>
   camelCase: boolean | null
-  category_amari: number
+  category_amari: string
   category_april: Array<string>
   category_buddy: Array<string> | null
   category_clementine: number | null
@@ -894,7 +894,7 @@ export interface TypeEntity {
   id_helen: Array<number> | null
   id_ike: Array<number>
   id_joan: Array<string> | null
-  id_karelle: number | null
+  id_karelle: string | null
   id_lavern: Date
   id_margarita: string | null
   id_maximilian: Array<string>
@@ -907,7 +907,7 @@ export interface TypeEntity {
   name_enoch: number
   name_jermain: Array<string> | null
   name_marielle: string | null
-  name_myrtle: Array<number> | null
+  name_myrtle: Array<string> | null
   name_santos: Array<string>
   name_skye: string | null
   name_stephanie: boolean
@@ -953,7 +953,7 @@ export interface TypeEntity {
   updatedat_brett: Array<string> | null
   updatedat_cedrick: Array<boolean>
   updatedat_derick: Array<Record<string, any> | Array<Record<string, any>>>
-  updatedat_eli: Array<number>
+  updatedat_eli: Array<string>
   updatedat_ewell: Array<string>
   updatedat_laura: Array<string> | null
   updatedat_melody: Array<number>
@@ -1010,7 +1010,7 @@ export interface TypeEntity {
   avatar_myah: Array<string>;
   avatar_rozella: Array<string>;
   camelCase: boolean | null;
-  category_amari: number;
+  category_amari: string;
   category_april: Array<string>;
   category_buddy: Array<string> | null;
   category_clementine: number | null;
@@ -1047,7 +1047,7 @@ export interface TypeEntity {
   id_helen: Array<number> | null;
   id_ike: Array<number>;
   id_joan: Array<string> | null;
-  id_karelle: number | null;
+  id_karelle: string | null;
   id_lavern: Date;
   id_margarita: string | null;
   id_maximilian: Array<string>;
@@ -1060,7 +1060,7 @@ export interface TypeEntity {
   name_enoch: number;
   name_jermain: Array<string> | null;
   name_marielle: string | null;
-  name_myrtle: Array<number> | null;
+  name_myrtle: Array<string> | null;
   name_santos: Array<string>;
   name_skye: string | null;
   name_stephanie: boolean;
@@ -1106,7 +1106,7 @@ export interface TypeEntity {
   updatedat_brett: Array<string> | null;
   updatedat_cedrick: Array<boolean>;
   updatedat_derick: Array<Record<string, any> | Array<Record<string, any>>>;
-  updatedat_eli: Array<number>;
+  updatedat_eli: Array<string>;
   updatedat_ewell: Array<string>;
   updatedat_laura: Array<string> | null;
   updatedat_melody: Array<number>;
@@ -1163,7 +1163,7 @@ export type TypeEntity = {
   avatar_myah: Array<string>;
   avatar_rozella: Array<string>;
   camelCase: boolean | null;
-  category_amari: number;
+  category_amari: string;
   category_april: Array<string>;
   category_buddy: Array<string> | null;
   category_clementine: number | null;
@@ -1200,7 +1200,7 @@ export type TypeEntity = {
   id_helen: Array<number> | null;
   id_ike: Array<number>;
   id_joan: Array<string> | null;
-  id_karelle: number | null;
+  id_karelle: string | null;
   id_lavern: Date;
   id_margarita: string | null;
   id_maximilian: Array<string>;
@@ -1213,7 +1213,7 @@ export type TypeEntity = {
   name_enoch: number;
   name_jermain: Array<string> | null;
   name_marielle: string | null;
-  name_myrtle: Array<number> | null;
+  name_myrtle: Array<string> | null;
   name_santos: Array<string>;
   name_skye: string | null;
   name_stephanie: boolean;
@@ -1259,7 +1259,7 @@ export type TypeEntity = {
   updatedat_brett: Array<string> | null;
   updatedat_cedrick: Array<boolean>;
   updatedat_derick: Array<Record<string, any> | Array<Record<string, any>>>;
-  updatedat_eli: Array<number>;
+  updatedat_eli: Array<string>;
   updatedat_ewell: Array<string>;
   updatedat_laura: Array<string> | null;
   updatedat_melody: Array<number>;
