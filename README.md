@@ -22,7 +22,9 @@
 ## Install
 
 ```sh
-npm install schema-typegen
+$ npm install schema-typegen
+# or
+$ yarn add schema-typegen
 ```
 
 ## Usage
