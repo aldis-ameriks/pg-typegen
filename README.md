@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to pg-typegen 👋</h1>
+<h1 align="center">pg-typegen</h1>
 <p>
     <a href="https://www.npmjs.com/package/pg-typegen" target="_blank">
         <img alt="Version" src="https://img.shields.io/npm/v/pg-typegen.svg">
