@@ -1270,7 +1270,7 @@ export type TypeEntity = {
 `
 
 exports['test/cli.js TAP help > must match snapshot 1'] = `
-Usage: schema-typegen [options] <connection>
+Usage: pg-typegen [options] <connection>
 
 Options:
   -V, --version              output the version number
@@ -1296,12 +1296,12 @@ Options:
   --help                     display help for command
 
 Example:
-  $ schema-typegen -o ./entities.ts postgres://username:password@localhost:5432/database
+  $ pg-typegen -o ./entities.ts postgres://username:password@localhost:5432/database
 
 `
 
 exports['test/cli.js TAP missing connection string > must match snapshot 1'] = `
-Usage: schema-typegen [options] <connection>
+Usage: pg-typegen [options] <connection>
 
 Options:
   -V, --version              output the version number
@@ -1327,7 +1327,7 @@ Options:
   --help                     display help for command
 
 Example:
-  $ schema-typegen -o ./entities.ts postgres://username:password@localhost:5432/database
+  $ pg-typegen -o ./entities.ts postgres://username:password@localhost:5432/database
 
 `
 

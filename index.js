@@ -10,7 +10,7 @@ const postgres = require('./lib/postgres')
 
 const program = new Command()
 program
-  .name('schema-typegen')
+  .name('pg-typegen')
   .version(`v${packageJson.version}`)
   .arguments('<connection>')
   .option('-f, --suffix <suffix>', 'suffix to append to generated table type, e.g. item -> ItemEntity', 'Entity')
@@ -29,7 +29,7 @@ program
 program.on('--help', () => {
   console.log('')
   console.log('Example:')
-  console.log('  $ schema-typegen -o ./entities.ts postgres://username:password@localhost:5432/database')
+  console.log('  $ pg-typegen -o ./entities.ts postgres://username:password@localhost:5432/database')
 })
 
 function parseArray (value) {
