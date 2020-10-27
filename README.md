@@ -1,37 +1,36 @@
-<h1 align="center">Welcome to schema-typegen 👋</h1>
+<h1 align="center">Welcome to pg-typegen 👋</h1>
 <p>
-    <a href="https://www.npmjs.com/package/schema-typegen" target="_blank">
-        <img alt="Version" src="https://img.shields.io/npm/v/schema-typegen.svg">
+    <a href="https://www.npmjs.com/package/pg-typegen" target="_blank">
+        <img alt="Version" src="https://img.shields.io/npm/v/pg-typegen.svg">
     </a>
-    <a href="https://github.com/aldis-ameriks/schema-typegen/graphs/commit-activity" target="_blank">
+    <a href="https://github.com/aldis-ameriks/pg-typegen/graphs/commit-activity" target="_blank">
         <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
     </a>
-    <a href="https://github.com/aldis-ameriks/schema-typegen/blob/master/LICENSE" target="_blank">
-        <img alt="License: MIT" src="https://img.shields.io/github/license/aldis-ameriks/schema-typegen" />
+    <a href="https://github.com/aldis-ameriks/pg-typegen/blob/master/LICENSE" target="_blank">
+        <img alt="License: MIT" src="https://img.shields.io/github/license/aldis-ameriks/pg-typegen" />
     </a>
-    <a href='https://coveralls.io/github/aldis-ameriks/schema-typegen?branch=master'>
-        <img src='https://coveralls.io/repos/github/aldis-ameriks/schema-typegen/badge.svg?branch=master' alt='Coverage Status' />
+    <a href='https://coveralls.io/github/aldis-ameriks/pg-typegen?branch=master'>
+        <img src='https://coveralls.io/repos/github/aldis-ameriks/pg-typegen/badge.svg?branch=master' alt='Coverage Status' />
     </a>
-    <a href="https://github.com/aldis-ameriks/schema-typegen/workflows/CI/badge.svg" target="_blank">
-        <img alt="CI" src="https://github.com/aldis-ameriks/schema-typegen/workflows/CI/badge.svg" />
+    <a href="https://github.com/aldis-ameriks/pg-typegen/workflows/CI/badge.svg" target="_blank">
+        <img alt="CI" src="https://github.com/aldis-ameriks/pg-typegen/workflows/CI/badge.svg" />
     </a>
 </p>
 
-> Generate TypeScript type definitions from database schema.
+> Generate TypeScript type definitions from Postgres database.
 
 ## Install
 
 ```sh
-$ npm install schema-typegen
+$ npm install pg-typegen
 # or
-$ yarn add schema-typegen
+$ yarn add pg-typegen
 ```
 
 ## Usage
-> For now only Postgres is supported.
 
 ```
-Usage: schema-typegen [options] <connection>
+Usage: pg-typegen [options] <connection>
 
 Options:
   -V, --version              output the version number
@@ -50,7 +49,7 @@ Options:
   --help                     display help for command
 
 Example:
-  $ schema-typegen -o ./entities.ts postgres://username:password@localhost:5432/database
+  $ pg-typegen -o ./entities.ts postgres://username:password@localhost:5432/database
 ```
 
 Given database table
@@ -68,7 +67,7 @@ CREATE TABLE users (
 );
 ```
 
-Running `schema-typegen -o ./entities.ts postgres://username:password@localhost:5432/database`
+Running `pg-typegen -o ./entities.ts postgres://username:password@localhost:5432/database`
 Will generate the following type definitions
 ```ts
 enum UserState {
@@ -88,7 +87,7 @@ interface UserEntity {
 
 ```ts
 import { join } from 'path'
-import generate from 'schema-typegen'
+import generate from 'pg-typegen'
 ;(async () => {
   const output = join(__dirname, 'entities.ts')
   await generate({ connection: 'postgres://username:password@localhost:5432/database', output })
@@ -99,12 +98,12 @@ import generate from 'schema-typegen'
 
 #### from .env file
 ```
-export $(grep -v '^#' .env | xargs) && schema-typegen -o ./entities.ts postgres://$DB_USERNAME:$DB_PASSWORD@$DB_HOST:$DB_PORT/$DB_NAME
+export $(grep -v '^#' .env | xargs) && pg-typegen -o ./entities.ts postgres://$DB_USERNAME:$DB_PASSWORD@$DB_HOST:$DB_PORT/$DB_NAME
 ```
 
 #### from json file
 ```
-schema-typegen -o ./entities.ts postgres://$(jq -r '.DB.USERNAME' config.json):$(jq -r '.DB.PASSWORD' config.json)@$(jq -r '.DB.HOST' config.json):$(jq -r '.DB.PORT' config.json)/$(jq -r '.DB.NAME' config.json)
+pg-typegen -o ./entities.ts postgres://$(jq -r '.DB.USERNAME' config.json):$(jq -r '.DB.PASSWORD' config.json)@$(jq -r '.DB.HOST' config.json):$(jq -r '.DB.PORT' config.json)/$(jq -r '.DB.NAME' config.json)
 ```
 
 
@@ -122,5 +121,5 @@ Contributions, issues and feature requests are welcome!
 ## License
 
 Copyright © 2020 [Aldis Ameriks](https://github.com/aldis-ameriks).<br />
-This project is [MIT](https://github.com/aldis-ameriks/schema-typegen/blob/master/LICENSE) licensed.
+This project is [MIT](https://github.com/aldis-ameriks/pg-typegen/blob/master/LICENSE) licensed.
 
