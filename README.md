@@ -83,6 +83,8 @@ interface UserEntity {
 }
 ```
 
+> By default, the types will be generated based on how [pg](https://github.com/brianc/node-postgres) returns the values.
+
 ### Running from code
 
 ```ts
