@@ -643,6 +643,14 @@ Object {
     },
   ],
   "typeMapping": Object {
+    "any": Array [
+      "json",
+      "jsonb",
+    ],
+    "Array<any>": Array [
+      "_json",
+      "_jsonb",
+    ],
     "Array<bigint>": Array [],
     "Array<boolean>": Array [
       "_bool",
@@ -659,10 +667,6 @@ Object {
       "_float8",
       "_money",
       "_oid",
-    ],
-    "Array<object>": Array [
-      "_json",
-      "_jsonb",
     ],
     "Array<string>": Array [
       "_bpchar",
@@ -695,10 +699,6 @@ Object {
       "float8",
       "money",
       "oid",
-    ],
-    "object": Array [
-      "json",
-      "jsonb",
     ],
     "string": Array [
       "bpchar",
@@ -1357,6 +1357,14 @@ Object {
     },
   ],
   "typeMapping": Object {
+    "any": Array [
+      "json",
+      "jsonb",
+    ],
+    "Array<any>": Array [
+      "_json",
+      "_jsonb",
+    ],
     "Array<bigint>": Array [
       "_int8",
     ],
@@ -1378,10 +1386,6 @@ Object {
       "_float8",
       "_money",
       "_oid",
-    ],
-    "Array<object>": Array [
-      "_json",
-      "_jsonb",
     ],
     "Array<string>": Array [
       "_bpchar",
@@ -1421,10 +1425,6 @@ Object {
       "float8",
       "money",
       "oid",
-    ],
-    "object": Array [
-      "json",
-      "jsonb",
     ],
     "string": Array [
       "bpchar",
@@ -2085,6 +2085,14 @@ Object {
     },
   ],
   "typeMapping": Object {
+    "any": Array [
+      "json",
+      "jsonb",
+    ],
+    "Array<any>": Array [
+      "_json",
+      "_jsonb",
+    ],
     "Array<bigint>": Array [
       "_int8",
     ],
@@ -2106,10 +2114,6 @@ Object {
       "_float8",
       "_money",
       "_oid",
-    ],
-    "Array<object>": Array [
-      "_json",
-      "_jsonb",
     ],
     "Array<string>": Array [
       "_bpchar",
@@ -2151,10 +2155,6 @@ Object {
       "float8",
       "money",
       "oid",
-    ],
-    "object": Array [
-      "json",
-      "jsonb",
     ],
     "string": Array [
       "bpchar",
@@ -2817,6 +2817,14 @@ Object {
     },
   ],
   "typeMapping": Object {
+    "any": Array [
+      "json",
+      "jsonb",
+    ],
+    "Array<any>": Array [
+      "_json",
+      "_jsonb",
+    ],
     "Array<bigint>": Array [
       "_int8",
     ],
@@ -2837,10 +2845,6 @@ Object {
       "_float8",
       "_money",
       "_oid",
-    ],
-    "Array<object>": Array [
-      "_json",
-      "_jsonb",
     ],
     "Array<string>": Array [
       "_bpchar",
@@ -2878,10 +2882,6 @@ Object {
       "float8",
       "money",
       "oid",
-    ],
-    "object": Array [
-      "json",
-      "jsonb",
     ],
     "string": Array [
       "bpchar",
@@ -3541,6 +3541,14 @@ Object {
     },
   ],
   "typeMapping": Object {
+    "any": Array [
+      "json",
+      "jsonb",
+    ],
+    "Array<any>": Array [
+      "_json",
+      "_jsonb",
+    ],
     "Array<bigint>": Array [],
     "Array<boolean>": Array [
       "_bool",
@@ -3558,10 +3566,6 @@ Object {
       "_float8",
       "_money",
       "_oid",
-    ],
-    "Array<object>": Array [
-      "_json",
-      "_jsonb",
     ],
     "Array<string>": Array [
       "_bpchar",
@@ -3596,10 +3600,6 @@ Object {
       "float8",
       "money",
       "oid",
-    ],
-    "object": Array [
-      "json",
-      "jsonb",
     ],
     "string": Array [
       "bpchar",
