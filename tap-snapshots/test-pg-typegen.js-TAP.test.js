@@ -366,7 +366,8 @@ Options:
   --date-as-string           use string for date types instead of javascript
                              Date object (default: false)
   --insert-types             generate separate insert types with optional
-                             columns having default values (default: false)
+                             fields for columns allowing NULL value or having
+                             default values (default: false)
   --help                     display help for command
 
 `
@@ -396,7 +397,8 @@ Options:
   --date-as-string           use string for date types instead of javascript
                              Date object (default: false)
   --insert-types             generate separate insert types with optional
-                             columns having default values (default: false)
+                             fields for columns allowing NULL value or having
+                             default values (default: false)
   --help                     display help for command
 
 `
