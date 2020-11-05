@@ -87,7 +87,7 @@ interface UserEntity {
 > By default, the types will be generated based on how [pg](https://github.com/brianc/node-postgres) returns the values.
 
 #### Insert types
-To simplify database inserts, separate types can be generated with optional values where default values for column exist in postgres.
+To simplify database inserts, separate types can be generated with optional values where NULL is allowed or default values for column exist in postgres.
 
 Given database table
 ```sql
