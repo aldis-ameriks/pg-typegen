@@ -45,6 +45,11 @@ export interface SnakeTestEntity {
   id: number;
 };
 
+export interface SomeViewEntity {
+  test: number | null;
+  test_text: string | null;
+};
+
 export interface TypeEntity {
   avatar_darren: Array<number> | null;
   avatar_ernestina: string;
@@ -206,6 +211,11 @@ export interface SnakeTestEntity {
   id: number;
 };
 
+export interface SomeViewEntity {
+  test: number | null;
+  test_text: string | null;
+};
+
 export interface TypeEntity {
   avatar_darren: Array<number> | null;
   avatar_ernestina: string;
@@ -328,7 +338,7 @@ export interface UserEntity {
 `
 
 exports['test/pg-typegen.js TAP generates types to file > must match snapshot 2'] = `
-✔ Generated types from 7 tables and 3 enums
+✔ Generated types from 8 tables and 3 enums
 `
 
 exports['test/pg-typegen.js TAP returns help when missing connection > must match snapshot 1'] = `

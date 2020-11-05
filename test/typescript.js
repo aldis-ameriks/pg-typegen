@@ -69,6 +69,14 @@ const tables = [
       { name: 'one', type: 'int4', hasDefault: true },
       { name: 'two', type: 'int4', hasDefault: true, isNullable: true }
     ]
+  },
+  {
+    name: 'view',
+    isView: true,
+    columns: [
+      { name: 'one', type: 'int4', hasDefault: true },
+      { name: 'two', type: 'int4', hasDefault: true, isNullable: true }
+    ]
   }
 ]
 

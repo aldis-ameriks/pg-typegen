@@ -104,6 +104,11 @@ export interface UpperCaseEntity {
   duplicate: number;
 };
 
+export interface ViewEntity {
+  one: number;
+  two: number | null;
+};
+
 export interface WhiteSpaceEntity {
   'white space 1': number | null;
   'white space 2': number;
@@ -208,6 +213,11 @@ export interface UnknownEntity {
 export interface UpperCaseEntity {
   duplicate: number
   duplicate: number
+}
+
+export interface ViewEntity {
+  one: number
+  two: number | null
 }
 
 export interface WhiteSpaceEntity {
@@ -316,6 +326,11 @@ export type UpperCaseEntity = {
   duplicate: number;
 };
 
+export type ViewEntity = {
+  one: number;
+  two: number | null;
+};
+
 export type WhiteSpaceEntity = {
   'white space 1': number | null;
   'white space 2': number;
@@ -422,6 +437,11 @@ export type UpperCaseEntity = {
   duplicate: number
 }
 
+export type ViewEntity = {
+  one: number
+  two: number | null
+}
+
 export type WhiteSpaceEntity = {
   'white space 1': number | null
   'white space 2': number
@@ -526,6 +546,11 @@ export interface UnknownRecord {
 export interface UpperCaseRecord {
   duplicate: number;
   duplicate: number;
+};
+
+export interface ViewRecord {
+  one: number;
+  two: number | null;
 };
 
 export interface WhiteSpaceRecord {
@@ -636,7 +661,7 @@ export interface KebabCaseEntity {
 };
 
 export interface KebabCaseInsertEntity {
-  'kebab-case1': number | null;
+  'kebab-case1'?: number | null;
   'kebab-case2': number;
 };
 
@@ -651,10 +676,10 @@ export interface KnownEntity {
 
 export interface KnownInsertEntity {
   known1: number;
-  known2: number | null;
-  known3: number | null;
+  known2?: number | null;
+  known3?: number | null;
   known4: number;
-  known5: string | null;
+  known5?: string | null;
   known6: string;
 };
 
@@ -664,7 +689,7 @@ export interface SnakeCaseEntity {
 };
 
 export interface SnakeCaseInsertEntity {
-  snake_case1: number | null;
+  snake_case1?: number | null;
   snake_case2: number;
 };
 
@@ -676,9 +701,9 @@ export interface UnknownEntity {
 };
 
 export interface UnknownInsertEntity {
-  unknown1: any | null;
+  unknown1?: any | null;
   unknown2: any;
-  unknown3: Array<any> | null;
+  unknown3?: Array<any> | null;
   unknown4: Array<any>;
 };
 
@@ -692,13 +717,18 @@ export interface UpperCaseInsertEntity {
   duplicate: number;
 };
 
+export interface ViewEntity {
+  one: number;
+  two: number | null;
+};
+
 export interface WhiteSpaceEntity {
   'white space 1': number | null;
   'white space 2': number;
 };
 
 export interface WhiteSpaceInsertEntity {
-  'white space 1': number | null;
+  'white space 1'?: number | null;
   'white space 2': number;
 };
 
@@ -861,6 +891,11 @@ export interface UpperCaseInsertEntity {
   duplicate: number;
 };
 
+export interface ViewEntity {
+  one: number;
+  two?: number;
+};
+
 export interface WhiteSpaceEntity {
   'white space 1'?: number;
   'white space 2': number;
@@ -974,6 +1009,11 @@ export interface UpperCaseEntity {
   duplicate: number;
 };
 
+export interface ViewEntity {
+  one: number;
+  two: number | null;
+};
+
 export interface WhiteSpaceEntity {
   'white space 1': number | null;
   'white space 2': number;
@@ -1078,6 +1118,11 @@ export interface UnknownEntity {
 export interface UpperCaseEntity {
   duplicate: number;
   duplicate: number;
+};
+
+export interface ViewEntity {
+  one: number;
+  two?: number;
 };
 
 export interface WhiteSpaceEntity {
@@ -1186,6 +1231,11 @@ export interface UpperCaseEntity {
   duplicate: number;
 };
 
+export interface ViewEntity {
+  one: number;
+  two: number | null;
+};
+
 export interface WhiteSpaceEntity {
   'white space 1': number | null;
   'white space 2': number;
@@ -1250,6 +1300,11 @@ export interface UnknownEntity {
 export interface UpperCaseEntity {
   duplicate: number;
   duplicate: number;
+};
+
+export interface ViewEntity {
+  one: number;
+  two?: number;
 };
 
 export interface WhiteSpaceEntity {

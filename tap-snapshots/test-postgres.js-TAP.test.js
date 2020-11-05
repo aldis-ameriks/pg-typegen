@@ -40,6 +40,7 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "histories",
     },
     Object {
@@ -51,6 +52,7 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "kebab-test",
     },
     Object {
@@ -62,7 +64,26 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "snake_test",
+    },
+    Object {
+      "columns": Array [
+        Object {
+          "hasDefault": false,
+          "isNullable": true,
+          "name": "test",
+          "type": "int4",
+        },
+        Object {
+          "hasDefault": false,
+          "isNullable": true,
+          "name": "test_text",
+          "type": "text",
+        },
+      ],
+      "isView": true,
+      "name": "some_view",
     },
     Object {
       "columns": Array [
@@ -709,6 +730,7 @@ Object {
           "type": "float4",
         },
       ],
+      "isView": false,
       "name": "types",
     },
     Object {
@@ -750,6 +772,7 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "users",
     },
     Object {
@@ -775,6 +798,7 @@ Object {
           "type": "timestamptz",
         },
       ],
+      "isView": true,
       "name": "materialized_items",
     },
     Object {
@@ -790,6 +814,7 @@ Object {
           "type": "text",
         },
       ],
+      "isView": true,
       "name": "materialized_other_items",
     },
   ],
@@ -905,6 +930,7 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "histories",
     },
     Object {
@@ -916,6 +942,7 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "kebab-test",
     },
     Object {
@@ -927,7 +954,26 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "snake_test",
+    },
+    Object {
+      "columns": Array [
+        Object {
+          "hasDefault": false,
+          "isNullable": true,
+          "name": "test",
+          "type": "int4",
+        },
+        Object {
+          "hasDefault": false,
+          "isNullable": true,
+          "name": "test_text",
+          "type": "text",
+        },
+      ],
+      "isView": true,
+      "name": "some_view",
     },
     Object {
       "columns": Array [
@@ -1574,6 +1620,7 @@ Object {
           "type": "float4",
         },
       ],
+      "isView": false,
       "name": "types",
     },
     Object {
@@ -1615,6 +1662,7 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "users",
     },
     Object {
@@ -1640,6 +1688,7 @@ Object {
           "type": "timestamptz",
         },
       ],
+      "isView": true,
       "name": "materialized_items",
     },
     Object {
@@ -1655,6 +1704,7 @@ Object {
           "type": "text",
         },
       ],
+      "isView": true,
       "name": "materialized_other_items",
     },
   ],
@@ -1784,6 +1834,7 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "histories",
     },
     Object {
@@ -1795,6 +1846,7 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "kebab-test",
     },
     Object {
@@ -1806,7 +1858,26 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "snake_test",
+    },
+    Object {
+      "columns": Array [
+        Object {
+          "hasDefault": false,
+          "isNullable": true,
+          "name": "test",
+          "type": "int4",
+        },
+        Object {
+          "hasDefault": false,
+          "isNullable": true,
+          "name": "test_text",
+          "type": "text",
+        },
+      ],
+      "isView": true,
+      "name": "some_view",
     },
     Object {
       "columns": Array [
@@ -2453,6 +2524,7 @@ Object {
           "type": "float4",
         },
       ],
+      "isView": false,
       "name": "types",
     },
     Object {
@@ -2494,6 +2566,7 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "users",
     },
     Object {
@@ -2519,6 +2592,7 @@ Object {
           "type": "timestamptz",
         },
       ],
+      "isView": true,
       "name": "materialized_items",
     },
     Object {
@@ -2534,6 +2608,7 @@ Object {
           "type": "text",
         },
       ],
+      "isView": true,
       "name": "materialized_other_items",
     },
   ],
@@ -2667,6 +2742,7 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "histories",
     },
     Object {
@@ -2678,6 +2754,7 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "kebab-test",
     },
     Object {
@@ -2689,7 +2766,26 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "snake_test",
+    },
+    Object {
+      "columns": Array [
+        Object {
+          "hasDefault": false,
+          "isNullable": true,
+          "name": "test",
+          "type": "int4",
+        },
+        Object {
+          "hasDefault": false,
+          "isNullable": true,
+          "name": "test_text",
+          "type": "text",
+        },
+      ],
+      "isView": true,
+      "name": "some_view",
     },
     Object {
       "columns": Array [
@@ -3336,6 +3432,7 @@ Object {
           "type": "float4",
         },
       ],
+      "isView": false,
       "name": "types",
     },
     Object {
@@ -3377,6 +3474,7 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "users",
     },
     Object {
@@ -3402,6 +3500,7 @@ Object {
           "type": "timestamptz",
         },
       ],
+      "isView": true,
       "name": "materialized_items",
     },
     Object {
@@ -3417,6 +3516,7 @@ Object {
           "type": "text",
         },
       ],
+      "isView": true,
       "name": "materialized_other_items",
     },
   ],
@@ -3542,6 +3642,7 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "histories",
     },
     Object {
@@ -3553,6 +3654,7 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "kebab-test",
     },
     Object {
@@ -3564,7 +3666,26 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "snake_test",
+    },
+    Object {
+      "columns": Array [
+        Object {
+          "hasDefault": false,
+          "isNullable": true,
+          "name": "test",
+          "type": "int4",
+        },
+        Object {
+          "hasDefault": false,
+          "isNullable": true,
+          "name": "test_text",
+          "type": "text",
+        },
+      ],
+      "isView": true,
+      "name": "some_view",
     },
     Object {
       "columns": Array [
@@ -4211,6 +4332,7 @@ Object {
           "type": "float4",
         },
       ],
+      "isView": false,
       "name": "types",
     },
     Object {
@@ -4252,6 +4374,7 @@ Object {
           "type": "int4",
         },
       ],
+      "isView": false,
       "name": "users",
     },
     Object {
@@ -4277,6 +4400,7 @@ Object {
           "type": "timestamptz",
         },
       ],
+      "isView": true,
       "name": "materialized_items",
     },
     Object {
@@ -4292,6 +4416,7 @@ Object {
           "type": "text",
         },
       ],
+      "isView": true,
       "name": "materialized_other_items",
     },
   ],

@@ -212,6 +212,12 @@ async function setupTestPostgres () {
             SELECT 1 AS test,  '2' AS test_text
         )
     `
+
+    await sql`
+      CREATE OR REPLACE VIEW some_view AS (
+          SELECT 1 AS test,  '2' AS test_text
+      )
+    `
   } catch (e) {
     console.error(e)
     throw e
