@@ -91,18 +91,38 @@ To simplify database inserts, separate types can be generated with optional valu
 
 Given database table
 ```sql
+CREATE TYPE user_state AS ENUM (
+  'asleep',
+  'awake'
+);
+
 CREATE TABLE users (
-    id serial4 PRIMARY KEY,
-    name text NOT NULL,
+    id int4 NOT NULL,
+    name varchar(255) NOT NULL,
+    state user_state,
     is_enabled bool NOT NULL DEFAULT FALSE
 );
 ```
 
+Running `pg-typegen -o ./entities.ts --insert-types postgres://username:password@localhost:5432/database`
 Will generate the following type definitions
 ```ts
+enum UserState {
+  asleep = 'asleep',
+  awake = 'awake'
+}
+
+interface UserEntity {
+  id: number;
+  name: string;
+  state: UserState | null;
+  is_enabled: boolean;
+}
+
 interface UserInsertEntity {
   id?: number;
   name: string;
+  state?: UserState | null;
   is_enabled?: boolean;
 }
 ```
