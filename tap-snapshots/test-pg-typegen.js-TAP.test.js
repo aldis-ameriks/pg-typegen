@@ -155,6 +155,15 @@ export interface TypeEntity {
   updatedat_rossie: number | null;
 };
 
+export interface UserEntity {
+  id: number;
+  name: string | null;
+  name2: string;
+  name3: string;
+  other_id: number;
+  other_primary_id: number;
+};
+
 `
 
 exports['test/pg-typegen.js TAP generates types to file > must match snapshot 1'] = `
@@ -307,10 +316,19 @@ export interface TypeEntity {
   updatedat_rossie: number | null;
 };
 
+export interface UserEntity {
+  id: number;
+  name: string | null;
+  name2: string;
+  name3: string;
+  other_id: number;
+  other_primary_id: number;
+};
+
 `
 
 exports['test/pg-typegen.js TAP generates types to file > must match snapshot 2'] = `
-✔ Generated types from 6 tables and 3 enums
+✔ Generated types from 7 tables and 3 enums
 `
 
 exports['test/pg-typegen.js TAP returns help when missing connection > must match snapshot 1'] = `
@@ -337,6 +355,8 @@ Options:
                              (default: false)
   --date-as-string           use string for date types instead of javascript
                              Date object (default: false)
+  --insert-types             generate separate insert types with optional
+                             columns having default values (default: false)
   --help                     display help for command
 
 `
@@ -365,6 +385,8 @@ Options:
                              (default: false)
   --date-as-string           use string for date types instead of javascript
                              Date object (default: false)
+  --insert-types             generate separate insert types with optional
+                             columns having default values (default: false)
   --help                     display help for command
 
 `

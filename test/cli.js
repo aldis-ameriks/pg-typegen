@@ -126,7 +126,7 @@ test('reports success to stdout', t => {
   })
 
   child.on('close', () => {
-    t.equal(result.data, '✔ Generated types from 6 tables and 3 enums\n')
+    t.equal(result.data, '✔ Generated types from 7 tables and 3 enums\n')
   })
 })
 
@@ -254,6 +254,26 @@ test('generates types with types option', t => {
   t.plan(1)
 
   const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'index.js'), connection, ssl ? '--ssl' : '', '--type'], {
+    cwd: __dirname,
+    env: process.env,
+    stdio: ['ignore', 'pipe', 'pipe'],
+    detached: false
+  })
+
+  const result = { data: '' }
+  child.stdout.on('data', data => {
+    result.data += data.toString()
+  })
+
+  child.on('close', () => {
+    t.matchSnapshot(eol.lf(result.data))
+  })
+})
+
+test('generates types with insert types', t => {
+  t.plan(1)
+
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'index.js'), connection, ssl ? '--ssl' : '', '--insert-types'], {
     cwd: __dirname,
     env: process.env,
     stdio: ['ignore', 'pipe', 'pipe'],

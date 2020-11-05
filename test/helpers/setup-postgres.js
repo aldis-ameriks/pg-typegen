@@ -56,6 +56,18 @@ async function setupTestPostgres () {
     } catch (e) { }
 
     await sql`
+      CREATE TABLE IF NOT EXISTS users
+      (
+          id               serial4         NOT NULL,
+          other_id         int4 GENERATED ALWAYS AS IDENTITY,
+          other_primary_id int4 GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+          name             text DEFAULT '',
+          name2            text DEFAULT '' NOT NULL,
+          name3            text            NOT NULL
+      );
+    `
+
+    await sql`
         CREATE TABLE IF NOT EXISTS "kebab-test" (
             id int4 NOT NULL
         );
