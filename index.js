@@ -25,7 +25,7 @@ program
   .option('--pascal-enums', 'transform enum keys to pascal case', false)
   .option('--bigint', 'use bigint for int8 types instead of strings', false)
   .option('--date-as-string', 'use string for date types instead of javascript Date object', false)
-  .option('--insert-types', 'generate separate insert types with optional columns having default values', false)
+  .option('--insert-types', 'generate separate insert types with optional fields for columns allowing NULL value or having default values', false)
 
 program.on('--help', () => {
   console.log('')
