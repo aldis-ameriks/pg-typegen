@@ -86,6 +86,32 @@ interface UserEntity {
 
 > By default, the types will be generated based on how [pg](https://github.com/brianc/node-postgres) returns the values.
 
+#### Insert types
+To simplify database inserts, separate types can be generated with optional values where default values for column exist in postgres.
+
+Given database table
+```sql
+CREATE TABLE users (
+    id serial4 PRIMARY KEY,
+    name text NOT NULL,
+    is_enabled bool NOT NULL DEFAULT FALSE
+);
+```
+
+Will generate the following type definitions
+```ts
+interface UserInsertEntity {
+  id?: number;
+  name: string;
+  is_enabled?: boolean;
+}
+```
+
+Which should allow simplified inserts when coupled with libraries like [knex](https://github.com/knex/knex)
+```ts
+knex<UserInsertEntity>('users').insert({ name: 'foo' })
+```
+
 ### Running from code
 
 ```ts
