@@ -3,19 +3,19 @@
 const postgres = require('postgres')
 
 const defaultPort = '5435'
+const database = 'pg_typegen_test'
 
 function getTestPostgresConnectionString () {
-  return process.env.DATABASE_CONNECTION || `postgres://postgres:postgres@localhost:${defaultPort}/test_db`
+  return `${process.env.DATABASE_CONNECTION}/${database}` || `postgres://postgres:postgres@localhost:${defaultPort}/${database}`
 }
 
 async function setupTestPostgres () {
-  let connection = process.env.DATABASE_CONNECTION
+  let connection = process.env.DATABASE_CONNECTION || `postgres://postgres:postgres@localhost:${defaultPort}`
   const ssl = process.env.DATABASE_SSL_ENABLED === 'true'
+  const recreateDatabase = process.env.RECREATE_DATABASE === 'true'
 
   let sql
-  if (!connection) {
-    connection = `postgres://postgres:postgres@localhost:${defaultPort}`
-    const database = 'test_db'
+  if (recreateDatabase) {
     sql = postgres(connection, ssl ? { ssl: { rejectUnauthorized: false } } : false)
 
     try {
@@ -27,9 +27,9 @@ async function setupTestPostgres () {
     } finally {
       await sql.end()
     }
-    connection = `${connection}/${database}`
   }
 
+  connection = `${connection}/${database}`
   sql = postgres(connection, ssl ? { ssl: { rejectUnauthorized: false } } : false)
 
   try {
