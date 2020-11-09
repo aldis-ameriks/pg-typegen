@@ -59,6 +59,13 @@ export interface CustomEntity {
   custom6: Array<CustomType>;
 };
 
+export interface DefaultEntity {
+  one: number;
+  two: number | null;
+};
+
+export interface DefaultsNoColumnEntity {};
+
 export interface EmptyEntity {};
 
 export interface EntityEntity {
@@ -95,6 +102,11 @@ export interface UnknownEntity {
 export interface UpperCaseEntity {
   duplicate: number;
   duplicate: number;
+};
+
+export interface ViewEntity {
+  one: number;
+  two: number | null;
 };
 
 export interface WhiteSpaceEntity {
@@ -158,6 +170,13 @@ export interface CustomEntity {
   custom6: Array<CustomType>
 }
 
+export interface DefaultEntity {
+  one: number
+  two: number | null
+}
+
+export interface DefaultsNoColumnEntity {}
+
 export interface EmptyEntity {}
 
 export interface EntityEntity {
@@ -194,6 +213,11 @@ export interface UnknownEntity {
 export interface UpperCaseEntity {
   duplicate: number
   duplicate: number
+}
+
+export interface ViewEntity {
+  one: number
+  two: number | null
 }
 
 export interface WhiteSpaceEntity {
@@ -257,6 +281,13 @@ export type CustomEntity = {
   custom6: Array<CustomType>;
 };
 
+export type DefaultEntity = {
+  one: number;
+  two: number | null;
+};
+
+export type DefaultsNoColumnEntity = {};
+
 export type EmptyEntity = {};
 
 export type EntityEntity = {
@@ -293,6 +324,11 @@ export type UnknownEntity = {
 export type UpperCaseEntity = {
   duplicate: number;
   duplicate: number;
+};
+
+export type ViewEntity = {
+  one: number;
+  two: number | null;
 };
 
 export type WhiteSpaceEntity = {
@@ -356,6 +392,13 @@ export type CustomEntity = {
   custom6: Array<CustomType>
 }
 
+export type DefaultEntity = {
+  one: number
+  two: number | null
+}
+
+export type DefaultsNoColumnEntity = {}
+
 export type EmptyEntity = {}
 
 export type EntityEntity = {
@@ -392,6 +435,11 @@ export type UnknownEntity = {
 export type UpperCaseEntity = {
   duplicate: number
   duplicate: number
+}
+
+export type ViewEntity = {
+  one: number
+  two: number | null
 }
 
 export type WhiteSpaceEntity = {
@@ -455,6 +503,13 @@ export interface CustomRecord {
   custom6: Array<CustomType>;
 };
 
+export interface DefaultRecord {
+  one: number;
+  two: number | null;
+};
+
+export interface DefaultsNoColumnRecord {};
+
 export interface EmptyRecord {};
 
 export interface EntityRecord {
@@ -493,8 +548,361 @@ export interface UpperCaseRecord {
   duplicate: number;
 };
 
+export interface ViewRecord {
+  one: number;
+  two: number | null;
+};
+
 export interface WhiteSpaceRecord {
   'white space 1': number | null;
+  'white space 2': number;
+};
+
+`
+
+exports['test/typescript.js TAP with generated insert types > must match snapshot 1'] = `
+export enum Apples {}
+
+export enum CustomType {
+  bar = 'bar',
+  foo = 'foo',
+}
+
+export enum CustomType {
+  bar = 'bar',
+  foo = 'foo',
+}
+
+export enum CustomEnum {
+  'foo   bar3' = 'foo   bar3',
+  'foo  ---- ____ ---   bar6' = 'foo  ---- ____ ---   bar6',
+  'foo bar' = 'foo bar',
+  'foo----bar4' = 'foo----bar4',
+  'foo-bar2' = 'foo-bar2',
+  foo____bar5 = 'foo____bar5',
+  value_one = 'value_one',
+  value_two = 'value_two',
+}
+
+export enum CustomType {
+  bar = 'bar',
+  foo = 'foo',
+}
+
+export enum Empty {}
+
+export enum KebabCase1 {}
+
+export enum KebabCase2 {
+  'kebab-case-value' = 'kebab-case-value',
+}
+
+export enum WhiteSpace {
+  'white space value' = 'white space value',
+}
+
+export interface AddressEntity {};
+
+export interface AddressInsertEntity {};
+
+export interface AppleEntity {};
+
+export interface AppleInsertEntity {};
+
+export interface CustomEntity {
+  custom1: CustomType;
+  custom2: CustomType;
+  custom3: CustomType;
+  custom4: Array<CustomType>;
+  custom5: Array<CustomType>;
+  custom6: Array<CustomType>;
+};
+
+export interface CustomInsertEntity {
+  custom1: CustomType;
+  custom2: CustomType;
+  custom3: CustomType;
+  custom4: Array<CustomType>;
+  custom5: Array<CustomType>;
+  custom6: Array<CustomType>;
+};
+
+export interface DefaultEntity {
+  one: number;
+  two: number | null;
+};
+
+export interface DefaultInsertEntity {
+  one?: number;
+  two?: number | null;
+};
+
+export interface DefaultsNoColumnEntity {};
+
+export interface DefaultsNoColumnInsertEntity {};
+
+export interface EmptyEntity {};
+
+export interface EmptyInsertEntity {};
+
+export interface EntityEntity {
+  duplicate: number;
+  duplicate: number;
+};
+
+export interface EntityInsertEntity {
+  duplicate: number;
+  duplicate: number;
+};
+
+export interface KebabCaseEntity {
+  'kebab-case1': number | null;
+  'kebab-case2': number;
+};
+
+export interface KebabCaseInsertEntity {
+  'kebab-case1'?: number | null;
+  'kebab-case2': number;
+};
+
+export interface KnownEntity {
+  known1: number;
+  known2: number | null;
+  known3: number | null;
+  known4: number;
+  known5: string | null;
+  known6: string;
+};
+
+export interface KnownInsertEntity {
+  known1: number;
+  known2?: number | null;
+  known3?: number | null;
+  known4: number;
+  known5?: string | null;
+  known6: string;
+};
+
+export interface SnakeCaseEntity {
+  snake_case1: number | null;
+  snake_case2: number;
+};
+
+export interface SnakeCaseInsertEntity {
+  snake_case1?: number | null;
+  snake_case2: number;
+};
+
+export interface UnknownEntity {
+  unknown1: any | null;
+  unknown2: any;
+  unknown3: Array<any> | null;
+  unknown4: Array<any>;
+};
+
+export interface UnknownInsertEntity {
+  unknown1?: any | null;
+  unknown2: any;
+  unknown3?: Array<any> | null;
+  unknown4: Array<any>;
+};
+
+export interface UpperCaseEntity {
+  duplicate: number;
+  duplicate: number;
+};
+
+export interface UpperCaseInsertEntity {
+  duplicate: number;
+  duplicate: number;
+};
+
+export interface ViewEntity {
+  one: number;
+  two: number | null;
+};
+
+export interface WhiteSpaceEntity {
+  'white space 1': number | null;
+  'white space 2': number;
+};
+
+export interface WhiteSpaceInsertEntity {
+  'white space 1'?: number | null;
+  'white space 2': number;
+};
+
+`
+
+exports['test/typescript.js TAP with generated insert types with optionals > must match snapshot 1'] = `
+export enum Apples {}
+
+export enum CustomType {
+  bar = 'bar',
+  foo = 'foo',
+}
+
+export enum CustomType {
+  bar = 'bar',
+  foo = 'foo',
+}
+
+export enum CustomEnum {
+  'foo   bar3' = 'foo   bar3',
+  'foo  ---- ____ ---   bar6' = 'foo  ---- ____ ---   bar6',
+  'foo bar' = 'foo bar',
+  'foo----bar4' = 'foo----bar4',
+  'foo-bar2' = 'foo-bar2',
+  foo____bar5 = 'foo____bar5',
+  value_one = 'value_one',
+  value_two = 'value_two',
+}
+
+export enum CustomType {
+  bar = 'bar',
+  foo = 'foo',
+}
+
+export enum Empty {}
+
+export enum KebabCase1 {}
+
+export enum KebabCase2 {
+  'kebab-case-value' = 'kebab-case-value',
+}
+
+export enum WhiteSpace {
+  'white space value' = 'white space value',
+}
+
+export interface AddressEntity {};
+
+export interface AddressInsertEntity {};
+
+export interface AppleEntity {};
+
+export interface AppleInsertEntity {};
+
+export interface CustomEntity {
+  custom1: CustomType;
+  custom2: CustomType;
+  custom3: CustomType;
+  custom4: Array<CustomType>;
+  custom5: Array<CustomType>;
+  custom6: Array<CustomType>;
+};
+
+export interface CustomInsertEntity {
+  custom1: CustomType;
+  custom2: CustomType;
+  custom3: CustomType;
+  custom4: Array<CustomType>;
+  custom5: Array<CustomType>;
+  custom6: Array<CustomType>;
+};
+
+export interface DefaultEntity {
+  one: number;
+  two?: number;
+};
+
+export interface DefaultInsertEntity {
+  one?: number;
+  two?: number;
+};
+
+export interface DefaultsNoColumnEntity {};
+
+export interface DefaultsNoColumnInsertEntity {};
+
+export interface EmptyEntity {};
+
+export interface EmptyInsertEntity {};
+
+export interface EntityEntity {
+  duplicate: number;
+  duplicate: number;
+};
+
+export interface EntityInsertEntity {
+  duplicate: number;
+  duplicate: number;
+};
+
+export interface KebabCaseEntity {
+  'kebab-case1'?: number;
+  'kebab-case2': number;
+};
+
+export interface KebabCaseInsertEntity {
+  'kebab-case1'?: number;
+  'kebab-case2': number;
+};
+
+export interface KnownEntity {
+  known1: number;
+  known2?: number;
+  known3?: number;
+  known4: number;
+  known5?: string;
+  known6: string;
+};
+
+export interface KnownInsertEntity {
+  known1: number;
+  known2?: number;
+  known3?: number;
+  known4: number;
+  known5?: string;
+  known6: string;
+};
+
+export interface SnakeCaseEntity {
+  snake_case1?: number;
+  snake_case2: number;
+};
+
+export interface SnakeCaseInsertEntity {
+  snake_case1?: number;
+  snake_case2: number;
+};
+
+export interface UnknownEntity {
+  unknown1?: any;
+  unknown2: any;
+  unknown3?: Array<any>;
+  unknown4: Array<any>;
+};
+
+export interface UnknownInsertEntity {
+  unknown1?: any;
+  unknown2: any;
+  unknown3?: Array<any>;
+  unknown4: Array<any>;
+};
+
+export interface UpperCaseEntity {
+  duplicate: number;
+  duplicate: number;
+};
+
+export interface UpperCaseInsertEntity {
+  duplicate: number;
+  duplicate: number;
+};
+
+export interface ViewEntity {
+  one: number;
+  two?: number;
+};
+
+export interface WhiteSpaceEntity {
+  'white space 1'?: number;
+  'white space 2': number;
+};
+
+export interface WhiteSpaceInsertEntity {
+  'white space 1'?: number;
   'white space 2': number;
 };
 
@@ -556,6 +964,13 @@ export interface CustomEntity {
   custom6: Array<CustomType>;
 };
 
+export interface DefaultEntity {
+  one: number;
+  two: number | null;
+};
+
+export interface DefaultsNoColumnEntity {};
+
 export interface EmptyEntity {};
 
 export interface EntityEntity {
@@ -592,6 +1007,11 @@ export interface UnknownEntity {
 export interface UpperCaseEntity {
   duplicate: number;
   duplicate: number;
+};
+
+export interface ViewEntity {
+  one: number;
+  two: number | null;
 };
 
 export interface WhiteSpaceEntity {
@@ -655,6 +1075,13 @@ export interface CustomEntity {
   custom6: Array<CustomType>;
 };
 
+export interface DefaultEntity {
+  one: number;
+  two?: number;
+};
+
+export interface DefaultsNoColumnEntity {};
+
 export interface EmptyEntity {};
 
 export interface EntityEntity {
@@ -691,6 +1118,11 @@ export interface UnknownEntity {
 export interface UpperCaseEntity {
   duplicate: number;
   duplicate: number;
+};
+
+export interface ViewEntity {
+  one: number;
+  two?: number;
 };
 
 export interface WhiteSpaceEntity {
@@ -754,6 +1186,13 @@ export interface CustomEntity {
   custom6: Array<CustomType>;
 };
 
+export interface DefaultEntity {
+  one: number;
+  two: number | null;
+};
+
+export interface DefaultsNoColumnEntity {};
+
 export interface EmptyEntity {};
 
 export interface EntityEntity {
@@ -792,6 +1231,11 @@ export interface UpperCaseEntity {
   duplicate: number;
 };
 
+export interface ViewEntity {
+  one: number;
+  two: number | null;
+};
+
 export interface WhiteSpaceEntity {
   'white space 1': number | null;
   'white space 2': number;
@@ -812,6 +1256,13 @@ export interface CustomEntity {
   custom5: Array<any>;
   custom6: Array<any>;
 };
+
+export interface DefaultEntity {
+  one: number;
+  two?: number;
+};
+
+export interface DefaultsNoColumnEntity {};
 
 export interface EmptyEntity {};
 
@@ -849,6 +1300,11 @@ export interface UnknownEntity {
 export interface UpperCaseEntity {
   duplicate: number;
   duplicate: number;
+};
+
+export interface ViewEntity {
+  one: number;
+  two?: number;
 };
 
 export interface WhiteSpaceEntity {

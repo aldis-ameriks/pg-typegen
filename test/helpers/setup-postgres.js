@@ -6,7 +6,10 @@ const defaultPort = '5435'
 const database = 'pg_typegen_test'
 
 function getTestPostgresConnectionString () {
-  return `${process.env.DATABASE_CONNECTION}/${database}` || `postgres://postgres:postgres@localhost:${defaultPort}/${database}`
+  if (process.env.DATABASE_CONNECTION) {
+    return `${process.env.DATABASE_CONNECTION}/${database}`
+  }
+  return `postgres://postgres:postgres@localhost:${defaultPort}/${database}`
 }
 
 async function setupTestPostgres () {
@@ -54,6 +57,18 @@ async function setupTestPostgres () {
           );
       `
     } catch (e) { }
+
+    await sql`
+      CREATE TABLE IF NOT EXISTS users
+      (
+          id               serial4         NOT NULL,
+          other_id         int4 GENERATED ALWAYS AS IDENTITY,
+          other_primary_id int4 GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+          name             text DEFAULT '',
+          name2            text DEFAULT '' NOT NULL,
+          name3            text            NOT NULL
+      );
+    `
 
     await sql`
         CREATE TABLE IF NOT EXISTS "kebab-test" (
@@ -199,6 +214,12 @@ async function setupTestPostgres () {
         CREATE MATERIALIZED VIEW IF NOT EXISTS materialized_other_items AS (
             SELECT 1 AS test,  '2' AS test_text
         )
+    `
+
+    await sql`
+      CREATE OR REPLACE VIEW some_view AS (
+          SELECT 1 AS test,  '2' AS test_text
+      )
     `
   } catch (e) {
     console.error(e)

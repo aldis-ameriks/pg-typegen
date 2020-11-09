@@ -61,7 +61,23 @@ const tables = [
   { name: 'apples', columns: [] },
   { name: 'addresses', columns: [] },
   { name: 'entities', columns: [{ name: 'duplicate', type: 'int2' }, { name: 'duplicate', type: 'int2' }] },
-  { name: 'UpperCase', columns: [{ name: 'duplicate', type: 'int2' }, { name: 'duplicate', type: 'int2' }] }
+  { name: 'UpperCase', columns: [{ name: 'duplicate', type: 'int2' }, { name: 'duplicate', type: 'int2' }] },
+  { name: 'defaults_no_columns', columns: [] },
+  {
+    name: 'defaults',
+    columns: [
+      { name: 'one', type: 'int4', hasDefault: true },
+      { name: 'two', type: 'int4', hasDefault: true, isNullable: true }
+    ]
+  },
+  {
+    name: 'view',
+    isView: true,
+    columns: [
+      { name: 'one', type: 'int4', hasDefault: true },
+      { name: 'two', type: 'int4', hasDefault: true, isNullable: true }
+    ]
+  }
 ]
 
 const enums = [
@@ -136,5 +152,17 @@ test('without enums', t => {
 test('with pascal case enums', t => {
   t.plan(1)
   const result = typescript({ ...opts, pascalEnums: true }, { tables, typeMapping, enums })
+  t.matchSnapshot(result)
+})
+
+test('with generated insert types', t => {
+  t.plan(1)
+  const result = typescript({ ...opts, insertTypes: true }, { tables, typeMapping, enums })
+  t.matchSnapshot(result)
+})
+
+test('with generated insert types with optionals', t => {
+  t.plan(1)
+  const result = typescript({ ...opts, insertTypes: true, optionals: true }, { tables, typeMapping, enums })
   t.matchSnapshot(result)
 })

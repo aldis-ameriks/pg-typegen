@@ -12,6 +12,7 @@ export interface Options {
   bigint?: boolean;
   dateAsString?: boolean;
   ssl?: boolean;
+  insertTypes?: boolean;
 }
 
 declare function generate(option: Options): Promise<string>;

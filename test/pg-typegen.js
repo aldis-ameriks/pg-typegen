@@ -15,6 +15,13 @@ test('generates types as return value', async (t) => {
   t.matchSnapshot(result)
 })
 
+test('generates types with insert types', async (t) => {
+  t.plan(1)
+
+  const result = await generate({ connection, ssl, insertTypes: true })
+  t.matchSnapshot(result)
+})
+
 test('generates types to file', async (t) => {
   t.plan(2)
 

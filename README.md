@@ -46,6 +46,7 @@ Options:
   --pascal-enums             transform enum keys to pascal case (default: false)
   --bigint                   use bigint for int8 types instead of strings (default: false)
   --date-as-string           use string for date types instead of javascript Date object (default: false)
+  --insert-types             generate separate insert types with optional fields for columns allowing NULL value or having default values (default: false)
   --help                     display help for command
 
 Example:
@@ -84,6 +85,52 @@ interface UserEntity {
 ```
 
 > By default, the types will be generated based on how [pg](https://github.com/brianc/node-postgres) returns the values.
+
+#### Insert types
+To simplify database inserts, separate types can be generated with optional values where NULL is allowed or default values for column exist in postgres.
+
+Given database table
+```sql
+CREATE TYPE user_state AS ENUM (
+  'asleep',
+  'awake'
+);
+
+CREATE TABLE users (
+    id int4 NOT NULL,
+    name varchar(255) NOT NULL,
+    state user_state,
+    is_enabled bool NOT NULL DEFAULT FALSE
+);
+```
+
+Running `pg-typegen -o ./entities.ts --insert-types postgres://username:password@localhost:5432/database`
+Will generate the following type definitions
+```ts
+enum UserState {
+  asleep = 'asleep',
+  awake = 'awake'
+}
+
+interface UserEntity {
+  id: number;
+  name: string;
+  state: UserState | null;
+  is_enabled: boolean;
+}
+
+interface UserInsertEntity {
+  id?: number;
+  name: string;
+  state?: UserState | null;
+  is_enabled?: boolean;
+}
+```
+
+Which should allow simplified inserts when coupled with libraries like [knex](https://github.com/knex/knex)
+```ts
+knex<UserInsertEntity>('users').insert({ name: 'foo' })
+```
 
 ### Running from code
 
