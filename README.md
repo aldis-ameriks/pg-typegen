@@ -127,9 +127,10 @@ interface UserInsertEntity {
 }
 ```
 
-Which should allow simplified inserts when coupled with libraries like [knex](https://github.com/knex/knex)
+Which should allow working with insert objects without having to define all optional and nullable fields.
 ```ts
-knex<UserInsertEntity>('users').insert({ name: 'foo' })
+const user: UserInsertEntity = { name: 'foo' }
+knex<UserInsertEntity>('users').insert(user)
 ```
 
 ### Running from code
