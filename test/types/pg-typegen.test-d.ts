@@ -15,7 +15,8 @@ const options = {
   semicolons: false,
   ssl: false,
   suffix: 'foo',
-  type: false
+  type: false,
+  insertTypes: true
 }
 
 expectAssignable<Options>(options)
