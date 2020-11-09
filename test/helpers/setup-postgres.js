@@ -6,7 +6,10 @@ const defaultPort = '5435'
 const database = 'pg_typegen_test'
 
 function getTestPostgresConnectionString () {
-  return `${process.env.DATABASE_CONNECTION}/${database}` || `postgres://postgres:postgres@localhost:${defaultPort}/${database}`
+  if (process.env.DATABASE_CONNECTION) {
+    return `${process.env.DATABASE_CONNECTION}/${database}`
+  }
+  return `postgres://postgres:postgres@localhost:${defaultPort}/${database}`
 }
 
 async function setupTestPostgres () {
