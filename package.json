@@ -38,7 +38,7 @@
     "eol": "^0.9.1",
     "standard": "^16.0.1",
     "tap": "^14.10.8",
-    "tsd": "^0.13.1"
+    "tsd": "^0.14.0"
   },
   "tsd": {
     "directory": "test/types"
