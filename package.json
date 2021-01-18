@@ -31,7 +31,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "commander": "^6.2.0",
+    "commander": "^7.0.0",
     "postgres": "^2.0.0-beta.2"
   },
   "devDependencies": {
