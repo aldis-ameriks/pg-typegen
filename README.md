@@ -97,7 +97,7 @@ CREATE TYPE user_state AS ENUM (
 );
 
 CREATE TABLE users (
-    id int4 NOT NULL,
+    id serial4 PRIMARY KEY,
     name varchar(255) NOT NULL,
     state user_state,
     is_enabled bool NOT NULL DEFAULT FALSE
