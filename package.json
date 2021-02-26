@@ -7,7 +7,7 @@
     "pg-typegen": "index.js"
   },
   "scripts": {
-    "test": "tap test/*.js --100 --before=test/helpers/setup-postgres.js",
+    "test": "tap test/*.js --100 --timeout=60 --before=test/helpers/setup-postgres.js",
     "test:types": "tsd",
     "lint": "standard",
     "lint:fix": "standard --fix"
