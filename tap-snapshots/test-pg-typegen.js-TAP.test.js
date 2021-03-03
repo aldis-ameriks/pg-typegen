@@ -92,7 +92,7 @@ export interface TypeEntity {
   id_gay: string;
   id_hailee: any;
   id_helen: Array<number> | null;
-  id_ike: Array<number>;
+  id_ike: Array<string>;
   id_joan: Array<string> | null;
   id_karelle: string | null;
   id_lavern: Date;
@@ -104,7 +104,7 @@ export interface TypeEntity {
   'kebab-b': DeliciousKebab;
   name_amara: string | null;
   name_brionna: number;
-  name_enoch: number;
+  name_enoch: string;
   name_jermain: Array<string> | null;
   name_marielle: string | null;
   name_myrtle: Array<string> | null;
@@ -146,10 +146,10 @@ export interface TypeEntity {
   token_kenyon: Array<string>;
   token_marianna: Array<string> | null;
   token_rubye: string;
-  token_ryley: number | null;
+  token_ryley: string | null;
   token_zora: Array<number>;
   updatedat_aaliyah: number | null;
-  updatedat_abe: Array<number> | null;
+  updatedat_abe: Array<string> | null;
   updatedat_brett: Array<string> | null;
   updatedat_cedrick: Array<boolean>;
   updatedat_derick: Array<any>;
@@ -258,7 +258,7 @@ export interface TypeEntity {
   id_gay: string;
   id_hailee: any;
   id_helen: Array<number> | null;
-  id_ike: Array<number>;
+  id_ike: Array<string>;
   id_joan: Array<string> | null;
   id_karelle: string | null;
   id_lavern: Date;
@@ -270,7 +270,7 @@ export interface TypeEntity {
   'kebab-b': DeliciousKebab;
   name_amara: string | null;
   name_brionna: number;
-  name_enoch: number;
+  name_enoch: string;
   name_jermain: Array<string> | null;
   name_marielle: string | null;
   name_myrtle: Array<string> | null;
@@ -312,10 +312,10 @@ export interface TypeEntity {
   token_kenyon: Array<string>;
   token_marianna: Array<string> | null;
   token_rubye: string;
-  token_ryley: number | null;
+  token_ryley: string | null;
   token_zora: Array<number>;
   updatedat_aaliyah: number | null;
-  updatedat_abe: Array<number> | null;
+  updatedat_abe: Array<string> | null;
   updatedat_brett: Array<string> | null;
   updatedat_cedrick: Array<boolean>;
   updatedat_derick: Array<any>;
@@ -440,7 +440,7 @@ export interface TypeEntity {
   id_gay: string;
   id_hailee: any;
   id_helen: Array<number> | null;
-  id_ike: Array<number>;
+  id_ike: Array<string>;
   id_joan: Array<string> | null;
   id_karelle: string | null;
   id_lavern: Date;
@@ -452,7 +452,7 @@ export interface TypeEntity {
   'kebab-b': DeliciousKebab;
   name_amara: string | null;
   name_brionna: number;
-  name_enoch: number;
+  name_enoch: string;
   name_jermain: Array<string> | null;
   name_marielle: string | null;
   name_myrtle: Array<string> | null;
@@ -494,10 +494,10 @@ export interface TypeEntity {
   token_kenyon: Array<string>;
   token_marianna: Array<string> | null;
   token_rubye: string;
-  token_ryley: number | null;
+  token_ryley: string | null;
   token_zora: Array<number>;
   updatedat_aaliyah: number | null;
-  updatedat_abe: Array<number> | null;
+  updatedat_abe: Array<string> | null;
   updatedat_brett: Array<string> | null;
   updatedat_cedrick: Array<boolean>;
   updatedat_derick: Array<any>;
@@ -550,7 +550,7 @@ export interface TypeInsertEntity {
   id_gay: string;
   id_hailee: any;
   id_helen?: Array<number> | null;
-  id_ike: Array<number>;
+  id_ike: Array<string>;
   id_joan?: Array<string> | null;
   id_karelle?: string | null;
   id_lavern: Date;
@@ -562,7 +562,7 @@ export interface TypeInsertEntity {
   'kebab-b': DeliciousKebab;
   name_amara?: string | null;
   name_brionna: number;
-  name_enoch: number;
+  name_enoch: string;
   name_jermain?: Array<string> | null;
   name_marielle?: string | null;
   name_myrtle?: Array<string> | null;
@@ -604,10 +604,10 @@ export interface TypeInsertEntity {
   token_kenyon: Array<string>;
   token_marianna?: Array<string> | null;
   token_rubye: string;
-  token_ryley?: number | null;
+  token_ryley?: string | null;
   token_zora: Array<number>;
   updatedat_aaliyah?: number | null;
-  updatedat_abe?: Array<number> | null;
+  updatedat_abe?: Array<string> | null;
   updatedat_brett?: Array<string> | null;
   updatedat_cedrick: Array<boolean>;
   updatedat_derick: Array<any>;
