@@ -665,6 +665,8 @@ Options:
   --insert-types             generate separate insert types with optional
                              fields for columns allowing NULL value or having
                              default values (default: false)
+  --tables                   generate string literal type with all table names
+                             (default: false)
   --help                     display help for command
 
 `
@@ -696,6 +698,8 @@ Options:
   --insert-types             generate separate insert types with optional
                              fields for columns allowing NULL value or having
                              default values (default: false)
+  --tables                   generate string literal type with all table names
+                             (default: false)
   --help                     display help for command
 
 `
