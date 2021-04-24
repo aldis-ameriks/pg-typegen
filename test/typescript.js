@@ -169,6 +169,6 @@ test('with generated insert types with optionals', t => {
 
 test('with table string literal', t => {
   t.plan(1)
-  const result = typescript({ ...opts, tables: true }, { tables, typeMapping, enums })
+  const result = typescript({ ...opts, tableNames: true }, { tables, typeMapping, enums })
   t.matchSnapshot(result)
 })
