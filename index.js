@@ -26,7 +26,7 @@ program
   .option('--bigint', 'use bigint for int8 types instead of strings', false)
   .option('--date-as-string', 'use string for date types instead of javascript Date object', false)
   .option('--insert-types', 'generate separate insert types with optional fields for columns allowing NULL value or having default values', false)
-  .option('--tables', 'generate string literal type with all table names', false)
+  .option('--table-names', 'generate string literal type with all table names', false)
 
 program.on('--help', () => {
   console.log('')
