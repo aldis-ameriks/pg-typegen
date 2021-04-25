@@ -13,6 +13,7 @@ export interface Options {
   dateAsString?: boolean;
   ssl?: boolean;
   insertTypes?: boolean;
+  tableNames?: boolean;
 }
 
 declare function generate(option: Options): Promise<string>;

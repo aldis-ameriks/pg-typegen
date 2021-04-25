@@ -16,7 +16,8 @@ const options = {
   ssl: false,
   suffix: 'foo',
   type: false,
-  insertTypes: true
+  insertTypes: true,
+  tableNames: true
 }
 
 expectAssignable<Options>(options)
