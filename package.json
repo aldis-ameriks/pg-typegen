@@ -38,8 +38,8 @@
   "devDependencies": {
     "eol": "^0.9.1",
     "standard": "^16.0.3",
-    "tap": "^15.0.2",
-    "tsd": "^0.14.0"
+    "tap": "^15.0.9",
+    "tsd": "^0.17.0"
   },
   "tsd": {
     "directory": "test/types"
