@@ -39,7 +39,13 @@ function parseArray (value) {
 }
 
 async function generateSchema (opts) {
-  const defaultOpts = program.parse([]).opts()
+  let argv = process.argv
+  if (process.argv.length === 2) {
+    // Starting from commander v8, arguments are mandatory.
+    // We're adding placeholder argument to be able to parse and get the default args.
+    argv = [...process.argv, '']
+  }
+  const defaultOpts = program.parse(argv).opts()
   opts = { ...defaultOpts, ...opts }
 
   if (!opts.connection) {
@@ -60,13 +66,14 @@ async function generateSchema (opts) {
 
 if (require.main === module) {
   (async () => {
+    if (process.argv.length === 2) {
+      // Calling script without any arguments, so we're showing help and exiting.
+      program.help()
+    }
+
     const command = program.parse(process.argv)
     const opts = command.opts()
     const args = command.args
-
-    if (!args || !args.length) {
-      program.help()
-    }
 
     opts.connection = args[0]
 
