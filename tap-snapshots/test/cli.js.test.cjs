@@ -6,7 +6,7 @@
  */
 'use strict'
 exports['test/cli.js TAP generates table names > must match snapshot 1'] = `
-export type Tables = 'histories' | 'kebab-test' | 'snake_test' | 'types' | 'users';
+export type Tables = 'address' | 'histories' | 'kebab-test' | 'snake_test' | 'types' | 'users';
 
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',
@@ -22,6 +22,10 @@ export enum Fruits {
 export enum SnakesOn {
   a_plane = 'a_plane',
 }
+
+export interface AddressEntity {
+  id: number;
+};
 
 export interface HistoryEntity {
   id: number;
@@ -190,6 +194,10 @@ export enum SnakesOn {
   a_plane = 'a_plane',
 }
 
+export interface AddressEntity {
+  id: number;
+};
+
 export interface HistoryEntity {
   id: number;
 };
@@ -357,6 +365,10 @@ export enum SnakesOn {
   a_plane = 'a_plane',
 }
 
+export interface AddressEntity {
+  id: number;
+};
+
 export interface HistoryEntity {
   id: number;
 };
@@ -522,6 +534,10 @@ export enum Fruits {
 export enum SnakesOn {
   a_plane = 'a_plane',
 }
+
+export interface AddressEntity {
+  id: number;
+};
 
 export interface HistoryEntity {
   id: number;
@@ -690,6 +706,10 @@ export enum SnakesOn {
   a_plane = 'a_plane',
 }
 
+export interface AddressEntity {
+  id: number;
+};
+
 export interface HistoryEntity {
   id: number;
 };
@@ -744,6 +764,10 @@ export enum Fruits {
 export enum SnakesOn {
   a_plane = 'a_plane',
 }
+
+export interface AddressEntity {
+  id: number;
+};
 
 export interface HistoryEntity {
   id: number;
@@ -911,6 +935,14 @@ export enum Fruits {
 export enum SnakesOn {
   a_plane = 'a_plane',
 }
+
+export interface AddressEntity {
+  id: number;
+};
+
+export interface AddressInsertEntity {
+  id: number;
+};
 
 export interface HistoryEntity {
   id: number;
@@ -1210,6 +1242,10 @@ export enum SnakesOn {
   a_plane = 'a_plane',
 }
 
+export interface AddressEntity {
+  id: number
+}
+
 export interface HistoryEntity {
   id: number
 }
@@ -1375,6 +1411,10 @@ export enum Fruits {
 
 export enum SnakesOn {
   a_plane = 'a_plane',
+}
+
+export interface AddressEntity {
+  id: number
 }
 
 export interface HistoryEntity {
@@ -1544,6 +1584,10 @@ export enum SnakesOn {
   APlane = 'a_plane',
 }
 
+export interface AddressEntity {
+  id: number;
+};
+
 export interface HistoryEntity {
   id: number;
 };
@@ -1710,6 +1754,10 @@ export enum Fruits {
 export enum SnakesOn {
   a_plane = 'a_plane',
 }
+
+export type AddressEntity = {
+  id: number;
+};
 
 export type HistoryEntity = {
   id: number;

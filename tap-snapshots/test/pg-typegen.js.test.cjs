@@ -21,6 +21,10 @@ export enum SnakesOn {
   a_plane = 'a_plane',
 }
 
+export interface AddressEntity {
+  id: number;
+};
+
 export interface HistoryEntity {
   id: number;
 };
@@ -187,6 +191,10 @@ export enum SnakesOn {
   a_plane = 'a_plane',
 }
 
+export interface AddressEntity {
+  id: number;
+};
+
 export interface HistoryEntity {
   id: number;
 };
@@ -338,7 +346,7 @@ export interface UserEntity {
 `
 
 exports['test/pg-typegen.js TAP generates types to file > must match snapshot 2'] = `
-✔ Generated types from 8 tables and 3 enums
+✔ Generated types from 9 tables and 3 enums
 `
 
 exports['test/pg-typegen.js TAP generates types with insert types > must match snapshot 1'] = `
@@ -356,6 +364,14 @@ export enum Fruits {
 export enum SnakesOn {
   a_plane = 'a_plane',
 }
+
+export interface AddressEntity {
+  id: number;
+};
+
+export interface AddressInsertEntity {
+  id: number;
+};
 
 export interface HistoryEntity {
   id: number;

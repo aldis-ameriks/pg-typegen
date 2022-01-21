@@ -41,6 +41,18 @@ Object {
         },
       ],
       "isView": false,
+      "name": "address",
+    },
+    Object {
+      "columns": Array [
+        Object {
+          "hasDefault": false,
+          "isNullable": false,
+          "name": "id",
+          "type": "int4",
+        },
+      ],
+      "isView": false,
       "name": "histories",
     },
     Object {
@@ -921,6 +933,18 @@ Object {
     },
   ],
   "tables": Array [
+    Object {
+      "columns": Array [
+        Object {
+          "hasDefault": false,
+          "isNullable": false,
+          "name": "id",
+          "type": "int4",
+        },
+      ],
+      "isView": false,
+      "name": "address",
+    },
     Object {
       "columns": Array [
         Object {
@@ -1825,6 +1849,18 @@ Object {
     },
   ],
   "tables": Array [
+    Object {
+      "columns": Array [
+        Object {
+          "hasDefault": false,
+          "isNullable": false,
+          "name": "id",
+          "type": "int4",
+        },
+      ],
+      "isView": false,
+      "name": "address",
+    },
     Object {
       "columns": Array [
         Object {
@@ -2743,6 +2779,18 @@ Object {
         },
       ],
       "isView": false,
+      "name": "address",
+    },
+    Object {
+      "columns": Array [
+        Object {
+          "hasDefault": false,
+          "isNullable": false,
+          "name": "id",
+          "type": "int4",
+        },
+      ],
+      "isView": false,
       "name": "histories",
     },
     Object {
@@ -3633,6 +3681,18 @@ Object {
     },
   ],
   "tables": Array [
+    Object {
+      "columns": Array [
+        Object {
+          "hasDefault": false,
+          "isNullable": false,
+          "name": "id",
+          "type": "int4",
+        },
+      ],
+      "isView": false,
+      "name": "address",
+    },
     Object {
       "columns": Array [
         Object {
