@@ -71,6 +71,18 @@ async function setupTestPostgres () {
     `
 
     await sql`
+        COMMENT ON TABLE users IS 'this is the users table';
+    `
+
+    await sql`
+        COMMENT ON COLUMN users.other_primary_id IS 'This is the user identifier number';
+    `
+
+    await sql`
+        COMMENT ON COLUMN users.name IS 'Very long long long long long long long long long long long long long long long long long long long long long comment';
+    `
+
+    await sql`
         CREATE TABLE IF NOT EXISTS "kebab-test" (
             id int4 NOT NULL
         );
@@ -78,7 +90,7 @@ async function setupTestPostgres () {
 
     await sql`
         CREATE TABLE IF NOT EXISTS snake_test (
-            id int4 NOT NULL
+            id int4 NOT NULL PRIMARY KEY
         );
     `
 
