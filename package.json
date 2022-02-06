@@ -32,14 +32,14 @@
   },
   "license": "MIT",
   "dependencies": {
-    "commander": "^8.1.0",
-    "postgres": "^2.0.0-beta.4"
+    "commander": "^9.0.0",
+    "postgres": "^2.0.0-beta.11"
   },
   "devDependencies": {
     "eol": "^0.9.1",
-    "standard": "^16.0.3",
-    "tap": "^15.0.9",
-    "tsd": "^0.17.0"
+    "standard": "^16.0.4",
+    "tap": "^15.1.6",
+    "tsd": "^0.19.1"
   },
   "tsd": {
     "directory": "test/types"
