@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "eol": "^0.9.1",
-    "standard": "^16.0.4",
+    "standard": "^17.0.0",
     "tap": "^15.1.6",
     "tsd": "^0.19.1"
   },
