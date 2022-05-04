@@ -22,6 +22,7 @@ program
   .option('--noSemi, --no-semicolons', 'omit semicolons in generated types', false)
   .option('--ssl', 'use ssl', false)
   .option('--optionals', 'use optionals "?" instead of null', false)
+  .option('--comments', 'generate table and column comments', false)
   .option('--pascal-enums', 'transform enum keys to pascal case', false)
   .option('--bigint', 'use bigint for int8 types instead of strings', false)
   .option('--date-as-string', 'use string for date types instead of javascript Date object', false)
