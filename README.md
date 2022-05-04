@@ -43,6 +43,7 @@ Options:
   --noSemi, --no-semicolons  omit semicolons in generated types
   --ssl                      use ssl (default: false)
   --optionals                use optionals "?" instead of null (default: false)
+  --comments                 generate table and column comments (default: false)
   --pascal-enums             transform enum keys to pascal case (default: false)
   --bigint                   use bigint for int8 types instead of strings (default: false)
   --date-as-string           use string for date types instead of javascript Date object (default: false)
