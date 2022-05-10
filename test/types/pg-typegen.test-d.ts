@@ -17,7 +17,8 @@ const options = {
   suffix: 'foo',
   type: false,
   insertTypes: true,
-  tableNames: true
+  tableNames: true,
+  comments: true
 }
 
 expectAssignable<Options>(options)

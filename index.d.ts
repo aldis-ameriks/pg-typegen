@@ -14,6 +14,7 @@ export interface Options {
   ssl?: boolean;
   insertTypes?: boolean;
   tableNames?: boolean;
+  comments?: boolean;
 }
 
 declare function generate(option: Options): Promise<string>;
