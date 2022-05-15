@@ -5,8 +5,8 @@
 const fs = require('fs')
 const { Command } = require('commander')
 const packageJson = require('./package.json')
-const typescript = require('./lib/typescript')
-const postgres = require('./lib/postgres')
+const typescript = require('./src/typescript')
+const postgres = require('./src/postgres')
 
 const program = new Command()
 program

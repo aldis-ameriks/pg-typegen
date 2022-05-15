@@ -1,7 +1,7 @@
 'use strict'
 
 const { test } = require('tap')
-const getSchemaDefinition = require('../lib/postgres')
+const getSchemaDefinition = require('../src/postgres')
 const { getTestPostgresConnectionString } = require('./helpers/setup-postgres')
 
 test('retrieves database schema', async t => {

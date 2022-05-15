@@ -1,7 +1,7 @@
 'use strict'
 
 const { test, only } = require('tap')
-const typescript = require('../lib/typescript')
+const typescript = require('../src/typescript')
 
 const tables = [
   {
