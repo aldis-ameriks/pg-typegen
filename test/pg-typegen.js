@@ -29,6 +29,13 @@ test('generates types with comments', async (t) => {
   t.matchSnapshot(result)
 })
 
+test('generates types with comments and insert types', async (t) => {
+  t.plan(1)
+
+  const result = await generate({ connection, ssl, comments: true, insertTypes: true })
+  t.matchSnapshot(result)
+})
+
 test('generates types to file', async (t) => {
   t.plan(2)
 

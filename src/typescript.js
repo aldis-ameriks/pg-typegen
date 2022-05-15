@@ -138,6 +138,7 @@ function generateTableTypes (opts, tables, typeMapping, enums) {
 
       if (opts.insertTypes && !table.isView) {
         result += '\n'
+        result += formatTableComment(opts, table)
         result += getTableType(opts, table.name, `Insert${opts.suffix}`)
 
         if (table.columns.length > 0) {
@@ -147,6 +148,7 @@ function generateTableTypes (opts, tables, typeMapping, enums) {
         table.columns
           .sort(sortByField('name'))
           .forEach(tableColumn => {
+            result += formatColumnComment(opts, tableColumn)
             result += `  ${formatName(tableColumn.name)}${tableColumn.isNullable || tableColumn.hasDefault ? '?' : ''}: ${getColumnType(typeMapping, tableColumn.type, enums)}${tableColumn.isNullable && !opts.optionals ? ' | null' : ''}${semicolon(opts)}\n`
           })
 
