@@ -166,6 +166,8 @@ docker-compose up -d
 npm test
 ```
 
+> Use `RECREATE_DATABASE=true npm test` when running tests for the first time
+
 ## Contributing
 
 Contributions, issues and feature requests are welcome!
