@@ -22,9 +22,11 @@
 ## Install
 
 ```sh
-$ npm install pg-typegen
+$ npm install -D pg-typegen
 # or
-$ yarn add pg-typegen
+$ yarn add -D pg-typegen
+# or
+$ pnpm add -D pg-typegen
 ```
 
 ## Usage
