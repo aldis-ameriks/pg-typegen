@@ -1,6 +1,6 @@
 {
   "name": "pg-typegen",
-  "version": "3.3.5",
+  "version": "3.3.6",
   "description": "Generate TypeScript type definitions from Postgres database",
   "main": "index.js",
   "bin": {
