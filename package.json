@@ -32,13 +32,13 @@
   },
   "license": "MIT",
   "dependencies": {
-    "commander": "^10.0.0",
-    "postgres": "^3.3.4"
+    "commander": "^11.0.0",
+    "postgres": "^3.3.5"
   },
   "devDependencies": {
     "eol": "^0.9.1",
-    "standard": "^17.0.0",
-    "tap": "^16.3.4",
+    "standard": "^17.1.0",
+    "tap": "^16.3.6",
     "tsd": "^0.28.1"
   },
   "tsd": {
