@@ -119,7 +119,6 @@ function formatTableComment (opts, table) {
 
 function generateTableTypes (opts, tables, typeMapping, enums) {
   return tables
-    .filter(table => !opts.exclude.includes(table.name))
     .sort(sortByField('name'))
     .map(table => {
       const formattedTableName = formatTableName(opts, table.name, opts.suffix)
@@ -170,7 +169,6 @@ function generateTableTypes (opts, tables, typeMapping, enums) {
 
 function generateEnumTypes (opts, enums) {
   const enumTypes = enums
-    .filter(entry => !opts.exclude.includes(entry.name))
     .sort(sortByField('name'))
     .map(entry => {
       let enumType = `export enum ${toPascalCase(entry.name)} {`
@@ -205,7 +203,7 @@ function typescript (opts, schema) {
   }
 
   if (opts.tableNames) {
-    result += `export type Tables = ${tables.filter(table => !table.isView && !opts.exclude.includes(table.name)).sort(sortByField('name')).map(table => `'${table.name}'`).join(' | ')}${semicolon(opts)}`
+    result += `export type Tables = ${tables.filter(table => !table.isView).sort(sortByField('name')).map(table => `'${table.name}'`).join(' | ')}${semicolon(opts)}`
     result += '\n\n'
   }
 
@@ -217,10 +215,7 @@ function typescript (opts, schema) {
 
   result += generateTableTypes(opts, tables, typeMapping, enums)
 
-  if (opts.onTypes) {
-    opts.onTypes({ resultingTypeMapping: opts.resultingTypeMapping, resultingInsertTypeMapping: opts.resultingInsertTypeMapping })
-  }
-  return result
+  return { types: result, resultingTypeMapping: opts.resultingTypeMapping, resultingInsertTypeMapping: opts.resultingInsertTypeMapping }
 }
 
 module.exports = typescript

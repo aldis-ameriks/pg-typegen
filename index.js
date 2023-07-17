@@ -61,12 +61,20 @@ async function generateSchema (opts) {
     opts.onSchema(schema)
   }
 
-  const types = typescript(opts, schema)
+  schema.tables = schema.tables.filter(table => !opts.exclude.includes(table.name))
+  schema.enums = schema.enums.filter(enums => !opts.exclude.includes(enums.name))
+
+  const result = typescript(opts, schema)
+
+  if (opts.onTypes) {
+    opts.onTypes(result)
+  }
+
   if (opts.output && opts.output !== 'stdout') {
-    fs.writeFileSync(opts.output, types)
+    fs.writeFileSync(opts.output, result.types)
     return `✔ Generated types from ${schema.tables.length} tables and ${schema.enums.length} enums`
   } else {
-    return types
+    return result.types
   }
 }
 
