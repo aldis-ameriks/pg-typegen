@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { expectAssignable, expectError, expectType } from 'tsd'
-import generate, { Options } from '../..'
+import generate, { Options, Schema } from '../..'
 
 const options = {
   connection: 'connection-string',
@@ -18,7 +18,8 @@ const options = {
   type: false,
   insertTypes: true,
   tableNames: true,
-  comments: true
+  comments: true,
+  onSchema: (schema: Schema) => {}
 }
 
 expectAssignable<Options>(options)

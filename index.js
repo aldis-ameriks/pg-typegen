@@ -56,7 +56,12 @@ async function generateSchema (opts) {
   }
 
   const schema = await postgres(opts)
-  const types = await typescript(opts, schema)
+
+  if (opts.onSchema) {
+    opts.onSchema(schema)
+  }
+
+  const types = typescript(opts, schema)
   if (opts.output && opts.output !== 'stdout') {
     fs.writeFileSync(opts.output, types)
     return `✔ Generated types from ${schema.tables.length} tables and ${schema.enums.length} enums`

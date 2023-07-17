@@ -9,36 +9,26 @@ const connection = getTestPostgresConnectionString()
 const ssl = process.env.DATABASE_SSL_ENABLED === 'true'
 
 test('generates types as return value', async (t) => {
-  t.plan(1)
-
   const result = await generate({ connection, ssl })
   t.matchSnapshot(result)
 })
 
 test('generates types with insert types', async (t) => {
-  t.plan(1)
-
   const result = await generate({ connection, ssl, insertTypes: true })
   t.matchSnapshot(result)
 })
 
 test('generates types with comments', async (t) => {
-  t.plan(1)
-
   const result = await generate({ connection, ssl, comments: true })
   t.matchSnapshot(result)
 })
 
 test('generates types with comments and insert types', async (t) => {
-  t.plan(1)
-
   const result = await generate({ connection, ssl, comments: true, insertTypes: true })
   t.matchSnapshot(result)
 })
 
 test('generates types to file', async (t) => {
-  t.plan(2)
-
   const outputPath = path.join(__dirname, './test-entities.ts')
   const result = await generate({ connection, ssl, output: outputPath })
   const content = fs.readFileSync(outputPath, 'utf8')
@@ -48,15 +38,23 @@ test('generates types to file', async (t) => {
 })
 
 test('returns help when missing connection', async (t) => {
-  t.plan(1)
-
   const result = await generate()
   t.matchSnapshot(result)
 })
 
 test('returns help when missing connection', async (t) => {
-  t.plan(1)
-
   const result = await generate({})
+  t.matchSnapshot(result)
+})
+
+test('allows hooking into schema generation', async (t) => {
+  let result
+  await generate({
+    connection,
+    ssl,
+    onSchema: (schema) => {
+      result = schema
+    }
+  })
   t.matchSnapshot(result)
 })
