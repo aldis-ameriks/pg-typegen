@@ -47,7 +47,7 @@ test('returns help when missing connection', async (t) => {
   t.matchSnapshot(result)
 })
 
-test('allows hooking into schema generation', async (t) => {
+test('allows hooking into schema result', async (t) => {
   let result
   await generate({
     connection,
@@ -59,7 +59,7 @@ test('allows hooking into schema generation', async (t) => {
   t.matchSnapshot(result)
 })
 
-test('allows hooking into experimental/internal typescript resulting table name mapping', async (t) => {
+test('allows hooking into type result', async (t) => {
   let result
   await generate({
     connection,

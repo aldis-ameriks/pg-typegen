@@ -1,4 +1,4 @@
-export interface Schema {
+export interface SchemaResult {
   tables: Array<{
     name: string;
     comment: string | null
@@ -17,6 +17,12 @@ export interface Schema {
   typeMapping: Record<string, string[]>
 }
 
+export interface TypeResult {
+  types: string,
+  typeMapping: Record<string, string>,
+  insertTypeMapping: Record<string, string>,
+}
+
 export interface Options {
   connection: string;
   suffix?: string;
@@ -31,7 +37,6 @@ export interface Options {
   bigint?: boolean;
   dateAsString?: boolean;
   ssl?: boolean;
-  onSchema?: (schema: Schema) => void;
   insertTypes?: boolean;
   tableNames?: boolean;
   comments?: boolean;

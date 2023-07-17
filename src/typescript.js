@@ -122,7 +122,7 @@ function generateTableTypes (opts, tables, typeMapping, enums) {
     .sort(sortByField('name'))
     .map(table => {
       const formattedTableName = formatTableName(opts, table.name, opts.suffix)
-      opts.resultingTypeMapping[table.name] = formattedTableName
+      opts.typeMapping[table.name] = formattedTableName
       let result = ''
 
       result += formatTableComment(opts, table)
@@ -143,7 +143,7 @@ function generateTableTypes (opts, tables, typeMapping, enums) {
 
       if (opts.insertTypes && !table.isView) {
         const formattedTableName = formatTableName(opts, table.name, `Insert${opts.suffix}`)
-        opts.resultingInsertTypeMapping[table.name] = formattedTableName
+        opts.insertTypeMapping[table.name] = formattedTableName
 
         result += '\n'
         result += formatTableComment(opts, table)
@@ -193,8 +193,8 @@ function typescript (opts, schema) {
   const { header } = opts
 
   // For internal/experimental usage only
-  opts.resultingTypeMapping = {}
-  opts.resultingInsertTypeMapping = {}
+  opts.typeMapping = {}
+  opts.insertTypeMapping = {}
 
   let result = ''
   if (header) {
@@ -215,7 +215,7 @@ function typescript (opts, schema) {
 
   result += generateTableTypes(opts, tables, typeMapping, enums)
 
-  return { types: result, resultingTypeMapping: opts.resultingTypeMapping, resultingInsertTypeMapping: opts.resultingInsertTypeMapping }
+  return { types: result, typeMapping: opts.typeMapping, insertTypeMapping: opts.insertTypeMapping }
 }
 
 module.exports = typescript
