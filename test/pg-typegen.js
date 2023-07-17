@@ -58,3 +58,16 @@ test('allows hooking into schema generation', async (t) => {
   })
   t.matchSnapshot(result)
 })
+
+test('allows hooking into experimental/internal typescript resulting table name mapping', async (t) => {
+  let result
+  await generate({
+    connection,
+    ssl,
+    insertTypes: true,
+    onTypes: (typeMapping) => {
+      result = typeMapping
+    }
+  })
+  t.matchSnapshot(result)
+})

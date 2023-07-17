@@ -5,6 +5,30 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
+exports['test/pg-typegen.js TAP allows hooking into experimental/internal typescript resulting table name mapping > must match snapshot 1'] = `
+Object {
+  "resultingInsertTypeMapping": Object {
+    "address": "AddressInsertEntity",
+    "histories": "HistoryInsertEntity",
+    "kebab-test": "KebabTestInsertEntity",
+    "snake_test": "SnakeTestInsertEntity",
+    "types": "TypeInsertEntity",
+    "users": "UserInsertEntity",
+  },
+  "resultingTypeMapping": Object {
+    "address": "AddressEntity",
+    "histories": "HistoryEntity",
+    "kebab-test": "KebabTestEntity",
+    "materialized_items": "MaterializedItemEntity",
+    "materialized_other_items": "MaterializedOtherItemEntity",
+    "snake_test": "SnakeTestEntity",
+    "some_view": "SomeViewEntity",
+    "types": "TypeEntity",
+    "users": "UserEntity",
+  },
+}
+`
+
 exports['test/pg-typegen.js TAP allows hooking into schema generation > must match snapshot 1'] = `
 Object {
   "enums": Result [

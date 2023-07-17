@@ -62,7 +62,7 @@ function getColumnType (typeMapping, type, enums) {
   return result[0]
 }
 
-function getTableType (opts, tableName, suffix) {
+function formatTableName (opts, tableName, suffix) {
   let parsedTableName = toPascalCase(tableName)
   if (parsedTableName.endsWith('ies')) {
     parsedTableName = parsedTableName.slice(0, -3) + 'y'
@@ -74,10 +74,14 @@ function getTableType (opts, tableName, suffix) {
     parsedTableName = parsedTableName.slice(0, -1)
   }
 
+  return `${parsedTableName}${suffix}`
+}
+
+function getTableType (opts, tableName) {
   if (opts.type) {
-    return `export type ${parsedTableName}${suffix} = {`
+    return `export type ${tableName} = {`
   } else {
-    return `export interface ${parsedTableName}${suffix} {`
+    return `export interface ${tableName} {`
   }
 }
 
@@ -118,10 +122,12 @@ function generateTableTypes (opts, tables, typeMapping, enums) {
     .filter(table => !opts.exclude.includes(table.name))
     .sort(sortByField('name'))
     .map(table => {
+      const formattedTableName = formatTableName(opts, table.name, opts.suffix)
+      opts.resultingTypeMapping[table.name] = formattedTableName
       let result = ''
 
       result += formatTableComment(opts, table)
-      result += getTableType(opts, table.name, opts.suffix)
+      result += getTableType(opts, formattedTableName)
 
       if (table.columns.length > 0) {
         result += '\n'
@@ -137,9 +143,12 @@ function generateTableTypes (opts, tables, typeMapping, enums) {
       result += `}${semicolon(opts)}\n`
 
       if (opts.insertTypes && !table.isView) {
+        const formattedTableName = formatTableName(opts, table.name, `Insert${opts.suffix}`)
+        opts.resultingInsertTypeMapping[table.name] = formattedTableName
+
         result += '\n'
         result += formatTableComment(opts, table)
-        result += getTableType(opts, table.name, `Insert${opts.suffix}`)
+        result += getTableType(opts, formattedTableName)
 
         if (table.columns.length > 0) {
           result += '\n'
@@ -185,6 +194,10 @@ function typescript (opts, schema) {
   const { tables, typeMapping, enums } = schema
   const { header } = opts
 
+  // For internal/experimental usage only
+  opts.resultingTypeMapping = {}
+  opts.resultingInsertTypeMapping = {}
+
   let result = ''
   if (header) {
     result += header
@@ -201,7 +214,12 @@ function typescript (opts, schema) {
     result += enumTypes
     result += '\n'
   }
+
   result += generateTableTypes(opts, tables, typeMapping, enums)
+
+  if (opts.onTypes) {
+    opts.onTypes({ resultingTypeMapping: opts.resultingTypeMapping, resultingInsertTypeMapping: opts.resultingInsertTypeMapping })
+  }
   return result
 }
 
