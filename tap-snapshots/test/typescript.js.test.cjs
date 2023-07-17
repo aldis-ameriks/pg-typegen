@@ -1244,7 +1244,7 @@ export interface WhiteSpaceEntity {
 `
 
 exports['test/typescript.js TAP with table string literal > must match snapshot 1'] = `
-export type Tables = 'known' | 'unknown' | 'snake_case' | 'kebab-case' | 'white space' | 'custom' | 'empty' | 'apples' | 'addresses' | 'entities' | 'UpperCase' | 'defaults_no_columns' | 'defaults';
+export type Tables = 'addresses' | 'apples' | 'custom' | 'defaults' | 'defaults_no_columns' | 'empty' | 'entities' | 'kebab-case' | 'known' | 'snake_case' | 'unknown' | 'UpperCase' | 'white space';
 
 export enum Apples {}
 

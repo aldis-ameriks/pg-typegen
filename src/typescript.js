@@ -205,7 +205,7 @@ function typescript (opts, schema) {
   }
 
   if (opts.tableNames) {
-    result += `export type Tables = ${tables.filter(table => !table.isView && !opts.exclude.includes(table.name)).map(table => `'${table.name}'`).join(' | ')}${semicolon(opts)}`
+    result += `export type Tables = ${tables.filter(table => !table.isView && !opts.exclude.includes(table.name)).sort(sortByField('name')).map(table => `'${table.name}'`).join(' | ')}${semicolon(opts)}`
     result += '\n\n'
   }
 
