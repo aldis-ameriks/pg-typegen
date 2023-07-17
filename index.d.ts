@@ -1,5 +1,5 @@
 export interface Schema {
-  tables: {
+  tables: Array<{
     name: string;
     comment: string | null
     isView: boolean
@@ -12,7 +12,7 @@ export interface Schema {
       isNullable: boolean,
       defaultValue: null
     }>
-  },
+  }>,
   enums: Array<{ name: string, values: string[] }>,
   typeMapping: Record<string, string[]>
 }
