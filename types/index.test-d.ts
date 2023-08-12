@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { expectAssignable, expectError, expectType } from 'tsd'
-import generate, { Options } from '../..'
+import generate, { Options } from '.'
 
 const options = {
   connection: 'connection-string',

@@ -22,8 +22,7 @@ jobs:
       - run: npm run test:types
       - run: npm test
       - run: npm run transpile:cjs
-      - run: npm run test:cjs:types
-      - run: npm test:cjs
+      - run: npm run test:cjs
     env:
       CI: true
       DATABASE_SSL_ENABLED: ${{ secrets.DATABASE_SSL_ENABLED }}
