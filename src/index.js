@@ -22,8 +22,8 @@ const options = {
   comments: { type: 'boolean' },
   semicolons: { type: 'boolean' },
   bigint: { type: 'boolean' },
-  noSemi: { type: 'boolean' },
-  'no-semicolons': { type: 'boolean' },
+  noSemi: { type: 'boolean' }, // TODO: Deprecate
+  'no-semicolons': { type: 'boolean' }, // TODO: Deprecate
   'pascal-enums': { type: 'boolean' },
   'date-as-string': { type: 'boolean' },
   'insert-types': { type: 'boolean' },
