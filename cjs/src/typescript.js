@@ -216,4 +216,4 @@ function typescript (opts, schema) {
   return { types: result, typeMapping: opts.typeMapping, insertTypeMapping: opts.insertTypeMapping }
 }
 
-export default typescript
+module.exports = typescript

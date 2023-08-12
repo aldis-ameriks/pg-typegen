@@ -1,6 +1,6 @@
-import { test } from 'tap'
-import getSchemaDefinition, { getPostgresOpts } from '../src/postgres.js'
-import { getTestPostgresConnectionString } from './helpers/setup-postgres.js'
+const { test } = require('tap')
+const getSchemaDefinition = require('../src/postgres.js')
+const { getTestPostgresConnectionString } = require('./helpers/setup-postgres.js')
 
 test('retrieves database schema', async t => {
   t.plan(1)
@@ -60,12 +60,12 @@ test('returns typeMapping with date to string mapping', async t => {
 test('uses correct postgres opts', t => {
   t.plan(3)
 
-  let result = getPostgresOpts({})
+  let result = getSchemaDefinition.getPostgresOpts({})
   t.equal(result, false)
 
-  result = getPostgresOpts({ ssl: false })
+  result = getSchemaDefinition.getPostgresOpts({ ssl: false })
   t.equal(result, false)
 
-  result = getPostgresOpts({ ssl: true })
+  result = getSchemaDefinition.getPostgresOpts({ ssl: true })
   t.same(result, { ssl: { rejectUnauthorized: false } })
 })

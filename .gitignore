@@ -4,3 +4,4 @@ node_modules
 package-lock.json
 yarn.lock
 test/entities.ts
+cjs/test/entities.ts

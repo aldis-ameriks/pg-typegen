@@ -1,12 +1,12 @@
 #! /usr/bin/env node
 
-'use strict'
+import fs from 'node:fs'
+import { pathToFileURL } from 'node:url'
+import { Command } from 'commander'
+import typescript from './typescript.js'
+import postgres from './postgres.js'
 
-const fs = require('fs')
-const { Command } = require('commander')
-const packageJson = require('./package.json')
-const typescript = require('./src/typescript')
-const postgres = require('./src/postgres')
+const packageJson = JSON.parse(fs.readFileSync(new URL('../package.json', import.meta.url)))
 
 const program = new Command()
 program
@@ -78,7 +78,7 @@ async function generateSchema (opts) {
   }
 }
 
-if (require.main === module) {
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   (async () => {
     if (process.argv.length === 2) {
       // Calling script without any arguments, so we're showing help and exiting.
@@ -96,4 +96,4 @@ if (require.main === module) {
   })()
 }
 
-module.exports = generateSchema
+export default generateSchema

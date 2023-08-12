@@ -1,17 +1,16 @@
-import { pathToFileURL } from 'node:url'
-import postgres from 'postgres'
+const postgres = require('postgres')
 
 const defaultPort = '5435'
 const database = 'pg_typegen_test'
 
-export function getTestPostgresConnectionString () {
+module.exports.getTestPostgresConnectionString = getTestPostgresConnectionString; function getTestPostgresConnectionString () {
   if (process.env.DATABASE_CONNECTION) {
     return `${process.env.DATABASE_CONNECTION}/${database}`
   }
   return `postgres://postgres:postgres@localhost:${defaultPort}/${database}`
 }
 
-export async function setupTestPostgres () {
+module.exports.setupTestPostgres = setupTestPostgres; async function setupTestPostgres () {
   let connection = process.env.DATABASE_CONNECTION || `postgres://postgres:postgres@localhost:${defaultPort}`
   const ssl = process.env.DATABASE_SSL_ENABLED === 'true'
   const recreateDatabase = process.env.RECREATE_DATABASE === 'true'
@@ -247,7 +246,7 @@ export async function setupTestPostgres () {
   return connection
 }
 
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (require.main === module) {
   (async () => {
     await setupTestPostgres()
   })()

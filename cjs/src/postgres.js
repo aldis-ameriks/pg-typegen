@@ -1,4 +1,4 @@
-import postgres from 'postgres'
+const postgres = require('postgres')
 
 const typeMapping = {
   string: ['bpchar', 'char', 'varchar', 'text', 'numeric', 'money', 'uuid', 'bytea', 'inet', 'time', 'timetz', 'interval', 'name'],
@@ -107,7 +107,7 @@ function getEnumDefinitions (sql, schema) {
   `
 }
 
-export function getPostgresOpts (opts) {
+function getPostgresOpts (opts) {
   // rejectUnauthorized: false allows self-signed certs
   return opts.ssl ? { ssl: { rejectUnauthorized: false } } : false
 }
@@ -146,4 +146,5 @@ async function getSchemaDefinition (opts) {
   }
 }
 
-export default getSchemaDefinition
+module.exports = getSchemaDefinition
+module.exports.getPostgresOpts = getPostgresOpts

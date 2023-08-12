@@ -2,15 +2,27 @@
   "name": "pg-typegen",
   "version": "3.4.4",
   "description": "Generate TypeScript type definitions from Postgres database",
-  "main": "index.js",
+  "type": "module",
+  "module": "src/index.js",
+  "main": "cjs/src/index.js",
+  "exports": {
+    "types": "./index.d.ts",
+    "import": "./src/index.js",
+    "default": "./cjs/src/index.js"
+  },
+  "types": "index.d.ts",
+  "typings": "index.d.ts",
   "bin": {
-    "pg-typegen": "index.js"
+    "pg-typegen": "cjs/src/index.js"
   },
   "scripts": {
     "test": "tap test/*.js --100 --timeout=60 --before=test/helpers/setup-postgres.js",
+    "test:cjs": "tap cjs/test/*.js --100 --timeout=60 --before=cjs/test/helpers/setup-postgres.js",
     "test:types": "tsd",
+    "test:cjs:types": "tsd",
     "lint": "standard",
-    "lint:fix": "standard --fix"
+    "lint:fix": "standard --fix",
+    "transpile:cjs": "node ./transpile.cjs.js && npm run lint:fix"
   },
   "author": "Aldis Ameriks <aldis.ameriks@gmail.com>",
   "keywords": [

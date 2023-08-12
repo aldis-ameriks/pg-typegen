@@ -1,5 +1,5 @@
-import { test } from 'tap'
-import typescript from '../src/typescript.js'
+const { test } = require('tap')
+const typescript = require('../src/typescript.js')
 
 const tables = [
   {

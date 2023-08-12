@@ -1,15 +1,12 @@
-import childProcess from 'node:child_process'
-import fs from 'node:fs'
-import url from 'node:url'
-import path from 'node:path'
-import eol from 'eol'
-import { test, only } from 'tap'
-import { getTestPostgresConnectionString } from './helpers/setup-postgres.js'
+const childProcess = require('node:child_process')
+const fs = require('node:fs')
+const path = require('node:path')
+const eol = require('eol')
+const { test, only } = require('tap')
+const { getTestPostgresConnectionString } = require('./helpers/setup-postgres.js')
 
 const connection = getTestPostgresConnectionString()
 const ssl = process.env.DATABASE_SSL_ENABLED === 'true'
-
-const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
 test('help', t => {
   t.plan(1)

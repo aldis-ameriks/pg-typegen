@@ -5,3 +5,5 @@
 !package.json
 !README.md
 !LICENSE
+!cjs/src/*
+!cjs/package.json

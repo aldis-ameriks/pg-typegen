@@ -1,10 +1,9 @@
-import { test } from 'tap'
-import fs from 'node:fs'
-import path from 'node:path'
-import url from 'node:url'
+const { test } = require('tap')
+const fs = require('node:fs')
+const path = require('node:path')
 
-import generate from '../src/index.js'
-import { getTestPostgresConnectionString } from './helpers/setup-postgres.js'
+const generate = require('../src/index.js')
+const { getTestPostgresConnectionString } = require('./helpers/setup-postgres.js')
 
 const connection = getTestPostgresConnectionString()
 const ssl = process.env.DATABASE_SSL_ENABLED === 'true'
@@ -30,7 +29,7 @@ test('generates types with comments and insert types', async (t) => {
 })
 
 test('generates types to file', async (t) => {
-  const outputPath = path.join(url.fileURLToPath(new URL('.', import.meta.url)), './test-entities.ts')
+  const outputPath = path.join(__dirname, './test-entities.ts')
   const result = await generate({ connection, ssl, output: outputPath })
   const content = fs.readFileSync(outputPath, 'utf8')
   t.matchSnapshot(content)
