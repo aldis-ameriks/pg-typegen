@@ -19,6 +19,7 @@ const options = {
   ssl: { type: 'boolean' },
   optionals: { type: 'boolean' },
   comments: { type: 'boolean' },
+  semicolons: { type: 'boolean' },
   bigint: { type: 'boolean' },
   noSemi: { type: 'boolean' },
   'no-semicolons': { type: 'boolean' },
@@ -35,7 +36,7 @@ const defaultOptions = {
   output: 'stdout',
   exclude: [],
   type: false,
-  semicolons: true,
+  semicolons: false,
   ssl: false,
   optionals: false,
   comments: false,
@@ -52,13 +53,13 @@ const help = `Usage: pg-typegen [options] <connection>
 
 Options:
   -V, --version              output the version number
-  -f, --suffix <suffix>      suffix to append to generated table type, e.g. item -> ItemEntity (default: "Entity")
-  -s, --schema <schema>      schema (default: "public")
-  -h, --header <header>      header content (default: "")
-  -o, --output <output>      file output path (default: "stdout")
+  -f, --suffix  <suffix>     suffix to append to generated table type, e.g. item -> ItemEntity (default: "Entity")
+  -s, --schema  <schema>     schema (default: "public")
+  -h, --header  <header>     header content (default: "")
+  -o, --output  <output>     file output path (default: "stdout")
   -e, --exclude <exclude>    excluded tables and enums as comma separated string e.g. knex_migrations,knex_migrations_lock (default: [])
   --type                     use type definitions instead of interfaces in generated output (default: false)
-  --noSemi, --no-semicolons  omit semicolons in generated types (default: false)
+  --semicolons               use semicolons in generated types (default: false)
   --ssl                      use ssl (default: false)
   --optionals                use optionals "?" instead of null (default: false)
   --comments                 generate table and column comments (default: false)
@@ -122,7 +123,7 @@ if (require.main === module) {
       output: opts.output,
       exclude: opts.exclude ? opts.exclude.split(',').map(e => e.trim()).filter(Boolean) : [],
       type: opts.type,
-      semicolons: !(opts.noSemi === true || opts['no-semicolons'] === true),
+      semicolons: opts.semicolons === true || !(opts.noSemi === true || opts['no-semicolons'] === true),
       ssl: opts.ssl,
       optionals: opts.optionals,
       comments: opts.comments,

@@ -227,6 +227,26 @@ t.test('generates types with no-semicolons option', t => {
   })
 })
 
+t.test('generates types with semicolons option', t => {
+  t.plan(1)
+
+  const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'src', 'index.js'), connection, ssl ? '--ssl' : '', '--semicolons'], {
+    cwd: __dirname,
+    env: process.env,
+    stdio: ['ignore', 'pipe', 'pipe'],
+    detached: false
+  })
+
+  const result = { data: '' }
+  child.stdout.on('data', data => {
+    result.data += data.toString()
+  })
+
+  child.on('close', () => {
+    t.matchSnapshot(result.data)
+  })
+})
+
 t.test('generates types with bigint option', t => {
   t.plan(1)
 
