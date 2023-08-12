@@ -1,7 +1,6 @@
 const childProcess = require('node:child_process')
 const fs = require('node:fs')
 const path = require('node:path')
-const eol = require('eol')
 const { test, only } = require('tap')
 const { getTestPostgresConnectionString } = require('./helpers/setup-postgres.js')
 
@@ -24,7 +23,7 @@ test('help', t => {
   })
 
   child.on('close', () => {
-    t.matchSnapshot(eol.lf(result.data))
+    t.matchSnapshot(result.data)
   })
 })
 
@@ -46,7 +45,7 @@ test('version', t => {
   })
 
   child.on('close', () => {
-    t.matchSnapshot(eol.lf(result.data))
+    t.matchSnapshot(result.data)
   })
 })
 
@@ -66,7 +65,7 @@ test('missing connection string', t => {
   })
 
   child.on('close', () => {
-    t.matchSnapshot(eol.lf(result.data))
+    t.matchSnapshot(result.data)
   })
 })
 
@@ -86,7 +85,7 @@ test('generates types stdout', t => {
   })
 
   child.on('close', () => {
-    t.matchSnapshot(eol.lf(result.data))
+    t.matchSnapshot(result.data)
   })
 })
 
@@ -144,7 +143,7 @@ test('generates types with exclusion', t => {
   })
 
   child.on('close', () => {
-    t.matchSnapshot(eol.lf(result.data))
+    t.matchSnapshot(result.data)
   })
 })
 
@@ -164,7 +163,7 @@ test('generates types with header', t => {
   })
 
   child.on('close', () => {
-    t.matchSnapshot(eol.lf(result.data))
+    t.matchSnapshot(result.data)
   })
 })
 
@@ -184,7 +183,7 @@ test('generates types with pascal case enums', t => {
   })
 
   child.on('close', () => {
-    t.matchSnapshot(eol.lf(result.data))
+    t.matchSnapshot(result.data)
   })
 })
 
@@ -204,7 +203,7 @@ test('generates types with noSemi option', t => {
   })
 
   child.on('close', () => {
-    t.matchSnapshot(eol.lf(result.data))
+    t.matchSnapshot(result.data)
   })
 })
 
@@ -224,7 +223,7 @@ test('generates types with no-semicolons option', t => {
   })
 
   child.on('close', () => {
-    t.matchSnapshot(eol.lf(result.data))
+    t.matchSnapshot(result.data)
   })
 })
 
@@ -244,7 +243,7 @@ test('generates types with bigint option', t => {
   })
 
   child.on('close', () => {
-    t.matchSnapshot(eol.lf(result.data))
+    t.matchSnapshot(result.data)
   })
 })
 
@@ -264,7 +263,7 @@ test('generates types with types option', t => {
   })
 
   child.on('close', () => {
-    t.matchSnapshot(eol.lf(result.data))
+    t.matchSnapshot(result.data)
   })
 })
 
@@ -284,7 +283,7 @@ test('generates types with insert types', t => {
   })
 
   child.on('close', () => {
-    t.matchSnapshot(eol.lf(result.data))
+    t.matchSnapshot(result.data)
   })
 })
 
@@ -304,7 +303,7 @@ test('generates table names', t => {
   })
 
   child.on('close', () => {
-    t.matchSnapshot(eol.lf(result.data))
+    t.matchSnapshot(result.data)
   })
 })
 
