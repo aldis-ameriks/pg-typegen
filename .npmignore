@@ -1,9 +1,8 @@
 *
-!src/*
-!index.js
-!types/index.d.ts
-!package.json
 !README.md
 !LICENSE
+!src/*
+!package.json
 !cjs/src/*
 !cjs/package.json
+!types/index.d.ts
