@@ -21,6 +21,7 @@ jobs:
       - run: npm run lint
       - run: npm run test:types
       - run: npm test
+      - run: npm run transpile:cjs
       - run: npm run test:cjs:types
       - run: npm test:cjs
         env:
