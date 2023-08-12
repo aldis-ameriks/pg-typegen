@@ -1,8 +1,8 @@
-const { test } = require('tap')
+const t = require('tap')
 const getSchemaDefinition = require('../src/postgres.js')
 const { getTestPostgresConnectionString } = require('./helpers/setup-postgres.js')
 
-test('retrieves database schema', async t => {
+t.test('retrieves database schema', async t => {
   t.plan(1)
 
   const connection = getTestPostgresConnectionString()
@@ -13,7 +13,7 @@ test('retrieves database schema', async t => {
   t.matchSnapshot(result)
 })
 
-test('returns typeMapping with int8 to string mapping', async t => {
+t.test('returns typeMapping with int8 to string mapping', async t => {
   t.plan(1)
 
   const connection = getTestPostgresConnectionString()
@@ -24,7 +24,7 @@ test('returns typeMapping with int8 to string mapping', async t => {
   t.matchSnapshot(result)
 })
 
-test('returns typeMapping with int8 to bigint mapping', async t => {
+t.test('returns typeMapping with int8 to bigint mapping', async t => {
   t.plan(1)
 
   const connection = getTestPostgresConnectionString()
@@ -35,7 +35,7 @@ test('returns typeMapping with int8 to bigint mapping', async t => {
   t.matchSnapshot(result)
 })
 
-test('returns typeMapping with date to javascript Date mapping', async t => {
+t.test('returns typeMapping with date to javascript Date mapping', async t => {
   t.plan(1)
 
   const connection = getTestPostgresConnectionString()
@@ -46,7 +46,7 @@ test('returns typeMapping with date to javascript Date mapping', async t => {
   t.matchSnapshot(result)
 })
 
-test('returns typeMapping with date to string mapping', async t => {
+t.test('returns typeMapping with date to string mapping', async t => {
   t.plan(1)
 
   const connection = getTestPostgresConnectionString()
@@ -57,7 +57,7 @@ test('returns typeMapping with date to string mapping', async t => {
   t.matchSnapshot(result)
 })
 
-test('uses correct postgres opts', t => {
+t.test('uses correct postgres opts', t => {
   t.plan(3)
 
   let result = getSchemaDefinition.getPostgresOpts({})

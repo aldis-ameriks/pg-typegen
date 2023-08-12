@@ -1,4 +1,4 @@
-import { test } from 'tap'
+import t from 'tap'
 import typescript from '../src/typescript.js'
 
 const tables = [
@@ -102,7 +102,7 @@ const opts = {
   semicolons: true
 }
 
-test('using types', t => {
+t.test('using types', t => {
   t.plan(2)
   let result = typescript({ ...opts, type: true, semicolons: true }, { tables, typeMapping, enums })
   t.matchSnapshot(result.types)
@@ -111,7 +111,7 @@ test('using types', t => {
   t.matchSnapshot(result.types)
 })
 
-test('using interfaces', t => {
+t.test('using interfaces', t => {
   t.plan(2)
   let result = typescript({ ...opts, type: false, semicolons: true }, { tables, typeMapping, enums })
   t.matchSnapshot(result.types)
@@ -120,49 +120,49 @@ test('using interfaces', t => {
   t.matchSnapshot(result.types)
 })
 
-test('with custom suffix', t => {
+t.test('with custom suffix', t => {
   t.plan(1)
   const result = typescript({ ...opts, suffix: 'Record' }, { tables, typeMapping, enums })
   t.matchSnapshot(result.types)
 })
 
-test('with header', t => {
+t.test('with header', t => {
   t.plan(1)
   const result = typescript({ ...opts, header: '/* eslint-disable */' }, { tables, typeMapping, enums })
   t.matchSnapshot(result.types)
 })
 
-test('with optionals', t => {
+t.test('with optionals', t => {
   t.plan(1)
   const result = typescript({ ...opts, optionals: true }, { tables, typeMapping, enums })
   t.matchSnapshot(result.types)
 })
 
-test('without enums', t => {
+t.test('without enums', t => {
   t.plan(1)
   const result = typescript({ ...opts, optionals: true }, { tables, typeMapping, enums: [] })
   t.matchSnapshot(result.types)
 })
 
-test('with pascal case enums', t => {
+t.test('with pascal case enums', t => {
   t.plan(1)
   const result = typescript({ ...opts, pascalEnums: true }, { tables, typeMapping, enums })
   t.matchSnapshot(result.types)
 })
 
-test('with generated insert types', t => {
+t.test('with generated insert types', t => {
   t.plan(1)
   const result = typescript({ ...opts, insertTypes: true }, { tables, typeMapping, enums })
   t.matchSnapshot(result.types)
 })
 
-test('with generated insert types with optionals', t => {
+t.test('with generated insert types with optionals', t => {
   t.plan(1)
   const result = typescript({ ...opts, insertTypes: true, optionals: true }, { tables, typeMapping, enums })
   t.matchSnapshot(result.types)
 })
 
-test('with table string literal', t => {
+t.test('with table string literal', t => {
   t.plan(1)
   const result = typescript({ ...opts, tableNames: true }, { tables, typeMapping, enums })
   t.matchSnapshot(result.types)

@@ -1,13 +1,13 @@
 const childProcess = require('node:child_process')
 const fs = require('node:fs')
 const path = require('node:path')
-const { test, only } = require('tap')
+const t = require('tap')
 const { getTestPostgresConnectionString } = require('./helpers/setup-postgres.js')
 
 const connection = getTestPostgresConnectionString()
 const ssl = process.env.DATABASE_SSL_ENABLED === 'true'
 
-test('help', t => {
+t.test('help', t => {
   t.plan(1)
 
   const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'src', 'index.js'), '--help'], {
@@ -27,7 +27,7 @@ test('help', t => {
   })
 })
 
-test('version', t => {
+t.test('version', t => {
   t.plan(1)
 
   t.cleanSnapshot = s => s.replace(/v[0-9.]+/g, 'v{v}')
@@ -49,7 +49,7 @@ test('version', t => {
   })
 })
 
-test('missing connection string', t => {
+t.test('missing connection string', t => {
   t.plan(1)
 
   const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'src', 'index.js')], {
@@ -69,7 +69,7 @@ test('missing connection string', t => {
   })
 })
 
-test('generates types stdout', t => {
+t.test('generates types stdout', t => {
   t.plan(1)
 
   const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'src', 'index.js'), connection, ssl ? '--ssl' : ''], {
@@ -89,7 +89,7 @@ test('generates types stdout', t => {
   })
 })
 
-only('generates types to file', t => {
+t.test('generates types to file', t => {
   t.plan(1)
 
   const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'src', 'index.js'), '-o', './entities.ts', connection, ssl ? '--ssl' : ''], {
@@ -107,7 +107,7 @@ only('generates types to file', t => {
   })
 })
 
-test('reports success to stdout', t => {
+t.test('reports success to stdout', t => {
   t.plan(1)
 
   const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'src', 'index.js'), '-o', './entities.ts', connection, ssl ? '--ssl' : ''], {
@@ -127,7 +127,7 @@ test('reports success to stdout', t => {
   })
 })
 
-test('generates types with exclusion', t => {
+t.test('generates types with exclusion', t => {
   t.plan(1)
 
   const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'src', 'index.js'), connection, ssl ? '--ssl' : '', '-e', 'types,snake_test'], {
@@ -147,7 +147,7 @@ test('generates types with exclusion', t => {
   })
 })
 
-test('generates types with header', t => {
+t.test('generates types with header', t => {
   t.plan(1)
 
   const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'src', 'index.js'), connection, ssl ? '--ssl' : '', '-h', '/* eslint-disable */'], {
@@ -167,7 +167,7 @@ test('generates types with header', t => {
   })
 })
 
-test('generates types with pascal case enums', t => {
+t.test('generates types with pascal case enums', t => {
   t.plan(1)
 
   const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'src', 'index.js'), connection, ssl ? '--ssl' : '', '--pascal-enums'], {
@@ -187,7 +187,7 @@ test('generates types with pascal case enums', t => {
   })
 })
 
-test('generates types with noSemi option', t => {
+t.test('generates types with noSemi option', t => {
   t.plan(1)
 
   const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'src', 'index.js'), connection, ssl ? '--ssl' : '', '--noSemi'], {
@@ -207,7 +207,7 @@ test('generates types with noSemi option', t => {
   })
 })
 
-test('generates types with no-semicolons option', t => {
+t.test('generates types with no-semicolons option', t => {
   t.plan(1)
 
   const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'src', 'index.js'), connection, ssl ? '--ssl' : '', '--no-semicolons'], {
@@ -227,7 +227,7 @@ test('generates types with no-semicolons option', t => {
   })
 })
 
-test('generates types with bigint option', t => {
+t.test('generates types with bigint option', t => {
   t.plan(1)
 
   const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'src', 'index.js'), connection, ssl ? '--ssl' : '', '--bigint'], {
@@ -247,7 +247,7 @@ test('generates types with bigint option', t => {
   })
 })
 
-test('generates types with types option', t => {
+t.test('generates types with types option', t => {
   t.plan(1)
 
   const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'src', 'index.js'), connection, ssl ? '--ssl' : '', '--type'], {
@@ -267,7 +267,7 @@ test('generates types with types option', t => {
   })
 })
 
-test('generates types with insert types', t => {
+t.test('generates types with insert types', t => {
   t.plan(1)
 
   const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'src', 'index.js'), connection, ssl ? '--ssl' : '', '--insert-types'], {
@@ -287,7 +287,7 @@ test('generates types with insert types', t => {
   })
 })
 
-test('generates table names', t => {
+t.test('generates table names', t => {
   t.plan(1)
 
   const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'src', 'index.js'), connection, ssl ? '--ssl' : '', '--table-names'], {
@@ -307,7 +307,7 @@ test('generates table names', t => {
   })
 })
 
-test('sends error to stderr', t => {
+t.test('sends error to stderr', t => {
   t.plan(1)
   const invalidConnection = 'postgres://postgres:postgres@0.0.0.0:1/test_db'
   const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'src', 'index.js'), '-o', './entities.ts', invalidConnection, ssl ? '--ssl' : ''], {

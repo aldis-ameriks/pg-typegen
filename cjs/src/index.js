@@ -1,58 +1,84 @@
 #! /usr/bin/env node
 
 const fs = require('node:fs')
-const { Command } = require('commander')
+const { parseArgs } = require('node:util')
 const typescript = require('./typescript.js')
 const postgres = require('./postgres.js')
 
 const packageJson = require('../../package.json')
 
-const program = new Command()
-program
-  .name('pg-typegen')
-  .version(`v${packageJson.version}`)
-  .arguments('<connection>')
-  .option('-f, --suffix <suffix>', 'suffix to append to generated table type, e.g. item -> ItemEntity', 'Entity')
-  .option('-s, --schema <schema>', 'schema', 'public')
-  .option('-h, --header <header>', 'header content', '')
-  .option('-o, --output <output>', 'file output path', 'stdout')
-  .option('-e, --exclude <exclude>', 'excluded tables and enums as comma separated string e.g. knex_migrations,knex_migrations_lock', parseArray, [])
-  .option('--type', 'use type definitions instead of interfaces in generated output', false)
-  .option('--noSemi, --no-semicolons', 'omit semicolons in generated types', false)
-  .option('--ssl', 'use ssl', false)
-  .option('--optionals', 'use optionals "?" instead of null', false)
-  .option('--comments', 'generate table and column comments', false)
-  .option('--pascal-enums', 'transform enum keys to pascal case', false)
-  .option('--bigint', 'use bigint for int8 types instead of strings', false)
-  .option('--date-as-string', 'use string for date types instead of javascript Date object', false)
-  .option('--insert-types', 'generate separate insert types with optional fields for columns allowing NULL value or having default values', false)
-  .option('--table-names', 'generate string literal type with all table names', false)
-
-program.on('--help', () => {
-  console.log('')
-  console.log('Example:')
-  console.log('  $ pg-typegen -o ./entities.ts postgres://username:password@localhost:5432/database')
-})
-
-function parseArray (value) {
-  return value.split(',')
+const options = {
+  version: { type: 'boolean', short: 'V' },
+  help: { type: 'boolean' },
+  suffix: { type: 'string', short: 'f' },
+  schema: { type: 'string', short: 's' },
+  header: { type: 'string', short: 'h' },
+  output: { type: 'string', short: 'o' },
+  exclude: { type: 'string', short: 'e' },
+  type: { type: 'boolean' },
+  ssl: { type: 'boolean' },
+  optionals: { type: 'boolean' },
+  comments: { type: 'boolean' },
+  bigint: { type: 'boolean' },
+  noSemi: { type: 'boolean' },
+  'no-semicolons': { type: 'boolean' },
+  'pascal-enums': { type: 'boolean' },
+  'date-as-string': { type: 'boolean' },
+  'insert-types': { type: 'boolean' },
+  'table-names': { type: 'boolean' }
 }
 
-async function generateSchema (opts) {
-  let argv = process.argv
-  if (process.argv.length === 2) {
-    // Starting from commander v8, arguments are mandatory.
-    // We're adding placeholder argument to be able to parse and get the default args.
-    argv = [...process.argv, '']
-  }
-  const defaultOpts = program.parse(argv).opts()
-  opts = { ...defaultOpts, ...opts }
+const defaultOptions = {
+  suffix: 'Entity',
+  schema: 'public',
+  header: '',
+  output: 'stdout',
+  exclude: [],
+  type: false,
+  semicolons: true,
+  ssl: false,
+  optionals: false,
+  comments: false,
+  pascalEnums: false,
+  bigint: false,
+  dateAsString: false,
+  insertTypes: false,
+  tableNames: false,
+  help: false,
+  version: false
+}
 
-  if (!opts.connection) {
-    const help = program.helpInformation()
+const help = `Usage: pg-typegen [options] <connection>
+
+Options:
+  -V, --version              output the version number
+  -f, --suffix <suffix>      suffix to append to generated table type, e.g. item -> ItemEntity (default: "Entity")
+  -s, --schema <schema>      schema (default: "public")
+  -h, --header <header>      header content (default: "")
+  -o, --output <output>      file output path (default: "stdout")
+  -e, --exclude <exclude>    excluded tables and enums as comma separated string e.g. knex_migrations,knex_migrations_lock (default: [])
+  --type                     use type definitions instead of interfaces in generated output (default: false)
+  --noSemi, --no-semicolons  omit semicolons in generated types (default: false)
+  --ssl                      use ssl (default: false)
+  --optionals                use optionals "?" instead of null (default: false)
+  --comments                 generate table and column comments (default: false)
+  --pascal-enums             transform enum keys to pascal case (default: false)
+  --bigint                   use bigint for int8 types instead of strings (default: false)
+  --date-as-string           use string for date types instead of javascript Date object (default: false)
+  --insert-types             generate separate insert types with optional fields for columns allowing NULL value or having default values (default: false)
+  --table-names              generate string literal type with all table names (default: false)
+  --help                     display help for command
+
+Example:
+  $ pg-typegen -o ./entities.ts postgres://username:password@localhost:5432/database`
+
+async function generateSchema (opts) {
+  if (!opts || !opts.connection) {
     console.log(help)
-    return help
+    return
   }
+
+  opts = { ...defaultOptions, ...opts }
 
   const schema = await postgres(opts)
 
@@ -81,16 +107,51 @@ if (require.main === module) {
   (async () => {
     if (process.argv.length === 2) {
       // Calling script without any arguments, so we're showing help and exiting.
-      program.help()
+      console.log(help)
+      return
     }
 
-    const command = program.parse(process.argv)
-    const opts = command.opts()
-    const args = command.args
+    const parsedArgs = parseArgs({ options, allowPositionals: true, args: process.argv })
+    const opts = parsedArgs.values
+    opts.connection = parsedArgs.positionals[2]
 
-    opts.connection = args[0]
+    const parsedOpts = {
+      suffix: opts.suffix,
+      schema: opts.schema,
+      header: opts.header,
+      output: opts.output,
+      exclude: opts.exclude ? opts.exclude.split(',').map(e => e.trim()).filter(Boolean) : [],
+      type: opts.type,
+      semicolons: !(opts.noSemi === true || opts['no-semicolons'] === true),
+      ssl: opts.ssl,
+      optionals: opts.optionals,
+      comments: opts.comments,
+      pascalEnums: opts['pascal-enums'],
+      bigint: opts.bigint,
+      dateAsString: opts['date-as-string'],
+      insertTypes: opts['insert-types'],
+      tableNames: opts['table-names'],
+      help: opts.help,
+      version: opts.version,
+      connection: opts.connection
+    }
 
-    const result = await generateSchema(opts)
+    const optsWithDefaults = {
+      ...defaultOptions,
+      ...Object.fromEntries(Object.entries(parsedOpts).filter(([, value]) => value !== undefined))
+    }
+
+    if (optsWithDefaults.help) {
+      console.log(help)
+      return
+    }
+
+    if (optsWithDefaults.version) {
+      console.log(`v${packageJson.version}`)
+      return
+    }
+
+    const result = await generateSchema(optsWithDefaults)
     console.log(result)
   })()
 }
