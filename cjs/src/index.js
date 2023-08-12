@@ -21,8 +21,8 @@ const options = {
   comments: { type: 'boolean' },
   semicolons: { type: 'boolean' },
   bigint: { type: 'boolean' },
-  noSemi: { type: 'boolean' },
-  'no-semicolons': { type: 'boolean' },
+  noSemi: { type: 'boolean' }, // TODO: Deprecate
+  'no-semicolons': { type: 'boolean' }, // TODO: Deprecate
   'pascal-enums': { type: 'boolean' },
   'date-as-string': { type: 'boolean' },
   'insert-types': { type: 'boolean' },
@@ -116,6 +116,13 @@ if (require.main === module) {
     const opts = parsedArgs.values
     opts.connection = parsedArgs.positionals[2]
 
+    let semicolons = opts.semicolons
+    if (opts.noSemi !== undefined) {
+      semicolons = !opts.noSemi
+    } else if (opts['no-semicolons'] !== undefined) {
+      semicolons = !opts['no-semicolons']
+    }
+
     const parsedOpts = {
       suffix: opts.suffix,
       schema: opts.schema,
@@ -123,7 +130,7 @@ if (require.main === module) {
       output: opts.output,
       exclude: opts.exclude ? opts.exclude.split(',').map(e => e.trim()).filter(Boolean) : [],
       type: opts.type,
-      semicolons: opts.semicolons === true || !(opts.noSemi === true || opts['no-semicolons'] === true),
+      semicolons,
       ssl: opts.ssl,
       optionals: opts.optionals,
       comments: opts.comments,

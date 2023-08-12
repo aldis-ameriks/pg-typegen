@@ -117,6 +117,13 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
     const opts = parsedArgs.values
     opts.connection = parsedArgs.positionals[2]
 
+    let semicolons = opts.semicolons
+    if (opts.noSemi !== undefined) {
+      semicolons = !opts.noSemi
+    } else if (opts['no-semicolons'] !== undefined) {
+      semicolons = !opts['no-semicolons']
+    }
+
     const parsedOpts = {
       suffix: opts.suffix,
       schema: opts.schema,
@@ -124,7 +131,7 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
       output: opts.output,
       exclude: opts.exclude ? opts.exclude.split(',').map(e => e.trim()).filter(Boolean) : [],
       type: opts.type,
-      semicolons: opts.semicolons === true || !(opts.noSemi === true || opts['no-semicolons'] === true),
+      semicolons,
       ssl: opts.ssl,
       optionals: opts.optionals,
       comments: opts.comments,
