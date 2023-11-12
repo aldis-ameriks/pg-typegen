@@ -51,6 +51,6 @@
     "tsd": "^0.28.1"
   },
   "tsd": {
-    "directory": "types/types"
+    "directory": "types"
   }
 }

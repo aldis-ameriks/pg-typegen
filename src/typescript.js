@@ -26,7 +26,7 @@ function toPascalCase (value) {
 }
 
 function formatName (name) {
-  if (name.match(/(-|\s)/g)) {
+  if (name.match(/(-|\s|\.)/g)) {
     name = `'${name}'`
   }
   return name
@@ -76,7 +76,7 @@ function formatTableName (opts, tableName, suffix) {
 }
 
 function getTableType (opts, tableName) {
-  if (opts.type) {
+  if (opts.type || opts.unionTableNamePrefixedColumns) {
     return `export type ${tableName} = {`
   } else {
     return `export interface ${tableName} {`
@@ -137,7 +137,20 @@ function generateTableTypes (opts, tables, typeMapping, enums) {
           result += `  ${formatName(tableColumn.name)}${tableColumn.isNullable && opts.optionals ? '?' : ''}: ${getColumnType(typeMapping, tableColumn.type, enums)}${tableColumn.isNullable && !opts.optionals ? ' | null' : ''}${semicolon(opts)}\n`
         })
 
-      result += `}${semicolon(opts)}\n`
+      result += '}'
+
+      if (opts.unionTableNamePrefixedColumns) {
+        result += ' | {\n'
+        table.columns
+          .sort(sortByField('name'))
+          .forEach(tableColumn => {
+            result += `  ${formatName(`${table.name}.${tableColumn.name}`)}${tableColumn.isNullable && opts.optionals ? '?' : ''}: ${getColumnType(typeMapping, tableColumn.type, enums)}${tableColumn.isNullable && !opts.optionals ? ' | null' : ''}${semicolon(opts)}\n`
+          })
+
+        result += '}'
+      }
+
+      result += `${semicolon(opts)}\n`
 
       if (opts.insertTypes && !table.isView) {
         const formattedTableName = formatTableName(opts, table.name, `Insert${opts.suffix}`)
