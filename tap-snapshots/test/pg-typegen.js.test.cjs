@@ -2836,287 +2836,278 @@ export enum SnakesOn {
 
 export type AddressEntity = {
   id: number
-} | {
   'address.id': number
 }
 
 export type HistoryEntity = {
   id: number
-} | {
   'histories.id': number
 }
 
 export type KebabTestEntity = {
   id: number
-} | {
   'kebab-test.id': number
 }
 
 export type MaterializedItemEntity = {
   test?: number
-  test_array?: Array<number>
-  test_text?: string
-  test_timestamp?: Date
-} | {
   'materialized_items.test'?: number
+  test_array?: Array<number>
   'materialized_items.test_array'?: Array<number>
+  test_text?: string
   'materialized_items.test_text'?: string
+  test_timestamp?: Date
   'materialized_items.test_timestamp'?: Date
 }
 
 export type MaterializedOtherItemEntity = {
   test?: number
-  test_text?: string
-} | {
   'materialized_other_items.test'?: number
+  test_text?: string
   'materialized_other_items.test_text'?: string
 }
 
 export type SnakeTestEntity = {
   id: number
-} | {
   'snake_test.id': number
 }
 
 export type SomeViewEntity = {
   test?: number
-  test_text?: string
-} | {
   'some_view.test'?: number
+  test_text?: string
   'some_view.test_text'?: string
 }
 
 export type TypeEntity = {
   avatar_darren?: Array<number>
-  avatar_ernestina: string
-  avatar_mark?: Array<any>
-  avatar_myah: Array<string>
-  avatar_rozella: Array<string>
-  camelCase?: boolean
-  category_amari: string
-  category_april: Array<string>
-  category_buddy?: Array<string>
-  category_clementine?: number
-  category_marcelle?: Date
-  category_roberta?: boolean
-  category_trent?: any
-  category_viola: string
-  comment_cali: string
-  comment_delilah?: Array<string>
-  comment_easter?: Date
-  comment_ella: string
-  comment_myles: string
-  comment_rocio?: string
-  createdat_hulda: any
-  createdat_pansy?: Array<number>
-  email_andres: Date
-  email_cleveland?: string
-  email_keaton?: Array<number>
-  email_lucio?: string
-  email_paris: string
-  email_paula?: string
-  email_ressie: string
-  fruit_a?: Fruits
-  fruit_b: Fruits
-  group_abigayle: Array<string>
-  group_gabe?: Array<Date>
-  group_jay: Array<string>
-  group_jedediah: Array<Date>
-  group_shanny: Date
-  group_toby: string
-  group_ulices?: Array<string>
-  id_gay: string
-  id_hailee: any
-  id_helen?: Array<number>
-  id_ike: Array<string>
-  id_joan?: Array<string>
-  id_karelle?: string
-  id_lavern: Date
-  id_margarita?: string
-  id_maximilian: Array<string>
-  id_william: Array<string>
-  id_wilmer?: Array<string>
-  'kebab-a'?: DeliciousKebab
-  'kebab-b': DeliciousKebab
-  name_amara?: string
-  name_brionna: number
-  name_enoch: string
-  name_jermain?: Array<string>
-  name_marielle?: string
-  name_myrtle?: Array<string>
-  name_santos: Array<string>
-  name_skye?: string
-  name_stephanie: boolean
-  password_alessia?: Array<string>
-  password_camylle: Array<string>
-  password_elenora?: number
-  password_felton?: Array<Date>
-  password_korey: number
-  password_murphy?: Array<any>
-  password_vladimir?: number
-  phone_angelo: string
-  phone_colten: number
-  phone_erling?: Array<string>
-  phone_johanna?: Array<Date>
-  phone_kendall: Array<number>
-  phone_keyshawn?: string
-  phone_maryam?: string
-  phone_osvaldo: Array<Date>
-  phone_rupert?: any
-  snakes_on_a?: SnakesOn
-  snakes_on_b: SnakesOn
-  status_amalia: number
-  status_angelica?: Array<number>
-  status_cade: Array<number>
-  status_lori?: string
-  status_ricky: number
-  status_sid?: Array<boolean>
-  title_aidan?: Date
-  title_alexzander: string
-  title_haylee?: Array<string>
-  title_ilene: Array<any>
-  title_vicenta?: string
-  title_vivienne: Array<number>
-  token_adella: Array<Date>
-  token_hermann: Array<string>
-  token_kenyon: Array<string>
-  token_marianna?: Array<string>
-  token_rubye: string
-  token_ryley?: string
-  token_zora: Array<number>
-  updatedat_aaliyah?: number
-  updatedat_abe?: Array<string>
-  updatedat_brett?: Array<string>
-  updatedat_cedrick: Array<boolean>
-  updatedat_derick: Array<any>
-  updatedat_eli: Array<string>
-  updatedat_ewell: Array<string>
-  updatedat_laura?: Array<string>
-  updatedat_melody: Array<number>
-  updatedat_rossie?: number
-} | {
   'types.avatar_darren'?: Array<number>
+  avatar_ernestina: string
   'types.avatar_ernestina': string
+  avatar_mark?: Array<any>
   'types.avatar_mark'?: Array<any>
+  avatar_myah: Array<string>
   'types.avatar_myah': Array<string>
+  avatar_rozella: Array<string>
   'types.avatar_rozella': Array<string>
+  camelCase?: boolean
   'types.camelCase'?: boolean
+  category_amari: string
   'types.category_amari': string
+  category_april: Array<string>
   'types.category_april': Array<string>
+  category_buddy?: Array<string>
   'types.category_buddy'?: Array<string>
+  category_clementine?: number
   'types.category_clementine'?: number
+  category_marcelle?: Date
   'types.category_marcelle'?: Date
+  category_roberta?: boolean
   'types.category_roberta'?: boolean
+  category_trent?: any
   'types.category_trent'?: any
+  category_viola: string
   'types.category_viola': string
+  comment_cali: string
   'types.comment_cali': string
+  comment_delilah?: Array<string>
   'types.comment_delilah'?: Array<string>
+  comment_easter?: Date
   'types.comment_easter'?: Date
+  comment_ella: string
   'types.comment_ella': string
+  comment_myles: string
   'types.comment_myles': string
+  comment_rocio?: string
   'types.comment_rocio'?: string
+  createdat_hulda: any
   'types.createdat_hulda': any
+  createdat_pansy?: Array<number>
   'types.createdat_pansy'?: Array<number>
+  email_andres: Date
   'types.email_andres': Date
+  email_cleveland?: string
   'types.email_cleveland'?: string
+  email_keaton?: Array<number>
   'types.email_keaton'?: Array<number>
+  email_lucio?: string
   'types.email_lucio'?: string
+  email_paris: string
   'types.email_paris': string
+  email_paula?: string
   'types.email_paula'?: string
+  email_ressie: string
   'types.email_ressie': string
+  fruit_a?: Fruits
   'types.fruit_a'?: Fruits
+  fruit_b: Fruits
   'types.fruit_b': Fruits
+  group_abigayle: Array<string>
   'types.group_abigayle': Array<string>
+  group_gabe?: Array<Date>
   'types.group_gabe'?: Array<Date>
+  group_jay: Array<string>
   'types.group_jay': Array<string>
+  group_jedediah: Array<Date>
   'types.group_jedediah': Array<Date>
+  group_shanny: Date
   'types.group_shanny': Date
+  group_toby: string
   'types.group_toby': string
+  group_ulices?: Array<string>
   'types.group_ulices'?: Array<string>
+  id_gay: string
   'types.id_gay': string
+  id_hailee: any
   'types.id_hailee': any
+  id_helen?: Array<number>
   'types.id_helen'?: Array<number>
+  id_ike: Array<string>
   'types.id_ike': Array<string>
+  id_joan?: Array<string>
   'types.id_joan'?: Array<string>
+  id_karelle?: string
   'types.id_karelle'?: string
+  id_lavern: Date
   'types.id_lavern': Date
+  id_margarita?: string
   'types.id_margarita'?: string
+  id_maximilian: Array<string>
   'types.id_maximilian': Array<string>
+  id_william: Array<string>
   'types.id_william': Array<string>
+  id_wilmer?: Array<string>
   'types.id_wilmer'?: Array<string>
+  'kebab-a'?: DeliciousKebab
   'types.kebab-a'?: DeliciousKebab
+  'kebab-b': DeliciousKebab
   'types.kebab-b': DeliciousKebab
+  name_amara?: string
   'types.name_amara'?: string
+  name_brionna: number
   'types.name_brionna': number
+  name_enoch: string
   'types.name_enoch': string
+  name_jermain?: Array<string>
   'types.name_jermain'?: Array<string>
+  name_marielle?: string
   'types.name_marielle'?: string
+  name_myrtle?: Array<string>
   'types.name_myrtle'?: Array<string>
+  name_santos: Array<string>
   'types.name_santos': Array<string>
+  name_skye?: string
   'types.name_skye'?: string
+  name_stephanie: boolean
   'types.name_stephanie': boolean
+  password_alessia?: Array<string>
   'types.password_alessia'?: Array<string>
+  password_camylle: Array<string>
   'types.password_camylle': Array<string>
+  password_elenora?: number
   'types.password_elenora'?: number
+  password_felton?: Array<Date>
   'types.password_felton'?: Array<Date>
+  password_korey: number
   'types.password_korey': number
+  password_murphy?: Array<any>
   'types.password_murphy'?: Array<any>
+  password_vladimir?: number
   'types.password_vladimir'?: number
+  phone_angelo: string
   'types.phone_angelo': string
+  phone_colten: number
   'types.phone_colten': number
+  phone_erling?: Array<string>
   'types.phone_erling'?: Array<string>
+  phone_johanna?: Array<Date>
   'types.phone_johanna'?: Array<Date>
+  phone_kendall: Array<number>
   'types.phone_kendall': Array<number>
+  phone_keyshawn?: string
   'types.phone_keyshawn'?: string
+  phone_maryam?: string
   'types.phone_maryam'?: string
+  phone_osvaldo: Array<Date>
   'types.phone_osvaldo': Array<Date>
+  phone_rupert?: any
   'types.phone_rupert'?: any
+  snakes_on_a?: SnakesOn
   'types.snakes_on_a'?: SnakesOn
+  snakes_on_b: SnakesOn
   'types.snakes_on_b': SnakesOn
+  status_amalia: number
   'types.status_amalia': number
+  status_angelica?: Array<number>
   'types.status_angelica'?: Array<number>
+  status_cade: Array<number>
   'types.status_cade': Array<number>
+  status_lori?: string
   'types.status_lori'?: string
+  status_ricky: number
   'types.status_ricky': number
+  status_sid?: Array<boolean>
   'types.status_sid'?: Array<boolean>
+  title_aidan?: Date
   'types.title_aidan'?: Date
+  title_alexzander: string
   'types.title_alexzander': string
+  title_haylee?: Array<string>
   'types.title_haylee'?: Array<string>
+  title_ilene: Array<any>
   'types.title_ilene': Array<any>
+  title_vicenta?: string
   'types.title_vicenta'?: string
+  title_vivienne: Array<number>
   'types.title_vivienne': Array<number>
+  token_adella: Array<Date>
   'types.token_adella': Array<Date>
+  token_hermann: Array<string>
   'types.token_hermann': Array<string>
+  token_kenyon: Array<string>
   'types.token_kenyon': Array<string>
+  token_marianna?: Array<string>
   'types.token_marianna'?: Array<string>
+  token_rubye: string
   'types.token_rubye': string
+  token_ryley?: string
   'types.token_ryley'?: string
+  token_zora: Array<number>
   'types.token_zora': Array<number>
+  updatedat_aaliyah?: number
   'types.updatedat_aaliyah'?: number
+  updatedat_abe?: Array<string>
   'types.updatedat_abe'?: Array<string>
+  updatedat_brett?: Array<string>
   'types.updatedat_brett'?: Array<string>
+  updatedat_cedrick: Array<boolean>
   'types.updatedat_cedrick': Array<boolean>
+  updatedat_derick: Array<any>
   'types.updatedat_derick': Array<any>
+  updatedat_eli: Array<string>
   'types.updatedat_eli': Array<string>
+  updatedat_ewell: Array<string>
   'types.updatedat_ewell': Array<string>
+  updatedat_laura?: Array<string>
   'types.updatedat_laura'?: Array<string>
+  updatedat_melody: Array<number>
   'types.updatedat_melody': Array<number>
+  updatedat_rossie?: number
   'types.updatedat_rossie'?: number
 }
 
 export type UserEntity = {
   id: number
-  name?: string
-  name2: string
-  name3: string
-  other_id: number
-  other_primary_id: number
-} | {
   'users.id': number
+  name?: string
   'users.name'?: string
+  name2: string
   'users.name2': string
+  name3: string
   'users.name3': string
+  other_id: number
   'users.other_id': number
+  other_primary_id: number
   'users.other_primary_id': number
 }
 
@@ -3140,287 +3131,278 @@ export enum SnakesOn {
 
 export type AddressEntity = {
   id: number
-} | {
   'address.id': number
 }
 
 export type HistoryEntity = {
   id: number
-} | {
   'histories.id': number
 }
 
 export type KebabTestEntity = {
   id: number
-} | {
   'kebab-test.id': number
 }
 
 export type MaterializedItemEntity = {
   test: number | null
-  test_array: Array<number> | null
-  test_text: string | null
-  test_timestamp: Date | null
-} | {
   'materialized_items.test': number | null
+  test_array: Array<number> | null
   'materialized_items.test_array': Array<number> | null
+  test_text: string | null
   'materialized_items.test_text': string | null
+  test_timestamp: Date | null
   'materialized_items.test_timestamp': Date | null
 }
 
 export type MaterializedOtherItemEntity = {
   test: number | null
-  test_text: string | null
-} | {
   'materialized_other_items.test': number | null
+  test_text: string | null
   'materialized_other_items.test_text': string | null
 }
 
 export type SnakeTestEntity = {
   id: number
-} | {
   'snake_test.id': number
 }
 
 export type SomeViewEntity = {
   test: number | null
-  test_text: string | null
-} | {
   'some_view.test': number | null
+  test_text: string | null
   'some_view.test_text': string | null
 }
 
 export type TypeEntity = {
   avatar_darren: Array<number> | null
-  avatar_ernestina: string
-  avatar_mark: Array<any> | null
-  avatar_myah: Array<string>
-  avatar_rozella: Array<string>
-  camelCase: boolean | null
-  category_amari: string
-  category_april: Array<string>
-  category_buddy: Array<string> | null
-  category_clementine: number | null
-  category_marcelle: Date | null
-  category_roberta: boolean | null
-  category_trent: any | null
-  category_viola: string
-  comment_cali: string
-  comment_delilah: Array<string> | null
-  comment_easter: Date | null
-  comment_ella: string
-  comment_myles: string
-  comment_rocio: string | null
-  createdat_hulda: any
-  createdat_pansy: Array<number> | null
-  email_andres: Date
-  email_cleveland: string | null
-  email_keaton: Array<number> | null
-  email_lucio: string | null
-  email_paris: string
-  email_paula: string | null
-  email_ressie: string
-  fruit_a: Fruits | null
-  fruit_b: Fruits
-  group_abigayle: Array<string>
-  group_gabe: Array<Date> | null
-  group_jay: Array<string>
-  group_jedediah: Array<Date>
-  group_shanny: Date
-  group_toby: string
-  group_ulices: Array<string> | null
-  id_gay: string
-  id_hailee: any
-  id_helen: Array<number> | null
-  id_ike: Array<string>
-  id_joan: Array<string> | null
-  id_karelle: string | null
-  id_lavern: Date
-  id_margarita: string | null
-  id_maximilian: Array<string>
-  id_william: Array<string>
-  id_wilmer: Array<string> | null
-  'kebab-a': DeliciousKebab | null
-  'kebab-b': DeliciousKebab
-  name_amara: string | null
-  name_brionna: number
-  name_enoch: string
-  name_jermain: Array<string> | null
-  name_marielle: string | null
-  name_myrtle: Array<string> | null
-  name_santos: Array<string>
-  name_skye: string | null
-  name_stephanie: boolean
-  password_alessia: Array<string> | null
-  password_camylle: Array<string>
-  password_elenora: number | null
-  password_felton: Array<Date> | null
-  password_korey: number
-  password_murphy: Array<any> | null
-  password_vladimir: number | null
-  phone_angelo: string
-  phone_colten: number
-  phone_erling: Array<string> | null
-  phone_johanna: Array<Date> | null
-  phone_kendall: Array<number>
-  phone_keyshawn: string | null
-  phone_maryam: string | null
-  phone_osvaldo: Array<Date>
-  phone_rupert: any | null
-  snakes_on_a: SnakesOn | null
-  snakes_on_b: SnakesOn
-  status_amalia: number
-  status_angelica: Array<number> | null
-  status_cade: Array<number>
-  status_lori: string | null
-  status_ricky: number
-  status_sid: Array<boolean> | null
-  title_aidan: Date | null
-  title_alexzander: string
-  title_haylee: Array<string> | null
-  title_ilene: Array<any>
-  title_vicenta: string | null
-  title_vivienne: Array<number>
-  token_adella: Array<Date>
-  token_hermann: Array<string>
-  token_kenyon: Array<string>
-  token_marianna: Array<string> | null
-  token_rubye: string
-  token_ryley: string | null
-  token_zora: Array<number>
-  updatedat_aaliyah: number | null
-  updatedat_abe: Array<string> | null
-  updatedat_brett: Array<string> | null
-  updatedat_cedrick: Array<boolean>
-  updatedat_derick: Array<any>
-  updatedat_eli: Array<string>
-  updatedat_ewell: Array<string>
-  updatedat_laura: Array<string> | null
-  updatedat_melody: Array<number>
-  updatedat_rossie: number | null
-} | {
   'types.avatar_darren': Array<number> | null
+  avatar_ernestina: string
   'types.avatar_ernestina': string
+  avatar_mark: Array<any> | null
   'types.avatar_mark': Array<any> | null
+  avatar_myah: Array<string>
   'types.avatar_myah': Array<string>
+  avatar_rozella: Array<string>
   'types.avatar_rozella': Array<string>
+  camelCase: boolean | null
   'types.camelCase': boolean | null
+  category_amari: string
   'types.category_amari': string
+  category_april: Array<string>
   'types.category_april': Array<string>
+  category_buddy: Array<string> | null
   'types.category_buddy': Array<string> | null
+  category_clementine: number | null
   'types.category_clementine': number | null
+  category_marcelle: Date | null
   'types.category_marcelle': Date | null
+  category_roberta: boolean | null
   'types.category_roberta': boolean | null
+  category_trent: any | null
   'types.category_trent': any | null
+  category_viola: string
   'types.category_viola': string
+  comment_cali: string
   'types.comment_cali': string
+  comment_delilah: Array<string> | null
   'types.comment_delilah': Array<string> | null
+  comment_easter: Date | null
   'types.comment_easter': Date | null
+  comment_ella: string
   'types.comment_ella': string
+  comment_myles: string
   'types.comment_myles': string
+  comment_rocio: string | null
   'types.comment_rocio': string | null
+  createdat_hulda: any
   'types.createdat_hulda': any
+  createdat_pansy: Array<number> | null
   'types.createdat_pansy': Array<number> | null
+  email_andres: Date
   'types.email_andres': Date
+  email_cleveland: string | null
   'types.email_cleveland': string | null
+  email_keaton: Array<number> | null
   'types.email_keaton': Array<number> | null
+  email_lucio: string | null
   'types.email_lucio': string | null
+  email_paris: string
   'types.email_paris': string
+  email_paula: string | null
   'types.email_paula': string | null
+  email_ressie: string
   'types.email_ressie': string
+  fruit_a: Fruits | null
   'types.fruit_a': Fruits | null
+  fruit_b: Fruits
   'types.fruit_b': Fruits
+  group_abigayle: Array<string>
   'types.group_abigayle': Array<string>
+  group_gabe: Array<Date> | null
   'types.group_gabe': Array<Date> | null
+  group_jay: Array<string>
   'types.group_jay': Array<string>
+  group_jedediah: Array<Date>
   'types.group_jedediah': Array<Date>
+  group_shanny: Date
   'types.group_shanny': Date
+  group_toby: string
   'types.group_toby': string
+  group_ulices: Array<string> | null
   'types.group_ulices': Array<string> | null
+  id_gay: string
   'types.id_gay': string
+  id_hailee: any
   'types.id_hailee': any
+  id_helen: Array<number> | null
   'types.id_helen': Array<number> | null
+  id_ike: Array<string>
   'types.id_ike': Array<string>
+  id_joan: Array<string> | null
   'types.id_joan': Array<string> | null
+  id_karelle: string | null
   'types.id_karelle': string | null
+  id_lavern: Date
   'types.id_lavern': Date
+  id_margarita: string | null
   'types.id_margarita': string | null
+  id_maximilian: Array<string>
   'types.id_maximilian': Array<string>
+  id_william: Array<string>
   'types.id_william': Array<string>
+  id_wilmer: Array<string> | null
   'types.id_wilmer': Array<string> | null
+  'kebab-a': DeliciousKebab | null
   'types.kebab-a': DeliciousKebab | null
+  'kebab-b': DeliciousKebab
   'types.kebab-b': DeliciousKebab
+  name_amara: string | null
   'types.name_amara': string | null
+  name_brionna: number
   'types.name_brionna': number
+  name_enoch: string
   'types.name_enoch': string
+  name_jermain: Array<string> | null
   'types.name_jermain': Array<string> | null
+  name_marielle: string | null
   'types.name_marielle': string | null
+  name_myrtle: Array<string> | null
   'types.name_myrtle': Array<string> | null
+  name_santos: Array<string>
   'types.name_santos': Array<string>
+  name_skye: string | null
   'types.name_skye': string | null
+  name_stephanie: boolean
   'types.name_stephanie': boolean
+  password_alessia: Array<string> | null
   'types.password_alessia': Array<string> | null
+  password_camylle: Array<string>
   'types.password_camylle': Array<string>
+  password_elenora: number | null
   'types.password_elenora': number | null
+  password_felton: Array<Date> | null
   'types.password_felton': Array<Date> | null
+  password_korey: number
   'types.password_korey': number
+  password_murphy: Array<any> | null
   'types.password_murphy': Array<any> | null
+  password_vladimir: number | null
   'types.password_vladimir': number | null
+  phone_angelo: string
   'types.phone_angelo': string
+  phone_colten: number
   'types.phone_colten': number
+  phone_erling: Array<string> | null
   'types.phone_erling': Array<string> | null
+  phone_johanna: Array<Date> | null
   'types.phone_johanna': Array<Date> | null
+  phone_kendall: Array<number>
   'types.phone_kendall': Array<number>
+  phone_keyshawn: string | null
   'types.phone_keyshawn': string | null
+  phone_maryam: string | null
   'types.phone_maryam': string | null
+  phone_osvaldo: Array<Date>
   'types.phone_osvaldo': Array<Date>
+  phone_rupert: any | null
   'types.phone_rupert': any | null
+  snakes_on_a: SnakesOn | null
   'types.snakes_on_a': SnakesOn | null
+  snakes_on_b: SnakesOn
   'types.snakes_on_b': SnakesOn
+  status_amalia: number
   'types.status_amalia': number
+  status_angelica: Array<number> | null
   'types.status_angelica': Array<number> | null
+  status_cade: Array<number>
   'types.status_cade': Array<number>
+  status_lori: string | null
   'types.status_lori': string | null
+  status_ricky: number
   'types.status_ricky': number
+  status_sid: Array<boolean> | null
   'types.status_sid': Array<boolean> | null
+  title_aidan: Date | null
   'types.title_aidan': Date | null
+  title_alexzander: string
   'types.title_alexzander': string
+  title_haylee: Array<string> | null
   'types.title_haylee': Array<string> | null
+  title_ilene: Array<any>
   'types.title_ilene': Array<any>
+  title_vicenta: string | null
   'types.title_vicenta': string | null
+  title_vivienne: Array<number>
   'types.title_vivienne': Array<number>
+  token_adella: Array<Date>
   'types.token_adella': Array<Date>
+  token_hermann: Array<string>
   'types.token_hermann': Array<string>
+  token_kenyon: Array<string>
   'types.token_kenyon': Array<string>
+  token_marianna: Array<string> | null
   'types.token_marianna': Array<string> | null
+  token_rubye: string
   'types.token_rubye': string
+  token_ryley: string | null
   'types.token_ryley': string | null
+  token_zora: Array<number>
   'types.token_zora': Array<number>
+  updatedat_aaliyah: number | null
   'types.updatedat_aaliyah': number | null
+  updatedat_abe: Array<string> | null
   'types.updatedat_abe': Array<string> | null
+  updatedat_brett: Array<string> | null
   'types.updatedat_brett': Array<string> | null
+  updatedat_cedrick: Array<boolean>
   'types.updatedat_cedrick': Array<boolean>
+  updatedat_derick: Array<any>
   'types.updatedat_derick': Array<any>
+  updatedat_eli: Array<string>
   'types.updatedat_eli': Array<string>
+  updatedat_ewell: Array<string>
   'types.updatedat_ewell': Array<string>
+  updatedat_laura: Array<string> | null
   'types.updatedat_laura': Array<string> | null
+  updatedat_melody: Array<number>
   'types.updatedat_melody': Array<number>
+  updatedat_rossie: number | null
   'types.updatedat_rossie': number | null
 }
 
 export type UserEntity = {
   id: number
-  name: string | null
-  name2: string
-  name3: string
-  other_id: number
-  other_primary_id: number
-} | {
   'users.id': number
+  name: string | null
   'users.name': string | null
+  name2: string
   'users.name2': string
+  name3: string
   'users.name3': string
+  other_id: number
   'users.other_id': number
+  other_primary_id: number
   'users.other_primary_id': number
 }
 

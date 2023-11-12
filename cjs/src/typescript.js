@@ -76,7 +76,7 @@ function formatTableName (opts, tableName, suffix) {
 }
 
 function getTableType (opts, tableName) {
-  if (opts.type || opts.unionTableNamePrefixedColumns) {
+  if (opts.type || opts.appendTableNamePrefixedColumns) {
     return `export type ${tableName} = {`
   } else {
     return `export interface ${tableName} {`
@@ -135,22 +135,13 @@ function generateTableTypes (opts, tables, typeMapping, enums) {
         .forEach(tableColumn => {
           result += formatColumnComment(opts, tableColumn)
           result += `  ${formatName(tableColumn.name)}${tableColumn.isNullable && opts.optionals ? '?' : ''}: ${getColumnType(typeMapping, tableColumn.type, enums)}${tableColumn.isNullable && !opts.optionals ? ' | null' : ''}${semicolon(opts)}\n`
+
+          if (opts.appendTableNamePrefixedColumns) {
+            result += `  ${formatName(`${table.name}.${tableColumn.name}`)}${tableColumn.isNullable && opts.optionals ? '?' : ''}: ${getColumnType(typeMapping, tableColumn.type, enums)}${tableColumn.isNullable && !opts.optionals ? ' | null' : ''}${semicolon(opts)}\n`
+          }
         })
 
-      result += '}'
-
-      if (opts.unionTableNamePrefixedColumns) {
-        result += ' | {\n'
-        table.columns
-          .sort(sortByField('name'))
-          .forEach(tableColumn => {
-            result += `  ${formatName(`${table.name}.${tableColumn.name}`)}${tableColumn.isNullable && opts.optionals ? '?' : ''}: ${getColumnType(typeMapping, tableColumn.type, enums)}${tableColumn.isNullable && !opts.optionals ? ' | null' : ''}${semicolon(opts)}\n`
-          })
-
-        result += '}'
-      }
-
-      result += `${semicolon(opts)}\n`
+      result += `}${semicolon(opts)}\n`
 
       if (opts.insertTypes && !table.isView) {
         const formattedTableName = formatTableName(opts, table.name, `Insert${opts.suffix}`)

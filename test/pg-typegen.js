@@ -49,12 +49,12 @@ t.test('returns help when missing connection', async (t) => {
 })
 
 t.test('generates types with table name prefix', async (t) => {
-  const result = await generate({ connection, ssl, unionTableNamePrefixedColumns: true })
+  const result = await generate({ connection, ssl, appendTableNamePrefixedColumns: true })
   t.matchSnapshot(result)
 })
 
 t.test('generates types with optionals and with table name prefix', async (t) => {
-  const result = await generate({ connection, ssl, optionals: true, unionTableNamePrefixedColumns: true })
+  const result = await generate({ connection, ssl, optionals: true, appendTableNamePrefixedColumns: true })
   t.matchSnapshot(result)
 })
 
