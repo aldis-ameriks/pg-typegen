@@ -16,8 +16,8 @@
     "pg-typegen": "cjs/src/index.js"
   },
   "scripts": {
-    "test": "tap test/*.js --100 --timeout=60 --before=test/helpers/setup-postgres.js",
-    "test:cjs": "tap cjs/test/*.js --100 --timeout=60 --before=cjs/test/helpers/setup-postgres.js",
+    "test": "tap test/*.js -- --100 --timeout=60 --before=test/helpers/setup-postgres.js",
+    "test:cjs": "tap cjs/test/*.js -- --100 --timeout=60 --before=cjs/test/helpers/setup-postgres.js",
     "test:types": "tsd",
     "lint": "standard",
     "lint:fix": "standard --fix",
@@ -43,12 +43,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "postgres": "^3.3.5"
+    "postgres": "^3.4.3"
   },
   "devDependencies": {
     "standard": "^17.1.0",
-    "tap": "^16.3.8",
-    "tsd": "^0.28.1"
+    "tap": "^18.5.7",
+    "tsd": "^0.29.0"
   },
   "tsd": {
     "directory": "types"

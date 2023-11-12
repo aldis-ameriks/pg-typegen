@@ -1,3 +1,4 @@
+/* c8 ignore start */
 import { pathToFileURL } from 'node:url'
 import postgres from 'postgres'
 

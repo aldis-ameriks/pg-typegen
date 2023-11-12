@@ -5,7 +5,7 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
-exports['cjs/test/typescript.js TAP using interfaces > must match snapshot 1'] = `
+exports['cjs/test/typescript.js > TAP > using interfaces > must match snapshot 1'] = `
 export enum Apples {}
 
 export enum CustomType {
@@ -116,7 +116,7 @@ export interface WhiteSpaceEntity {
 
 `
 
-exports['cjs/test/typescript.js TAP using interfaces > must match snapshot 2'] = `
+exports['cjs/test/typescript.js > TAP > using interfaces > must match snapshot 2'] = `
 export enum Apples {}
 
 export enum CustomType {
@@ -227,7 +227,7 @@ export interface WhiteSpaceEntity {
 
 `
 
-exports['cjs/test/typescript.js TAP using types > must match snapshot 1'] = `
+exports['cjs/test/typescript.js > TAP > using types > must match snapshot 1'] = `
 export enum Apples {}
 
 export enum CustomType {
@@ -338,7 +338,7 @@ export type WhiteSpaceEntity = {
 
 `
 
-exports['cjs/test/typescript.js TAP using types > must match snapshot 2'] = `
+exports['cjs/test/typescript.js > TAP > using types > must match snapshot 2'] = `
 export enum Apples {}
 
 export enum CustomType {
@@ -449,7 +449,7 @@ export type WhiteSpaceEntity = {
 
 `
 
-exports['cjs/test/typescript.js TAP with custom suffix > must match snapshot 1'] = `
+exports['cjs/test/typescript.js > TAP > with custom suffix > must match snapshot 1'] = `
 export enum Apples {}
 
 export enum CustomType {
@@ -560,7 +560,7 @@ export interface WhiteSpaceRecord {
 
 `
 
-exports['cjs/test/typescript.js TAP with generated insert types > must match snapshot 1'] = `
+exports['cjs/test/typescript.js > TAP > with generated insert types > must match snapshot 1'] = `
 export enum Apples {}
 
 export enum CustomType {
@@ -734,7 +734,7 @@ export interface WhiteSpaceInsertEntity {
 
 `
 
-exports['cjs/test/typescript.js TAP with generated insert types with optionals > must match snapshot 1'] = `
+exports['cjs/test/typescript.js > TAP > with generated insert types with optionals > must match snapshot 1'] = `
 export enum Apples {}
 
 export enum CustomType {
@@ -908,7 +908,7 @@ export interface WhiteSpaceInsertEntity {
 
 `
 
-exports['cjs/test/typescript.js TAP with header > must match snapshot 1'] = `
+exports['cjs/test/typescript.js > TAP > with header > must match snapshot 1'] = `
 /* eslint-disable */
 
 export enum Apples {}
@@ -1021,7 +1021,7 @@ export interface WhiteSpaceEntity {
 
 `
 
-exports['cjs/test/typescript.js TAP with optionals > must match snapshot 1'] = `
+exports['cjs/test/typescript.js > TAP > with optionals > must match snapshot 1'] = `
 export enum Apples {}
 
 export enum CustomType {
@@ -1132,7 +1132,7 @@ export interface WhiteSpaceEntity {
 
 `
 
-exports['cjs/test/typescript.js TAP with pascal case enums > must match snapshot 1'] = `
+exports['cjs/test/typescript.js > TAP > with pascal case enums > must match snapshot 1'] = `
 export enum Apples {}
 
 export enum CustomType {
@@ -1243,7 +1243,7 @@ export interface WhiteSpaceEntity {
 
 `
 
-exports['cjs/test/typescript.js TAP with table string literal > must match snapshot 1'] = `
+exports['cjs/test/typescript.js > TAP > with table string literal > must match snapshot 1'] = `
 export type Tables = 'addresses' | 'apples' | 'custom' | 'defaults' | 'defaults_no_columns' | 'empty' | 'entities' | 'kebab-case' | 'known' | 'snake_case' | 'unknown' | 'UpperCase' | 'white space';
 
 export enum Apples {}
@@ -1356,7 +1356,7 @@ export interface WhiteSpaceEntity {
 
 `
 
-exports['cjs/test/typescript.js TAP without enums > must match snapshot 1'] = `
+exports['cjs/test/typescript.js > TAP > without enums > must match snapshot 1'] = `
 export interface AddressEntity {};
 
 export interface AppleEntity {};

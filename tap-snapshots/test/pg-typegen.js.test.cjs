@@ -5,7 +5,7 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
-exports['test/pg-typegen.js TAP allows hooking into schema result > must match snapshot 1'] = `
+exports['test/pg-typegen.js > TAP > allows hooking into schema result > must match snapshot 1'] = `
 Object {
   "enums": Array [
     Object {
@@ -1327,7 +1327,7 @@ Object {
 }
 `
 
-exports['test/pg-typegen.js TAP allows hooking into type result > must match snapshot 1'] = `
+exports['test/pg-typegen.js > TAP > allows hooking into type result > must match snapshot 1'] = `
 Object {
   "insertTypeMapping": Object {
     "address": "AddressInsertEntity",
@@ -1655,7 +1655,7 @@ Object {
 }
 `
 
-exports['test/pg-typegen.js TAP generates types as return value > must match snapshot 1'] = `
+exports['test/pg-typegen.js > TAP > generates types as return value > must match snapshot 1'] = `
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',
   mix = 'mix',
@@ -1825,7 +1825,7 @@ export interface UserEntity {
 
 `
 
-exports['test/pg-typegen.js TAP generates types to file > must match snapshot 1'] = `
+exports['test/pg-typegen.js > TAP > generates types to file > must match snapshot 1'] = `
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',
   mix = 'mix',
@@ -1995,11 +1995,11 @@ export interface UserEntity {
 
 `
 
-exports['test/pg-typegen.js TAP generates types to file > must match snapshot 2'] = `
+exports['test/pg-typegen.js > TAP > generates types to file > must match snapshot 2'] = `
 ✔ Generated types from 9 tables and 3 enums
 `
 
-exports['test/pg-typegen.js TAP generates types with comments > must match snapshot 1'] = `
+exports['test/pg-typegen.js > TAP > generates types with comments > must match snapshot 1'] = `
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',
   mix = 'mix',
@@ -2182,7 +2182,7 @@ export interface UserEntity {
 
 `
 
-exports['test/pg-typegen.js TAP generates types with comments and insert types > must match snapshot 1'] = `
+exports['test/pg-typegen.js > TAP > generates types with comments and insert types > must match snapshot 1'] = `
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',
   mix = 'mix',
@@ -2513,7 +2513,7 @@ export interface UserInsertEntity {
 
 `
 
-exports['test/pg-typegen.js TAP generates types with insert types > must match snapshot 1'] = `
+exports['test/pg-typegen.js > TAP > generates types with insert types > must match snapshot 1'] = `
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',
   mix = 'mix',
@@ -2818,7 +2818,7 @@ export interface UserInsertEntity {
 
 `
 
-exports['test/pg-typegen.js TAP generates types with optionals and with table name prefix > must match snapshot 1'] = `
+exports['test/pg-typegen.js > TAP > generates types with optionals and with table name prefix > must match snapshot 1'] = `
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',
   mix = 'mix',
@@ -3122,7 +3122,7 @@ export type UserEntity = {
 
 `
 
-exports['test/pg-typegen.js TAP generates types with table name prefix > must match snapshot 1'] = `
+exports['test/pg-typegen.js > TAP > generates types with table name prefix > must match snapshot 1'] = `
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',
   mix = 'mix',
@@ -3426,10 +3426,10 @@ export type UserEntity = {
 
 `
 
-exports['test/pg-typegen.js TAP returns help when missing connection > must match snapshot 1'] = `
+exports['test/pg-typegen.js > TAP > returns help when missing connection > must match snapshot 1'] = `
 undefined
 `
 
-exports['test/pg-typegen.js TAP returns help when missing connection > must match snapshot 2'] = `
+exports['test/pg-typegen.js > TAP > returns help when missing connection > must match snapshot 2'] = `
 undefined
 `

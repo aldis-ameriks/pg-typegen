@@ -1,3 +1,4 @@
+/* c8 ignore start */
 const postgres = require('postgres')
 
 const defaultPort = '5435'

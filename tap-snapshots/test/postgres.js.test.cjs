@@ -5,7 +5,7 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
-exports['test/postgres.js TAP retrieves database schema > must match snapshot 1'] = `
+exports['test/postgres.js > TAP > retrieves database schema > must match snapshot 1'] = `
 Object {
   "enums": Result [
     Object {
@@ -1299,7 +1299,7 @@ Object {
 }
 `
 
-exports['test/postgres.js TAP returns typeMapping with date to javascript Date mapping > must match snapshot 1'] = `
+exports['test/postgres.js > TAP > returns typeMapping with date to javascript Date mapping > must match snapshot 1'] = `
 Object {
   "enums": Result [
     Object {
@@ -2607,7 +2607,7 @@ Object {
 }
 `
 
-exports['test/postgres.js TAP returns typeMapping with date to string mapping > must match snapshot 1'] = `
+exports['test/postgres.js > TAP > returns typeMapping with date to string mapping > must match snapshot 1'] = `
 Object {
   "enums": Result [
     Object {
@@ -3919,7 +3919,7 @@ Object {
 }
 `
 
-exports['test/postgres.js TAP returns typeMapping with int8 to bigint mapping > must match snapshot 1'] = `
+exports['test/postgres.js > TAP > returns typeMapping with int8 to bigint mapping > must match snapshot 1'] = `
 Object {
   "enums": Result [
     Object {
@@ -5223,7 +5223,7 @@ Object {
 }
 `
 
-exports['test/postgres.js TAP returns typeMapping with int8 to string mapping > must match snapshot 1'] = `
+exports['test/postgres.js > TAP > returns typeMapping with int8 to string mapping > must match snapshot 1'] = `
 Object {
   "enums": Result [
     Object {

@@ -5,7 +5,7 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
-exports['test/cli.js TAP generates table names > must match snapshot 1'] = `
+exports['test/cli.js > TAP > generates table names > must match snapshot 1'] = `
 export type Tables = 'address' | 'histories' | 'kebab-test' | 'snake_test' | 'types' | 'users'
 
 export enum DeliciousKebab {
@@ -178,7 +178,7 @@ export interface UserEntity {
 
 `
 
-exports['test/cli.js TAP generates types stdout > must match snapshot 1'] = `
+exports['test/cli.js > TAP > generates types stdout > must match snapshot 1'] = `
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',
   mix = 'mix',
@@ -349,7 +349,7 @@ export interface UserEntity {
 
 `
 
-exports['test/cli.js TAP generates types to file > must match snapshot 1'] = `
+exports['test/cli.js > TAP > generates types to file > must match snapshot 1'] = `
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',
   mix = 'mix',
@@ -519,7 +519,7 @@ export interface UserEntity {
 
 `
 
-exports['test/cli.js TAP generates types with bigint option > must match snapshot 1'] = `
+exports['test/cli.js > TAP > generates types with bigint option > must match snapshot 1'] = `
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',
   mix = 'mix',
@@ -690,7 +690,7 @@ export interface UserEntity {
 
 `
 
-exports['test/cli.js TAP generates types with exclusion > must match snapshot 1'] = `
+exports['test/cli.js > TAP > generates types with exclusion > must match snapshot 1'] = `
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',
   mix = 'mix',
@@ -747,7 +747,7 @@ export interface UserEntity {
 
 `
 
-exports['test/cli.js TAP generates types with header > must match snapshot 1'] = `
+exports['test/cli.js > TAP > generates types with header > must match snapshot 1'] = `
 /* eslint-disable */
 
 export enum DeliciousKebab {
@@ -920,7 +920,7 @@ export interface UserEntity {
 
 `
 
-exports['test/cli.js TAP generates types with insert types > must match snapshot 1'] = `
+exports['test/cli.js > TAP > generates types with insert types > must match snapshot 1'] = `
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',
   mix = 'mix',
@@ -1226,7 +1226,7 @@ export interface UserInsertEntity {
 
 `
 
-exports['test/cli.js TAP generates types with no-semicolons option > must match snapshot 1'] = `
+exports['test/cli.js > TAP > generates types with no-semicolons option > must match snapshot 1'] = `
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',
   mix = 'mix',
@@ -1397,7 +1397,7 @@ export interface UserEntity {
 
 `
 
-exports['test/cli.js TAP generates types with noSemi option > must match snapshot 1'] = `
+exports['test/cli.js > TAP > generates types with noSemi option > must match snapshot 1'] = `
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',
   mix = 'mix',
@@ -1568,7 +1568,7 @@ export interface UserEntity {
 
 `
 
-exports['test/cli.js TAP generates types with pascal case enums > must match snapshot 1'] = `
+exports['test/cli.js > TAP > generates types with pascal case enums > must match snapshot 1'] = `
 export enum DeliciousKebab {
   BigMix = 'big-mix',
   Mix = 'mix',
@@ -1739,7 +1739,7 @@ export interface UserEntity {
 
 `
 
-exports['test/cli.js TAP generates types with semicolons option > must match snapshot 1'] = `
+exports['test/cli.js > TAP > generates types with semicolons option > must match snapshot 1'] = `
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',
   mix = 'mix',
@@ -1910,7 +1910,7 @@ export interface UserEntity {
 
 `
 
-exports['test/cli.js TAP generates types with types option > must match snapshot 1'] = `
+exports['test/cli.js > TAP > generates types with types option > must match snapshot 1'] = `
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',
   mix = 'mix',
@@ -2081,7 +2081,7 @@ export type UserEntity = {
 
 `
 
-exports['test/cli.js TAP help > must match snapshot 1'] = `
+exports['test/cli.js > TAP > help > must match snapshot 1'] = `
 Usage: pg-typegen [options] <connection>
 
 Options:
@@ -2108,7 +2108,7 @@ Example:
 
 `
 
-exports['test/cli.js TAP missing connection string > must match snapshot 1'] = `
+exports['test/cli.js > TAP > missing connection string > must match snapshot 1'] = `
 Usage: pg-typegen [options] <connection>
 
 Options:
@@ -2135,7 +2135,7 @@ Example:
 
 `
 
-exports['test/cli.js TAP version > must match snapshot 1'] = `
+exports['test/cli.js > TAP > version > must match snapshot 1'] = `
 v{v}
 
 `
