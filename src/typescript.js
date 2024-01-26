@@ -20,13 +20,14 @@ function sortByField (name) {
 
 function toPascalCase (value) {
   let replaced = value.replace(/((_|-|\s)\w)/g, (token) => token[1].toUpperCase())
+  replaced = replaced.replace(/((\d)\w)/g, (token) => token[0] + token[1].toUpperCase())
   replaced = replaced.charAt(0).toUpperCase() + replaced.slice(1)
   replaced = replaced.replace(/_|-|\s/g, '')
   return replaced
 }
 
 function formatName (name) {
-  if (name.match(/(-|\s|\.)/g)) {
+  if (name.match(/(-|\s|\.)/g) || name.match(/^\d/)) {
     name = `'${name}'`
   }
   return name
@@ -34,7 +35,7 @@ function formatName (name) {
 
 function formatEnumName (opts, name) {
   if (opts.pascalEnums) {
-    return toPascalCase(name)
+    return formatName(toPascalCase(name))
   }
 
   return formatName(name)

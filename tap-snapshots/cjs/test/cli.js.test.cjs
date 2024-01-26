@@ -19,6 +19,13 @@ export enum Fruits {
   orange = 'orange',
 }
 
+export enum NumericNames {
+  '1name' = '1name',
+  '2Name' = '2Name',
+  '3-name' = '3-name',
+  '4_name' = '4_name',
+}
+
 export enum SnakesOn {
   a_plane = 'a_plane',
 }
@@ -188,6 +195,13 @@ export enum Fruits {
   apple = 'apple',
   banana = 'banana',
   orange = 'orange',
+}
+
+export enum NumericNames {
+  '1name' = '1name',
+  '2Name' = '2Name',
+  '3-name' = '3-name',
+  '4_name' = '4_name',
 }
 
 export enum SnakesOn {
@@ -361,6 +375,13 @@ export enum Fruits {
   orange = 'orange',
 }
 
+export enum NumericNames {
+  '1name' = '1name',
+  '2Name' = '2Name',
+  '3-name' = '3-name',
+  '4_name' = '4_name',
+}
+
 export enum SnakesOn {
   a_plane = 'a_plane',
 }
@@ -529,6 +550,13 @@ export enum Fruits {
   apple = 'apple',
   banana = 'banana',
   orange = 'orange',
+}
+
+export enum NumericNames {
+  '1name' = '1name',
+  '2Name' = '2Name',
+  '3-name' = '3-name',
+  '4_name' = '4_name',
 }
 
 export enum SnakesOn {
@@ -702,6 +730,13 @@ export enum Fruits {
   orange = 'orange',
 }
 
+export enum NumericNames {
+  '1name' = '1name',
+  '2Name' = '2Name',
+  '3-name' = '3-name',
+  '4_name' = '4_name',
+}
+
 export enum SnakesOn {
   a_plane = 'a_plane',
 }
@@ -759,6 +794,13 @@ export enum Fruits {
   apple = 'apple',
   banana = 'banana',
   orange = 'orange',
+}
+
+export enum NumericNames {
+  '1name' = '1name',
+  '2Name' = '2Name',
+  '3-name' = '3-name',
+  '4_name' = '4_name',
 }
 
 export enum SnakesOn {
@@ -930,6 +972,13 @@ export enum Fruits {
   apple = 'apple',
   banana = 'banana',
   orange = 'orange',
+}
+
+export enum NumericNames {
+  '1name' = '1name',
+  '2Name' = '2Name',
+  '3-name' = '3-name',
+  '4_name' = '4_name',
 }
 
 export enum SnakesOn {
@@ -1238,6 +1287,13 @@ export enum Fruits {
   orange = 'orange',
 }
 
+export enum NumericNames {
+  '1name' = '1name',
+  '2Name' = '2Name',
+  '3-name' = '3-name',
+  '4_name' = '4_name',
+}
+
 export enum SnakesOn {
   a_plane = 'a_plane',
 }
@@ -1407,6 +1463,13 @@ export enum Fruits {
   apple = 'apple',
   banana = 'banana',
   orange = 'orange',
+}
+
+export enum NumericNames {
+  '1name' = '1name',
+  '2Name' = '2Name',
+  '3-name' = '3-name',
+  '4_name' = '4_name',
 }
 
 export enum SnakesOn {
@@ -1580,6 +1643,13 @@ export enum Fruits {
   Orange = 'orange',
 }
 
+export enum NumericNames {
+  '1Name' = '1name',
+  '2Name' = '2Name',
+  '3Name' = '3-name',
+  '4Name' = '4_name',
+}
+
 export enum SnakesOn {
   APlane = 'a_plane',
 }
@@ -1751,6 +1821,13 @@ export enum Fruits {
   orange = 'orange',
 }
 
+export enum NumericNames {
+  '1name' = '1name',
+  '2Name' = '2Name',
+  '3-name' = '3-name',
+  '4_name' = '4_name',
+}
+
 export enum SnakesOn {
   a_plane = 'a_plane',
 }
@@ -1920,6 +1997,13 @@ export enum Fruits {
   apple = 'apple',
   banana = 'banana',
   orange = 'orange',
+}
+
+export enum NumericNames {
+  '1name' = '1name',
+  '2Name' = '2Name',
+  '3-name' = '3-name',
+  '4_name' = '4_name',
 }
 
 export enum SnakesOn {

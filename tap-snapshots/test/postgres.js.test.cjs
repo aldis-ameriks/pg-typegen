@@ -24,6 +24,15 @@ Object {
       ],
     },
     Object {
+      "name": "numeric_names",
+      "values": Array [
+        "1name",
+        "2Name",
+        "3-name",
+        "4_name",
+      ],
+    },
+    Object {
       "name": "snakes_on",
       "values": Array [
         "a_plane",
@@ -1315,6 +1324,15 @@ Object {
         "apple",
         "banana",
         "orange",
+      ],
+    },
+    Object {
+      "name": "numeric_names",
+      "values": Array [
+        "1name",
+        "2Name",
+        "3-name",
+        "4_name",
       ],
     },
     Object {
@@ -2623,6 +2641,15 @@ Object {
         "apple",
         "banana",
         "orange",
+      ],
+    },
+    Object {
+      "name": "numeric_names",
+      "values": Array [
+        "1name",
+        "2Name",
+        "3-name",
+        "4_name",
       ],
     },
     Object {
@@ -3938,6 +3965,15 @@ Object {
       ],
     },
     Object {
+      "name": "numeric_names",
+      "values": Array [
+        "1name",
+        "2Name",
+        "3-name",
+        "4_name",
+      ],
+    },
+    Object {
       "name": "snakes_on",
       "values": Array [
         "a_plane",
@@ -5239,6 +5275,15 @@ Object {
         "apple",
         "banana",
         "orange",
+      ],
+    },
+    Object {
+      "name": "numeric_names",
+      "values": Array [
+        "1name",
+        "2Name",
+        "3-name",
+        "4_name",
       ],
     },
     Object {

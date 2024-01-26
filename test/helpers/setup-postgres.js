@@ -56,6 +56,15 @@ export async function setupTestPostgres () {
               'a_plane'
           );
       `
+
+      await sql`
+          CREATE TYPE "numeric_names" AS ENUM (
+              '1name',
+              '2Name',
+              '3-name',
+              '4_name'
+            );
+      `
     } catch (e) { }
 
     await sql`

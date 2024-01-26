@@ -24,6 +24,15 @@ Object {
       ],
     },
     Object {
+      "name": "numeric_names",
+      "values": Array [
+        "1name",
+        "2Name",
+        "3-name",
+        "4_name",
+      ],
+    },
+    Object {
       "name": "snakes_on",
       "values": Array [
         "a_plane",
@@ -1360,6 +1369,13 @@ Object {
       orange = 'orange',
     }
     
+    export enum NumericNames {
+      '1name' = '1name',
+      '2Name' = '2Name',
+      '3-name' = '3-name',
+      '4_name' = '4_name',
+    }
+    
     export enum SnakesOn {
       a_plane = 'a_plane',
     }
@@ -1667,6 +1683,13 @@ export enum Fruits {
   orange = 'orange',
 }
 
+export enum NumericNames {
+  '1name' = '1name',
+  '2Name' = '2Name',
+  '3-name' = '3-name',
+  '4_name' = '4_name',
+}
+
 export enum SnakesOn {
   a_plane = 'a_plane',
 }
@@ -1837,6 +1860,13 @@ export enum Fruits {
   orange = 'orange',
 }
 
+export enum NumericNames {
+  '1name' = '1name',
+  '2Name' = '2Name',
+  '3-name' = '3-name',
+  '4_name' = '4_name',
+}
+
 export enum SnakesOn {
   a_plane = 'a_plane',
 }
@@ -1996,7 +2026,7 @@ export interface UserEntity {
 `
 
 exports['cjs/test/pg-typegen.js > TAP > generates types to file > must match snapshot 2'] = `
-✔ Generated types from 9 tables and 3 enums
+✔ Generated types from 9 tables and 4 enums
 `
 
 exports['cjs/test/pg-typegen.js > TAP > generates types with comments > must match snapshot 1'] = `
@@ -2009,6 +2039,13 @@ export enum Fruits {
   apple = 'apple',
   banana = 'banana',
   orange = 'orange',
+}
+
+export enum NumericNames {
+  '1name' = '1name',
+  '2Name' = '2Name',
+  '3-name' = '3-name',
+  '4_name' = '4_name',
 }
 
 export enum SnakesOn {
@@ -2192,6 +2229,13 @@ export enum Fruits {
   apple = 'apple',
   banana = 'banana',
   orange = 'orange',
+}
+
+export enum NumericNames {
+  '1name' = '1name',
+  '2Name' = '2Name',
+  '3-name' = '3-name',
+  '4_name' = '4_name',
 }
 
 export enum SnakesOn {
@@ -2525,6 +2569,13 @@ export enum Fruits {
   orange = 'orange',
 }
 
+export enum NumericNames {
+  '1name' = '1name',
+  '2Name' = '2Name',
+  '3-name' = '3-name',
+  '4_name' = '4_name',
+}
+
 export enum SnakesOn {
   a_plane = 'a_plane',
 }
@@ -2830,6 +2881,13 @@ export enum Fruits {
   orange = 'orange',
 }
 
+export enum NumericNames {
+  '1name' = '1name',
+  '2Name' = '2Name',
+  '3-name' = '3-name',
+  '4_name' = '4_name',
+}
+
 export enum SnakesOn {
   a_plane = 'a_plane',
 }
@@ -3123,6 +3181,13 @@ export enum Fruits {
   apple = 'apple',
   banana = 'banana',
   orange = 'orange',
+}
+
+export enum NumericNames {
+  '1name' = '1name',
+  '2Name' = '2Name',
+  '3-name' = '3-name',
+  '4_name' = '4_name',
 }
 
 export enum SnakesOn {
