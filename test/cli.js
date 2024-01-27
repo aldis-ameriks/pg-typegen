@@ -126,7 +126,7 @@ t.test('reports success to stdout', t => {
   })
 
   child.on('close', () => {
-    t.equal(result.data, '✔ Generated types from 9 tables and 4 enums\n')
+    t.equal(result.data, '✔ Generated types from 10 tables and 4 enums\n')
   })
 })
 
@@ -170,7 +170,7 @@ t.test('generates types with header', t => {
   })
 })
 
-t.only('generates types with pascal case enums', t => {
+t.test('generates types with pascal case enums', t => {
   t.plan(1)
 
   const child = childProcess.spawn(process.execPath, [path.join(__dirname, '..', 'src', 'index.js'), connection, ssl ? '--ssl' : '', '--pascal-enums'], {

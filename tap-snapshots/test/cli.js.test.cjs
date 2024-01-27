@@ -6,7 +6,7 @@
  */
 'use strict'
 exports['test/cli.js > TAP > generates table names > must match snapshot 1'] = `
-export type Tables = 'address' | 'histories' | 'kebab-test' | 'snake_test' | 'types' | 'users'
+export type Tables = 'address' | 'histories' | 'kebab-test' | 'PascalTableName' | 'snake_test' | 'types' | 'users'
 
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',
@@ -52,6 +52,11 @@ export interface MaterializedItemEntity {
 export interface MaterializedOtherItemEntity {
   test: number | null
   test_text: string | null
+}
+
+export interface PascalTableNameEntity {
+  id: number
+  Name: string
 }
 
 export interface SnakeTestEntity {
@@ -232,6 +237,11 @@ export interface MaterializedOtherItemEntity {
   test_text: string | null
 }
 
+export interface PascalTableNameEntity {
+  id: number
+  Name: string
+}
+
 export interface SnakeTestEntity {
   id: number
 }
@@ -410,6 +420,11 @@ export interface MaterializedOtherItemEntity {
   test_text: string | null
 }
 
+export interface PascalTableNameEntity {
+  id: number
+  Name: string
+}
+
 export interface SnakeTestEntity {
   id: number
 }
@@ -585,6 +600,11 @@ export interface MaterializedItemEntity {
 export interface MaterializedOtherItemEntity {
   test: number | null
   test_text: string | null
+}
+
+export interface PascalTableNameEntity {
+  id: number
+  Name: string
 }
 
 export interface SnakeTestEntity {
@@ -765,6 +785,11 @@ export interface MaterializedOtherItemEntity {
   test_text: string | null
 }
 
+export interface PascalTableNameEntity {
+  id: number
+  Name: string
+}
+
 export interface SomeViewEntity {
   test: number | null
   test_text: string | null
@@ -829,6 +854,11 @@ export interface MaterializedItemEntity {
 export interface MaterializedOtherItemEntity {
   test: number | null
   test_text: string | null
+}
+
+export interface PascalTableNameEntity {
+  id: number
+  Name: string
 }
 
 export interface SnakeTestEntity {
@@ -1019,6 +1049,16 @@ export interface MaterializedItemEntity {
 export interface MaterializedOtherItemEntity {
   test: number | null
   test_text: string | null
+}
+
+export interface PascalTableNameEntity {
+  id: number
+  Name: string
+}
+
+export interface PascalTableNameInsertEntity {
+  id?: number
+  Name: string
 }
 
 export interface SnakeTestEntity {
@@ -1322,6 +1362,11 @@ export interface MaterializedOtherItemEntity {
   test_text: string | null
 }
 
+export interface PascalTableNameEntity {
+  id: number
+  Name: string
+}
+
 export interface SnakeTestEntity {
   id: number
 }
@@ -1498,6 +1543,11 @@ export interface MaterializedItemEntity {
 export interface MaterializedOtherItemEntity {
   test: number | null
   test_text: string | null
+}
+
+export interface PascalTableNameEntity {
+  id: number
+  Name: string
 }
 
 export interface SnakeTestEntity {
@@ -1678,6 +1728,11 @@ export interface MaterializedOtherItemEntity {
   test_text: string | null
 }
 
+export interface PascalTableNameEntity {
+  id: number
+  Name: string
+}
+
 export interface SnakeTestEntity {
   id: number
 }
@@ -1856,6 +1911,11 @@ export interface MaterializedOtherItemEntity {
   test_text: string | null;
 };
 
+export interface PascalTableNameEntity {
+  id: number;
+  Name: string;
+};
+
 export interface SnakeTestEntity {
   id: number;
 };
@@ -2032,6 +2092,11 @@ export type MaterializedItemEntity = {
 export type MaterializedOtherItemEntity = {
   test: number | null
   test_text: string | null
+}
+
+export type PascalTableNameEntity = {
+  id: number
+  Name: string
 }
 
 export type SnakeTestEntity = {

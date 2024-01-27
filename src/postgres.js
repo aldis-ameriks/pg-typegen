@@ -18,7 +18,7 @@ const typeMapping = {
 function getTableDefinitions (sql, schema) {
   return sql`
       SELECT c.table_name AS name,
-             obj_description(c.table_name::regclass) AS comment,
+             obj_description(('"' || c.table_name || '"')::regclass) AS comment,
              t.table_type = 'VIEW' AS "isView",
              jsonb_agg(
                      DISTINCT jsonb_build_object(
@@ -31,7 +31,7 @@ function getTableDefinitions (sql, schema) {
                      'comment', (
                          SELECT coalesce(pg_catalog.col_description(pc.oid, c.ordinal_position::int), '')
                          FROM pg_catalog.pg_class pc
-                         WHERE pc.oid = c.table_name::regclass::oid
+                         WHERE pc.oid = (('"' || c.table_name || '"')::regclass)::oid
                            AND pc.relname = c.table_name
                      ),
                      'indices', (

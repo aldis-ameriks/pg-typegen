@@ -44,6 +44,31 @@ Object {
       "columns": Array [
         Object {
           "comment": "",
+          "defaultValue": "nextval('\\"PascalTableName_id_seq\\"'::regclass)",
+          "hasDefault": true,
+          "indices": Array [],
+          "isNullable": false,
+          "name": "id",
+          "type": "int4",
+        },
+        Object {
+          "comment": "",
+          "defaultValue": null,
+          "hasDefault": false,
+          "indices": Array [],
+          "isNullable": false,
+          "name": "Name",
+          "type": "text",
+        },
+      ],
+      "comment": null,
+      "isView": false,
+      "name": "PascalTableName",
+    },
+    Object {
+      "columns": Array [
+        Object {
+          "comment": "",
           "defaultValue": null,
           "hasDefault": false,
           "indices": Array [],
@@ -1343,6 +1368,31 @@ Object {
     },
   ],
   "tables": Array [
+    Object {
+      "columns": Array [
+        Object {
+          "comment": "",
+          "defaultValue": "nextval('\\"PascalTableName_id_seq\\"'::regclass)",
+          "hasDefault": true,
+          "indices": Array [],
+          "isNullable": false,
+          "name": "id",
+          "type": "int4",
+        },
+        Object {
+          "comment": "",
+          "defaultValue": null,
+          "hasDefault": false,
+          "indices": Array [],
+          "isNullable": false,
+          "name": "Name",
+          "type": "text",
+        },
+      ],
+      "comment": null,
+      "isView": false,
+      "name": "PascalTableName",
+    },
     Object {
       "columns": Array [
         Object {
@@ -2660,6 +2710,31 @@ Object {
     },
   ],
   "tables": Array [
+    Object {
+      "columns": Array [
+        Object {
+          "comment": "",
+          "defaultValue": "nextval('\\"PascalTableName_id_seq\\"'::regclass)",
+          "hasDefault": true,
+          "indices": Array [],
+          "isNullable": false,
+          "name": "id",
+          "type": "int4",
+        },
+        Object {
+          "comment": "",
+          "defaultValue": null,
+          "hasDefault": false,
+          "indices": Array [],
+          "isNullable": false,
+          "name": "Name",
+          "type": "text",
+        },
+      ],
+      "comment": null,
+      "isView": false,
+      "name": "PascalTableName",
+    },
     Object {
       "columns": Array [
         Object {
@@ -3985,6 +4060,31 @@ Object {
       "columns": Array [
         Object {
           "comment": "",
+          "defaultValue": "nextval('\\"PascalTableName_id_seq\\"'::regclass)",
+          "hasDefault": true,
+          "indices": Array [],
+          "isNullable": false,
+          "name": "id",
+          "type": "int4",
+        },
+        Object {
+          "comment": "",
+          "defaultValue": null,
+          "hasDefault": false,
+          "indices": Array [],
+          "isNullable": false,
+          "name": "Name",
+          "type": "text",
+        },
+      ],
+      "comment": null,
+      "isView": false,
+      "name": "PascalTableName",
+    },
+    Object {
+      "columns": Array [
+        Object {
+          "comment": "",
           "defaultValue": null,
           "hasDefault": false,
           "indices": Array [],
@@ -5294,6 +5394,31 @@ Object {
     },
   ],
   "tables": Array [
+    Object {
+      "columns": Array [
+        Object {
+          "comment": "",
+          "defaultValue": "nextval('\\"PascalTableName_id_seq\\"'::regclass)",
+          "hasDefault": true,
+          "indices": Array [],
+          "isNullable": false,
+          "name": "id",
+          "type": "int4",
+        },
+        Object {
+          "comment": "",
+          "defaultValue": null,
+          "hasDefault": false,
+          "indices": Array [],
+          "isNullable": false,
+          "name": "Name",
+          "type": "text",
+        },
+      ],
+      "comment": null,
+      "isView": false,
+      "name": "PascalTableName",
+    },
     Object {
       "columns": Array [
         Object {

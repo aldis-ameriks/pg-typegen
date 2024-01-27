@@ -152,6 +152,31 @@ Object {
       "columns": Array [
         Object {
           "comment": "",
+          "defaultValue": "nextval('\\"PascalTableName_id_seq\\"'::regclass)",
+          "hasDefault": true,
+          "indices": Array [],
+          "isNullable": false,
+          "name": "id",
+          "type": "int4",
+        },
+        Object {
+          "comment": "",
+          "defaultValue": null,
+          "hasDefault": false,
+          "indices": Array [],
+          "isNullable": false,
+          "name": "Name",
+          "type": "text",
+        },
+      ],
+      "comment": null,
+      "isView": false,
+      "name": "PascalTableName",
+    },
+    Object {
+      "columns": Array [
+        Object {
+          "comment": "",
           "defaultValue": null,
           "hasDefault": false,
           "indices": Array [
@@ -1342,6 +1367,7 @@ Object {
     "address": "AddressInsertEntity",
     "histories": "HistoryInsertEntity",
     "kebab-test": "KebabTestInsertEntity",
+    "PascalTableName": "PascalTableNameInsertEntity",
     "snake_test": "SnakeTestInsertEntity",
     "types": "TypeInsertEntity",
     "users": "UserInsertEntity",
@@ -1352,6 +1378,7 @@ Object {
     "kebab-test": "KebabTestEntity",
     "materialized_items": "MaterializedItemEntity",
     "materialized_other_items": "MaterializedOtherItemEntity",
+    "PascalTableName": "PascalTableNameEntity",
     "snake_test": "SnakeTestEntity",
     "some_view": "SomeViewEntity",
     "types": "TypeEntity",
@@ -1414,6 +1441,16 @@ Object {
     export interface MaterializedOtherItemEntity {
       test: number | null
       test_text: string | null
+    }
+    
+    export interface PascalTableNameEntity {
+      id: number
+      Name: string
+    }
+    
+    export interface PascalTableNameInsertEntity {
+      id?: number
+      Name: string
     }
     
     export interface SnakeTestEntity {
@@ -1718,6 +1755,11 @@ export interface MaterializedOtherItemEntity {
   test_text: string | null
 }
 
+export interface PascalTableNameEntity {
+  id: number
+  Name: string
+}
+
 export interface SnakeTestEntity {
   id: number
 }
@@ -1895,6 +1937,11 @@ export interface MaterializedOtherItemEntity {
   test_text: string | null
 }
 
+export interface PascalTableNameEntity {
+  id: number
+  Name: string
+}
+
 export interface SnakeTestEntity {
   id: number
 }
@@ -2026,7 +2073,7 @@ export interface UserEntity {
 `
 
 exports['cjs/test/pg-typegen.js > TAP > generates types to file > must match snapshot 2'] = `
-✔ Generated types from 9 tables and 4 enums
+✔ Generated types from 10 tables and 4 enums
 `
 
 exports['cjs/test/pg-typegen.js > TAP > generates types with comments > must match snapshot 1'] = `
@@ -2074,6 +2121,11 @@ export interface MaterializedItemEntity {
 export interface MaterializedOtherItemEntity {
   test: number | null
   test_text: string | null
+}
+
+export interface PascalTableNameEntity {
+  id: number
+  Name: string
 }
 
 export interface SnakeTestEntity {
@@ -2276,6 +2328,16 @@ export interface MaterializedItemEntity {
 export interface MaterializedOtherItemEntity {
   test: number | null
   test_text: string | null
+}
+
+export interface PascalTableNameEntity {
+  id: number
+  Name: string
+}
+
+export interface PascalTableNameInsertEntity {
+  id?: number
+  Name: string
 }
 
 export interface SnakeTestEntity {
@@ -2616,6 +2678,16 @@ export interface MaterializedOtherItemEntity {
   test_text: string | null
 }
 
+export interface PascalTableNameEntity {
+  id: number
+  Name: string
+}
+
+export interface PascalTableNameInsertEntity {
+  id?: number
+  Name: string
+}
+
 export interface SnakeTestEntity {
   id: number
 }
@@ -2925,6 +2997,13 @@ export type MaterializedOtherItemEntity = {
   'materialized_other_items.test_text'?: string
 }
 
+export type PascalTableNameEntity = {
+  id: number
+  'PascalTableName.id': number
+  Name: string
+  'PascalTableName.Name': string
+}
+
 export type SnakeTestEntity = {
   id: number
   'snake_test.id': number
@@ -3225,6 +3304,13 @@ export type MaterializedOtherItemEntity = {
   'materialized_other_items.test': number | null
   test_text: string | null
   'materialized_other_items.test_text': string | null
+}
+
+export type PascalTableNameEntity = {
+  id: number
+  'PascalTableName.id': number
+  Name: string
+  'PascalTableName.Name': string
 }
 
 export type SnakeTestEntity = {

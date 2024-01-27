@@ -91,6 +91,14 @@ module.exports.setupTestPostgres = setupTestPostgres; async function setupTestPo
     `
 
     await sql`
+      CREATE TABLE IF NOT EXISTS "PascalTableName"
+      (
+        id               serial4           NOT NULL,
+        "Name"           text              NOT NULL
+      );
+    `
+
+    await sql`
         CREATE TABLE IF NOT EXISTS "kebab-test" (
             id int4 NOT NULL
         );
