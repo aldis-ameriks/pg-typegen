@@ -39,6 +39,7 @@ export interface Options {
   ssl?: boolean;
   insertTypes?: boolean;
   tableNames?: boolean;
+  viewNames?: boolean;
   comments?: boolean;
 }
 

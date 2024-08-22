@@ -18,6 +18,7 @@ const options = {
   type: false,
   insertTypes: true,
   tableNames: true,
+  viewNames: true,
   comments: true,
 }
 

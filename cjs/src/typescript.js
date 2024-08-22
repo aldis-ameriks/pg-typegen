@@ -210,6 +210,14 @@ function typescript (opts, schema) {
     result += '\n\n'
   }
 
+  if (opts.viewNames) {
+    const views = tables.filter(table => table.isView)
+    if (views.length > 0) {
+      result += `export type Views = ${views.sort(sortByField('name')).map(table => `'${table.name}'`).join(' | ')}${semicolon(opts)}`
+      result += '\n\n'
+    }
+  }
+
   const enumTypes = generateEnumTypes(opts, enums)
   if (enumTypes) {
     result += enumTypes

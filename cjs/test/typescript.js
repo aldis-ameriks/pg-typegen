@@ -74,6 +74,14 @@ const tables = [
       { name: 'one', type: 'int4', hasDefault: true },
       { name: 'two', type: 'int4', hasDefault: true, isNullable: true }
     ]
+  },
+  {
+    name: 'another-view',
+    isView: true,
+    columns: [
+      { name: 'one', type: 'int4', hasDefault: true },
+      { name: 'two', type: 'int4', hasDefault: true, isNullable: true }
+    ]
   }
 ]
 
@@ -165,5 +173,41 @@ t.test('with generated insert types with optionals', t => {
 t.test('with table string literal', t => {
   t.plan(1)
   const result = typescript({ ...opts, tableNames: true }, { tables, typeMapping, enums })
+  t.matchSnapshot(result.types)
+})
+
+t.test('viewNames with views', t => {
+  t.plan(1)
+  const result = typescript({ ...opts, viewNames: true }, { tables, typeMapping, enums })
+  t.matchSnapshot(result.types)
+})
+
+t.test('viewNames with single view', t => {
+  t.plan(1)
+  const tablesWithSingleView = [
+    {
+      name: 'view',
+      isView: true,
+      columns: [
+        { name: 'one', type: 'int4', hasDefault: true }
+      ]
+    }
+  ]
+  const result = typescript({ ...opts, viewNames: true }, { tables: tablesWithSingleView, typeMapping, enums })
+  t.matchSnapshot(result.types)
+})
+
+t.test('viewNames without views', t => {
+  t.plan(1)
+  const tablesWithoutView = [
+    {
+      name: 'table',
+      isView: false,
+      columns: [
+        { name: 'one', type: 'int4', hasDefault: true }
+      ]
+    }
+  ]
+  const result = typescript({ ...opts, viewNames: true }, { tables: tablesWithoutView, typeMapping, enums })
   t.matchSnapshot(result.types)
 })

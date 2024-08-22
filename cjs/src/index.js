@@ -26,7 +26,8 @@ const options = {
   'pascal-enums': { type: 'boolean' },
   'date-as-string': { type: 'boolean' },
   'insert-types': { type: 'boolean' },
-  'table-names': { type: 'boolean' }
+  'table-names': { type: 'boolean' },
+  'view-names': { type: 'boolean' }
 }
 
 const defaultOptions = {
@@ -45,6 +46,7 @@ const defaultOptions = {
   dateAsString: false,
   insertTypes: false,
   tableNames: false,
+  viewNames: false,
   help: false,
   version: false
 }
@@ -68,6 +70,7 @@ Options:
   --date-as-string           use string for date types instead of javascript Date object (default: false)
   --insert-types             generate separate insert types with optional fields for columns allowing NULL value or having default values (default: false)
   --table-names              generate string literal type with all table names (default: false)
+  --view-names               generate string literal type with all view names (default: false)
   --help                     display help for command
 
 Example:
@@ -139,6 +142,7 @@ if (require.main === module) {
       dateAsString: opts['date-as-string'],
       insertTypes: opts['insert-types'],
       tableNames: opts['table-names'],
+      viewNames: opts['view-names'],
       help: opts.help,
       version: opts.version,
       connection: opts.connection
