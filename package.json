@@ -47,8 +47,8 @@
   },
   "devDependencies": {
     "standard": "^17.1.0",
-    "tap": "^18.7.2",
-    "tsd": "^0.31.0"
+    "tap": "^21.0.1",
+    "tsd": "^0.31.1"
   },
   "tsd": {
     "directory": "types"
