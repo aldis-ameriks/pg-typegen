@@ -211,9 +211,15 @@ function typescript (opts, schema) {
   }
 
   if (opts.viewNames) {
-    const views = tables.filter(table => table.isView)
+    const views = tables.filter(table => table.isView && !table.isMaterializedView)
     if (views.length > 0) {
       result += `export type Views = ${views.sort(sortByField('name')).map(table => `'${table.name}'`).join(' | ')}${semicolon(opts)}`
+      result += '\n\n'
+    }
+
+    const materializedViews = tables.filter(table => table.isMaterializedView)
+    if (materializedViews.length > 0) {
+      result += `export type MaterializedViews = ${materializedViews.sort(sortByField('name')).map(table => `'${table.name}'`).join(' | ')}${semicolon(opts)}`
       result += '\n\n'
     }
   }

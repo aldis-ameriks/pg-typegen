@@ -2231,7 +2231,9 @@ export type UserEntity = {
 `
 
 exports['test/cli.js > TAP > generates view names > must match snapshot 1'] = `
-export type Views = 'materialized_items' | 'materialized_other_items' | 'some_view'
+export type Views = 'some_view'
+
+export type MaterializedViews = 'materialized_items' | 'materialized_other_items'
 
 export enum DeliciousKebab {
   'big-mix' = 'big-mix',

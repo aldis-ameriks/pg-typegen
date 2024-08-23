@@ -20,6 +20,7 @@ function getTableDefinitions (sql, schema) {
       SELECT c.table_name AS name,
              obj_description(('"' || c.table_name || '"')::regclass) AS comment,
              t.table_type = 'VIEW' AS "isView",
+             FALSE AS "isMaterializedView",
              jsonb_agg(
                      DISTINCT jsonb_build_object(
                      'name', column_name,
@@ -75,6 +76,7 @@ async function getMaterializedViewDefinitions (sql, schema) {
       )
       SELECT pc.relname AS name,
              TRUE AS "isView",
+             TRUE AS "isMaterializedView",
              jsonb_agg(
                      DISTINCT jsonb_build_object(
                      'name', pa.attname,
