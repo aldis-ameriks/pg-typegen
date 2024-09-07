@@ -16,8 +16,8 @@
     "pg-typegen": "cjs/src/index.js"
   },
   "scripts": {
-    "test": "node --test --experimental-test-coverage --experimental-test-snapshots --test-coverage-lines=100 --test-coverage-include='src/**/*.js' --import=./test/helpers/setup.js test/*.js",
-    "test:cjs": "node --test --experimental-test-coverage --experimental-test-snapshots --test-coverage-lines=100 --test-coverage-include='cjs/src/**/*.js' --import=./cjs/test/helpers/setup.js cjs/test/*.js",
+    "test": "node --test --experimental-test-coverage --experimental-test-snapshots --test-coverage-lines=100 --test-coverage-branches=100 --test-coverage-include='src/**/*.js' --import=./test/helpers/setup.js test/*.js",
+    "test:cjs": "node --test --experimental-test-coverage --experimental-test-snapshots --test-coverage-lines=100 --test-coverage-branches=100 --test-coverage-include='cjs/src/**/*.js' --import=./cjs/test/helpers/setup.js cjs/test/*.js",
     "test:types": "tsd",
     "lint": "standard",
     "lint:fix": "standard --fix",
