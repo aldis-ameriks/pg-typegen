@@ -9,9 +9,6 @@
     <a href="https://github.com/aldis-ameriks/pg-typegen/blob/master/LICENSE" target="_blank">
         <img alt="License: MIT" src="https://img.shields.io/github/license/aldis-ameriks/pg-typegen" />
     </a>
-    <a href='https://coveralls.io/github/aldis-ameriks/pg-typegen?branch=master'>
-        <img src='https://coveralls.io/repos/github/aldis-ameriks/pg-typegen/badge.svg?branch=master' alt='Coverage Status' />
-    </a>
     <a href="https://github.com/aldis-ameriks/pg-typegen/workflows/CI/badge.svg" target="_blank">
         <img alt="CI" src="https://github.com/aldis-ameriks/pg-typegen/workflows/CI/badge.svg" />
     </a>
