@@ -4,7 +4,7 @@ const postgres = require('postgres')
 const defaultPort = '5435'
 const database = 'pg_typegen_test'
 
-// fix initial setup
+// TODO: fix initial setup
 
 module.exports.getTestPostgresConnectionString = getTestPostgresConnectionString; function getTestPostgresConnectionString () {
   if (process.env.DATABASE_CONNECTION) {
