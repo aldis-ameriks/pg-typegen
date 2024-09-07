@@ -1,9 +1,10 @@
 /* c8 ignore start */
-import { pathToFileURL } from 'node:url'
 import postgres from 'postgres'
 
 const defaultPort = '5435'
 const database = 'pg_typegen_test'
+
+// TODO: fix initial setup
 
 export function getTestPostgresConnectionString () {
   if (process.env.DATABASE_CONNECTION) {
@@ -225,10 +226,10 @@ export async function setupTestPostgres () {
          group_Shanny        timestamptz       NOT NULL,
          group_Gabe          timestamptz[],
          phone_Osvaldo       timestamptz[]     NOT NULL,
-         
+
          -- check camel case too
          "camelCase"         bool              DEFAULT FALSE,
-    
+
         -- custom types
          fruit_a             fruits,
          fruit_b             fruits            NOT NULL,
@@ -263,10 +264,4 @@ export async function setupTestPostgres () {
     await sql.end()
   }
   return connection
-}
-
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
-  (async () => {
-    await setupTestPostgres()
-  })()
 }

@@ -16,8 +16,8 @@
     "pg-typegen": "cjs/src/index.js"
   },
   "scripts": {
-    "test": "tap test/*.js -- --100 --timeout=60 --before=test/helpers/setup-postgres.js",
-    "test:cjs": "tap cjs/test/*.js -- --100 --timeout=60 --before=cjs/test/helpers/setup-postgres.js",
+    "test": "node --test --experimental-test-coverage --experimental-test-snapshots --test-coverage-lines=100 --test-coverage-include='src/**/*.js' --import=./test/helpers/setup.js test/*.js",
+    "test:cjs": "node --test --experimental-test-coverage --experimental-test-snapshots --test-coverage-lines=100 --test-coverage-include='cjs/src/**/*.js' --import=./cjs/test/helpers/setup.js cjs/test/*.js",
     "test:types": "tsd",
     "lint": "standard",
     "lint:fix": "standard --fix",
@@ -47,8 +47,7 @@
   },
   "devDependencies": {
     "standard": "^17.1.0",
-    "tap": "^21.0.1",
-    "tsd": "^0.31.1"
+    "tsd": "^0.31.2"
   },
   "tsd": {
     "directory": "types"

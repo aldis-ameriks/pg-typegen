@@ -1,0 +1,6735 @@
+exports[`retrieves database schema 1`] = `
+{
+  "tables": [
+    {
+      "name": "PascalTableName",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": "nextval('\\"PascalTableName_id_seq\\"'::regclass)"
+        },
+        {
+          "name": "Name",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "address",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "histories",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "kebab-test",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "snake_test",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [
+            {
+              "name": "snake_test_pkey",
+              "isPrimaryKey": true
+            }
+          ],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "some_view",
+      "comment": null,
+      "isView": true,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "test",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_text",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "types",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "avatar_darren",
+          "type": "_float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_ernestina",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_mark",
+          "type": "_jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_myah",
+          "type": "_text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_rozella",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "camelCase",
+          "type": "bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": true,
+          "defaultValue": "false"
+        },
+        {
+          "name": "category_amari",
+          "type": "numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category_april",
+          "type": "_int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category_buddy",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_clementine",
+          "type": "oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_marcelle",
+          "type": "timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_roberta",
+          "type": "bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_trent",
+          "type": "jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_viola",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_cali",
+          "type": "inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_delilah",
+          "type": "_interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_easter",
+          "type": "date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_ella",
+          "type": "bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_myles",
+          "type": "time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_rocio",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "createdat_hulda",
+          "type": "json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "createdat_pansy",
+          "type": "_int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_andres",
+          "type": "timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "email_cleveland",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_keaton",
+          "type": "_int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_lucio",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_paris",
+          "type": "name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "email_paula",
+          "type": "uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_ressie",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "fruit_a",
+          "type": "fruits",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "fruit_b",
+          "type": "fruits",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_abigayle",
+          "type": "_bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_gabe",
+          "type": "_timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "group_jay",
+          "type": "_name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_jedediah",
+          "type": "_date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_shanny",
+          "type": "timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_toby",
+          "type": "interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_ulices",
+          "type": "_int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_gay",
+          "type": "varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_hailee",
+          "type": "jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_helen",
+          "type": "_oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_ike",
+          "type": "_money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_joan",
+          "type": "_bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_karelle",
+          "type": "numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_lavern",
+          "type": "date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_margarita",
+          "type": "int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_maximilian",
+          "type": "_interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_william",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_wilmer",
+          "type": "_time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "kebab-a",
+          "type": "delicious-kebab",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "kebab-b",
+          "type": "delicious-kebab",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_amara",
+          "type": "inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_brionna",
+          "type": "oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_enoch",
+          "type": "money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_jermain",
+          "type": "_varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_marielle",
+          "type": "interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_myrtle",
+          "type": "_numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_santos",
+          "type": "_uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_skye",
+          "type": "bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_stephanie",
+          "type": "bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "password_alessia",
+          "type": "_text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_camylle",
+          "type": "_inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "password_elenora",
+          "type": "int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_felton",
+          "type": "_timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_korey",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "password_murphy",
+          "type": "_json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_vladimir",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_angelo",
+          "type": "int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_colten",
+          "type": "int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_erling",
+          "type": "_timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_johanna",
+          "type": "_date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_kendall",
+          "type": "_int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_keyshawn",
+          "type": "timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_maryam",
+          "type": "time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_osvaldo",
+          "type": "_timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_rupert",
+          "type": "json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "snakes_on_a",
+          "type": "snakes_on",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "snakes_on_b",
+          "type": "snakes_on",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_amalia",
+          "type": "float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_angelica",
+          "type": "_float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "status_cade",
+          "type": "_float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_lori",
+          "type": "name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "status_ricky",
+          "type": "float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_sid",
+          "type": "_bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_aidan",
+          "type": "timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_alexzander",
+          "type": "uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title_haylee",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_ilene",
+          "type": "_json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title_vicenta",
+          "type": "varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_vivienne",
+          "type": "_float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_adella",
+          "type": "_timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_hermann",
+          "type": "_timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_kenyon",
+          "type": "_varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_marianna",
+          "type": "_uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "token_rubye",
+          "type": "timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_ryley",
+          "type": "money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "token_zora",
+          "type": "_oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_aaliyah",
+          "type": "float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_abe",
+          "type": "_money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_brett",
+          "type": "_name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_cedrick",
+          "type": "_bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_derick",
+          "type": "_jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_eli",
+          "type": "_numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_ewell",
+          "type": "_time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_laura",
+          "type": "_inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_melody",
+          "type": "_int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_rossie",
+          "type": "float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "comment": "this is the users table",
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": "nextval('users_id_seq'::regclass)"
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "comment": "Very long long long long long long long long long long long long long long long long long long long long long comment",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": true,
+          "defaultValue": "''::text"
+        },
+        {
+          "name": "name2",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": "''::text"
+        },
+        {
+          "name": "name3",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "other_id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "other_primary_id",
+          "type": "int4",
+          "comment": "This is the user identifier number",
+          "indices": [
+            {
+              "name": "users_pkey",
+              "isPrimaryKey": true
+            }
+          ],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "materialized_items",
+      "isView": true,
+      "isMaterializedView": true,
+      "columns": [
+        {
+          "name": "test",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_array",
+          "type": "_int4",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_text",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_timestamp",
+          "type": "timestamptz",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "materialized_other_items",
+      "isView": true,
+      "isMaterializedView": true,
+      "columns": [
+        {
+          "name": "test",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_text",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    }
+  ],
+  "enums": [
+    {
+      "name": "delicious-kebab",
+      "values": [
+        "big-mix",
+        "mix"
+      ]
+    },
+    {
+      "name": "fruits",
+      "values": [
+        "apple",
+        "banana",
+        "orange"
+      ]
+    },
+    {
+      "name": "numeric_names",
+      "values": [
+        "1name",
+        "2Name",
+        "3-name",
+        "4_name"
+      ]
+    },
+    {
+      "name": "snakes_on",
+      "values": [
+        "a_plane"
+      ]
+    }
+  ],
+  "typeMapping": {
+    "string": [
+      "bpchar",
+      "char",
+      "varchar",
+      "text",
+      "numeric",
+      "money",
+      "uuid",
+      "bytea",
+      "inet",
+      "time",
+      "timetz",
+      "interval",
+      "name",
+      "int8"
+    ],
+    "number": [
+      "int2",
+      "int4",
+      "float4",
+      "float8",
+      "oid"
+    ],
+    "boolean": [
+      "bool"
+    ],
+    "bigint": [],
+    "any": [
+      "json",
+      "jsonb"
+    ],
+    "Date": [
+      "timestamp",
+      "timestamptz",
+      "date"
+    ],
+    "Array<string>": [
+      "_bpchar",
+      "_char",
+      "_varchar",
+      "_text",
+      "_money",
+      "_numeric",
+      "_uuid",
+      "_bytea",
+      "_inet",
+      "_time",
+      "_timetz",
+      "_interval",
+      "_name",
+      "_int8"
+    ],
+    "Array<number>": [
+      "_int2",
+      "_int4",
+      "_float4",
+      "_float8",
+      "_oid"
+    ],
+    "Array<boolean>": [
+      "_bool"
+    ],
+    "Array<any>": [
+      "_json",
+      "_jsonb"
+    ],
+    "Array<Date>": [
+      "_timestamp",
+      "_timestamptz",
+      "_date"
+    ],
+    "Array<bigint>": []
+  }
+}
+`;
+
+exports[`returns typeMapping with date to javascript Date mapping 1`] = `
+{
+  "tables": [
+    {
+      "name": "PascalTableName",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": "nextval('\\"PascalTableName_id_seq\\"'::regclass)"
+        },
+        {
+          "name": "Name",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "address",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "histories",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "kebab-test",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "snake_test",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [
+            {
+              "name": "snake_test_pkey",
+              "isPrimaryKey": true
+            }
+          ],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "some_view",
+      "comment": null,
+      "isView": true,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "test",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_text",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "types",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "avatar_darren",
+          "type": "_float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_ernestina",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_mark",
+          "type": "_jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_myah",
+          "type": "_text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_rozella",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "camelCase",
+          "type": "bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": true,
+          "defaultValue": "false"
+        },
+        {
+          "name": "category_amari",
+          "type": "numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category_april",
+          "type": "_int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category_buddy",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_clementine",
+          "type": "oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_marcelle",
+          "type": "timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_roberta",
+          "type": "bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_trent",
+          "type": "jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_viola",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_cali",
+          "type": "inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_delilah",
+          "type": "_interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_easter",
+          "type": "date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_ella",
+          "type": "bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_myles",
+          "type": "time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_rocio",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "createdat_hulda",
+          "type": "json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "createdat_pansy",
+          "type": "_int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_andres",
+          "type": "timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "email_cleveland",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_keaton",
+          "type": "_int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_lucio",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_paris",
+          "type": "name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "email_paula",
+          "type": "uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_ressie",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "fruit_a",
+          "type": "fruits",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "fruit_b",
+          "type": "fruits",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_abigayle",
+          "type": "_bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_gabe",
+          "type": "_timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "group_jay",
+          "type": "_name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_jedediah",
+          "type": "_date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_shanny",
+          "type": "timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_toby",
+          "type": "interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_ulices",
+          "type": "_int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_gay",
+          "type": "varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_hailee",
+          "type": "jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_helen",
+          "type": "_oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_ike",
+          "type": "_money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_joan",
+          "type": "_bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_karelle",
+          "type": "numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_lavern",
+          "type": "date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_margarita",
+          "type": "int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_maximilian",
+          "type": "_interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_william",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_wilmer",
+          "type": "_time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "kebab-a",
+          "type": "delicious-kebab",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "kebab-b",
+          "type": "delicious-kebab",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_amara",
+          "type": "inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_brionna",
+          "type": "oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_enoch",
+          "type": "money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_jermain",
+          "type": "_varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_marielle",
+          "type": "interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_myrtle",
+          "type": "_numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_santos",
+          "type": "_uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_skye",
+          "type": "bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_stephanie",
+          "type": "bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "password_alessia",
+          "type": "_text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_camylle",
+          "type": "_inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "password_elenora",
+          "type": "int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_felton",
+          "type": "_timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_korey",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "password_murphy",
+          "type": "_json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_vladimir",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_angelo",
+          "type": "int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_colten",
+          "type": "int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_erling",
+          "type": "_timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_johanna",
+          "type": "_date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_kendall",
+          "type": "_int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_keyshawn",
+          "type": "timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_maryam",
+          "type": "time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_osvaldo",
+          "type": "_timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_rupert",
+          "type": "json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "snakes_on_a",
+          "type": "snakes_on",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "snakes_on_b",
+          "type": "snakes_on",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_amalia",
+          "type": "float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_angelica",
+          "type": "_float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "status_cade",
+          "type": "_float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_lori",
+          "type": "name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "status_ricky",
+          "type": "float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_sid",
+          "type": "_bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_aidan",
+          "type": "timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_alexzander",
+          "type": "uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title_haylee",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_ilene",
+          "type": "_json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title_vicenta",
+          "type": "varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_vivienne",
+          "type": "_float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_adella",
+          "type": "_timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_hermann",
+          "type": "_timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_kenyon",
+          "type": "_varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_marianna",
+          "type": "_uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "token_rubye",
+          "type": "timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_ryley",
+          "type": "money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "token_zora",
+          "type": "_oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_aaliyah",
+          "type": "float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_abe",
+          "type": "_money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_brett",
+          "type": "_name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_cedrick",
+          "type": "_bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_derick",
+          "type": "_jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_eli",
+          "type": "_numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_ewell",
+          "type": "_time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_laura",
+          "type": "_inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_melody",
+          "type": "_int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_rossie",
+          "type": "float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "comment": "this is the users table",
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": "nextval('users_id_seq'::regclass)"
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "comment": "Very long long long long long long long long long long long long long long long long long long long long long comment",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": true,
+          "defaultValue": "''::text"
+        },
+        {
+          "name": "name2",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": "''::text"
+        },
+        {
+          "name": "name3",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "other_id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "other_primary_id",
+          "type": "int4",
+          "comment": "This is the user identifier number",
+          "indices": [
+            {
+              "name": "users_pkey",
+              "isPrimaryKey": true
+            }
+          ],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "materialized_items",
+      "isView": true,
+      "isMaterializedView": true,
+      "columns": [
+        {
+          "name": "test",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_array",
+          "type": "_int4",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_text",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_timestamp",
+          "type": "timestamptz",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "materialized_other_items",
+      "isView": true,
+      "isMaterializedView": true,
+      "columns": [
+        {
+          "name": "test",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_text",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    }
+  ],
+  "enums": [
+    {
+      "name": "delicious-kebab",
+      "values": [
+        "big-mix",
+        "mix"
+      ]
+    },
+    {
+      "name": "fruits",
+      "values": [
+        "apple",
+        "banana",
+        "orange"
+      ]
+    },
+    {
+      "name": "numeric_names",
+      "values": [
+        "1name",
+        "2Name",
+        "3-name",
+        "4_name"
+      ]
+    },
+    {
+      "name": "snakes_on",
+      "values": [
+        "a_plane"
+      ]
+    }
+  ],
+  "typeMapping": {
+    "string": [
+      "bpchar",
+      "char",
+      "varchar",
+      "text",
+      "numeric",
+      "money",
+      "uuid",
+      "bytea",
+      "inet",
+      "time",
+      "timetz",
+      "interval",
+      "name",
+      "int8",
+      "int8",
+      "int8"
+    ],
+    "number": [
+      "int2",
+      "int4",
+      "float4",
+      "float8",
+      "oid"
+    ],
+    "boolean": [
+      "bool"
+    ],
+    "bigint": [
+      "int8"
+    ],
+    "any": [
+      "json",
+      "jsonb"
+    ],
+    "Date": [
+      "timestamp",
+      "timestamptz",
+      "date",
+      "date",
+      "date",
+      "date"
+    ],
+    "Array<string>": [
+      "_bpchar",
+      "_char",
+      "_varchar",
+      "_text",
+      "_money",
+      "_numeric",
+      "_uuid",
+      "_bytea",
+      "_inet",
+      "_time",
+      "_timetz",
+      "_interval",
+      "_name",
+      "_int8",
+      "_int8",
+      "_int8"
+    ],
+    "Array<number>": [
+      "_int2",
+      "_int4",
+      "_float4",
+      "_float8",
+      "_oid"
+    ],
+    "Array<boolean>": [
+      "_bool"
+    ],
+    "Array<any>": [
+      "_json",
+      "_jsonb"
+    ],
+    "Array<Date>": [
+      "_timestamp",
+      "_timestamptz",
+      "_date",
+      "_date",
+      "_date",
+      "_date"
+    ],
+    "Array<bigint>": [
+      "_int8"
+    ]
+  }
+}
+`;
+
+exports[`returns typeMapping with date to string mapping 1`] = `
+{
+  "tables": [
+    {
+      "name": "PascalTableName",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": "nextval('\\"PascalTableName_id_seq\\"'::regclass)"
+        },
+        {
+          "name": "Name",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "address",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "histories",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "kebab-test",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "snake_test",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [
+            {
+              "name": "snake_test_pkey",
+              "isPrimaryKey": true
+            }
+          ],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "some_view",
+      "comment": null,
+      "isView": true,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "test",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_text",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "types",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "avatar_darren",
+          "type": "_float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_ernestina",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_mark",
+          "type": "_jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_myah",
+          "type": "_text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_rozella",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "camelCase",
+          "type": "bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": true,
+          "defaultValue": "false"
+        },
+        {
+          "name": "category_amari",
+          "type": "numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category_april",
+          "type": "_int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category_buddy",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_clementine",
+          "type": "oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_marcelle",
+          "type": "timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_roberta",
+          "type": "bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_trent",
+          "type": "jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_viola",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_cali",
+          "type": "inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_delilah",
+          "type": "_interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_easter",
+          "type": "date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_ella",
+          "type": "bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_myles",
+          "type": "time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_rocio",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "createdat_hulda",
+          "type": "json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "createdat_pansy",
+          "type": "_int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_andres",
+          "type": "timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "email_cleveland",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_keaton",
+          "type": "_int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_lucio",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_paris",
+          "type": "name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "email_paula",
+          "type": "uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_ressie",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "fruit_a",
+          "type": "fruits",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "fruit_b",
+          "type": "fruits",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_abigayle",
+          "type": "_bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_gabe",
+          "type": "_timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "group_jay",
+          "type": "_name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_jedediah",
+          "type": "_date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_shanny",
+          "type": "timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_toby",
+          "type": "interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_ulices",
+          "type": "_int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_gay",
+          "type": "varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_hailee",
+          "type": "jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_helen",
+          "type": "_oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_ike",
+          "type": "_money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_joan",
+          "type": "_bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_karelle",
+          "type": "numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_lavern",
+          "type": "date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_margarita",
+          "type": "int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_maximilian",
+          "type": "_interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_william",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_wilmer",
+          "type": "_time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "kebab-a",
+          "type": "delicious-kebab",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "kebab-b",
+          "type": "delicious-kebab",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_amara",
+          "type": "inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_brionna",
+          "type": "oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_enoch",
+          "type": "money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_jermain",
+          "type": "_varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_marielle",
+          "type": "interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_myrtle",
+          "type": "_numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_santos",
+          "type": "_uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_skye",
+          "type": "bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_stephanie",
+          "type": "bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "password_alessia",
+          "type": "_text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_camylle",
+          "type": "_inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "password_elenora",
+          "type": "int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_felton",
+          "type": "_timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_korey",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "password_murphy",
+          "type": "_json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_vladimir",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_angelo",
+          "type": "int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_colten",
+          "type": "int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_erling",
+          "type": "_timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_johanna",
+          "type": "_date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_kendall",
+          "type": "_int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_keyshawn",
+          "type": "timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_maryam",
+          "type": "time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_osvaldo",
+          "type": "_timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_rupert",
+          "type": "json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "snakes_on_a",
+          "type": "snakes_on",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "snakes_on_b",
+          "type": "snakes_on",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_amalia",
+          "type": "float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_angelica",
+          "type": "_float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "status_cade",
+          "type": "_float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_lori",
+          "type": "name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "status_ricky",
+          "type": "float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_sid",
+          "type": "_bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_aidan",
+          "type": "timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_alexzander",
+          "type": "uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title_haylee",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_ilene",
+          "type": "_json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title_vicenta",
+          "type": "varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_vivienne",
+          "type": "_float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_adella",
+          "type": "_timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_hermann",
+          "type": "_timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_kenyon",
+          "type": "_varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_marianna",
+          "type": "_uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "token_rubye",
+          "type": "timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_ryley",
+          "type": "money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "token_zora",
+          "type": "_oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_aaliyah",
+          "type": "float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_abe",
+          "type": "_money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_brett",
+          "type": "_name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_cedrick",
+          "type": "_bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_derick",
+          "type": "_jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_eli",
+          "type": "_numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_ewell",
+          "type": "_time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_laura",
+          "type": "_inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_melody",
+          "type": "_int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_rossie",
+          "type": "float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "comment": "this is the users table",
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": "nextval('users_id_seq'::regclass)"
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "comment": "Very long long long long long long long long long long long long long long long long long long long long long comment",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": true,
+          "defaultValue": "''::text"
+        },
+        {
+          "name": "name2",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": "''::text"
+        },
+        {
+          "name": "name3",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "other_id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "other_primary_id",
+          "type": "int4",
+          "comment": "This is the user identifier number",
+          "indices": [
+            {
+              "name": "users_pkey",
+              "isPrimaryKey": true
+            }
+          ],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "materialized_items",
+      "isView": true,
+      "isMaterializedView": true,
+      "columns": [
+        {
+          "name": "test",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_array",
+          "type": "_int4",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_text",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_timestamp",
+          "type": "timestamptz",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "materialized_other_items",
+      "isView": true,
+      "isMaterializedView": true,
+      "columns": [
+        {
+          "name": "test",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_text",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    }
+  ],
+  "enums": [
+    {
+      "name": "delicious-kebab",
+      "values": [
+        "big-mix",
+        "mix"
+      ]
+    },
+    {
+      "name": "fruits",
+      "values": [
+        "apple",
+        "banana",
+        "orange"
+      ]
+    },
+    {
+      "name": "numeric_names",
+      "values": [
+        "1name",
+        "2Name",
+        "3-name",
+        "4_name"
+      ]
+    },
+    {
+      "name": "snakes_on",
+      "values": [
+        "a_plane"
+      ]
+    }
+  ],
+  "typeMapping": {
+    "string": [
+      "bpchar",
+      "char",
+      "varchar",
+      "text",
+      "numeric",
+      "money",
+      "uuid",
+      "bytea",
+      "inet",
+      "time",
+      "timetz",
+      "interval",
+      "name",
+      "int8",
+      "int8",
+      "int8",
+      "int8",
+      "date"
+    ],
+    "number": [
+      "int2",
+      "int4",
+      "float4",
+      "float8",
+      "oid"
+    ],
+    "boolean": [
+      "bool"
+    ],
+    "bigint": [
+      "int8"
+    ],
+    "any": [
+      "json",
+      "jsonb"
+    ],
+    "Date": [
+      "timestamp",
+      "timestamptz",
+      "date",
+      "date",
+      "date",
+      "date"
+    ],
+    "Array<string>": [
+      "_bpchar",
+      "_char",
+      "_varchar",
+      "_text",
+      "_money",
+      "_numeric",
+      "_uuid",
+      "_bytea",
+      "_inet",
+      "_time",
+      "_timetz",
+      "_interval",
+      "_name",
+      "_int8",
+      "_int8",
+      "_int8",
+      "_int8",
+      "_date"
+    ],
+    "Array<number>": [
+      "_int2",
+      "_int4",
+      "_float4",
+      "_float8",
+      "_oid"
+    ],
+    "Array<boolean>": [
+      "_bool"
+    ],
+    "Array<any>": [
+      "_json",
+      "_jsonb"
+    ],
+    "Array<Date>": [
+      "_timestamp",
+      "_timestamptz",
+      "_date",
+      "_date",
+      "_date",
+      "_date"
+    ],
+    "Array<bigint>": [
+      "_int8"
+    ]
+  }
+}
+`;
+
+exports[`returns typeMapping with int8 to bigint mapping 1`] = `
+{
+  "tables": [
+    {
+      "name": "PascalTableName",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": "nextval('\\"PascalTableName_id_seq\\"'::regclass)"
+        },
+        {
+          "name": "Name",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "address",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "histories",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "kebab-test",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "snake_test",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [
+            {
+              "name": "snake_test_pkey",
+              "isPrimaryKey": true
+            }
+          ],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "some_view",
+      "comment": null,
+      "isView": true,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "test",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_text",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "types",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "avatar_darren",
+          "type": "_float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_ernestina",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_mark",
+          "type": "_jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_myah",
+          "type": "_text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_rozella",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "camelCase",
+          "type": "bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": true,
+          "defaultValue": "false"
+        },
+        {
+          "name": "category_amari",
+          "type": "numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category_april",
+          "type": "_int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category_buddy",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_clementine",
+          "type": "oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_marcelle",
+          "type": "timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_roberta",
+          "type": "bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_trent",
+          "type": "jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_viola",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_cali",
+          "type": "inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_delilah",
+          "type": "_interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_easter",
+          "type": "date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_ella",
+          "type": "bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_myles",
+          "type": "time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_rocio",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "createdat_hulda",
+          "type": "json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "createdat_pansy",
+          "type": "_int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_andres",
+          "type": "timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "email_cleveland",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_keaton",
+          "type": "_int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_lucio",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_paris",
+          "type": "name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "email_paula",
+          "type": "uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_ressie",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "fruit_a",
+          "type": "fruits",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "fruit_b",
+          "type": "fruits",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_abigayle",
+          "type": "_bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_gabe",
+          "type": "_timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "group_jay",
+          "type": "_name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_jedediah",
+          "type": "_date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_shanny",
+          "type": "timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_toby",
+          "type": "interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_ulices",
+          "type": "_int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_gay",
+          "type": "varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_hailee",
+          "type": "jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_helen",
+          "type": "_oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_ike",
+          "type": "_money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_joan",
+          "type": "_bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_karelle",
+          "type": "numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_lavern",
+          "type": "date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_margarita",
+          "type": "int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_maximilian",
+          "type": "_interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_william",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_wilmer",
+          "type": "_time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "kebab-a",
+          "type": "delicious-kebab",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "kebab-b",
+          "type": "delicious-kebab",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_amara",
+          "type": "inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_brionna",
+          "type": "oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_enoch",
+          "type": "money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_jermain",
+          "type": "_varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_marielle",
+          "type": "interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_myrtle",
+          "type": "_numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_santos",
+          "type": "_uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_skye",
+          "type": "bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_stephanie",
+          "type": "bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "password_alessia",
+          "type": "_text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_camylle",
+          "type": "_inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "password_elenora",
+          "type": "int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_felton",
+          "type": "_timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_korey",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "password_murphy",
+          "type": "_json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_vladimir",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_angelo",
+          "type": "int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_colten",
+          "type": "int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_erling",
+          "type": "_timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_johanna",
+          "type": "_date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_kendall",
+          "type": "_int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_keyshawn",
+          "type": "timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_maryam",
+          "type": "time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_osvaldo",
+          "type": "_timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_rupert",
+          "type": "json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "snakes_on_a",
+          "type": "snakes_on",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "snakes_on_b",
+          "type": "snakes_on",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_amalia",
+          "type": "float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_angelica",
+          "type": "_float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "status_cade",
+          "type": "_float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_lori",
+          "type": "name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "status_ricky",
+          "type": "float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_sid",
+          "type": "_bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_aidan",
+          "type": "timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_alexzander",
+          "type": "uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title_haylee",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_ilene",
+          "type": "_json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title_vicenta",
+          "type": "varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_vivienne",
+          "type": "_float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_adella",
+          "type": "_timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_hermann",
+          "type": "_timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_kenyon",
+          "type": "_varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_marianna",
+          "type": "_uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "token_rubye",
+          "type": "timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_ryley",
+          "type": "money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "token_zora",
+          "type": "_oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_aaliyah",
+          "type": "float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_abe",
+          "type": "_money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_brett",
+          "type": "_name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_cedrick",
+          "type": "_bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_derick",
+          "type": "_jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_eli",
+          "type": "_numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_ewell",
+          "type": "_time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_laura",
+          "type": "_inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_melody",
+          "type": "_int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_rossie",
+          "type": "float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "comment": "this is the users table",
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": "nextval('users_id_seq'::regclass)"
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "comment": "Very long long long long long long long long long long long long long long long long long long long long long comment",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": true,
+          "defaultValue": "''::text"
+        },
+        {
+          "name": "name2",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": "''::text"
+        },
+        {
+          "name": "name3",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "other_id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "other_primary_id",
+          "type": "int4",
+          "comment": "This is the user identifier number",
+          "indices": [
+            {
+              "name": "users_pkey",
+              "isPrimaryKey": true
+            }
+          ],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "materialized_items",
+      "isView": true,
+      "isMaterializedView": true,
+      "columns": [
+        {
+          "name": "test",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_array",
+          "type": "_int4",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_text",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_timestamp",
+          "type": "timestamptz",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "materialized_other_items",
+      "isView": true,
+      "isMaterializedView": true,
+      "columns": [
+        {
+          "name": "test",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_text",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    }
+  ],
+  "enums": [
+    {
+      "name": "delicious-kebab",
+      "values": [
+        "big-mix",
+        "mix"
+      ]
+    },
+    {
+      "name": "fruits",
+      "values": [
+        "apple",
+        "banana",
+        "orange"
+      ]
+    },
+    {
+      "name": "numeric_names",
+      "values": [
+        "1name",
+        "2Name",
+        "3-name",
+        "4_name"
+      ]
+    },
+    {
+      "name": "snakes_on",
+      "values": [
+        "a_plane"
+      ]
+    }
+  ],
+  "typeMapping": {
+    "string": [
+      "bpchar",
+      "char",
+      "varchar",
+      "text",
+      "numeric",
+      "money",
+      "uuid",
+      "bytea",
+      "inet",
+      "time",
+      "timetz",
+      "interval",
+      "name",
+      "int8",
+      "int8"
+    ],
+    "number": [
+      "int2",
+      "int4",
+      "float4",
+      "float8",
+      "oid"
+    ],
+    "boolean": [
+      "bool"
+    ],
+    "bigint": [
+      "int8"
+    ],
+    "any": [
+      "json",
+      "jsonb"
+    ],
+    "Date": [
+      "timestamp",
+      "timestamptz",
+      "date",
+      "date",
+      "date"
+    ],
+    "Array<string>": [
+      "_bpchar",
+      "_char",
+      "_varchar",
+      "_text",
+      "_money",
+      "_numeric",
+      "_uuid",
+      "_bytea",
+      "_inet",
+      "_time",
+      "_timetz",
+      "_interval",
+      "_name",
+      "_int8",
+      "_int8"
+    ],
+    "Array<number>": [
+      "_int2",
+      "_int4",
+      "_float4",
+      "_float8",
+      "_oid"
+    ],
+    "Array<boolean>": [
+      "_bool"
+    ],
+    "Array<any>": [
+      "_json",
+      "_jsonb"
+    ],
+    "Array<Date>": [
+      "_timestamp",
+      "_timestamptz",
+      "_date",
+      "_date",
+      "_date"
+    ],
+    "Array<bigint>": [
+      "_int8"
+    ]
+  }
+}
+`;
+
+exports[`returns typeMapping with int8 to string mapping 1`] = `
+{
+  "tables": [
+    {
+      "name": "PascalTableName",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": "nextval('\\"PascalTableName_id_seq\\"'::regclass)"
+        },
+        {
+          "name": "Name",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "address",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "histories",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "kebab-test",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "snake_test",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [
+            {
+              "name": "snake_test_pkey",
+              "isPrimaryKey": true
+            }
+          ],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "some_view",
+      "comment": null,
+      "isView": true,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "test",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_text",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "types",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "avatar_darren",
+          "type": "_float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_ernestina",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_mark",
+          "type": "_jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_myah",
+          "type": "_text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_rozella",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "camelCase",
+          "type": "bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": true,
+          "defaultValue": "false"
+        },
+        {
+          "name": "category_amari",
+          "type": "numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category_april",
+          "type": "_int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category_buddy",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_clementine",
+          "type": "oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_marcelle",
+          "type": "timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_roberta",
+          "type": "bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_trent",
+          "type": "jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_viola",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_cali",
+          "type": "inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_delilah",
+          "type": "_interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_easter",
+          "type": "date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_ella",
+          "type": "bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_myles",
+          "type": "time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_rocio",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "createdat_hulda",
+          "type": "json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "createdat_pansy",
+          "type": "_int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_andres",
+          "type": "timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "email_cleveland",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_keaton",
+          "type": "_int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_lucio",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_paris",
+          "type": "name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "email_paula",
+          "type": "uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_ressie",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "fruit_a",
+          "type": "fruits",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "fruit_b",
+          "type": "fruits",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_abigayle",
+          "type": "_bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_gabe",
+          "type": "_timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "group_jay",
+          "type": "_name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_jedediah",
+          "type": "_date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_shanny",
+          "type": "timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_toby",
+          "type": "interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_ulices",
+          "type": "_int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_gay",
+          "type": "varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_hailee",
+          "type": "jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_helen",
+          "type": "_oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_ike",
+          "type": "_money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_joan",
+          "type": "_bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_karelle",
+          "type": "numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_lavern",
+          "type": "date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_margarita",
+          "type": "int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_maximilian",
+          "type": "_interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_william",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_wilmer",
+          "type": "_time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "kebab-a",
+          "type": "delicious-kebab",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "kebab-b",
+          "type": "delicious-kebab",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_amara",
+          "type": "inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_brionna",
+          "type": "oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_enoch",
+          "type": "money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_jermain",
+          "type": "_varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_marielle",
+          "type": "interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_myrtle",
+          "type": "_numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_santos",
+          "type": "_uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_skye",
+          "type": "bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_stephanie",
+          "type": "bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "password_alessia",
+          "type": "_text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_camylle",
+          "type": "_inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "password_elenora",
+          "type": "int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_felton",
+          "type": "_timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_korey",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "password_murphy",
+          "type": "_json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_vladimir",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_angelo",
+          "type": "int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_colten",
+          "type": "int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_erling",
+          "type": "_timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_johanna",
+          "type": "_date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_kendall",
+          "type": "_int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_keyshawn",
+          "type": "timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_maryam",
+          "type": "time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_osvaldo",
+          "type": "_timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_rupert",
+          "type": "json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "snakes_on_a",
+          "type": "snakes_on",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "snakes_on_b",
+          "type": "snakes_on",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_amalia",
+          "type": "float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_angelica",
+          "type": "_float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "status_cade",
+          "type": "_float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_lori",
+          "type": "name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "status_ricky",
+          "type": "float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_sid",
+          "type": "_bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_aidan",
+          "type": "timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_alexzander",
+          "type": "uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title_haylee",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_ilene",
+          "type": "_json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title_vicenta",
+          "type": "varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_vivienne",
+          "type": "_float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_adella",
+          "type": "_timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_hermann",
+          "type": "_timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_kenyon",
+          "type": "_varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_marianna",
+          "type": "_uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "token_rubye",
+          "type": "timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_ryley",
+          "type": "money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "token_zora",
+          "type": "_oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_aaliyah",
+          "type": "float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_abe",
+          "type": "_money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_brett",
+          "type": "_name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_cedrick",
+          "type": "_bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_derick",
+          "type": "_jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_eli",
+          "type": "_numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_ewell",
+          "type": "_time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_laura",
+          "type": "_inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_melody",
+          "type": "_int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_rossie",
+          "type": "float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "comment": "this is the users table",
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": "nextval('users_id_seq'::regclass)"
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "comment": "Very long long long long long long long long long long long long long long long long long long long long long comment",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": true,
+          "defaultValue": "''::text"
+        },
+        {
+          "name": "name2",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": "''::text"
+        },
+        {
+          "name": "name3",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "other_id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "other_primary_id",
+          "type": "int4",
+          "comment": "This is the user identifier number",
+          "indices": [
+            {
+              "name": "users_pkey",
+              "isPrimaryKey": true
+            }
+          ],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "materialized_items",
+      "isView": true,
+      "isMaterializedView": true,
+      "columns": [
+        {
+          "name": "test",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_array",
+          "type": "_int4",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_text",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_timestamp",
+          "type": "timestamptz",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "materialized_other_items",
+      "isView": true,
+      "isMaterializedView": true,
+      "columns": [
+        {
+          "name": "test",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_text",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    }
+  ],
+  "enums": [
+    {
+      "name": "delicious-kebab",
+      "values": [
+        "big-mix",
+        "mix"
+      ]
+    },
+    {
+      "name": "fruits",
+      "values": [
+        "apple",
+        "banana",
+        "orange"
+      ]
+    },
+    {
+      "name": "numeric_names",
+      "values": [
+        "1name",
+        "2Name",
+        "3-name",
+        "4_name"
+      ]
+    },
+    {
+      "name": "snakes_on",
+      "values": [
+        "a_plane"
+      ]
+    }
+  ],
+  "typeMapping": {
+    "string": [
+      "bpchar",
+      "char",
+      "varchar",
+      "text",
+      "numeric",
+      "money",
+      "uuid",
+      "bytea",
+      "inet",
+      "time",
+      "timetz",
+      "interval",
+      "name",
+      "int8",
+      "int8"
+    ],
+    "number": [
+      "int2",
+      "int4",
+      "float4",
+      "float8",
+      "oid"
+    ],
+    "boolean": [
+      "bool"
+    ],
+    "bigint": [],
+    "any": [
+      "json",
+      "jsonb"
+    ],
+    "Date": [
+      "timestamp",
+      "timestamptz",
+      "date",
+      "date"
+    ],
+    "Array<string>": [
+      "_bpchar",
+      "_char",
+      "_varchar",
+      "_text",
+      "_money",
+      "_numeric",
+      "_uuid",
+      "_bytea",
+      "_inet",
+      "_time",
+      "_timetz",
+      "_interval",
+      "_name",
+      "_int8",
+      "_int8"
+    ],
+    "Array<number>": [
+      "_int2",
+      "_int4",
+      "_float4",
+      "_float8",
+      "_oid"
+    ],
+    "Array<boolean>": [
+      "_bool"
+    ],
+    "Array<any>": [
+      "_json",
+      "_jsonb"
+    ],
+    "Array<Date>": [
+      "_timestamp",
+      "_timestamptz",
+      "_date",
+      "_date"
+    ],
+    "Array<bigint>": []
+  }
+}
+`;

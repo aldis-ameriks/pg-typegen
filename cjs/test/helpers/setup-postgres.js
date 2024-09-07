@@ -4,6 +4,8 @@ const postgres = require('postgres')
 const defaultPort = '5435'
 const database = 'pg_typegen_test'
 
+// fix initial setup
+
 module.exports.getTestPostgresConnectionString = getTestPostgresConnectionString; function getTestPostgresConnectionString () {
   if (process.env.DATABASE_CONNECTION) {
     return `${process.env.DATABASE_CONNECTION}/${database}`
@@ -224,10 +226,10 @@ module.exports.setupTestPostgres = setupTestPostgres; async function setupTestPo
          group_Shanny        timestamptz       NOT NULL,
          group_Gabe          timestamptz[],
          phone_Osvaldo       timestamptz[]     NOT NULL,
-         
+
          -- check camel case too
          "camelCase"         bool              DEFAULT FALSE,
-    
+
         -- custom types
          fruit_a             fruits,
          fruit_b             fruits            NOT NULL,
@@ -262,10 +264,4 @@ module.exports.setupTestPostgres = setupTestPostgres; async function setupTestPo
     await sql.end()
   }
   return connection
-}
-
-if (require.main === module) {
-  (async () => {
-    await setupTestPostgres()
-  })()
 }

@@ -1,0 +1,1432 @@
+exports[`allows hooking into schema result 1`] = `
+{
+  "tables": [
+    {
+      "name": "address",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "histories",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "kebab-test",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "materialized_items",
+      "isView": true,
+      "isMaterializedView": true,
+      "columns": [
+        {
+          "name": "test",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_array",
+          "type": "_int4",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_text",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_timestamp",
+          "type": "timestamptz",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "materialized_other_items",
+      "isView": true,
+      "isMaterializedView": true,
+      "columns": [
+        {
+          "name": "test",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_text",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "PascalTableName",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": "nextval('\\"PascalTableName_id_seq\\"'::regclass)"
+        },
+        {
+          "name": "Name",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "snake_test",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [
+            {
+              "name": "snake_test_pkey",
+              "isPrimaryKey": true
+            }
+          ],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "some_view",
+      "comment": null,
+      "isView": true,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "test",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "test_text",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "types",
+      "comment": null,
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "avatar_darren",
+          "type": "_float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_ernestina",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_mark",
+          "type": "_jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_myah",
+          "type": "_text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "avatar_rozella",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "camelCase",
+          "type": "bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": true,
+          "defaultValue": "false"
+        },
+        {
+          "name": "category_amari",
+          "type": "numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category_april",
+          "type": "_int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "category_buddy",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_clementine",
+          "type": "oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_marcelle",
+          "type": "timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_roberta",
+          "type": "bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_trent",
+          "type": "jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "category_viola",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_cali",
+          "type": "inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_delilah",
+          "type": "_interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_easter",
+          "type": "date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_ella",
+          "type": "bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_myles",
+          "type": "time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "comment_rocio",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "createdat_hulda",
+          "type": "json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "createdat_pansy",
+          "type": "_int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_andres",
+          "type": "timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "email_cleveland",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_keaton",
+          "type": "_int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_lucio",
+          "type": "bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_paris",
+          "type": "name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "email_paula",
+          "type": "uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "email_ressie",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "fruit_a",
+          "type": "fruits",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "fruit_b",
+          "type": "fruits",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_abigayle",
+          "type": "_bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_gabe",
+          "type": "_timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "group_jay",
+          "type": "_name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_jedediah",
+          "type": "_date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_shanny",
+          "type": "timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_toby",
+          "type": "interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "group_ulices",
+          "type": "_int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_gay",
+          "type": "varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_hailee",
+          "type": "jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_helen",
+          "type": "_oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_ike",
+          "type": "_money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_joan",
+          "type": "_bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_karelle",
+          "type": "numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_lavern",
+          "type": "date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_margarita",
+          "type": "int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "id_maximilian",
+          "type": "_interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_william",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "id_wilmer",
+          "type": "_time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "kebab-a",
+          "type": "delicious-kebab",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "kebab-b",
+          "type": "delicious-kebab",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_amara",
+          "type": "inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_brionna",
+          "type": "oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_enoch",
+          "type": "money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_jermain",
+          "type": "_varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_marielle",
+          "type": "interval",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_myrtle",
+          "type": "_numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_santos",
+          "type": "_uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "name_skye",
+          "type": "bytea",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "name_stephanie",
+          "type": "bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "password_alessia",
+          "type": "_text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_camylle",
+          "type": "_inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "password_elenora",
+          "type": "int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_felton",
+          "type": "_timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_korey",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "password_murphy",
+          "type": "_json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "password_vladimir",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_angelo",
+          "type": "int8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_colten",
+          "type": "int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_erling",
+          "type": "_timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_johanna",
+          "type": "_date",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_kendall",
+          "type": "_int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_keyshawn",
+          "type": "timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_maryam",
+          "type": "time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_osvaldo",
+          "type": "_timestamptz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "phone_rupert",
+          "type": "json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "snakes_on_a",
+          "type": "snakes_on",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "snakes_on_b",
+          "type": "snakes_on",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_amalia",
+          "type": "float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_angelica",
+          "type": "_float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "status_cade",
+          "type": "_float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_lori",
+          "type": "name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "status_ricky",
+          "type": "float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "status_sid",
+          "type": "_bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_aidan",
+          "type": "timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_alexzander",
+          "type": "uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title_haylee",
+          "type": "_bpchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_ilene",
+          "type": "_json",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "title_vicenta",
+          "type": "varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "title_vivienne",
+          "type": "_float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_adella",
+          "type": "_timestamp",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_hermann",
+          "type": "_timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_kenyon",
+          "type": "_varchar",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_marianna",
+          "type": "_uuid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "token_rubye",
+          "type": "timetz",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "token_ryley",
+          "type": "money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "token_zora",
+          "type": "_oid",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_aaliyah",
+          "type": "float8",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_abe",
+          "type": "_money",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_brett",
+          "type": "_name",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_cedrick",
+          "type": "_bool",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_derick",
+          "type": "_jsonb",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_eli",
+          "type": "_numeric",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_ewell",
+          "type": "_time",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_laura",
+          "type": "_inet",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_melody",
+          "type": "_int2",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "updatedat_rossie",
+          "type": "float4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "comment": "this is the users table",
+      "isView": false,
+      "isMaterializedView": false,
+      "columns": [
+        {
+          "name": "id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": "nextval('users_id_seq'::regclass)"
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "comment": "Very long long long long long long long long long long long long long long long long long long long long long comment",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": true,
+          "defaultValue": "''::text"
+        },
+        {
+          "name": "name2",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": "''::text"
+        },
+        {
+          "name": "name3",
+          "type": "text",
+          "comment": "",
+          "indices": [],
+          "hasDefault": false,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "other_id",
+          "type": "int4",
+          "comment": "",
+          "indices": [],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": null
+        },
+        {
+          "name": "other_primary_id",
+          "type": "int4",
+          "comment": "This is the user identifier number",
+          "indices": [
+            {
+              "name": "users_pkey",
+              "isPrimaryKey": true
+            }
+          ],
+          "hasDefault": true,
+          "isNullable": false,
+          "defaultValue": null
+        }
+      ]
+    }
+  ],
+  "enums": [
+    {
+      "name": "delicious-kebab",
+      "values": [
+        "big-mix",
+        "mix"
+      ]
+    },
+    {
+      "name": "fruits",
+      "values": [
+        "apple",
+        "banana",
+        "orange"
+      ]
+    },
+    {
+      "name": "numeric_names",
+      "values": [
+        "1name",
+        "2Name",
+        "3-name",
+        "4_name"
+      ]
+    },
+    {
+      "name": "snakes_on",
+      "values": [
+        "a_plane"
+      ]
+    }
+  ],
+  "typeMapping": {
+    "string": [
+      "bpchar",
+      "char",
+      "varchar",
+      "text",
+      "numeric",
+      "money",
+      "uuid",
+      "bytea",
+      "inet",
+      "time",
+      "timetz",
+      "interval",
+      "name",
+      "int8",
+      "int8",
+      "int8",
+      "int8",
+      "int8",
+      "int8",
+      "int8",
+      "int8"
+    ],
+    "number": [
+      "int2",
+      "int4",
+      "float4",
+      "float8",
+      "oid"
+    ],
+    "boolean": [
+      "bool"
+    ],
+    "bigint": [],
+    "any": [
+      "json",
+      "jsonb"
+    ],
+    "Date": [
+      "timestamp",
+      "timestamptz",
+      "date",
+      "date",
+      "date",
+      "date",
+      "date",
+      "date",
+      "date",
+      "date"
+    ],
+    "Array<string>": [
+      "_bpchar",
+      "_char",
+      "_varchar",
+      "_text",
+      "_money",
+      "_numeric",
+      "_uuid",
+      "_bytea",
+      "_inet",
+      "_time",
+      "_timetz",
+      "_interval",
+      "_name",
+      "_int8",
+      "_int8",
+      "_int8",
+      "_int8",
+      "_int8",
+      "_int8",
+      "_int8",
+      "_int8"
+    ],
+    "Array<number>": [
+      "_int2",
+      "_int4",
+      "_float4",
+      "_float8",
+      "_oid"
+    ],
+    "Array<boolean>": [
+      "_bool"
+    ],
+    "Array<any>": [
+      "_json",
+      "_jsonb"
+    ],
+    "Array<Date>": [
+      "_timestamp",
+      "_timestamptz",
+      "_date",
+      "_date",
+      "_date",
+      "_date",
+      "_date",
+      "_date",
+      "_date",
+      "_date"
+    ],
+    "Array<bigint>": []
+  }
+}
+`;
+
+exports[`allows hooking into type result 1`] = `
+{
+  "types": "export enum DeliciousKebab {\\n  'big-mix' = 'big-mix',\\n  mix = 'mix',\\n}\\n\\nexport enum Fruits {\\n  apple = 'apple',\\n  banana = 'banana',\\n  orange = 'orange',\\n}\\n\\nexport enum NumericNames {\\n  '1name' = '1name',\\n  '2Name' = '2Name',\\n  '3-name' = '3-name',\\n  '4_name' = '4_name',\\n}\\n\\nexport enum SnakesOn {\\n  a_plane = 'a_plane',\\n}\\n\\nexport interface AddressEntity {\\n  id: number\\n}\\n\\nexport interface AddressInsertEntity {\\n  id: number\\n}\\n\\nexport interface HistoryEntity {\\n  id: number\\n}\\n\\nexport interface HistoryInsertEntity {\\n  id: number\\n}\\n\\nexport interface KebabTestEntity {\\n  id: number\\n}\\n\\nexport interface KebabTestInsertEntity {\\n  id: number\\n}\\n\\nexport interface MaterializedItemEntity {\\n  test: number | null\\n  test_array: Array<number> | null\\n  test_text: string | null\\n  test_timestamp: Date | null\\n}\\n\\nexport interface MaterializedOtherItemEntity {\\n  test: number | null\\n  test_text: string | null\\n}\\n\\nexport interface PascalTableNameEntity {\\n  id: number\\n  Name: string\\n}\\n\\nexport interface PascalTableNameInsertEntity {\\n  id?: number\\n  Name: string\\n}\\n\\nexport interface SnakeTestEntity {\\n  id: number\\n}\\n\\nexport interface SnakeTestInsertEntity {\\n  id: number\\n}\\n\\nexport interface SomeViewEntity {\\n  test: number | null\\n  test_text: string | null\\n}\\n\\nexport interface TypeEntity {\\n  avatar_darren: Array<number> | null\\n  avatar_ernestina: string\\n  avatar_mark: Array<any> | null\\n  avatar_myah: Array<string>\\n  avatar_rozella: Array<string>\\n  camelCase: boolean | null\\n  category_amari: string\\n  category_april: Array<string>\\n  category_buddy: Array<string> | null\\n  category_clementine: number | null\\n  category_marcelle: Date | null\\n  category_roberta: boolean | null\\n  category_trent: any | null\\n  category_viola: string\\n  comment_cali: string\\n  comment_delilah: Array<string> | null\\n  comment_easter: Date | null\\n  comment_ella: string\\n  comment_myles: string\\n  comment_rocio: string | null\\n  createdat_hulda: any\\n  createdat_pansy: Array<number> | null\\n  email_andres: Date\\n  email_cleveland: string | null\\n  email_keaton: Array<number> | null\\n  email_lucio: string | null\\n  email_paris: string\\n  email_paula: string | null\\n  email_ressie: string\\n  fruit_a: Fruits | null\\n  fruit_b: Fruits\\n  group_abigayle: Array<string>\\n  group_gabe: Array<Date> | null\\n  group_jay: Array<string>\\n  group_jedediah: Array<Date>\\n  group_shanny: Date\\n  group_toby: string\\n  group_ulices: Array<string> | null\\n  id_gay: string\\n  id_hailee: any\\n  id_helen: Array<number> | null\\n  id_ike: Array<string>\\n  id_joan: Array<string> | null\\n  id_karelle: string | null\\n  id_lavern: Date\\n  id_margarita: string | null\\n  id_maximilian: Array<string>\\n  id_william: Array<string>\\n  id_wilmer: Array<string> | null\\n  'kebab-a': DeliciousKebab | null\\n  'kebab-b': DeliciousKebab\\n  name_amara: string | null\\n  name_brionna: number\\n  name_enoch: string\\n  name_jermain: Array<string> | null\\n  name_marielle: string | null\\n  name_myrtle: Array<string> | null\\n  name_santos: Array<string>\\n  name_skye: string | null\\n  name_stephanie: boolean\\n  password_alessia: Array<string> | null\\n  password_camylle: Array<string>\\n  password_elenora: number | null\\n  password_felton: Array<Date> | null\\n  password_korey: number\\n  password_murphy: Array<any> | null\\n  password_vladimir: number | null\\n  phone_angelo: string\\n  phone_colten: number\\n  phone_erling: Array<string> | null\\n  phone_johanna: Array<Date> | null\\n  phone_kendall: Array<number>\\n  phone_keyshawn: string | null\\n  phone_maryam: string | null\\n  phone_osvaldo: Array<Date>\\n  phone_rupert: any | null\\n  snakes_on_a: SnakesOn | null\\n  snakes_on_b: SnakesOn\\n  status_amalia: number\\n  status_angelica: Array<number> | null\\n  status_cade: Array<number>\\n  status_lori: string | null\\n  status_ricky: number\\n  status_sid: Array<boolean> | null\\n  title_aidan: Date | null\\n  title_alexzander: string\\n  title_haylee: Array<string> | null\\n  title_ilene: Array<any>\\n  title_vicenta: string | null\\n  title_vivienne: Array<number>\\n  token_adella: Array<Date>\\n  token_hermann: Array<string>\\n  token_kenyon: Array<string>\\n  token_marianna: Array<string> | null\\n  token_rubye: string\\n  token_ryley: string | null\\n  token_zora: Array<number>\\n  updatedat_aaliyah: number | null\\n  updatedat_abe: Array<string> | null\\n  updatedat_brett: Array<string> | null\\n  updatedat_cedrick: Array<boolean>\\n  updatedat_derick: Array<any>\\n  updatedat_eli: Array<string>\\n  updatedat_ewell: Array<string>\\n  updatedat_laura: Array<string> | null\\n  updatedat_melody: Array<number>\\n  updatedat_rossie: number | null\\n}\\n\\nexport interface TypeInsertEntity {\\n  avatar_darren?: Array<number> | null\\n  avatar_ernestina: string\\n  avatar_mark?: Array<any> | null\\n  avatar_myah: Array<string>\\n  avatar_rozella: Array<string>\\n  camelCase?: boolean | null\\n  category_amari: string\\n  category_april: Array<string>\\n  category_buddy?: Array<string> | null\\n  category_clementine?: number | null\\n  category_marcelle?: Date | null\\n  category_roberta?: boolean | null\\n  category_trent?: any | null\\n  category_viola: string\\n  comment_cali: string\\n  comment_delilah?: Array<string> | null\\n  comment_easter?: Date | null\\n  comment_ella: string\\n  comment_myles: string\\n  comment_rocio?: string | null\\n  createdat_hulda: any\\n  createdat_pansy?: Array<number> | null\\n  email_andres: Date\\n  email_cleveland?: string | null\\n  email_keaton?: Array<number> | null\\n  email_lucio?: string | null\\n  email_paris: string\\n  email_paula?: string | null\\n  email_ressie: string\\n  fruit_a?: Fruits | null\\n  fruit_b: Fruits\\n  group_abigayle: Array<string>\\n  group_gabe?: Array<Date> | null\\n  group_jay: Array<string>\\n  group_jedediah: Array<Date>\\n  group_shanny: Date\\n  group_toby: string\\n  group_ulices?: Array<string> | null\\n  id_gay: string\\n  id_hailee: any\\n  id_helen?: Array<number> | null\\n  id_ike: Array<string>\\n  id_joan?: Array<string> | null\\n  id_karelle?: string | null\\n  id_lavern: Date\\n  id_margarita?: string | null\\n  id_maximilian: Array<string>\\n  id_william: Array<string>\\n  id_wilmer?: Array<string> | null\\n  'kebab-a'?: DeliciousKebab | null\\n  'kebab-b': DeliciousKebab\\n  name_amara?: string | null\\n  name_brionna: number\\n  name_enoch: string\\n  name_jermain?: Array<string> | null\\n  name_marielle?: string | null\\n  name_myrtle?: Array<string> | null\\n  name_santos: Array<string>\\n  name_skye?: string | null\\n  name_stephanie: boolean\\n  password_alessia?: Array<string> | null\\n  password_camylle: Array<string>\\n  password_elenora?: number | null\\n  password_felton?: Array<Date> | null\\n  password_korey: number\\n  password_murphy?: Array<any> | null\\n  password_vladimir?: number | null\\n  phone_angelo: string\\n  phone_colten: number\\n  phone_erling?: Array<string> | null\\n  phone_johanna?: Array<Date> | null\\n  phone_kendall: Array<number>\\n  phone_keyshawn?: string | null\\n  phone_maryam?: string | null\\n  phone_osvaldo: Array<Date>\\n  phone_rupert?: any | null\\n  snakes_on_a?: SnakesOn | null\\n  snakes_on_b: SnakesOn\\n  status_amalia: number\\n  status_angelica?: Array<number> | null\\n  status_cade: Array<number>\\n  status_lori?: string | null\\n  status_ricky: number\\n  status_sid?: Array<boolean> | null\\n  title_aidan?: Date | null\\n  title_alexzander: string\\n  title_haylee?: Array<string> | null\\n  title_ilene: Array<any>\\n  title_vicenta?: string | null\\n  title_vivienne: Array<number>\\n  token_adella: Array<Date>\\n  token_hermann: Array<string>\\n  token_kenyon: Array<string>\\n  token_marianna?: Array<string> | null\\n  token_rubye: string\\n  token_ryley?: string | null\\n  token_zora: Array<number>\\n  updatedat_aaliyah?: number | null\\n  updatedat_abe?: Array<string> | null\\n  updatedat_brett?: Array<string> | null\\n  updatedat_cedrick: Array<boolean>\\n  updatedat_derick: Array<any>\\n  updatedat_eli: Array<string>\\n  updatedat_ewell: Array<string>\\n  updatedat_laura?: Array<string> | null\\n  updatedat_melody: Array<number>\\n  updatedat_rossie?: number | null\\n}\\n\\nexport interface UserEntity {\\n  id: number\\n  name: string | null\\n  name2: string\\n  name3: string\\n  other_id: number\\n  other_primary_id: number\\n}\\n\\nexport interface UserInsertEntity {\\n  id?: number\\n  name?: string | null\\n  name2?: string\\n  name3: string\\n  other_id?: number\\n  other_primary_id?: number\\n}\\n",
+  "typeMapping": {
+    "address": "AddressEntity",
+    "histories": "HistoryEntity",
+    "kebab-test": "KebabTestEntity",
+    "materialized_items": "MaterializedItemEntity",
+    "materialized_other_items": "MaterializedOtherItemEntity",
+    "PascalTableName": "PascalTableNameEntity",
+    "snake_test": "SnakeTestEntity",
+    "some_view": "SomeViewEntity",
+    "types": "TypeEntity",
+    "users": "UserEntity"
+  },
+  "insertTypeMapping": {
+    "address": "AddressInsertEntity",
+    "histories": "HistoryInsertEntity",
+    "kebab-test": "KebabTestInsertEntity",
+    "PascalTableName": "PascalTableNameInsertEntity",
+    "snake_test": "SnakeTestInsertEntity",
+    "types": "TypeInsertEntity",
+    "users": "UserInsertEntity"
+  }
+}
+`;
+
+exports[`generates types as return value 1`] = `
+"export enum DeliciousKebab {\\n  'big-mix' = 'big-mix',\\n  mix = 'mix',\\n}\\n\\nexport enum Fruits {\\n  apple = 'apple',\\n  banana = 'banana',\\n  orange = 'orange',\\n}\\n\\nexport enum NumericNames {\\n  '1name' = '1name',\\n  '2Name' = '2Name',\\n  '3-name' = '3-name',\\n  '4_name' = '4_name',\\n}\\n\\nexport enum SnakesOn {\\n  a_plane = 'a_plane',\\n}\\n\\nexport interface AddressEntity {\\n  id: number\\n}\\n\\nexport interface HistoryEntity {\\n  id: number\\n}\\n\\nexport interface KebabTestEntity {\\n  id: number\\n}\\n\\nexport interface MaterializedItemEntity {\\n  test: number | null\\n  test_array: Array<number> | null\\n  test_text: string | null\\n  test_timestamp: Date | null\\n}\\n\\nexport interface MaterializedOtherItemEntity {\\n  test: number | null\\n  test_text: string | null\\n}\\n\\nexport interface PascalTableNameEntity {\\n  id: number\\n  Name: string\\n}\\n\\nexport interface SnakeTestEntity {\\n  id: number\\n}\\n\\nexport interface SomeViewEntity {\\n  test: number | null\\n  test_text: string | null\\n}\\n\\nexport interface TypeEntity {\\n  avatar_darren: Array<number> | null\\n  avatar_ernestina: string\\n  avatar_mark: Array<any> | null\\n  avatar_myah: Array<string>\\n  avatar_rozella: Array<string>\\n  camelCase: boolean | null\\n  category_amari: string\\n  category_april: Array<string>\\n  category_buddy: Array<string> | null\\n  category_clementine: number | null\\n  category_marcelle: Date | null\\n  category_roberta: boolean | null\\n  category_trent: any | null\\n  category_viola: string\\n  comment_cali: string\\n  comment_delilah: Array<string> | null\\n  comment_easter: Date | null\\n  comment_ella: string\\n  comment_myles: string\\n  comment_rocio: string | null\\n  createdat_hulda: any\\n  createdat_pansy: Array<number> | null\\n  email_andres: Date\\n  email_cleveland: string | null\\n  email_keaton: Array<number> | null\\n  email_lucio: string | null\\n  email_paris: string\\n  email_paula: string | null\\n  email_ressie: string\\n  fruit_a: Fruits | null\\n  fruit_b: Fruits\\n  group_abigayle: Array<string>\\n  group_gabe: Array<Date> | null\\n  group_jay: Array<string>\\n  group_jedediah: Array<Date>\\n  group_shanny: Date\\n  group_toby: string\\n  group_ulices: Array<string> | null\\n  id_gay: string\\n  id_hailee: any\\n  id_helen: Array<number> | null\\n  id_ike: Array<string>\\n  id_joan: Array<string> | null\\n  id_karelle: string | null\\n  id_lavern: Date\\n  id_margarita: string | null\\n  id_maximilian: Array<string>\\n  id_william: Array<string>\\n  id_wilmer: Array<string> | null\\n  'kebab-a': DeliciousKebab | null\\n  'kebab-b': DeliciousKebab\\n  name_amara: string | null\\n  name_brionna: number\\n  name_enoch: string\\n  name_jermain: Array<string> | null\\n  name_marielle: string | null\\n  name_myrtle: Array<string> | null\\n  name_santos: Array<string>\\n  name_skye: string | null\\n  name_stephanie: boolean\\n  password_alessia: Array<string> | null\\n  password_camylle: Array<string>\\n  password_elenora: number | null\\n  password_felton: Array<Date> | null\\n  password_korey: number\\n  password_murphy: Array<any> | null\\n  password_vladimir: number | null\\n  phone_angelo: string\\n  phone_colten: number\\n  phone_erling: Array<string> | null\\n  phone_johanna: Array<Date> | null\\n  phone_kendall: Array<number>\\n  phone_keyshawn: string | null\\n  phone_maryam: string | null\\n  phone_osvaldo: Array<Date>\\n  phone_rupert: any | null\\n  snakes_on_a: SnakesOn | null\\n  snakes_on_b: SnakesOn\\n  status_amalia: number\\n  status_angelica: Array<number> | null\\n  status_cade: Array<number>\\n  status_lori: string | null\\n  status_ricky: number\\n  status_sid: Array<boolean> | null\\n  title_aidan: Date | null\\n  title_alexzander: string\\n  title_haylee: Array<string> | null\\n  title_ilene: Array<any>\\n  title_vicenta: string | null\\n  title_vivienne: Array<number>\\n  token_adella: Array<Date>\\n  token_hermann: Array<string>\\n  token_kenyon: Array<string>\\n  token_marianna: Array<string> | null\\n  token_rubye: string\\n  token_ryley: string | null\\n  token_zora: Array<number>\\n  updatedat_aaliyah: number | null\\n  updatedat_abe: Array<string> | null\\n  updatedat_brett: Array<string> | null\\n  updatedat_cedrick: Array<boolean>\\n  updatedat_derick: Array<any>\\n  updatedat_eli: Array<string>\\n  updatedat_ewell: Array<string>\\n  updatedat_laura: Array<string> | null\\n  updatedat_melody: Array<number>\\n  updatedat_rossie: number | null\\n}\\n\\nexport interface UserEntity {\\n  id: number\\n  name: string | null\\n  name2: string\\n  name3: string\\n  other_id: number\\n  other_primary_id: number\\n}\\n"
+`;
+
+exports[`generates types to file 1`] = `
+"export enum DeliciousKebab {\\n  'big-mix' = 'big-mix',\\n  mix = 'mix',\\n}\\n\\nexport enum Fruits {\\n  apple = 'apple',\\n  banana = 'banana',\\n  orange = 'orange',\\n}\\n\\nexport enum NumericNames {\\n  '1name' = '1name',\\n  '2Name' = '2Name',\\n  '3-name' = '3-name',\\n  '4_name' = '4_name',\\n}\\n\\nexport enum SnakesOn {\\n  a_plane = 'a_plane',\\n}\\n\\nexport interface AddressEntity {\\n  id: number\\n}\\n\\nexport interface HistoryEntity {\\n  id: number\\n}\\n\\nexport interface KebabTestEntity {\\n  id: number\\n}\\n\\nexport interface MaterializedItemEntity {\\n  test: number | null\\n  test_array: Array<number> | null\\n  test_text: string | null\\n  test_timestamp: Date | null\\n}\\n\\nexport interface MaterializedOtherItemEntity {\\n  test: number | null\\n  test_text: string | null\\n}\\n\\nexport interface PascalTableNameEntity {\\n  id: number\\n  Name: string\\n}\\n\\nexport interface SnakeTestEntity {\\n  id: number\\n}\\n\\nexport interface SomeViewEntity {\\n  test: number | null\\n  test_text: string | null\\n}\\n\\nexport interface TypeEntity {\\n  avatar_darren: Array<number> | null\\n  avatar_ernestina: string\\n  avatar_mark: Array<any> | null\\n  avatar_myah: Array<string>\\n  avatar_rozella: Array<string>\\n  camelCase: boolean | null\\n  category_amari: string\\n  category_april: Array<string>\\n  category_buddy: Array<string> | null\\n  category_clementine: number | null\\n  category_marcelle: Date | null\\n  category_roberta: boolean | null\\n  category_trent: any | null\\n  category_viola: string\\n  comment_cali: string\\n  comment_delilah: Array<string> | null\\n  comment_easter: Date | null\\n  comment_ella: string\\n  comment_myles: string\\n  comment_rocio: string | null\\n  createdat_hulda: any\\n  createdat_pansy: Array<number> | null\\n  email_andres: Date\\n  email_cleveland: string | null\\n  email_keaton: Array<number> | null\\n  email_lucio: string | null\\n  email_paris: string\\n  email_paula: string | null\\n  email_ressie: string\\n  fruit_a: Fruits | null\\n  fruit_b: Fruits\\n  group_abigayle: Array<string>\\n  group_gabe: Array<Date> | null\\n  group_jay: Array<string>\\n  group_jedediah: Array<Date>\\n  group_shanny: Date\\n  group_toby: string\\n  group_ulices: Array<string> | null\\n  id_gay: string\\n  id_hailee: any\\n  id_helen: Array<number> | null\\n  id_ike: Array<string>\\n  id_joan: Array<string> | null\\n  id_karelle: string | null\\n  id_lavern: Date\\n  id_margarita: string | null\\n  id_maximilian: Array<string>\\n  id_william: Array<string>\\n  id_wilmer: Array<string> | null\\n  'kebab-a': DeliciousKebab | null\\n  'kebab-b': DeliciousKebab\\n  name_amara: string | null\\n  name_brionna: number\\n  name_enoch: string\\n  name_jermain: Array<string> | null\\n  name_marielle: string | null\\n  name_myrtle: Array<string> | null\\n  name_santos: Array<string>\\n  name_skye: string | null\\n  name_stephanie: boolean\\n  password_alessia: Array<string> | null\\n  password_camylle: Array<string>\\n  password_elenora: number | null\\n  password_felton: Array<Date> | null\\n  password_korey: number\\n  password_murphy: Array<any> | null\\n  password_vladimir: number | null\\n  phone_angelo: string\\n  phone_colten: number\\n  phone_erling: Array<string> | null\\n  phone_johanna: Array<Date> | null\\n  phone_kendall: Array<number>\\n  phone_keyshawn: string | null\\n  phone_maryam: string | null\\n  phone_osvaldo: Array<Date>\\n  phone_rupert: any | null\\n  snakes_on_a: SnakesOn | null\\n  snakes_on_b: SnakesOn\\n  status_amalia: number\\n  status_angelica: Array<number> | null\\n  status_cade: Array<number>\\n  status_lori: string | null\\n  status_ricky: number\\n  status_sid: Array<boolean> | null\\n  title_aidan: Date | null\\n  title_alexzander: string\\n  title_haylee: Array<string> | null\\n  title_ilene: Array<any>\\n  title_vicenta: string | null\\n  title_vivienne: Array<number>\\n  token_adella: Array<Date>\\n  token_hermann: Array<string>\\n  token_kenyon: Array<string>\\n  token_marianna: Array<string> | null\\n  token_rubye: string\\n  token_ryley: string | null\\n  token_zora: Array<number>\\n  updatedat_aaliyah: number | null\\n  updatedat_abe: Array<string> | null\\n  updatedat_brett: Array<string> | null\\n  updatedat_cedrick: Array<boolean>\\n  updatedat_derick: Array<any>\\n  updatedat_eli: Array<string>\\n  updatedat_ewell: Array<string>\\n  updatedat_laura: Array<string> | null\\n  updatedat_melody: Array<number>\\n  updatedat_rossie: number | null\\n}\\n\\nexport interface UserEntity {\\n  id: number\\n  name: string | null\\n  name2: string\\n  name3: string\\n  other_id: number\\n  other_primary_id: number\\n}\\n"
+`;
+
+exports[`generates types to file 2`] = `
+"✔ Generated types from 10 tables and 4 enums"
+`;
+
+exports[`generates types with comments 1`] = `
+"export enum DeliciousKebab {\\n  'big-mix' = 'big-mix',\\n  mix = 'mix',\\n}\\n\\nexport enum Fruits {\\n  apple = 'apple',\\n  banana = 'banana',\\n  orange = 'orange',\\n}\\n\\nexport enum NumericNames {\\n  '1name' = '1name',\\n  '2Name' = '2Name',\\n  '3-name' = '3-name',\\n  '4_name' = '4_name',\\n}\\n\\nexport enum SnakesOn {\\n  a_plane = 'a_plane',\\n}\\n\\nexport interface AddressEntity {\\n  id: number\\n}\\n\\nexport interface HistoryEntity {\\n  id: number\\n}\\n\\nexport interface KebabTestEntity {\\n  id: number\\n}\\n\\nexport interface MaterializedItemEntity {\\n  test: number | null\\n  test_array: Array<number> | null\\n  test_text: string | null\\n  test_timestamp: Date | null\\n}\\n\\nexport interface MaterializedOtherItemEntity {\\n  test: number | null\\n  test_text: string | null\\n}\\n\\nexport interface PascalTableNameEntity {\\n  id: number\\n  Name: string\\n}\\n\\nexport interface SnakeTestEntity {\\n  /**\\n   * PRIMARY KEY\\n  */\\n  id: number\\n}\\n\\nexport interface SomeViewEntity {\\n  test: number | null\\n  test_text: string | null\\n}\\n\\nexport interface TypeEntity {\\n  avatar_darren: Array<number> | null\\n  avatar_ernestina: string\\n  avatar_mark: Array<any> | null\\n  avatar_myah: Array<string>\\n  avatar_rozella: Array<string>\\n  camelCase: boolean | null\\n  category_amari: string\\n  category_april: Array<string>\\n  category_buddy: Array<string> | null\\n  category_clementine: number | null\\n  category_marcelle: Date | null\\n  category_roberta: boolean | null\\n  category_trent: any | null\\n  category_viola: string\\n  comment_cali: string\\n  comment_delilah: Array<string> | null\\n  comment_easter: Date | null\\n  comment_ella: string\\n  comment_myles: string\\n  comment_rocio: string | null\\n  createdat_hulda: any\\n  createdat_pansy: Array<number> | null\\n  email_andres: Date\\n  email_cleveland: string | null\\n  email_keaton: Array<number> | null\\n  email_lucio: string | null\\n  email_paris: string\\n  email_paula: string | null\\n  email_ressie: string\\n  fruit_a: Fruits | null\\n  fruit_b: Fruits\\n  group_abigayle: Array<string>\\n  group_gabe: Array<Date> | null\\n  group_jay: Array<string>\\n  group_jedediah: Array<Date>\\n  group_shanny: Date\\n  group_toby: string\\n  group_ulices: Array<string> | null\\n  id_gay: string\\n  id_hailee: any\\n  id_helen: Array<number> | null\\n  id_ike: Array<string>\\n  id_joan: Array<string> | null\\n  id_karelle: string | null\\n  id_lavern: Date\\n  id_margarita: string | null\\n  id_maximilian: Array<string>\\n  id_william: Array<string>\\n  id_wilmer: Array<string> | null\\n  'kebab-a': DeliciousKebab | null\\n  'kebab-b': DeliciousKebab\\n  name_amara: string | null\\n  name_brionna: number\\n  name_enoch: string\\n  name_jermain: Array<string> | null\\n  name_marielle: string | null\\n  name_myrtle: Array<string> | null\\n  name_santos: Array<string>\\n  name_skye: string | null\\n  name_stephanie: boolean\\n  password_alessia: Array<string> | null\\n  password_camylle: Array<string>\\n  password_elenora: number | null\\n  password_felton: Array<Date> | null\\n  password_korey: number\\n  password_murphy: Array<any> | null\\n  password_vladimir: number | null\\n  phone_angelo: string\\n  phone_colten: number\\n  phone_erling: Array<string> | null\\n  phone_johanna: Array<Date> | null\\n  phone_kendall: Array<number>\\n  phone_keyshawn: string | null\\n  phone_maryam: string | null\\n  phone_osvaldo: Array<Date>\\n  phone_rupert: any | null\\n  snakes_on_a: SnakesOn | null\\n  snakes_on_b: SnakesOn\\n  status_amalia: number\\n  status_angelica: Array<number> | null\\n  status_cade: Array<number>\\n  status_lori: string | null\\n  status_ricky: number\\n  status_sid: Array<boolean> | null\\n  title_aidan: Date | null\\n  title_alexzander: string\\n  title_haylee: Array<string> | null\\n  title_ilene: Array<any>\\n  title_vicenta: string | null\\n  title_vivienne: Array<number>\\n  token_adella: Array<Date>\\n  token_hermann: Array<string>\\n  token_kenyon: Array<string>\\n  token_marianna: Array<string> | null\\n  token_rubye: string\\n  token_ryley: string | null\\n  token_zora: Array<number>\\n  updatedat_aaliyah: number | null\\n  updatedat_abe: Array<string> | null\\n  updatedat_brett: Array<string> | null\\n  updatedat_cedrick: Array<boolean>\\n  updatedat_derick: Array<any>\\n  updatedat_eli: Array<string>\\n  updatedat_ewell: Array<string>\\n  updatedat_laura: Array<string> | null\\n  updatedat_melody: Array<number>\\n  updatedat_rossie: number | null\\n}\\n\\n/**\\n * this is the users table\\n*/\\nexport interface UserEntity {\\n  id: number\\n  /**\\n   * Very long long long long long long long long long long long long long long long long long long long long long comment\\n  */\\n  name: string | null\\n  name2: string\\n  name3: string\\n  other_id: number\\n  /**\\n   * This is the user identifier number\\n   * PRIMARY KEY\\n  */\\n  other_primary_id: number\\n}\\n"
+`;
+
+exports[`generates types with comments and insert types 1`] = `
+"export enum DeliciousKebab {\\n  'big-mix' = 'big-mix',\\n  mix = 'mix',\\n}\\n\\nexport enum Fruits {\\n  apple = 'apple',\\n  banana = 'banana',\\n  orange = 'orange',\\n}\\n\\nexport enum NumericNames {\\n  '1name' = '1name',\\n  '2Name' = '2Name',\\n  '3-name' = '3-name',\\n  '4_name' = '4_name',\\n}\\n\\nexport enum SnakesOn {\\n  a_plane = 'a_plane',\\n}\\n\\nexport interface AddressEntity {\\n  id: number\\n}\\n\\nexport interface AddressInsertEntity {\\n  id: number\\n}\\n\\nexport interface HistoryEntity {\\n  id: number\\n}\\n\\nexport interface HistoryInsertEntity {\\n  id: number\\n}\\n\\nexport interface KebabTestEntity {\\n  id: number\\n}\\n\\nexport interface KebabTestInsertEntity {\\n  id: number\\n}\\n\\nexport interface MaterializedItemEntity {\\n  test: number | null\\n  test_array: Array<number> | null\\n  test_text: string | null\\n  test_timestamp: Date | null\\n}\\n\\nexport interface MaterializedOtherItemEntity {\\n  test: number | null\\n  test_text: string | null\\n}\\n\\nexport interface PascalTableNameEntity {\\n  id: number\\n  Name: string\\n}\\n\\nexport interface PascalTableNameInsertEntity {\\n  id?: number\\n  Name: string\\n}\\n\\nexport interface SnakeTestEntity {\\n  /**\\n   * PRIMARY KEY\\n  */\\n  id: number\\n}\\n\\nexport interface SnakeTestInsertEntity {\\n  /**\\n   * PRIMARY KEY\\n  */\\n  id: number\\n}\\n\\nexport interface SomeViewEntity {\\n  test: number | null\\n  test_text: string | null\\n}\\n\\nexport interface TypeEntity {\\n  avatar_darren: Array<number> | null\\n  avatar_ernestina: string\\n  avatar_mark: Array<any> | null\\n  avatar_myah: Array<string>\\n  avatar_rozella: Array<string>\\n  camelCase: boolean | null\\n  category_amari: string\\n  category_april: Array<string>\\n  category_buddy: Array<string> | null\\n  category_clementine: number | null\\n  category_marcelle: Date | null\\n  category_roberta: boolean | null\\n  category_trent: any | null\\n  category_viola: string\\n  comment_cali: string\\n  comment_delilah: Array<string> | null\\n  comment_easter: Date | null\\n  comment_ella: string\\n  comment_myles: string\\n  comment_rocio: string | null\\n  createdat_hulda: any\\n  createdat_pansy: Array<number> | null\\n  email_andres: Date\\n  email_cleveland: string | null\\n  email_keaton: Array<number> | null\\n  email_lucio: string | null\\n  email_paris: string\\n  email_paula: string | null\\n  email_ressie: string\\n  fruit_a: Fruits | null\\n  fruit_b: Fruits\\n  group_abigayle: Array<string>\\n  group_gabe: Array<Date> | null\\n  group_jay: Array<string>\\n  group_jedediah: Array<Date>\\n  group_shanny: Date\\n  group_toby: string\\n  group_ulices: Array<string> | null\\n  id_gay: string\\n  id_hailee: any\\n  id_helen: Array<number> | null\\n  id_ike: Array<string>\\n  id_joan: Array<string> | null\\n  id_karelle: string | null\\n  id_lavern: Date\\n  id_margarita: string | null\\n  id_maximilian: Array<string>\\n  id_william: Array<string>\\n  id_wilmer: Array<string> | null\\n  'kebab-a': DeliciousKebab | null\\n  'kebab-b': DeliciousKebab\\n  name_amara: string | null\\n  name_brionna: number\\n  name_enoch: string\\n  name_jermain: Array<string> | null\\n  name_marielle: string | null\\n  name_myrtle: Array<string> | null\\n  name_santos: Array<string>\\n  name_skye: string | null\\n  name_stephanie: boolean\\n  password_alessia: Array<string> | null\\n  password_camylle: Array<string>\\n  password_elenora: number | null\\n  password_felton: Array<Date> | null\\n  password_korey: number\\n  password_murphy: Array<any> | null\\n  password_vladimir: number | null\\n  phone_angelo: string\\n  phone_colten: number\\n  phone_erling: Array<string> | null\\n  phone_johanna: Array<Date> | null\\n  phone_kendall: Array<number>\\n  phone_keyshawn: string | null\\n  phone_maryam: string | null\\n  phone_osvaldo: Array<Date>\\n  phone_rupert: any | null\\n  snakes_on_a: SnakesOn | null\\n  snakes_on_b: SnakesOn\\n  status_amalia: number\\n  status_angelica: Array<number> | null\\n  status_cade: Array<number>\\n  status_lori: string | null\\n  status_ricky: number\\n  status_sid: Array<boolean> | null\\n  title_aidan: Date | null\\n  title_alexzander: string\\n  title_haylee: Array<string> | null\\n  title_ilene: Array<any>\\n  title_vicenta: string | null\\n  title_vivienne: Array<number>\\n  token_adella: Array<Date>\\n  token_hermann: Array<string>\\n  token_kenyon: Array<string>\\n  token_marianna: Array<string> | null\\n  token_rubye: string\\n  token_ryley: string | null\\n  token_zora: Array<number>\\n  updatedat_aaliyah: number | null\\n  updatedat_abe: Array<string> | null\\n  updatedat_brett: Array<string> | null\\n  updatedat_cedrick: Array<boolean>\\n  updatedat_derick: Array<any>\\n  updatedat_eli: Array<string>\\n  updatedat_ewell: Array<string>\\n  updatedat_laura: Array<string> | null\\n  updatedat_melody: Array<number>\\n  updatedat_rossie: number | null\\n}\\n\\nexport interface TypeInsertEntity {\\n  avatar_darren?: Array<number> | null\\n  avatar_ernestina: string\\n  avatar_mark?: Array<any> | null\\n  avatar_myah: Array<string>\\n  avatar_rozella: Array<string>\\n  camelCase?: boolean | null\\n  category_amari: string\\n  category_april: Array<string>\\n  category_buddy?: Array<string> | null\\n  category_clementine?: number | null\\n  category_marcelle?: Date | null\\n  category_roberta?: boolean | null\\n  category_trent?: any | null\\n  category_viola: string\\n  comment_cali: string\\n  comment_delilah?: Array<string> | null\\n  comment_easter?: Date | null\\n  comment_ella: string\\n  comment_myles: string\\n  comment_rocio?: string | null\\n  createdat_hulda: any\\n  createdat_pansy?: Array<number> | null\\n  email_andres: Date\\n  email_cleveland?: string | null\\n  email_keaton?: Array<number> | null\\n  email_lucio?: string | null\\n  email_paris: string\\n  email_paula?: string | null\\n  email_ressie: string\\n  fruit_a?: Fruits | null\\n  fruit_b: Fruits\\n  group_abigayle: Array<string>\\n  group_gabe?: Array<Date> | null\\n  group_jay: Array<string>\\n  group_jedediah: Array<Date>\\n  group_shanny: Date\\n  group_toby: string\\n  group_ulices?: Array<string> | null\\n  id_gay: string\\n  id_hailee: any\\n  id_helen?: Array<number> | null\\n  id_ike: Array<string>\\n  id_joan?: Array<string> | null\\n  id_karelle?: string | null\\n  id_lavern: Date\\n  id_margarita?: string | null\\n  id_maximilian: Array<string>\\n  id_william: Array<string>\\n  id_wilmer?: Array<string> | null\\n  'kebab-a'?: DeliciousKebab | null\\n  'kebab-b': DeliciousKebab\\n  name_amara?: string | null\\n  name_brionna: number\\n  name_enoch: string\\n  name_jermain?: Array<string> | null\\n  name_marielle?: string | null\\n  name_myrtle?: Array<string> | null\\n  name_santos: Array<string>\\n  name_skye?: string | null\\n  name_stephanie: boolean\\n  password_alessia?: Array<string> | null\\n  password_camylle: Array<string>\\n  password_elenora?: number | null\\n  password_felton?: Array<Date> | null\\n  password_korey: number\\n  password_murphy?: Array<any> | null\\n  password_vladimir?: number | null\\n  phone_angelo: string\\n  phone_colten: number\\n  phone_erling?: Array<string> | null\\n  phone_johanna?: Array<Date> | null\\n  phone_kendall: Array<number>\\n  phone_keyshawn?: string | null\\n  phone_maryam?: string | null\\n  phone_osvaldo: Array<Date>\\n  phone_rupert?: any | null\\n  snakes_on_a?: SnakesOn | null\\n  snakes_on_b: SnakesOn\\n  status_amalia: number\\n  status_angelica?: Array<number> | null\\n  status_cade: Array<number>\\n  status_lori?: string | null\\n  status_ricky: number\\n  status_sid?: Array<boolean> | null\\n  title_aidan?: Date | null\\n  title_alexzander: string\\n  title_haylee?: Array<string> | null\\n  title_ilene: Array<any>\\n  title_vicenta?: string | null\\n  title_vivienne: Array<number>\\n  token_adella: Array<Date>\\n  token_hermann: Array<string>\\n  token_kenyon: Array<string>\\n  token_marianna?: Array<string> | null\\n  token_rubye: string\\n  token_ryley?: string | null\\n  token_zora: Array<number>\\n  updatedat_aaliyah?: number | null\\n  updatedat_abe?: Array<string> | null\\n  updatedat_brett?: Array<string> | null\\n  updatedat_cedrick: Array<boolean>\\n  updatedat_derick: Array<any>\\n  updatedat_eli: Array<string>\\n  updatedat_ewell: Array<string>\\n  updatedat_laura?: Array<string> | null\\n  updatedat_melody: Array<number>\\n  updatedat_rossie?: number | null\\n}\\n\\n/**\\n * this is the users table\\n*/\\nexport interface UserEntity {\\n  id: number\\n  /**\\n   * Very long long long long long long long long long long long long long long long long long long long long long comment\\n  */\\n  name: string | null\\n  name2: string\\n  name3: string\\n  other_id: number\\n  /**\\n   * This is the user identifier number\\n   * PRIMARY KEY\\n  */\\n  other_primary_id: number\\n}\\n\\n/**\\n * this is the users table\\n*/\\nexport interface UserInsertEntity {\\n  id?: number\\n  /**\\n   * Very long long long long long long long long long long long long long long long long long long long long long comment\\n  */\\n  name?: string | null\\n  name2?: string\\n  name3: string\\n  other_id?: number\\n  /**\\n   * This is the user identifier number\\n   * PRIMARY KEY\\n  */\\n  other_primary_id?: number\\n}\\n"
+`;
+
+exports[`generates types with insert types 1`] = `
+"export enum DeliciousKebab {\\n  'big-mix' = 'big-mix',\\n  mix = 'mix',\\n}\\n\\nexport enum Fruits {\\n  apple = 'apple',\\n  banana = 'banana',\\n  orange = 'orange',\\n}\\n\\nexport enum NumericNames {\\n  '1name' = '1name',\\n  '2Name' = '2Name',\\n  '3-name' = '3-name',\\n  '4_name' = '4_name',\\n}\\n\\nexport enum SnakesOn {\\n  a_plane = 'a_plane',\\n}\\n\\nexport interface AddressEntity {\\n  id: number\\n}\\n\\nexport interface AddressInsertEntity {\\n  id: number\\n}\\n\\nexport interface HistoryEntity {\\n  id: number\\n}\\n\\nexport interface HistoryInsertEntity {\\n  id: number\\n}\\n\\nexport interface KebabTestEntity {\\n  id: number\\n}\\n\\nexport interface KebabTestInsertEntity {\\n  id: number\\n}\\n\\nexport interface MaterializedItemEntity {\\n  test: number | null\\n  test_array: Array<number> | null\\n  test_text: string | null\\n  test_timestamp: Date | null\\n}\\n\\nexport interface MaterializedOtherItemEntity {\\n  test: number | null\\n  test_text: string | null\\n}\\n\\nexport interface PascalTableNameEntity {\\n  id: number\\n  Name: string\\n}\\n\\nexport interface PascalTableNameInsertEntity {\\n  id?: number\\n  Name: string\\n}\\n\\nexport interface SnakeTestEntity {\\n  id: number\\n}\\n\\nexport interface SnakeTestInsertEntity {\\n  id: number\\n}\\n\\nexport interface SomeViewEntity {\\n  test: number | null\\n  test_text: string | null\\n}\\n\\nexport interface TypeEntity {\\n  avatar_darren: Array<number> | null\\n  avatar_ernestina: string\\n  avatar_mark: Array<any> | null\\n  avatar_myah: Array<string>\\n  avatar_rozella: Array<string>\\n  camelCase: boolean | null\\n  category_amari: string\\n  category_april: Array<string>\\n  category_buddy: Array<string> | null\\n  category_clementine: number | null\\n  category_marcelle: Date | null\\n  category_roberta: boolean | null\\n  category_trent: any | null\\n  category_viola: string\\n  comment_cali: string\\n  comment_delilah: Array<string> | null\\n  comment_easter: Date | null\\n  comment_ella: string\\n  comment_myles: string\\n  comment_rocio: string | null\\n  createdat_hulda: any\\n  createdat_pansy: Array<number> | null\\n  email_andres: Date\\n  email_cleveland: string | null\\n  email_keaton: Array<number> | null\\n  email_lucio: string | null\\n  email_paris: string\\n  email_paula: string | null\\n  email_ressie: string\\n  fruit_a: Fruits | null\\n  fruit_b: Fruits\\n  group_abigayle: Array<string>\\n  group_gabe: Array<Date> | null\\n  group_jay: Array<string>\\n  group_jedediah: Array<Date>\\n  group_shanny: Date\\n  group_toby: string\\n  group_ulices: Array<string> | null\\n  id_gay: string\\n  id_hailee: any\\n  id_helen: Array<number> | null\\n  id_ike: Array<string>\\n  id_joan: Array<string> | null\\n  id_karelle: string | null\\n  id_lavern: Date\\n  id_margarita: string | null\\n  id_maximilian: Array<string>\\n  id_william: Array<string>\\n  id_wilmer: Array<string> | null\\n  'kebab-a': DeliciousKebab | null\\n  'kebab-b': DeliciousKebab\\n  name_amara: string | null\\n  name_brionna: number\\n  name_enoch: string\\n  name_jermain: Array<string> | null\\n  name_marielle: string | null\\n  name_myrtle: Array<string> | null\\n  name_santos: Array<string>\\n  name_skye: string | null\\n  name_stephanie: boolean\\n  password_alessia: Array<string> | null\\n  password_camylle: Array<string>\\n  password_elenora: number | null\\n  password_felton: Array<Date> | null\\n  password_korey: number\\n  password_murphy: Array<any> | null\\n  password_vladimir: number | null\\n  phone_angelo: string\\n  phone_colten: number\\n  phone_erling: Array<string> | null\\n  phone_johanna: Array<Date> | null\\n  phone_kendall: Array<number>\\n  phone_keyshawn: string | null\\n  phone_maryam: string | null\\n  phone_osvaldo: Array<Date>\\n  phone_rupert: any | null\\n  snakes_on_a: SnakesOn | null\\n  snakes_on_b: SnakesOn\\n  status_amalia: number\\n  status_angelica: Array<number> | null\\n  status_cade: Array<number>\\n  status_lori: string | null\\n  status_ricky: number\\n  status_sid: Array<boolean> | null\\n  title_aidan: Date | null\\n  title_alexzander: string\\n  title_haylee: Array<string> | null\\n  title_ilene: Array<any>\\n  title_vicenta: string | null\\n  title_vivienne: Array<number>\\n  token_adella: Array<Date>\\n  token_hermann: Array<string>\\n  token_kenyon: Array<string>\\n  token_marianna: Array<string> | null\\n  token_rubye: string\\n  token_ryley: string | null\\n  token_zora: Array<number>\\n  updatedat_aaliyah: number | null\\n  updatedat_abe: Array<string> | null\\n  updatedat_brett: Array<string> | null\\n  updatedat_cedrick: Array<boolean>\\n  updatedat_derick: Array<any>\\n  updatedat_eli: Array<string>\\n  updatedat_ewell: Array<string>\\n  updatedat_laura: Array<string> | null\\n  updatedat_melody: Array<number>\\n  updatedat_rossie: number | null\\n}\\n\\nexport interface TypeInsertEntity {\\n  avatar_darren?: Array<number> | null\\n  avatar_ernestina: string\\n  avatar_mark?: Array<any> | null\\n  avatar_myah: Array<string>\\n  avatar_rozella: Array<string>\\n  camelCase?: boolean | null\\n  category_amari: string\\n  category_april: Array<string>\\n  category_buddy?: Array<string> | null\\n  category_clementine?: number | null\\n  category_marcelle?: Date | null\\n  category_roberta?: boolean | null\\n  category_trent?: any | null\\n  category_viola: string\\n  comment_cali: string\\n  comment_delilah?: Array<string> | null\\n  comment_easter?: Date | null\\n  comment_ella: string\\n  comment_myles: string\\n  comment_rocio?: string | null\\n  createdat_hulda: any\\n  createdat_pansy?: Array<number> | null\\n  email_andres: Date\\n  email_cleveland?: string | null\\n  email_keaton?: Array<number> | null\\n  email_lucio?: string | null\\n  email_paris: string\\n  email_paula?: string | null\\n  email_ressie: string\\n  fruit_a?: Fruits | null\\n  fruit_b: Fruits\\n  group_abigayle: Array<string>\\n  group_gabe?: Array<Date> | null\\n  group_jay: Array<string>\\n  group_jedediah: Array<Date>\\n  group_shanny: Date\\n  group_toby: string\\n  group_ulices?: Array<string> | null\\n  id_gay: string\\n  id_hailee: any\\n  id_helen?: Array<number> | null\\n  id_ike: Array<string>\\n  id_joan?: Array<string> | null\\n  id_karelle?: string | null\\n  id_lavern: Date\\n  id_margarita?: string | null\\n  id_maximilian: Array<string>\\n  id_william: Array<string>\\n  id_wilmer?: Array<string> | null\\n  'kebab-a'?: DeliciousKebab | null\\n  'kebab-b': DeliciousKebab\\n  name_amara?: string | null\\n  name_brionna: number\\n  name_enoch: string\\n  name_jermain?: Array<string> | null\\n  name_marielle?: string | null\\n  name_myrtle?: Array<string> | null\\n  name_santos: Array<string>\\n  name_skye?: string | null\\n  name_stephanie: boolean\\n  password_alessia?: Array<string> | null\\n  password_camylle: Array<string>\\n  password_elenora?: number | null\\n  password_felton?: Array<Date> | null\\n  password_korey: number\\n  password_murphy?: Array<any> | null\\n  password_vladimir?: number | null\\n  phone_angelo: string\\n  phone_colten: number\\n  phone_erling?: Array<string> | null\\n  phone_johanna?: Array<Date> | null\\n  phone_kendall: Array<number>\\n  phone_keyshawn?: string | null\\n  phone_maryam?: string | null\\n  phone_osvaldo: Array<Date>\\n  phone_rupert?: any | null\\n  snakes_on_a?: SnakesOn | null\\n  snakes_on_b: SnakesOn\\n  status_amalia: number\\n  status_angelica?: Array<number> | null\\n  status_cade: Array<number>\\n  status_lori?: string | null\\n  status_ricky: number\\n  status_sid?: Array<boolean> | null\\n  title_aidan?: Date | null\\n  title_alexzander: string\\n  title_haylee?: Array<string> | null\\n  title_ilene: Array<any>\\n  title_vicenta?: string | null\\n  title_vivienne: Array<number>\\n  token_adella: Array<Date>\\n  token_hermann: Array<string>\\n  token_kenyon: Array<string>\\n  token_marianna?: Array<string> | null\\n  token_rubye: string\\n  token_ryley?: string | null\\n  token_zora: Array<number>\\n  updatedat_aaliyah?: number | null\\n  updatedat_abe?: Array<string> | null\\n  updatedat_brett?: Array<string> | null\\n  updatedat_cedrick: Array<boolean>\\n  updatedat_derick: Array<any>\\n  updatedat_eli: Array<string>\\n  updatedat_ewell: Array<string>\\n  updatedat_laura?: Array<string> | null\\n  updatedat_melody: Array<number>\\n  updatedat_rossie?: number | null\\n}\\n\\nexport interface UserEntity {\\n  id: number\\n  name: string | null\\n  name2: string\\n  name3: string\\n  other_id: number\\n  other_primary_id: number\\n}\\n\\nexport interface UserInsertEntity {\\n  id?: number\\n  name?: string | null\\n  name2?: string\\n  name3: string\\n  other_id?: number\\n  other_primary_id?: number\\n}\\n"
+`;
+
+exports[`generates types with optionals and with table name prefix 1`] = `
+"export enum DeliciousKebab {\\n  'big-mix' = 'big-mix',\\n  mix = 'mix',\\n}\\n\\nexport enum Fruits {\\n  apple = 'apple',\\n  banana = 'banana',\\n  orange = 'orange',\\n}\\n\\nexport enum NumericNames {\\n  '1name' = '1name',\\n  '2Name' = '2Name',\\n  '3-name' = '3-name',\\n  '4_name' = '4_name',\\n}\\n\\nexport enum SnakesOn {\\n  a_plane = 'a_plane',\\n}\\n\\nexport type AddressEntity = {\\n  id: number\\n  'address.id': number\\n}\\n\\nexport type HistoryEntity = {\\n  id: number\\n  'histories.id': number\\n}\\n\\nexport type KebabTestEntity = {\\n  id: number\\n  'kebab-test.id': number\\n}\\n\\nexport type MaterializedItemEntity = {\\n  test?: number\\n  'materialized_items.test'?: number\\n  test_array?: Array<number>\\n  'materialized_items.test_array'?: Array<number>\\n  test_text?: string\\n  'materialized_items.test_text'?: string\\n  test_timestamp?: Date\\n  'materialized_items.test_timestamp'?: Date\\n}\\n\\nexport type MaterializedOtherItemEntity = {\\n  test?: number\\n  'materialized_other_items.test'?: number\\n  test_text?: string\\n  'materialized_other_items.test_text'?: string\\n}\\n\\nexport type PascalTableNameEntity = {\\n  id: number\\n  'PascalTableName.id': number\\n  Name: string\\n  'PascalTableName.Name': string\\n}\\n\\nexport type SnakeTestEntity = {\\n  id: number\\n  'snake_test.id': number\\n}\\n\\nexport type SomeViewEntity = {\\n  test?: number\\n  'some_view.test'?: number\\n  test_text?: string\\n  'some_view.test_text'?: string\\n}\\n\\nexport type TypeEntity = {\\n  avatar_darren?: Array<number>\\n  'types.avatar_darren'?: Array<number>\\n  avatar_ernestina: string\\n  'types.avatar_ernestina': string\\n  avatar_mark?: Array<any>\\n  'types.avatar_mark'?: Array<any>\\n  avatar_myah: Array<string>\\n  'types.avatar_myah': Array<string>\\n  avatar_rozella: Array<string>\\n  'types.avatar_rozella': Array<string>\\n  camelCase?: boolean\\n  'types.camelCase'?: boolean\\n  category_amari: string\\n  'types.category_amari': string\\n  category_april: Array<string>\\n  'types.category_april': Array<string>\\n  category_buddy?: Array<string>\\n  'types.category_buddy'?: Array<string>\\n  category_clementine?: number\\n  'types.category_clementine'?: number\\n  category_marcelle?: Date\\n  'types.category_marcelle'?: Date\\n  category_roberta?: boolean\\n  'types.category_roberta'?: boolean\\n  category_trent?: any\\n  'types.category_trent'?: any\\n  category_viola: string\\n  'types.category_viola': string\\n  comment_cali: string\\n  'types.comment_cali': string\\n  comment_delilah?: Array<string>\\n  'types.comment_delilah'?: Array<string>\\n  comment_easter?: Date\\n  'types.comment_easter'?: Date\\n  comment_ella: string\\n  'types.comment_ella': string\\n  comment_myles: string\\n  'types.comment_myles': string\\n  comment_rocio?: string\\n  'types.comment_rocio'?: string\\n  createdat_hulda: any\\n  'types.createdat_hulda': any\\n  createdat_pansy?: Array<number>\\n  'types.createdat_pansy'?: Array<number>\\n  email_andres: Date\\n  'types.email_andres': Date\\n  email_cleveland?: string\\n  'types.email_cleveland'?: string\\n  email_keaton?: Array<number>\\n  'types.email_keaton'?: Array<number>\\n  email_lucio?: string\\n  'types.email_lucio'?: string\\n  email_paris: string\\n  'types.email_paris': string\\n  email_paula?: string\\n  'types.email_paula'?: string\\n  email_ressie: string\\n  'types.email_ressie': string\\n  fruit_a?: Fruits\\n  'types.fruit_a'?: Fruits\\n  fruit_b: Fruits\\n  'types.fruit_b': Fruits\\n  group_abigayle: Array<string>\\n  'types.group_abigayle': Array<string>\\n  group_gabe?: Array<Date>\\n  'types.group_gabe'?: Array<Date>\\n  group_jay: Array<string>\\n  'types.group_jay': Array<string>\\n  group_jedediah: Array<Date>\\n  'types.group_jedediah': Array<Date>\\n  group_shanny: Date\\n  'types.group_shanny': Date\\n  group_toby: string\\n  'types.group_toby': string\\n  group_ulices?: Array<string>\\n  'types.group_ulices'?: Array<string>\\n  id_gay: string\\n  'types.id_gay': string\\n  id_hailee: any\\n  'types.id_hailee': any\\n  id_helen?: Array<number>\\n  'types.id_helen'?: Array<number>\\n  id_ike: Array<string>\\n  'types.id_ike': Array<string>\\n  id_joan?: Array<string>\\n  'types.id_joan'?: Array<string>\\n  id_karelle?: string\\n  'types.id_karelle'?: string\\n  id_lavern: Date\\n  'types.id_lavern': Date\\n  id_margarita?: string\\n  'types.id_margarita'?: string\\n  id_maximilian: Array<string>\\n  'types.id_maximilian': Array<string>\\n  id_william: Array<string>\\n  'types.id_william': Array<string>\\n  id_wilmer?: Array<string>\\n  'types.id_wilmer'?: Array<string>\\n  'kebab-a'?: DeliciousKebab\\n  'types.kebab-a'?: DeliciousKebab\\n  'kebab-b': DeliciousKebab\\n  'types.kebab-b': DeliciousKebab\\n  name_amara?: string\\n  'types.name_amara'?: string\\n  name_brionna: number\\n  'types.name_brionna': number\\n  name_enoch: string\\n  'types.name_enoch': string\\n  name_jermain?: Array<string>\\n  'types.name_jermain'?: Array<string>\\n  name_marielle?: string\\n  'types.name_marielle'?: string\\n  name_myrtle?: Array<string>\\n  'types.name_myrtle'?: Array<string>\\n  name_santos: Array<string>\\n  'types.name_santos': Array<string>\\n  name_skye?: string\\n  'types.name_skye'?: string\\n  name_stephanie: boolean\\n  'types.name_stephanie': boolean\\n  password_alessia?: Array<string>\\n  'types.password_alessia'?: Array<string>\\n  password_camylle: Array<string>\\n  'types.password_camylle': Array<string>\\n  password_elenora?: number\\n  'types.password_elenora'?: number\\n  password_felton?: Array<Date>\\n  'types.password_felton'?: Array<Date>\\n  password_korey: number\\n  'types.password_korey': number\\n  password_murphy?: Array<any>\\n  'types.password_murphy'?: Array<any>\\n  password_vladimir?: number\\n  'types.password_vladimir'?: number\\n  phone_angelo: string\\n  'types.phone_angelo': string\\n  phone_colten: number\\n  'types.phone_colten': number\\n  phone_erling?: Array<string>\\n  'types.phone_erling'?: Array<string>\\n  phone_johanna?: Array<Date>\\n  'types.phone_johanna'?: Array<Date>\\n  phone_kendall: Array<number>\\n  'types.phone_kendall': Array<number>\\n  phone_keyshawn?: string\\n  'types.phone_keyshawn'?: string\\n  phone_maryam?: string\\n  'types.phone_maryam'?: string\\n  phone_osvaldo: Array<Date>\\n  'types.phone_osvaldo': Array<Date>\\n  phone_rupert?: any\\n  'types.phone_rupert'?: any\\n  snakes_on_a?: SnakesOn\\n  'types.snakes_on_a'?: SnakesOn\\n  snakes_on_b: SnakesOn\\n  'types.snakes_on_b': SnakesOn\\n  status_amalia: number\\n  'types.status_amalia': number\\n  status_angelica?: Array<number>\\n  'types.status_angelica'?: Array<number>\\n  status_cade: Array<number>\\n  'types.status_cade': Array<number>\\n  status_lori?: string\\n  'types.status_lori'?: string\\n  status_ricky: number\\n  'types.status_ricky': number\\n  status_sid?: Array<boolean>\\n  'types.status_sid'?: Array<boolean>\\n  title_aidan?: Date\\n  'types.title_aidan'?: Date\\n  title_alexzander: string\\n  'types.title_alexzander': string\\n  title_haylee?: Array<string>\\n  'types.title_haylee'?: Array<string>\\n  title_ilene: Array<any>\\n  'types.title_ilene': Array<any>\\n  title_vicenta?: string\\n  'types.title_vicenta'?: string\\n  title_vivienne: Array<number>\\n  'types.title_vivienne': Array<number>\\n  token_adella: Array<Date>\\n  'types.token_adella': Array<Date>\\n  token_hermann: Array<string>\\n  'types.token_hermann': Array<string>\\n  token_kenyon: Array<string>\\n  'types.token_kenyon': Array<string>\\n  token_marianna?: Array<string>\\n  'types.token_marianna'?: Array<string>\\n  token_rubye: string\\n  'types.token_rubye': string\\n  token_ryley?: string\\n  'types.token_ryley'?: string\\n  token_zora: Array<number>\\n  'types.token_zora': Array<number>\\n  updatedat_aaliyah?: number\\n  'types.updatedat_aaliyah'?: number\\n  updatedat_abe?: Array<string>\\n  'types.updatedat_abe'?: Array<string>\\n  updatedat_brett?: Array<string>\\n  'types.updatedat_brett'?: Array<string>\\n  updatedat_cedrick: Array<boolean>\\n  'types.updatedat_cedrick': Array<boolean>\\n  updatedat_derick: Array<any>\\n  'types.updatedat_derick': Array<any>\\n  updatedat_eli: Array<string>\\n  'types.updatedat_eli': Array<string>\\n  updatedat_ewell: Array<string>\\n  'types.updatedat_ewell': Array<string>\\n  updatedat_laura?: Array<string>\\n  'types.updatedat_laura'?: Array<string>\\n  updatedat_melody: Array<number>\\n  'types.updatedat_melody': Array<number>\\n  updatedat_rossie?: number\\n  'types.updatedat_rossie'?: number\\n}\\n\\nexport type UserEntity = {\\n  id: number\\n  'users.id': number\\n  name?: string\\n  'users.name'?: string\\n  name2: string\\n  'users.name2': string\\n  name3: string\\n  'users.name3': string\\n  other_id: number\\n  'users.other_id': number\\n  other_primary_id: number\\n  'users.other_primary_id': number\\n}\\n"
+`;
+
+exports[`generates types with table name prefix 1`] = `
+"export enum DeliciousKebab {\\n  'big-mix' = 'big-mix',\\n  mix = 'mix',\\n}\\n\\nexport enum Fruits {\\n  apple = 'apple',\\n  banana = 'banana',\\n  orange = 'orange',\\n}\\n\\nexport enum NumericNames {\\n  '1name' = '1name',\\n  '2Name' = '2Name',\\n  '3-name' = '3-name',\\n  '4_name' = '4_name',\\n}\\n\\nexport enum SnakesOn {\\n  a_plane = 'a_plane',\\n}\\n\\nexport type AddressEntity = {\\n  id: number\\n  'address.id': number\\n}\\n\\nexport type HistoryEntity = {\\n  id: number\\n  'histories.id': number\\n}\\n\\nexport type KebabTestEntity = {\\n  id: number\\n  'kebab-test.id': number\\n}\\n\\nexport type MaterializedItemEntity = {\\n  test: number | null\\n  'materialized_items.test': number | null\\n  test_array: Array<number> | null\\n  'materialized_items.test_array': Array<number> | null\\n  test_text: string | null\\n  'materialized_items.test_text': string | null\\n  test_timestamp: Date | null\\n  'materialized_items.test_timestamp': Date | null\\n}\\n\\nexport type MaterializedOtherItemEntity = {\\n  test: number | null\\n  'materialized_other_items.test': number | null\\n  test_text: string | null\\n  'materialized_other_items.test_text': string | null\\n}\\n\\nexport type PascalTableNameEntity = {\\n  id: number\\n  'PascalTableName.id': number\\n  Name: string\\n  'PascalTableName.Name': string\\n}\\n\\nexport type SnakeTestEntity = {\\n  id: number\\n  'snake_test.id': number\\n}\\n\\nexport type SomeViewEntity = {\\n  test: number | null\\n  'some_view.test': number | null\\n  test_text: string | null\\n  'some_view.test_text': string | null\\n}\\n\\nexport type TypeEntity = {\\n  avatar_darren: Array<number> | null\\n  'types.avatar_darren': Array<number> | null\\n  avatar_ernestina: string\\n  'types.avatar_ernestina': string\\n  avatar_mark: Array<any> | null\\n  'types.avatar_mark': Array<any> | null\\n  avatar_myah: Array<string>\\n  'types.avatar_myah': Array<string>\\n  avatar_rozella: Array<string>\\n  'types.avatar_rozella': Array<string>\\n  camelCase: boolean | null\\n  'types.camelCase': boolean | null\\n  category_amari: string\\n  'types.category_amari': string\\n  category_april: Array<string>\\n  'types.category_april': Array<string>\\n  category_buddy: Array<string> | null\\n  'types.category_buddy': Array<string> | null\\n  category_clementine: number | null\\n  'types.category_clementine': number | null\\n  category_marcelle: Date | null\\n  'types.category_marcelle': Date | null\\n  category_roberta: boolean | null\\n  'types.category_roberta': boolean | null\\n  category_trent: any | null\\n  'types.category_trent': any | null\\n  category_viola: string\\n  'types.category_viola': string\\n  comment_cali: string\\n  'types.comment_cali': string\\n  comment_delilah: Array<string> | null\\n  'types.comment_delilah': Array<string> | null\\n  comment_easter: Date | null\\n  'types.comment_easter': Date | null\\n  comment_ella: string\\n  'types.comment_ella': string\\n  comment_myles: string\\n  'types.comment_myles': string\\n  comment_rocio: string | null\\n  'types.comment_rocio': string | null\\n  createdat_hulda: any\\n  'types.createdat_hulda': any\\n  createdat_pansy: Array<number> | null\\n  'types.createdat_pansy': Array<number> | null\\n  email_andres: Date\\n  'types.email_andres': Date\\n  email_cleveland: string | null\\n  'types.email_cleveland': string | null\\n  email_keaton: Array<number> | null\\n  'types.email_keaton': Array<number> | null\\n  email_lucio: string | null\\n  'types.email_lucio': string | null\\n  email_paris: string\\n  'types.email_paris': string\\n  email_paula: string | null\\n  'types.email_paula': string | null\\n  email_ressie: string\\n  'types.email_ressie': string\\n  fruit_a: Fruits | null\\n  'types.fruit_a': Fruits | null\\n  fruit_b: Fruits\\n  'types.fruit_b': Fruits\\n  group_abigayle: Array<string>\\n  'types.group_abigayle': Array<string>\\n  group_gabe: Array<Date> | null\\n  'types.group_gabe': Array<Date> | null\\n  group_jay: Array<string>\\n  'types.group_jay': Array<string>\\n  group_jedediah: Array<Date>\\n  'types.group_jedediah': Array<Date>\\n  group_shanny: Date\\n  'types.group_shanny': Date\\n  group_toby: string\\n  'types.group_toby': string\\n  group_ulices: Array<string> | null\\n  'types.group_ulices': Array<string> | null\\n  id_gay: string\\n  'types.id_gay': string\\n  id_hailee: any\\n  'types.id_hailee': any\\n  id_helen: Array<number> | null\\n  'types.id_helen': Array<number> | null\\n  id_ike: Array<string>\\n  'types.id_ike': Array<string>\\n  id_joan: Array<string> | null\\n  'types.id_joan': Array<string> | null\\n  id_karelle: string | null\\n  'types.id_karelle': string | null\\n  id_lavern: Date\\n  'types.id_lavern': Date\\n  id_margarita: string | null\\n  'types.id_margarita': string | null\\n  id_maximilian: Array<string>\\n  'types.id_maximilian': Array<string>\\n  id_william: Array<string>\\n  'types.id_william': Array<string>\\n  id_wilmer: Array<string> | null\\n  'types.id_wilmer': Array<string> | null\\n  'kebab-a': DeliciousKebab | null\\n  'types.kebab-a': DeliciousKebab | null\\n  'kebab-b': DeliciousKebab\\n  'types.kebab-b': DeliciousKebab\\n  name_amara: string | null\\n  'types.name_amara': string | null\\n  name_brionna: number\\n  'types.name_brionna': number\\n  name_enoch: string\\n  'types.name_enoch': string\\n  name_jermain: Array<string> | null\\n  'types.name_jermain': Array<string> | null\\n  name_marielle: string | null\\n  'types.name_marielle': string | null\\n  name_myrtle: Array<string> | null\\n  'types.name_myrtle': Array<string> | null\\n  name_santos: Array<string>\\n  'types.name_santos': Array<string>\\n  name_skye: string | null\\n  'types.name_skye': string | null\\n  name_stephanie: boolean\\n  'types.name_stephanie': boolean\\n  password_alessia: Array<string> | null\\n  'types.password_alessia': Array<string> | null\\n  password_camylle: Array<string>\\n  'types.password_camylle': Array<string>\\n  password_elenora: number | null\\n  'types.password_elenora': number | null\\n  password_felton: Array<Date> | null\\n  'types.password_felton': Array<Date> | null\\n  password_korey: number\\n  'types.password_korey': number\\n  password_murphy: Array<any> | null\\n  'types.password_murphy': Array<any> | null\\n  password_vladimir: number | null\\n  'types.password_vladimir': number | null\\n  phone_angelo: string\\n  'types.phone_angelo': string\\n  phone_colten: number\\n  'types.phone_colten': number\\n  phone_erling: Array<string> | null\\n  'types.phone_erling': Array<string> | null\\n  phone_johanna: Array<Date> | null\\n  'types.phone_johanna': Array<Date> | null\\n  phone_kendall: Array<number>\\n  'types.phone_kendall': Array<number>\\n  phone_keyshawn: string | null\\n  'types.phone_keyshawn': string | null\\n  phone_maryam: string | null\\n  'types.phone_maryam': string | null\\n  phone_osvaldo: Array<Date>\\n  'types.phone_osvaldo': Array<Date>\\n  phone_rupert: any | null\\n  'types.phone_rupert': any | null\\n  snakes_on_a: SnakesOn | null\\n  'types.snakes_on_a': SnakesOn | null\\n  snakes_on_b: SnakesOn\\n  'types.snakes_on_b': SnakesOn\\n  status_amalia: number\\n  'types.status_amalia': number\\n  status_angelica: Array<number> | null\\n  'types.status_angelica': Array<number> | null\\n  status_cade: Array<number>\\n  'types.status_cade': Array<number>\\n  status_lori: string | null\\n  'types.status_lori': string | null\\n  status_ricky: number\\n  'types.status_ricky': number\\n  status_sid: Array<boolean> | null\\n  'types.status_sid': Array<boolean> | null\\n  title_aidan: Date | null\\n  'types.title_aidan': Date | null\\n  title_alexzander: string\\n  'types.title_alexzander': string\\n  title_haylee: Array<string> | null\\n  'types.title_haylee': Array<string> | null\\n  title_ilene: Array<any>\\n  'types.title_ilene': Array<any>\\n  title_vicenta: string | null\\n  'types.title_vicenta': string | null\\n  title_vivienne: Array<number>\\n  'types.title_vivienne': Array<number>\\n  token_adella: Array<Date>\\n  'types.token_adella': Array<Date>\\n  token_hermann: Array<string>\\n  'types.token_hermann': Array<string>\\n  token_kenyon: Array<string>\\n  'types.token_kenyon': Array<string>\\n  token_marianna: Array<string> | null\\n  'types.token_marianna': Array<string> | null\\n  token_rubye: string\\n  'types.token_rubye': string\\n  token_ryley: string | null\\n  'types.token_ryley': string | null\\n  token_zora: Array<number>\\n  'types.token_zora': Array<number>\\n  updatedat_aaliyah: number | null\\n  'types.updatedat_aaliyah': number | null\\n  updatedat_abe: Array<string> | null\\n  'types.updatedat_abe': Array<string> | null\\n  updatedat_brett: Array<string> | null\\n  'types.updatedat_brett': Array<string> | null\\n  updatedat_cedrick: Array<boolean>\\n  'types.updatedat_cedrick': Array<boolean>\\n  updatedat_derick: Array<any>\\n  'types.updatedat_derick': Array<any>\\n  updatedat_eli: Array<string>\\n  'types.updatedat_eli': Array<string>\\n  updatedat_ewell: Array<string>\\n  'types.updatedat_ewell': Array<string>\\n  updatedat_laura: Array<string> | null\\n  'types.updatedat_laura': Array<string> | null\\n  updatedat_melody: Array<number>\\n  'types.updatedat_melody': Array<number>\\n  updatedat_rossie: number | null\\n  'types.updatedat_rossie': number | null\\n}\\n\\nexport type UserEntity = {\\n  id: number\\n  'users.id': number\\n  name: string | null\\n  'users.name': string | null\\n  name2: string\\n  'users.name2': string\\n  name3: string\\n  'users.name3': string\\n  other_id: number\\n  'users.other_id': number\\n  other_primary_id: number\\n  'users.other_primary_id': number\\n}\\n"
+`;
+
+exports[`returns help when missing connection 1`] = `
+undefined
+`;
+
+exports[`returns help when missing connection 2`] = `
+undefined
+`;

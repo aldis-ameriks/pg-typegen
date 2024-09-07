@@ -1,5 +1,4 @@
 .idea
-.tap
 node_modules
 package-lock.json
 test/entities.ts

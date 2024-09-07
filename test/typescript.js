@@ -1,5 +1,5 @@
-import t from 'tap'
 import typescript from '../src/typescript.js'
+import test from 'node:test'
 
 const tables = [
   {
@@ -110,80 +110,70 @@ const opts = {
   semicolons: true
 }
 
-t.test('using types', t => {
+test('using types', t => {
   t.plan(2)
   let result = typescript({ ...opts, type: true, semicolons: true }, { tables, typeMapping, enums })
-  t.matchSnapshot(result.types)
+  t.assert.snapshot(result.types)
 
   result = typescript({ ...opts, type: true, semicolons: false }, { tables, typeMapping, enums })
-  t.matchSnapshot(result.types)
+  t.assert.snapshot(result.types)
 })
 
-t.test('using interfaces', t => {
+test('using interfaces', t => {
   t.plan(2)
   let result = typescript({ ...opts, type: false, semicolons: true }, { tables, typeMapping, enums })
-  t.matchSnapshot(result.types)
+  t.assert.snapshot(result.types)
 
   result = typescript({ ...opts, type: false, semicolons: false }, { tables, typeMapping, enums })
-  t.matchSnapshot(result.types)
+  t.assert.snapshot(result.types)
 })
 
-t.test('with custom suffix', t => {
-  t.plan(1)
+test('with custom suffix', t => {
   const result = typescript({ ...opts, suffix: 'Record' }, { tables, typeMapping, enums })
-  t.matchSnapshot(result.types)
+  t.assert.snapshot(result.types)
 })
 
-t.test('with header', t => {
-  t.plan(1)
+test('with header', t => {
   const result = typescript({ ...opts, header: '/* eslint-disable */' }, { tables, typeMapping, enums })
-  t.matchSnapshot(result.types)
+  t.assert.snapshot(result.types)
 })
 
-t.test('with optionals', t => {
-  t.plan(1)
+test('with optionals', t => {
   const result = typescript({ ...opts, optionals: true }, { tables, typeMapping, enums })
-  t.matchSnapshot(result.types)
+  t.assert.snapshot(result.types)
 })
 
-t.test('without enums', t => {
-  t.plan(1)
+test('without enums', t => {
   const result = typescript({ ...opts, optionals: true }, { tables, typeMapping, enums: [] })
-  t.matchSnapshot(result.types)
+  t.assert.snapshot(result.types)
 })
 
-t.test('with pascal case enums', t => {
-  t.plan(1)
+test('with pascal case enums', t => {
   const result = typescript({ ...opts, pascalEnums: true }, { tables, typeMapping, enums })
-  t.matchSnapshot(result.types)
+  t.assert.snapshot(result.types)
 })
 
-t.test('with generated insert types', t => {
-  t.plan(1)
+test('with generated insert types', t => {
   const result = typescript({ ...opts, insertTypes: true }, { tables, typeMapping, enums })
-  t.matchSnapshot(result.types)
+  t.assert.snapshot(result.types)
 })
 
-t.test('with generated insert types with optionals', t => {
-  t.plan(1)
+test('with generated insert types with optionals', t => {
   const result = typescript({ ...opts, insertTypes: true, optionals: true }, { tables, typeMapping, enums })
-  t.matchSnapshot(result.types)
+  t.assert.snapshot(result.types)
 })
 
-t.test('with table string literal', t => {
-  t.plan(1)
+test('with table string literal', t => {
   const result = typescript({ ...opts, tableNames: true }, { tables, typeMapping, enums })
-  t.matchSnapshot(result.types)
+  t.assert.snapshot(result.types)
 })
 
-t.test('viewNames with views', t => {
-  t.plan(1)
+test('viewNames with views', t => {
   const result = typescript({ ...opts, viewNames: true }, { tables, typeMapping, enums })
-  t.matchSnapshot(result.types)
+  t.assert.snapshot(result.types)
 })
 
-t.test('viewNames with single view', t => {
-  t.plan(1)
+test('viewNames with single view', t => {
   const tablesWithSingleView = [
     {
       name: 'view',
@@ -194,11 +184,10 @@ t.test('viewNames with single view', t => {
     }
   ]
   const result = typescript({ ...opts, viewNames: true }, { tables: tablesWithSingleView, typeMapping, enums })
-  t.matchSnapshot(result.types)
+  t.assert.snapshot(result.types)
 })
 
-t.test('viewNames without views', t => {
-  t.plan(1)
+test('viewNames without views', t => {
   const tablesWithoutView = [
     {
       name: 'table',
@@ -209,5 +198,5 @@ t.test('viewNames without views', t => {
     }
   ]
   const result = typescript({ ...opts, viewNames: true }, { tables: tablesWithoutView, typeMapping, enums })
-  t.matchSnapshot(result.types)
+  t.assert.snapshot(result.types)
 })

@@ -1,71 +1,60 @@
-import t from 'tap'
 import getSchemaDefinition, { getPostgresOpts } from '../src/postgres.js'
 import { getTestPostgresConnectionString } from './helpers/setup-postgres.js'
+import test from 'node:test'
+import assert from 'node:assert/strict'
 
-t.test('retrieves database schema', async t => {
-  t.plan(1)
-
+test('retrieves database schema', async t => {
   const connection = getTestPostgresConnectionString()
   const ssl = process.env.DATABASE_SSL_ENABLED === 'true'
 
   const opts = { schema: 'public', connection, ssl }
   const result = await getSchemaDefinition(opts)
-  t.matchSnapshot(result)
+  t.assert.snapshot(result)
 })
 
-t.test('returns typeMapping with int8 to string mapping', async t => {
-  t.plan(1)
-
+test('returns typeMapping with int8 to string mapping', async t => {
   const connection = getTestPostgresConnectionString()
   const ssl = process.env.DATABASE_SSL_ENABLED === 'true'
 
   const opts = { schema: 'public', connection, ssl, bigint: false }
   const result = await getSchemaDefinition(opts)
-  t.matchSnapshot(result)
+  t.assert.snapshot(result)
 })
 
-t.test('returns typeMapping with int8 to bigint mapping', async t => {
-  t.plan(1)
-
+test('returns typeMapping with int8 to bigint mapping', async t => {
   const connection = getTestPostgresConnectionString()
   const ssl = process.env.DATABASE_SSL_ENABLED === 'true'
 
   const opts = { schema: 'public', connection, ssl, bigint: true }
   const result = await getSchemaDefinition(opts)
-  t.matchSnapshot(result)
+  t.assert.snapshot(result)
 })
 
-t.test('returns typeMapping with date to javascript Date mapping', async t => {
-  t.plan(1)
-
+test('returns typeMapping with date to javascript Date mapping', async t => {
   const connection = getTestPostgresConnectionString()
   const ssl = process.env.DATABASE_SSL_ENABLED === 'true'
 
   const opts = { schema: 'public', connection, ssl, dateAsString: false }
   const result = await getSchemaDefinition(opts)
-  t.matchSnapshot(result)
+  t.assert.snapshot(result)
 })
 
-t.test('returns typeMapping with date to string mapping', async t => {
-  t.plan(1)
-
+test('returns typeMapping with date to string mapping', async t => {
   const connection = getTestPostgresConnectionString()
   const ssl = process.env.DATABASE_SSL_ENABLED === 'true'
 
   const opts = { schema: 'public', connection, ssl, dateAsString: true }
   const result = await getSchemaDefinition(opts)
-  t.matchSnapshot(result)
+  t.assert.snapshot(result)
 })
 
-t.test('uses correct postgres opts', t => {
-  t.plan(3)
-
+test('uses correct postgres opts', () => {
   let result = getPostgresOpts({})
-  t.equal(result, false)
+  assert.ok(result === false)
 
   result = getPostgresOpts({ ssl: false })
-  t.equal(result, false)
+  assert.ok(result === false)
 
   result = getPostgresOpts({ ssl: true })
-  t.same(result, { ssl: { rejectUnauthorized: false } })
+  assert.deepEqual(result, { ssl: { rejectUnauthorized: false } })
 })
