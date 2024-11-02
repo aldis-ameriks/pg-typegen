@@ -54,6 +54,7 @@ function transpile (content) {
     .replaceAll('export function getPostgresOpts', 'function getPostgresOpts')
     .replaceAll('import { pathToFileURL } from \'node:url\'\n', '')
     .replaceAll('import url from \'node:url\'\n', '')
+    .replaceAll('await setupTestPostgres()', 'setupTestPostgres()')
 
     .replace(/export default function ([^(]+)/, 'module.exports = $1;function $1')
     .replace(/export class ([a-z0-9_$]+)/gi, 'const $1 = module.exports.$1 = class $1')
