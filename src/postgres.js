@@ -44,6 +44,7 @@ function getTableDefinitions (sql, schema) {
                                                     FROM information_schema.table_constraints tc
                                                     WHERE tc.constraint_name = i.relname
                                                       AND tc.constraint_type = 'PRIMARY KEY'
+                                                      AND tc.table_schema = ${schema}
                                                 ) IS NOT NULL
                                             )
                                  FROM pg_class t1,
