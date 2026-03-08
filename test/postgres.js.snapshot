@@ -1166,13 +1166,14 @@ exports[`retrieves database schema 1`] = `
     },
     {
       "name": "materialized_items",
+      "comment": "materialized view for items",
       "isView": true,
       "isMaterializedView": true,
       "columns": [
         {
           "name": "test",
           "type": "int4",
-          "comment": "",
+          "comment": "test column comment",
           "indices": [],
           "isNullable": true,
           "defaultValue": null
@@ -1205,6 +1206,7 @@ exports[`retrieves database schema 1`] = `
     },
     {
       "name": "materialized_other_items",
+      "comment": null,
       "isView": true,
       "isMaterializedView": true,
       "columns": [
@@ -2504,13 +2506,14 @@ exports[`returns typeMapping with date to javascript Date mapping 1`] = `
     },
     {
       "name": "materialized_items",
+      "comment": "materialized view for items",
       "isView": true,
       "isMaterializedView": true,
       "columns": [
         {
           "name": "test",
           "type": "int4",
-          "comment": "",
+          "comment": "test column comment",
           "indices": [],
           "isNullable": true,
           "defaultValue": null
@@ -2543,6 +2546,7 @@ exports[`returns typeMapping with date to javascript Date mapping 1`] = `
     },
     {
       "name": "materialized_other_items",
+      "comment": null,
       "isView": true,
       "isMaterializedView": true,
       "columns": [
@@ -3842,13 +3846,14 @@ exports[`returns typeMapping with date to string mapping 1`] = `
     },
     {
       "name": "materialized_items",
+      "comment": "materialized view for items",
       "isView": true,
       "isMaterializedView": true,
       "columns": [
         {
           "name": "test",
           "type": "int4",
-          "comment": "",
+          "comment": "test column comment",
           "indices": [],
           "isNullable": true,
           "defaultValue": null
@@ -3881,6 +3886,7 @@ exports[`returns typeMapping with date to string mapping 1`] = `
     },
     {
       "name": "materialized_other_items",
+      "comment": null,
       "isView": true,
       "isMaterializedView": true,
       "columns": [
@@ -5180,13 +5186,14 @@ exports[`returns typeMapping with int8 to bigint mapping 1`] = `
     },
     {
       "name": "materialized_items",
+      "comment": "materialized view for items",
       "isView": true,
       "isMaterializedView": true,
       "columns": [
         {
           "name": "test",
           "type": "int4",
-          "comment": "",
+          "comment": "test column comment",
           "indices": [],
           "isNullable": true,
           "defaultValue": null
@@ -5219,6 +5226,7 @@ exports[`returns typeMapping with int8 to bigint mapping 1`] = `
     },
     {
       "name": "materialized_other_items",
+      "comment": null,
       "isView": true,
       "isMaterializedView": true,
       "columns": [
@@ -6520,13 +6528,14 @@ exports[`returns typeMapping with int8 to string mapping 1`] = `
     },
     {
       "name": "materialized_items",
+      "comment": "materialized view for items",
       "isView": true,
       "isMaterializedView": true,
       "columns": [
         {
           "name": "test",
           "type": "int4",
-          "comment": "",
+          "comment": "test column comment",
           "indices": [],
           "isNullable": true,
           "defaultValue": null
@@ -6559,6 +6568,7 @@ exports[`returns typeMapping with int8 to string mapping 1`] = `
     },
     {
       "name": "materialized_other_items",
+      "comment": null,
       "isView": true,
       "isMaterializedView": true,
       "columns": [

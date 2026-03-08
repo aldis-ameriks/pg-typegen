@@ -247,6 +247,14 @@ module.exports.setupTestPostgres = setupTestPostgres; async function setupTestPo
     `
 
     await sql`
+        COMMENT ON MATERIALIZED VIEW materialized_items IS 'materialized view for items';
+    `
+
+    await sql`
+        COMMENT ON COLUMN materialized_items.test IS 'test column comment';
+    `
+
+    await sql`
         CREATE MATERIALIZED VIEW IF NOT EXISTS materialized_other_items AS (
             SELECT 1 AS test,  '2' AS test_text
         )

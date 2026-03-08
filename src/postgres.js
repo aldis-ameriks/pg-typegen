@@ -76,6 +76,7 @@ async function getMaterializedViewDefinitions (sql, schema) {
           WHERE schemaname = ${schema}
       )
       SELECT pc.relname AS name,
+             obj_description(pc.oid) AS comment,
              TRUE AS "isView",
              TRUE AS "isMaterializedView",
              jsonb_agg(
@@ -84,7 +85,7 @@ async function getMaterializedViewDefinitions (sql, schema) {
                      'type', pt.typname,
                      'defaultValue', null,
                      'isNullable', NOT pa.attnotnull,
-                     'comment', '',
+                     'comment', coalesce(pg_catalog.col_description(pc.oid, pa.attnum), ''),
                      'indices', '[]'::jsonb
                  )) AS columns
       FROM pg_attribute pa
@@ -95,7 +96,7 @@ async function getMaterializedViewDefinitions (sql, schema) {
       WHERE pa.attnum > 0
         AND NOT pa.attisdropped
         AND pn.nspname = ${schema}
-      GROUP BY pc.relname;
+      GROUP BY pc.relname, pc.oid;
   `
 }
 
