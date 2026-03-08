@@ -67,6 +67,18 @@ function formatTableName (opts, tableName, suffix) {
     parsedTableName = parsedTableName.slice(0, -3) + 'y'
   } else if (parsedTableName.endsWith('sses')) {
     parsedTableName = parsedTableName.slice(0, -2)
+  } else if (parsedTableName.endsWith('shes')) {
+    parsedTableName = parsedTableName.slice(0, -2)
+  } else if (parsedTableName.endsWith('ches')) {
+    parsedTableName = parsedTableName.slice(0, -2)
+  } else if (parsedTableName.endsWith('xes')) {
+    parsedTableName = parsedTableName.slice(0, -2)
+  } else if (parsedTableName.endsWith('zes')) {
+    parsedTableName = parsedTableName.slice(0, -2)
+  } else if (parsedTableName.endsWith('oes')) {
+    parsedTableName = parsedTableName.slice(0, -2)
+  } else if (/[^aeiou]uses$/i.test(parsedTableName)) {
+    parsedTableName = parsedTableName.slice(0, -2)
   } else if (parsedTableName.endsWith('ess')) {
     /* handle words like address -> AddressEntity */
   } else if (parsedTableName.endsWith('s')) {
