@@ -1274,13 +1274,6 @@ exports[`allows hooking into schema result 1`] = `
       "timetz",
       "interval",
       "name",
-      "int8",
-      "int8",
-      "int8",
-      "int8",
-      "int8",
-      "int8",
-      "int8",
       "int8"
     ],
     "number": [
@@ -1301,13 +1294,6 @@ exports[`allows hooking into schema result 1`] = `
     "Date": [
       "timestamp",
       "timestamptz",
-      "date",
-      "date",
-      "date",
-      "date",
-      "date",
-      "date",
-      "date",
       "date"
     ],
     "Array<string>": [
@@ -1324,13 +1310,6 @@ exports[`allows hooking into schema result 1`] = `
       "_timetz",
       "_interval",
       "_name",
-      "_int8",
-      "_int8",
-      "_int8",
-      "_int8",
-      "_int8",
-      "_int8",
-      "_int8",
       "_int8"
     ],
     "Array<number>": [
@@ -1350,13 +1329,6 @@ exports[`allows hooking into schema result 1`] = `
     "Array<Date>": [
       "_timestamp",
       "_timestamptz",
-      "_date",
-      "_date",
-      "_date",
-      "_date",
-      "_date",
-      "_date",
-      "_date",
       "_date"
     ],
     "Array<bigint>": []

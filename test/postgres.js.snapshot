@@ -2612,8 +2612,6 @@ exports[`returns typeMapping with date to javascript Date mapping 1`] = `
       "timetz",
       "interval",
       "name",
-      "int8",
-      "int8",
       "int8"
     ],
     "number": [
@@ -2626,9 +2624,7 @@ exports[`returns typeMapping with date to javascript Date mapping 1`] = `
     "boolean": [
       "bool"
     ],
-    "bigint": [
-      "int8"
-    ],
+    "bigint": [],
     "any": [
       "json",
       "jsonb"
@@ -2636,9 +2632,6 @@ exports[`returns typeMapping with date to javascript Date mapping 1`] = `
     "Date": [
       "timestamp",
       "timestamptz",
-      "date",
-      "date",
-      "date",
       "date"
     ],
     "Array<string>": [
@@ -2655,8 +2648,6 @@ exports[`returns typeMapping with date to javascript Date mapping 1`] = `
       "_timetz",
       "_interval",
       "_name",
-      "_int8",
-      "_int8",
       "_int8"
     ],
     "Array<number>": [
@@ -2676,14 +2667,9 @@ exports[`returns typeMapping with date to javascript Date mapping 1`] = `
     "Array<Date>": [
       "_timestamp",
       "_timestamptz",
-      "_date",
-      "_date",
-      "_date",
       "_date"
     ],
-    "Array<bigint>": [
-      "_int8"
-    ]
+    "Array<bigint>": []
   }
 }
 `;
@@ -3965,9 +3951,6 @@ exports[`returns typeMapping with date to string mapping 1`] = `
       "interval",
       "name",
       "int8",
-      "int8",
-      "int8",
-      "int8",
       "date"
     ],
     "number": [
@@ -3980,20 +3963,14 @@ exports[`returns typeMapping with date to string mapping 1`] = `
     "boolean": [
       "bool"
     ],
-    "bigint": [
-      "int8"
-    ],
+    "bigint": [],
     "any": [
       "json",
       "jsonb"
     ],
     "Date": [
       "timestamp",
-      "timestamptz",
-      "date",
-      "date",
-      "date",
-      "date"
+      "timestamptz"
     ],
     "Array<string>": [
       "_bpchar",
@@ -4009,9 +3986,6 @@ exports[`returns typeMapping with date to string mapping 1`] = `
       "_timetz",
       "_interval",
       "_name",
-      "_int8",
-      "_int8",
-      "_int8",
       "_int8",
       "_date"
     ],
@@ -4031,15 +4005,9 @@ exports[`returns typeMapping with date to string mapping 1`] = `
     ],
     "Array<Date>": [
       "_timestamp",
-      "_timestamptz",
-      "_date",
-      "_date",
-      "_date",
-      "_date"
+      "_timestamptz"
     ],
-    "Array<bigint>": [
-      "_int8"
-    ]
+    "Array<bigint>": []
   }
 }
 `;
@@ -5319,9 +5287,7 @@ exports[`returns typeMapping with int8 to bigint mapping 1`] = `
       "time",
       "timetz",
       "interval",
-      "name",
-      "int8",
-      "int8"
+      "name"
     ],
     "number": [
       "int2",
@@ -5343,8 +5309,6 @@ exports[`returns typeMapping with int8 to bigint mapping 1`] = `
     "Date": [
       "timestamp",
       "timestamptz",
-      "date",
-      "date",
       "date"
     ],
     "Array<string>": [
@@ -5360,9 +5324,7 @@ exports[`returns typeMapping with int8 to bigint mapping 1`] = `
       "_time",
       "_timetz",
       "_interval",
-      "_name",
-      "_int8",
-      "_int8"
+      "_name"
     ],
     "Array<number>": [
       "_int2",
@@ -5381,8 +5343,6 @@ exports[`returns typeMapping with int8 to bigint mapping 1`] = `
     "Array<Date>": [
       "_timestamp",
       "_timestamptz",
-      "_date",
-      "_date",
       "_date"
     ],
     "Array<bigint>": [
@@ -6668,7 +6628,6 @@ exports[`returns typeMapping with int8 to string mapping 1`] = `
       "timetz",
       "interval",
       "name",
-      "int8",
       "int8"
     ],
     "number": [
@@ -6689,7 +6648,6 @@ exports[`returns typeMapping with int8 to string mapping 1`] = `
     "Date": [
       "timestamp",
       "timestamptz",
-      "date",
       "date"
     ],
     "Array<string>": [
@@ -6706,7 +6664,6 @@ exports[`returns typeMapping with int8 to string mapping 1`] = `
       "_timetz",
       "_interval",
       "_name",
-      "_int8",
       "_int8"
     ],
     "Array<number>": [
@@ -6726,7 +6683,6 @@ exports[`returns typeMapping with int8 to string mapping 1`] = `
     "Array<Date>": [
       "_timestamp",
       "_timestamptz",
-      "_date",
       "_date"
     ],
     "Array<bigint>": []

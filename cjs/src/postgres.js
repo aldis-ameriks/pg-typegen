@@ -117,20 +117,24 @@ function getPostgresOpts (opts) {
 
 async function getSchemaDefinition (opts) {
   const { schema, connection, bigint, dateAsString } = opts
+  const mapping = Object.fromEntries(
+    Object.entries(typeMapping).map(([k, v]) => [k, [...v]])
+  )
+
   if (bigint) {
-    typeMapping.bigint.push('int8')
-    typeMapping['Array<bigint>'].push('_int8')
+    mapping.bigint.push('int8')
+    mapping['Array<bigint>'].push('_int8')
   } else {
-    typeMapping.string.push('int8')
-    typeMapping['Array<string>'].push('_int8')
+    mapping.string.push('int8')
+    mapping['Array<string>'].push('_int8')
   }
 
   if (dateAsString) {
-    typeMapping.string.push('date')
-    typeMapping['Array<string>'].push('_date')
+    mapping.string.push('date')
+    mapping['Array<string>'].push('_date')
   } else {
-    typeMapping.Date.push('date')
-    typeMapping['Array<Date>'].push('_date')
+    mapping.Date.push('date')
+    mapping['Array<Date>'].push('_date')
   }
 
   const sql = postgres(connection, getPostgresOpts(opts))
@@ -141,7 +145,7 @@ async function getSchemaDefinition (opts) {
       getMaterializedViewDefinitions(sql, schema)
     ])
 
-    return { tables: [...tables, ...mViews], enums, typeMapping }
+    return { tables: [...tables, ...mViews], enums, typeMapping: mapping }
   } catch (e) {
     console.error(e.toString())
   } finally {
